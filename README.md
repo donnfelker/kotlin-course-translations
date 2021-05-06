@@ -1,6 +1,6 @@
 # Kotlin Course Translations
 
-This is the open source repository for the 9+ Hour FREE course on the [Kotlin programming language here that is on YouTube](https://www.youtube.com/watch?v=wuiT4T_LJQo).
+This is the open source repository for the 9+ Hour FREE course on the [Kotlin programming language available on YouTube](https://www.youtube.com/watch?v=wuiT4T_LJQo).
 
 ## Translations
 
