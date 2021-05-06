@@ -19,7 +19,7 @@ The most popular languages for viewing countries are as follows:
 
 Pull requests are welcome and encouraged. Its the only way this course will get translated! :) 
 
-Fork the repository, and create or modify the language file that contains the language you can help with. If the file does not exist, create it using the ISO 639-2 format with the country. 
+Fork the repository, and create or modify the language file that contains the language you can help with. If the file does not exist, create it using the ISO 639-2 format with the country. [Here's a decent list of language codes](http://www.lingoes.net/en/translator/langcode.htm).
 
 Example: 
 English US: en-us.srt
