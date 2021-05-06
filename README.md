@@ -12,6 +12,7 @@ The most popular languages for viewing countries are as follows:
 2. Bengali
 3. Spanish
 4. French
+... I'm open to other languages too, these just happen to be the most popular based upon the YouTube audience statistics. If you don't see your language listed there, you can still contribute with your language!
 
 
 ## Contributing 
