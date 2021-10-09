@@ -768,698 +768,704 @@ hit play and hit run main.kt,
 
 170
 00:06:49,590 --> 00:06:52,690
-Variables are the underpinning
-of your applications.
+Переменные - основной винтик
+в вашей программе.
 
 171
 00:06:52,690 --> 00:06:55,970
-To create a variable in Kotlin,
-you'll use the var keyword,
+Чтобы создать переменную в Котлине
+используется ключевое слово var,
 
 172
 00:06:55,970 --> 00:06:57,740
-and then you provide the
-name of your variable.
+после него вы пишите название
+вашей переменной.
 
 173
 00:06:57,740 --> 00:06:59,690
-In this case, we'll call it a full name
+В этом случае мы назовем ее
+"полное имя" (fullName)
 
 174
 00:07:00,556 --> 00:07:02,610
-and then you set it equal to a value.
+и напишем что оно равно значению.
 
 175
 00:07:02,610 --> 00:07:06,570
-Here, I'm sitting at equal to
-a string value of Donn Felker.
+Тут я задам переменной строковое
+значение "Donn Felker"
 
 176
 00:07:06,570 --> 00:07:08,890
-We now have a variable called full name
+теперь у нас есть переменная
+с именем "fullName"
 
 177
 00:07:08,890 --> 00:07:11,580
-and its contents are Donn Felker.
+и она содержит значение "Donn Felker"
 
 178
 00:07:12,743 --> 00:07:14,767
-If we wanna print this to the screen,
+Если мы захотим вывести ее на экран,
 
 179
 00:07:14,767 --> 00:07:15,950
-we can use the print ln command,
+то мы можем использовать функцию println
 
 180
 00:07:17,065 --> 00:07:19,060
-and then we can go up and
-run it from this play icon
+и теперь мы можем нажать стрелочку
+и запустить программу
 
 181
 00:07:19,060 --> 00:07:20,060
-and hit run main KT.
+и нажать "Run main.kt"
 
 182
 00:07:21,555 --> 00:07:23,569
-It'll compile, as we can see down here,
+Программа скомпилируется, об этом
+написано снизу
 
 183
 00:07:23,569 --> 00:07:25,569
-and the output will show as Donn Felker.
+и программа выведет значение "Donn Felker".
 
 184
 00:07:44,950 --> 00:07:45,783
-Now, I run this.
+Запустим заново
 
 185
 00:07:49,540 --> 00:07:51,700
-We can see Donn Felker and John Felker.
+Вы видите "Donn Felker" и "John Felker".
 
 186
 00:07:52,600 --> 00:07:57,600
-We can also set this value
-tool to a variable that's empty
+Вы таким же образом можете
+присвоить пустое значение
 
 187
 00:07:57,810 --> 00:07:59,160
-and print this out as well,
+и вывести его на экран,
 
 188
 00:08:00,440 --> 00:08:01,944
-even though we're not
-really gonna see anything,
+не смотря на то что мы не видим
+результата программы
 
 189
 00:08:01,944 --> 00:08:03,820
-what they full name that's
-empty, we can run here,
+потому что переменная пустая,
+мы можем запустить программу
 
 190
 00:08:03,820 --> 00:08:06,280
-we'll see, just kind of an
-extra line breakdown here.
+и увидеть, что в конце появилась
+дополнительная пустая строка.
 
 191
 00:08:06,280 --> 00:08:08,430
-Instead of one, two,
-there's now two line breaks
+Вместо одной, теперь тут две
+пустые строки
 
 192
 00:08:08,430 --> 00:08:10,130
-because we have an empty one here.
+потому что вы вывели одну
+пустую строку.
 
 193
 00:08:12,090 --> 00:08:14,700
-And also working with variables
-once we have access to them,
+Когда мы работаем с переменными,
+
 
 194
 00:08:14,700 --> 00:08:16,820
-we can start accessing
-properties of these variables.
+мы имеем полный доступ к их методам
 
 195
 00:08:16,820 --> 00:08:19,540
-So let's say that we wanted
-inspect some properties
+Например, мы хотим проверить
+характеристику строки
 
 196
 00:08:19,540 --> 00:08:22,760
-of the full name and we
-wanted to see if it was empty.
+и вызвать фунцию, которая
+проверит пустая она или нет.
 
 197
 00:08:22,760 --> 00:08:25,600
-I can say is empty and that's a method
+Я напишу isEmpty и это метод для
 
 198
 00:08:25,600 --> 00:08:26,830
-that's on this property.
+строковой переменной.
 
 199
 00:08:26,830 --> 00:08:29,557
-So we can check to see
-if the full is empty.
+С помощью нее мы можем проверить
+нашу переменную.
 
 200
 00:08:29,557 --> 00:08:32,619
-I'm gonna hit command B
-to go to the declaration
+Я нажму cmd+B чтобы посмотреть
+код функции.
 
 201
 00:08:32,619 --> 00:08:34,440
-and we can see that it
-returns this method,
+Тут можно увидеть, что метод isEmpty,
 
 202
 00:08:34,440 --> 00:08:36,960
-which is called is empty returns true
+возвращает true, когда длина
+последовательности
 
 203
 00:08:36,960 --> 00:08:39,100
-if the char sequence is empty.
+символов равняется нулю.
 
 204
 00:08:39,995 --> 00:08:41,850
-So char sequence a string.
+Последовательность символов это строка.
 
 205
 00:08:41,850 --> 00:08:44,480
-If this is empty, it's gonna
-return true, otherwise false.
+Если переменная пустая, тогда функция
+вернет true, иначе вернет false.
 
 206
 00:08:44,480 --> 00:08:47,530
-So if we run this, we'll get
-Donn Felker, John Felker,
+Если запустить программу мы получим
+"Donn Felker", "John Felker",
 
 207
 00:08:47,530 --> 00:08:50,600
-a blank line and then we're
-gonna see the word true.
+пустую строку и затем
+мы увидим слово true.
 
 208
 00:08:50,600 --> 00:08:51,750
-So we'll run that here.
+Давайте проверим
 
 209
 00:08:53,222 --> 00:08:54,334
-And then you can see
-in the window down here
+Теперь вы сами видите снизу
+в окне вывода
 
 210
 00:08:54,334 --> 00:08:57,910
-that we see Donn Felker, John
-Felker, blank line, and true.
+"Donn Felker", "John Felker",
+пустую строку и "true"
 
 211
 00:08:57,910 --> 00:09:00,920
-The key thing to remember with variables
+Ключевой момент, который нужно запомнить:
 
 212
 00:09:00,920 --> 00:09:03,710
-that use the word var is
-if you need to change them,
+если вы используете ключевое слово
+"var" это значит, что в любой момент
 
 213
 00:09:03,710 --> 00:09:06,130
-if you need it, change
-of variables at any time,
+вы или другие объекты программы
+могут изменить значение вашей переменной,
 
 214
 00:09:06,130 --> 00:09:08,170
-you'll want to use a var.
+если вы хотите менять значение -
+миспользуйте "var".
 
 215
 00:09:08,170 --> 00:09:11,740
-If say age equals 32, we can reset it
+Например, я могу написать, что age = 32
 
 216
 00:09:11,740 --> 00:09:14,190
-and there's not gonna be
-any problems whatsoever.
+и в любой момент без проблем могу
+изменить значение на другое
 
 217
 00:09:15,183 --> 00:09:16,356
-I noticed one additional thing.
+Еще одно замечание.
 
 218
 00:09:16,356 --> 00:09:18,730
-If I were to type the
-word var again on age,
+Если я снова напишу "var age"
 
 219
 00:09:18,730 --> 00:09:19,850
-we get a red squiggly line.
+то мы увидим красную линию под
+переменной
 
 220
 00:09:19,850 --> 00:09:22,900
-And what this says is there's
-conflicting declarations,
+В подсказке написано, что у нас
+две конфликтующие переменные
 
 221
 00:09:22,900 --> 00:09:26,040
-meaning we cannot define the variable age
+это значит что мы не можем дважды
+объявить одну и ту же переменную
 
 222
 00:09:26,040 --> 00:09:28,672
-twice within the same scope here,
+в скоупе выполнения
 
 223
 00:09:28,672 --> 00:09:30,300
-which is inside this main function.
+в данном примере - в рамках
+функции main()
 
 224
 00:09:30,300 --> 00:09:32,870
-So if I wanted to reassign
-it, I wouldn't say var again.
+Если я хочу задать переменной новое
+значение, я не буду писать "var"
 
 225
 00:09:32,870 --> 00:09:35,330
-I would just simply say age equals 32,
+я просто напишу что age равно 32
 
 226
 00:09:35,330 --> 00:09:36,840
-and then I can reassign it.
+и это изменит значение.
 
 227
 00:09:36,840 --> 00:09:40,980
-I can also print this out
-to the console as well
+Я так же могу вывести
+значение age в консоль
 
 228
 00:09:40,980 --> 00:09:43,400
-and type in age and we'll see that the age
+напишем age и увидим, что age
 
 229
 00:09:43,400 --> 00:09:47,800
-is going to print 32 is
-initialized it with 30,
+выведет в консоль 32, не смотря на то
+что переменная создавалась со значением 30
 
 230
 00:09:47,800 --> 00:09:50,760
-reset it to 32 and now
-it's gonna show as 32.
+В консоль выводится 32
 
 231
 00:09:51,920 --> 00:09:54,650
-One final note is that the age variable
+Последнее важное замечание,
 
 232
 00:09:54,650 --> 00:09:57,360
-was also implicit to an integer.
+что переменной age при создании
+неявно присвоился целочисленный тип
 
 233
 00:09:57,360 --> 00:09:59,170
-So again, we did not specify a type.
+При этом мы нигде явно этого не указывали
 
 234
 00:10:00,500 --> 00:10:01,880
-The compiler was able to determine
+Компилятор достатоно умный для того
+чтобы присвоить тип переменной
 
 235
 00:10:01,880 --> 00:10:04,060
-based upon what we set this to,
+в зависимости от того, что вы в нее кладете
 
 236
 00:10:04,060 --> 00:10:06,080
-that the value is an integer.
+в нашем случае - целочисленный тип.
 
 237
 00:10:07,330 --> 00:10:09,510
-You can create mutable variables in Kotlin
+В котлин вы можете создавать переменные
 
 238
 00:10:09,510 --> 00:10:13,220
-with the var keyword, but
-if you'd like to create
+с помощью ключевого слова "var",
+но если вы хотите создать
 
 239
 00:10:13,220 --> 00:10:14,320
-read only variables in Kotlin,
+неизменяемое значение,
 
 240
 00:10:14,320 --> 00:10:16,780
-you need to use the val keyword.
+то нужно использовать ключевое
+слово "val".
 
 241
 00:10:16,780 --> 00:10:19,591
-So let's try the same
-thing that we did before.
+Давайте попробуем проделать все
+то же самое.
 
 242
 00:10:19,591 --> 00:10:20,940
-We're gonna create a new variable,
+Мы создадим новую переменную
 
 243
 00:10:20,940 --> 00:10:23,959
-but this time we're going
-to use the val keyword,
+но на этот раз будем использовать
+ключевое слово "val"
 
 244
 00:10:23,959 --> 00:10:26,809
-and we're gonna set it to Donn
-Felker like we saw before,
+и присвоим ей значение
+"Donn Felker" как раньше
 
 245
 00:10:27,730 --> 00:10:29,800
-and we're gonna print this to the screen.
+И выведем все в консоль
 
 246
 00:10:29,800 --> 00:10:32,240
-And at this point, nothing
-has really changed.
+На данный момент ничего не поменялось
 
 247
 00:10:32,240 --> 00:10:34,180
-The output's going to be the same.
+Результат будет точно такой же
 
 248
 00:10:34,180 --> 00:10:37,090
-We've created a variable called full name,
+Мы создали переменную "fullName"
 
 249
 00:10:37,090 --> 00:10:38,870
-it contains the contents, Donn Felker.
+со значением "Donn Felker"
 
 250
 00:10:38,870 --> 00:10:41,700
-And when we, we run it, we get Donn Felker
+И когда мы запускаем программу, мы
+видим "Donn Felker"
 
 251
 00:10:41,700 --> 00:10:43,140
-down here at the bottom.
+в выводе консоли.
 
 252
 00:10:43,140 --> 00:10:46,950
-However, the big difference
-here is when we use
+Но самое большое отличие тут то,
+что мы использовали
 
 253
 00:10:46,950 --> 00:10:50,130
-the val keyword, we're
-creating a read only variable,
+ключевое слово "val".
+Тем самым мы создали переменную
 
 254
 00:10:50,130 --> 00:10:52,560
-which means I can only assign it once.
+которую нельзя изменять
 
 255
 00:10:52,560 --> 00:10:55,140
-Therefore, if I want to
-assign the variable again
+Если я попытаюсь задать у нее
+другое значение
 
 256
 00:10:55,140 --> 00:10:58,730
-or I attempt to I'll
-change this to John Felker,
+например, попрубую заменить
+ее на "John Felker"
 
 257
 00:11:00,260 --> 00:11:02,900
-and then we automatically get
-a red squiggly and IntelliJ
+я автоматически получу предупреждение -
+красную полосу
 
 258
 00:11:02,900 --> 00:11:07,090
-because IntelliJ Kotlin plugin
-realizes there's a problem.
+потому что Котлин понимает, что
+так делать нельзя
 
 259
 00:11:07,090 --> 00:11:09,500
-And what is saying is the
-val can not be reassigned.
+И в подсказке написано, что значения
+"val" переменных нельзя менять
 
 260
 00:11:09,500 --> 00:11:11,650
-So even if I say, "Hey, know
-what, I'm gonna ignore the IDE
+И если я попробую проигнорировать
+IDE и запущу программу
 
 261
 00:11:11,650 --> 00:11:12,990
-"you want it to run a compiler."
+нажму на кнопку Run
 
 262
 00:11:12,990 --> 00:11:16,370
-I try to compile this, we're
-gonna get a compiler error.
+Компилятор запустится
+и напишет что произошла ошибка компиляции
 
 263
 00:11:16,370 --> 00:11:19,100
-It's gonna say, "Hey, look,
-we couldn't compile this
+Компилятор скажет, что он
+не смог скомпилировать программу
 
 264
 00:11:19,100 --> 00:11:20,160
-"because there's an error."
+потому что в коде ошибка
 
 265
 00:11:20,160 --> 00:11:24,450
-Vals cannot be reassigned here
-and it's on line number five.
+и вы попытались поменять val переменную
+в строчке 5
 
 266
 00:11:24,450 --> 00:11:26,510
-So we go over here to line number five,
+Мы посмотрим на строчку 5 и вот
+наша попытка поменять значение val
 
 267
 00:11:26,510 --> 00:11:29,680
-and there's our problem, full
-name cannot be reassigned.
+переменной
 
 268
 00:11:29,680 --> 00:11:33,180
-So once we have a variable that's created
+Как только мы создаем val переменную
 
 269
 00:11:33,180 --> 00:11:35,940
-with the val keyword,
-we can not reassign it.
+ее значение больше не может
+меняться
 
 270
 00:11:35,940 --> 00:11:37,690
-And the same goes for other types too.
+То же самое работает для всех
 
 271
 00:11:37,690 --> 00:11:41,230
-So if we were to use age
-and say 32, that's fine,
+других типов данных. Например
+если это будет 32
 
 272
 00:11:41,230 --> 00:11:44,100
-you can print that to the screen as well.
+вы так же можете вывести ее в консоль
 
 273
 00:11:44,100 --> 00:11:47,670
-And then if we tried
-again to reassign val,
+Но если попробуете изменить ее
 
 274
 00:11:47,670 --> 00:11:49,130
-we could say that's 42 now,
+например присвоить 42
 
 275
 00:11:51,114 --> 00:11:52,060
-we could see that this
-is not going to work.
+вы можете увидеть ту же самую
+проблему
 
 276
 00:11:52,060 --> 00:11:54,880
-And again to verify it, we'll
-run, which will fire off
+Ради эксперимента запустим программу
+и увидим все
 
 277
 00:11:54,880 --> 00:11:56,480
-the compiler will say, hey, that the val
+ту же ошибку компилятора,
+который говорит
 
 278
 00:11:56,480 --> 00:11:57,760
-cannot be reassigned.
+что val нельзя изменять
 
 279
 00:11:57,760 --> 00:11:58,920
-We're on line eight right here.
+и покажет что ошибка в строке 8
 
 280
 00:11:58,920 --> 00:12:01,930
-That's what this first
-number is, the line number.
+Номер строки это первая цифра в
+этом сообщении об ошибке
 
 281
 00:12:01,930 --> 00:12:06,290
-And we're on line eight and its
-val 42 cannot be reassigned.
+И вот тут на строке 8 пытаемся
+поменять val переменную
 
 282
 00:12:06,290 --> 00:12:09,080
-So we cannot reassign vals,
+Поэтому мы не можем менять val
+переменные
 
 283
 00:12:09,080 --> 00:12:10,470
-so these are read only variables.
+и можем только читать их
 
 284
 00:12:10,470 --> 00:12:13,140
-These are great for things
-that you do not want to change
+Поэтому это отличный вариант, когда вам
+нужно создать то что нельзя менять
 
 285
 00:12:13,140 --> 00:12:16,340
-in your application, you don't
-ever expect them to change.
+в вашей программе и эту
 
 286
 00:12:16,340 --> 00:12:18,720
-And you'd like to verify
-that and enforce that
+неизменчивость вы делигируете
+и проверяете
 
 287
 00:12:18,720 --> 00:12:19,970
-through the compiler.
+с помощью компилятора.
 
 288
 00:12:19,970 --> 00:12:24,300
-Up until now, all variables
-have been implicitly declared.
+До этого момента все переменные
+неявно получали свой тип данных
 
 289
 00:12:24,300 --> 00:12:28,040
-Therefore, if we have a
-variable and we call a full name
+Однако, если у вас есть
+переменная fullName
 
 290
 00:12:28,040 --> 00:12:31,860
-and we set it equal to a string
-equivalent to Donn Felker,
+и мы присваиваем ей строку
+равную "Donn Felker"
 
 291
 00:12:31,860 --> 00:12:34,290
-the type is going to be a string.
+неявно она получит строковый тип
 
 292
 00:12:34,290 --> 00:12:35,690
-And we can actually verify that by doing
+И мы можем это проверить
 
 293
 00:12:35,690 --> 00:12:38,030
-a little bit of inspection
-here on the actual type.
+используя встроенные функции
+рефлексии
 
 294
 00:12:38,030 --> 00:12:41,000
-So I print the full name and
-do colon colon and tell it,
+Напишем println функцию
+и в скобках напишем fullName::class
 
 295
 00:12:41,000 --> 00:12:44,710
-"Hey, what class does this
-full name actually belong to?"
+Чтобы проверить к какому классу
+принадлежит эта переменная
 
 296
 00:12:44,710 --> 00:12:47,510
-And if we run it, we can actually see
+Если мы запустим программу, то в
 
 297
 00:12:47,510 --> 00:12:49,730
-that it comes back as a Kotlin string.
+консоли мы увидим, что переменная
+принадлежит к классу String
 
 298
 00:12:49,730 --> 00:12:51,530
-So we're working with a string here.
+Так мы понимаем что работаем со строкой
 
 299
 00:12:52,480 --> 00:12:54,770
-Now, there are times that
-you would like to specify
+Бывают случаи, когда вам нужно
 
 300
 00:12:54,770 --> 00:12:57,180
-the type of the variable explicitly,
+явно указать тип переменной
 
 301
 00:12:57,180 --> 00:13:00,010
-and you can do that by providing a colon
+и выможете это сделать, если после
+названия переменной напишите
 
 302
 00:13:00,010 --> 00:13:04,150
-after the name of the variable
-and then providing the type.
+двоеточие и тип, который вам нужен
 
 303
 00:13:04,150 --> 00:13:05,550
-So the here would be string.
+в нашем примере будет String
 
 304
 00:13:06,933 --> 00:13:08,120
-I would see Donn Felker.
+И справа значение "Donn Felker"
 
 305
 00:13:08,120 --> 00:13:10,630
-If perhaps I put the wrong type here,
+Если я тут напишу неправильный тип
 
 306
 00:13:10,630 --> 00:13:13,983
-perhaps I tried type integer
-and then I set it equal
+например целочисленный Integer
+и значение будет равно
 
 307
 00:13:13,983 --> 00:13:14,816
-to Donn Felker, we get actually an error.
+"Donn Felker", то мы получим ошибку
 
 308
 00:13:14,816 --> 00:13:16,640
-And it says, well, the type is mismatched.
+И в ошибке сказано, что тип переменной
+и присвоенное значение не совпадают
 
 309
 00:13:17,721 --> 00:13:20,200
-We require an int because
-the full name variables
+Значением должно быть число
 
 310
 00:13:20,200 --> 00:13:21,970
-and so you're trying to set a string,
+а вы пытаетесь присвоить строку
 
 311
 00:13:21,970 --> 00:13:23,050
-that's just not gonna work.
+и это просто не сработает
 
 312
 00:13:23,050 --> 00:13:25,800
-And if we try to compile
-it by skipping the IDE,
+если вы попробуете запустить
+программу, игнорируя ошибку
 
 313
 00:13:26,671 --> 00:13:27,660
-it's gonna say the same thing.
+то компилятор скажет вам все тоже самое:
 
 314
 00:13:27,660 --> 00:13:30,780
-The inferred type is
-string, but the actual,
+Присвоенный тип строковый, а
 
 315
 00:13:30,780 --> 00:13:32,280
-but int was expected.
+ожидался целочисленный
 
 316
 00:13:32,280 --> 00:13:36,490
-So either we have to
-change the explicit type
+Поэтому нужно поменять либо
+ожидаемый тип
 
 317
 00:13:36,490 --> 00:13:38,670
-or we need to change their value here.
+либо заменить присваеваемое значение.
 
 318
 00:13:38,670 --> 00:13:41,540
-So for example, if we wanted a age
+Еще пример, если мы создадим
+переменную age
 
 319
 00:13:41,540 --> 00:13:43,820
-and we wanted to explicitly
-provide the type,
+и явно захотим указать ее тип
 
 320
 00:13:44,670 --> 00:13:46,440
-we would provide the type here.
+то мы напишем тип перед значением
 
 321
 00:13:46,440 --> 00:13:49,520
-So anytime you'd like to provide
-the type for either a val
+Таким образом, каждый раз когда
+вы хотите явно указать тип
 
 322
 00:13:49,520 --> 00:13:54,520
-or a var, you just have to
-type the variable name, colon
+для val/var переменной
+вы пишите двоеточие и тип
 
 323
 00:13:54,840 --> 00:13:57,350
-and then the type that that's
-going to equal to explicitly
+вы пишите двоеточие и тип
 
 324
 00:13:57,350 --> 00:13:59,100
-provide the type to your variables.
+после названия переменной
 
 325
 00:14:00,590 --> 00:14:02,660
