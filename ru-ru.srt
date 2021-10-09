@@ -1469,705 +1469,696 @@ IDE и запущу программу
 
 325
 00:14:00,590 --> 00:14:02,660
-Kotlin has many built-in types.
+В языке Котлин есть несколько
+строенных типов
 
 326
 00:14:02,660 --> 00:14:05,620
-Let's go ahead and
-explore the number types.
+Для начала рассмотрим
+числовые типы
 
 327
 00:14:05,620 --> 00:14:08,450
-The lowest number type is a byte.
+Самый маленький из них - Byte (байт)
 
 328
 00:14:08,450 --> 00:14:10,536
-So I'm gonna create a
-variable called myByte
+Я создам переменную и назову
+ее myByte
 
 329
 00:14:10,536 --> 00:14:12,423
-and it's of type byte
+и укажу ей тип Byte
 
 330
 00:14:12,423 --> 00:14:14,630
-and I'm gonna set it to a value of eight.
+я присвою ей значение 8
 
 331
 00:14:14,630 --> 00:14:18,110
-Bytes are equivalent to
-eight bit signed integers.
+Байт - целоцисленное значение
+размеровм 8 бит
 
 332
 00:14:20,750 --> 00:14:23,680
-The next one up is a short,
-so I'll call this one
+Следующее число Short
+я создам переменную
 
 333
 00:14:23,680 --> 00:14:28,630
-myShort and will explicitly
-provide the value of short.
+myShort и явно укажу тип Short
 
 334
 00:14:28,630 --> 00:14:31,170
-And I'm gonna set this
-one by two equals 16,
+Этой переменной я присвою
+значение 16
 
 335
 00:14:31,170 --> 00:14:34,960
-and this is a 16 bit signed integer.
+и это целочисленное значение
+размером 16 бит
 
 336
 00:14:34,960 --> 00:14:38,380
-So as you can see, as we move up,
+Как вы уже могли заметить,
+чем дальше тем
 
 337
 00:14:38,380 --> 00:14:40,170
-the numbers are going to get bigger,
+больше становятся размеры типов
 
 338
 00:14:40,170 --> 00:14:42,070
-meaning that the values
-that they can store
+Это значит, что максимальная величина
+числа, котоаря может в них
 
 339
 00:14:42,070 --> 00:14:46,090
-are going to be bigger, which
-brings us to the most popular,
+хранится, тоже становится больше.
+Мы подходим к самомму популярному
 
 340
 00:14:46,090 --> 00:14:49,090
-probably in regards to
-program that you see,
+типу, который вы будете видеть
+чаще всего,
 
 341
 00:14:49,090 --> 00:14:50,950
-and that's going to be the integer value.
+и это тип Integer.
 
 342
 00:14:50,950 --> 00:14:53,890
-And this is going to be
-equivalent to a 32 bit
+Integer может хранить
 
 343
 00:14:53,890 --> 00:14:54,960
-signed integer.
+в себе 32 бита информации.
 
 344
 00:14:57,270 --> 00:14:59,920
-Next up we have a Long.
+Дальше идет тип Long.
 
 345
 00:14:59,920 --> 00:15:01,820
-Now long is a very long number,
+этот тип может вмещать всебя очень
+длинные числа
 
 346
 00:15:02,674 --> 00:15:03,712
-so it's kind of a good name for it.
+наверное поэтому он так и называется
 
 347
 00:15:03,712 --> 00:15:05,725
-It's a long number that you could use,
+Этот тип удобно использовать
 
 348
 00:15:05,725 --> 00:15:08,340
-and that's going to be
-equivalent to a 64 bit
+когда вы работаете с большими числами
+и он вмещает в себя
 
 349
 00:15:09,300 --> 00:15:10,133
-signed integer.
+64-бита информации
 
 350
 00:15:12,600 --> 00:15:14,120
-There are gonna be the most common types
+Это встроенные числовые типы языка
 
 351
 00:15:14,120 --> 00:15:17,027
-that you use when you're
-working with numbers.
+вы будете работать с ними,
 
 352
 00:15:17,027 --> 00:15:17,937
-So you're gonna be using these.
+если используете числа в программе.
 
 353
 00:15:17,937 --> 00:15:19,110
-And most often you're
-gonna be probably be using
+Скорее всего, самым частым
+в использовании для вас
 
 354
 00:15:19,110 --> 00:15:23,940
-an integer value as it will
-cover 90% of your use cases.
+станет Integer, который покрывает
+90% кейсов при работе с числами
 
 355
 00:15:23,940 --> 00:15:26,910
-If you need to use a long
-number of sorts of very long,
+Если числа у вас будут очень большие
 
 356
 00:15:26,910 --> 00:15:28,410
-then you wanna use a Long.
+то лучше использовать Long
 
 357
 00:15:29,426 --> 00:15:30,259
-And those times a new do wanna use that,
+И когда это действительно необходимо,
 
 358
 00:15:30,259 --> 00:15:32,820
-perhaps you're storing numerical values
+и вы будете работать с действительно
+большими числами
 
 359
 00:15:34,020 --> 00:15:36,180
-that are very lengthy.
+используйте Long
 
 360
 00:15:36,180 --> 00:15:38,756
-However, there are also
-times when you do need
+Однако бывают ситуации
+когда вам нужно будет работать
 
 361
 00:15:38,756 --> 00:15:39,589
-to store decimal value.
+с десятичными числами.
 
 362
 00:15:39,589 --> 00:15:42,000
-So if you do need to score decimal values,
+Если вам нужно хранить десятичные чиста
 
 363
 00:15:42,000 --> 00:15:44,900
-there's also something known as a float.
+Вы можете использовать тип Float
 
 364
 00:15:45,780 --> 00:15:47,750
-And so say like this, a float,
+Запишем переменную с типом Float
 
 365
 00:15:47,750 --> 00:15:52,030
-and we're gonna say this
-one is equal to 32.00
+и допустим ее значение равно 32.00
 
 366
 00:15:52,865 --> 00:15:54,650
-and I'll put an F here 'cause that means
+Я поставлю 'F' на конце, потому что
 
 367
 00:15:54,650 --> 00:15:57,200
-in literal terms that this is a float.
+это значит что этот литерал имеет тип Float
 
 368
 00:15:57,200 --> 00:16:00,180
-And what this thing is
-equivalent to is a 32 bit
+Float содержить 32 бита информации
 
 369
 00:16:01,380 --> 00:16:02,480
-floating point number.
+и так же называется числом
+с плавающей точной
 
 370
 00:16:05,130 --> 00:16:07,640
-So, this is a smaller decimal we can use.
+Этот минимальный по размеру тип
+данных для чисел с плавающей точкой
 
 371
 00:16:07,640 --> 00:16:09,420
-Now, if you need to use a larger decimal,
+Если вам нужны числа больше
 
 372
 00:16:09,420 --> 00:16:11,900
-you're gonna use a double
-and that's gonna be called
+то вы можете использовать
+тип Double
 
 373
 00:16:11,900 --> 00:16:15,140
-double and that's equivalent to 64
+и называется он Double потому что
+хранит в два раза больше информации
 
 374
 00:16:15,140 --> 00:16:19,900
-and it's gonna be a 64
-bit floating point number.
+а именно число с плавоющей точкой
+размером 64 байта
 
 375
 00:16:21,050 --> 00:16:22,760
-So, these are kind of the basic numbers
+Итак, это основные численные типы
 
 376
 00:16:22,760 --> 00:16:23,690
-that you're going to use
+Которые вы будете использовать
 
 377
 00:16:23,690 --> 00:16:27,000
-inside of your day-to-day
-application development.
+внутри вашей программы
 
 378
 00:16:27,000 --> 00:16:29,900
-Now there's something interesting
-about each one of these.
+Есть у них всех необычная особенность
 
 379
 00:16:29,900 --> 00:16:31,770
-If we go to the definition
-of any of these,
+Если мы посмотрим определение
+любого из этих типов
 
 380
 00:16:31,770 --> 00:16:32,670
-and I'll start with byte,
+например Byte
 
 381
 00:16:32,670 --> 00:16:34,850
-we can see that byte extends number.
+мы можем увидеть, что оно расширяет
+тип Number (число)
 
 382
 00:16:36,070 --> 00:16:39,010
-We can also go back to
-the previous file short,
+То же самое с типом Short
 
 383
 00:16:39,010 --> 00:16:41,220
-when we'll look at that,
-it also extends number.
+Short тоже расширяет тип Number
 
 384
 00:16:41,220 --> 00:16:43,610
-And as we walk down, each one of these,
+И мы можем пройти по каждому из них
 
 385
 00:16:43,610 --> 00:16:46,210
-you're going to notice
-that every one of them
+и заметим что каждый из них
 
 386
 00:16:46,210 --> 00:16:51,210
-from integer to long to a
-float, to double et cetera,
+Integer, Long, Float и т.д.
 
 387
 00:16:51,980 --> 00:16:56,170
-all of them implement the
-number abstract class.
+все они расширяют абстрактный класс
+Number
 
 388
 00:16:56,170 --> 00:16:57,280
-So let's go take a look at that again,
+Давайте посмотрим на Number
 
 389
 00:16:57,280 --> 00:16:59,400
-what does that look like.
+и узнаем из чего он сотоит
 
 390
 00:16:59,400 --> 00:17:01,150
-If we go to the number implementation,
+Если мы зайдем в реализацию
+типа Number
 
 391
 00:17:01,150 --> 00:17:03,460
-we'll see that it has a
-bunch of functions on here
+мы увидим, что внутри него находится
+множество разных функций
 
 392
 00:17:03,460 --> 00:17:05,530
-that we can access, which is interesting.
+к которым у нас есть доступ
 
 393
 00:17:05,530 --> 00:17:08,000
-Which means if we go talk
-about this for a second,
+Здесь возникает важная для
+Котлин концепция
 
 394
 00:17:08,000 --> 00:17:13,000
-that every time, every
-object, everything in Kotlin
+о том что любой тип это объект
 
 395
 00:17:13,670 --> 00:17:14,620
-is an object.
+в языке Котлин
 
 396
 00:17:14,620 --> 00:17:18,260
-So even this integer value is an object.
+Даже если вот это целое число - это объект
 
 397
 00:17:18,260 --> 00:17:21,860
-This long is an object,
-this byte is an object,
+Этот лонг - объект
+Этот байт - объект
 
 398
 00:17:21,860 --> 00:17:24,109
-which means that we can call methods
+А это значит, что мы можем вызывать методы
 
 399
 00:17:24,109 --> 00:17:25,660
-and properties on these.
+и свойства этих объектов
 
 400
 00:17:25,660 --> 00:17:29,540
-So if I want to print ln the, myByte.
+Например, если я захочу вывести myByte
 
 401
 00:17:32,980 --> 00:17:35,870
-Perhaps I want to perform
-division operation.
+Допустим я хочу поделить его на что-нибудь
 
 402
 00:17:35,870 --> 00:17:38,530
-There's a bunch of map operations
-you can perform on here.
+тут можно увидеть кучу математических
+функций готовых для этого класса
 
 403
 00:17:38,530 --> 00:17:42,520
-These are built into there from
-the various different types.
+И это уже готовые функции для
+всех встроенных типов
 
 404
 00:17:42,520 --> 00:17:45,210
-If I want to say to double,
-I could say to double,
+Возможно я хочу использовать toDouble
+я могу написать toDouble
 
 405
 00:17:45,210 --> 00:17:47,170
-and that would turn my bite into a double.
+и это превратит мой байт в double тип
 
 406
 00:17:47,170 --> 00:17:49,970
-And this actually comes from
-the number class, remember.
+И эти преобразования реализованы
+в классе Number
 
 407
 00:17:50,897 --> 00:17:54,310
-If we go to the parent
-declaration, which was command do,
+Если мы пойдем в родительский класс
 
 408
 00:17:54,310 --> 00:17:56,630
-we could see that this
-came from two double
+мы увидим, что эта функция
+лежит именно там
 
 409
 00:17:56,630 --> 00:17:58,940
-and so it returns a double.
+и возвращает Double
 
 410
 00:17:59,840 --> 00:18:01,940
-And so it would take this byte and turn it
+И если я сейчас возьму этот байт и
 
 411
 00:18:01,940 --> 00:18:03,100
-into now a double.
+преобразую его в Double
 
 412
 00:18:03,100 --> 00:18:04,860
-So if we were to print this and let's get
+Если мы сейчас выведем его тип
 
 413
 00:18:04,860 --> 00:18:08,510
-the type information by
-providing colon, colon class,
+консоль, используя ::class
 
 414
 00:18:08,510 --> 00:18:09,690
-and then running it,
+и запустим программу
 
 415
 00:18:09,690 --> 00:18:11,920
-you would see that it
-does return a double.
+вы увидите, что тип нашего байта
+стал double
 
 416
 00:18:14,750 --> 00:18:16,060
-Now, if we were to come over here,
+Теперь, если мы сменим
 
 417
 00:18:16,060 --> 00:18:18,550
-we could actually change this to a long.
+это значение на toLong
 
 418
 00:18:20,410 --> 00:18:23,630
-We could run it again and you
-see that returns say long.
+и запустим снова, то увидим
+что тип стал Long
 
 419
 00:18:26,003 --> 00:18:28,010
-So here we go, eight
-and we forgot to provide
+Мы получаем восемь
 
 420
 00:18:28,010 --> 00:18:31,270
-the values there, say class, run it again.
+просто мы забыли добавить ::class
 
 421
 00:18:32,340 --> 00:18:36,340
-And we'll see that we now
-have class Kotlin.long.
+Вот теперь вывод показывает
+тип Kotlin.Long
 
 422
 00:18:36,340 --> 00:18:39,200
-When working with certain
-numbers, such as longs,
+Когда мы работаем с такими специфичными
+типами, как Long
 
 423
 00:18:39,200 --> 00:18:41,340
-we can take and we can use the literals
+мы можем использовать литералы
 
 424
 00:18:43,380 --> 00:18:46,390
-and we can say big long, let
-me say this is a long value.
+Назовем переменную bigLong
+и укажем тип Long
 
 425
 00:18:46,390 --> 00:18:48,640
-And then we can actually
-do some cool syntax.
+И теперь мы можем использовать интересный
+синтаксис языка
 
 426
 00:18:49,500 --> 00:18:53,440
-And so what this does is it's
-built in syntax to Kotlin
+Такой способ записи встроен
+в синтаксис языка Котлим
 
 427
 00:18:53,440 --> 00:18:54,830
-that makes it easier to read.
+и читать большие числа в такой записи
+гораздо легче
 
 428
 00:18:54,830 --> 00:18:56,520
-So this is equivalent to one million.
+Это значение равно одному миллиону
 
 429
 00:18:56,520 --> 00:19:00,590
-So if I were to print
-line and we were to print
+И теперь, если мы захотим
 
 430
 00:19:00,590 --> 00:19:03,760
-this big long in here and run it,
+напечатать это число в консоль
 
 431
 00:19:03,760 --> 00:19:06,300
-we would actually see that
-this is just going to print out
+мы увидим что в выводе
+будет просто один миллион,
 
 432
 00:19:06,300 --> 00:19:08,550
-as one million, but it
-makes it just a lot easier,
+но читать такую запись
+гораздо проще
 
 433
 00:19:08,550 --> 00:19:11,270
-these underscores do,
-because you can read it.
+просто из-за визуального
+разделения
 
 434
 00:19:11,270 --> 00:19:14,080
-This is very valuable
-if you have a constant
+...
 
 435
 00:19:14,080 --> 00:19:16,950
-in your application that
-you know is always gonna be
+Такой вид записи полезен,
+когда у вас в программе
 
 436
 00:19:16,950 --> 00:19:19,530
-one million, or it's always gonna be 1000
+есть, например, переменная в 1 миллион
 
 437
 00:19:19,530 --> 00:19:20,370
-or something like that.
+или в тысячу, неважно
 
 438
 00:19:20,370 --> 00:19:22,590
-You can make this a lot easier to read,
+Вы можете упростить чтение
 
 439
 00:19:22,590 --> 00:19:26,120
-because let's say you're
-gonna go for one billion,
+потому что, допустим
+если у вас будет миллиард
 
 440
 00:19:26,120 --> 00:19:29,920
-this is much easier to read than this
+такая запись гораздо легче,
+чем без подчеркиваний
 
 441
 00:19:29,920 --> 00:19:31,680
-because you're not sure
-by looking at this,
+потому что вы просто не понимаете
+сразу с первого взгляда
 
 442
 00:19:31,680 --> 00:19:34,960
-is that one billion or
-is that 100 million?
+что это 1 миллион или
+10 миллионов
 
 443
 00:19:34,960 --> 00:19:36,680
-It's really hard to tell,
+Это очень трудно определить
 
 444
 00:19:36,680 --> 00:19:39,310
-but just by adding
-these simple separators,
+но если добавить подчеркивания
 
 445
 00:19:39,310 --> 00:19:41,410
-we can actually tell real easily
+то разница становится очевидна
 
 446
 00:19:41,410 --> 00:19:43,110
-that that would be one billion.
+что это 1 миллиард
 
 447
 00:19:43,110 --> 00:19:46,450
-One of the additional things
-that we can do with numbers
+Еще одна вещь, которую
+можно делать с числами -
 
 448
 00:19:46,450 --> 00:19:48,310
-is we can of course add them together.
+конечно мы можем их складывать
 
 449
 00:19:48,310 --> 00:19:50,250
-So we could say my int.
+Заведем переменную myInt
 
 450
 00:19:51,470 --> 00:19:55,000
-I'll say new int equals my int plus 12,
+а точнее newInt и напишем
+что она равна myInt+12
 
 451
 00:19:55,000 --> 00:19:57,080
-and that would equal 44,
+и это будет равно 44
 
 452
 00:19:57,080 --> 00:20:01,110
-but we can print that to
-the screen and say new int.
+Выведем это число через println
 
 453
 00:20:01,110 --> 00:20:03,900
-And when we run this, we
-see down here in the bottom
+и когда мы запусти программу
+внизу экрана
 
 454
 00:20:03,900 --> 00:20:08,030
-that we're going to get 44 right there.
+мы увидим что newInt равен 44
 
 455
 00:20:08,030 --> 00:20:09,980
-But we can also do an additional thing
+Еще мы можем использовать
 
 456
 00:20:09,980 --> 00:20:11,530
-by using the built-in methods.
+встроенные в Котлин методы
 
 457
 00:20:13,330 --> 00:20:15,360
-Plus, I'm gonna say 12.
+напишем plus и число 12
 
 458
 00:20:17,240 --> 00:20:18,170
-Now we can run that here.
+Теперь мы можем запустить
 
 459
 00:20:18,170 --> 00:20:20,640
-So there's some nice
-syntactic sugar to say plus,
+Так вот, это очень удобный синтаксический
+сахар для сложения
 
 460
 00:20:20,640 --> 00:20:22,070
-we're gonna get 44.
+мы так же получим 44
 
 461
 00:20:22,070 --> 00:20:25,570
-We can also do minus and we can run this
+Мы так же можем сделать minus и
 
 462
 00:20:25,570 --> 00:20:27,640
-and you'll see that we also get 44.
+если запустим то увидим 20 (не 44)
 
 463
 00:20:28,681 --> 00:20:30,720
-And there's a bunch of
-other map operations
+И таких математических функций
+очень много
 
 464
 00:20:30,720 --> 00:20:32,600
-that we can inspect inside of here
+мы можем посмотреть их все разом
 
 465
 00:20:32,600 --> 00:20:35,560
-by simply providing the dot
-to get the code completion
+если просто введем точку,
+чтобы среда подсказала
 
 466
 00:20:35,560 --> 00:20:36,860
-and implement them.
+нам эти методы.
 
 467
 00:20:36,860 --> 00:20:39,090
-And so if you're not familiar
-with a much of these,
+И если вы не знаете
+какие-то из них
 
 468
 00:20:39,090 --> 00:20:40,020
-you can hop into there.
+вы можете посмореть их
 
 469
 00:20:40,020 --> 00:20:41,980
-And let's say, for example,
-you're not too familiar
+Например, вы не знаете
 
 470
 00:20:41,980 --> 00:20:45,200
-with the word and is,
-you can take command B
+метод "and" вы можете нажать
+cmd+B
 
 471
 00:20:45,200 --> 00:20:47,210
-and go to that and say,
-we perform a bit wise
+и посмотреть определения функции
+что and проводит
 
 472
 00:20:47,210 --> 00:20:49,250
-and operation between these two values.
+побитовое "И" на двух числах
 
 473
 00:20:49,250 --> 00:20:52,980
-If you wanna do bit rise map,
-you can do that with the and,
+Если вам нужны побитовые операции
+вы ожете использовать для этого "and"
 
 474
 00:20:52,980 --> 00:20:57,520
-you're could hit plus, you
-can do multiply or times
+вы можете вызвать функции "plus"
+"multiply" или "times"
 
 475
 00:20:57,520 --> 00:20:58,580
-and then you could run that.
+и вы можете запустить
+программу и посмотреть результат
 
 476
 00:20:58,580 --> 00:21:03,580
-So 32 times 12, it's
-gonna run here by 384.
+Умножая 32 на 12 мы получим 384
 
 477
 00:21:04,260 --> 00:21:06,910
-So these are the basic types
-from smallest to largest.
+Итак, все это базовые типы от
+маленьких к большим
 
 478
 00:21:06,910 --> 00:21:09,230
-We're gonna start with
-byte, short, int, long,
+Мы начинаем в byte, short,
+int, long
 
 479
 00:21:10,094 --> 00:21:10,927
-and then we'll get to decimals,
+а потом переходим на десятичные
 
 480
 00:21:10,927 --> 00:21:11,890
-you have float and you have double.
+типы float и double
 
 481
 00:21:11,890 --> 00:21:14,190
-These are the built-in
-number types in Kotlin.
+Это встроенные бызовые числовые
+типы языка Котлин
 
 482
 00:21:15,380 --> 00:21:18,410
