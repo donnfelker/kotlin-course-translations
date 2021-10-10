@@ -2162,795 +2162,794 @@ int, long
 
 482
 00:21:15,380 --> 00:21:18,410
-In Kotlin, strings are
-also known as objects.
+В языке котлин строки
+тоже являются объектами
 
 483
 00:21:18,410 --> 00:21:21,460
-So if we stick with our traditional
-example of the full name
+Если мы вернемся к нашему
+первому примеру с полным именем
 
 484
 00:21:21,460 --> 00:21:25,210
-and we explicitly define
-the type of string
+и явно укажем у fullName
+строковый тип String
 
 485
 00:21:25,210 --> 00:21:28,320
-and set it to Donn Felker,
-we now have an object
+и запишем значение "Donn Felker"
+мы получим строковый объект
 
 486
 00:21:28,320 --> 00:21:32,280
-known as full name that contains
-the value of Donn Felker.
+с названием fullName
+и значением "Donn Felker"
 
 487
 00:21:33,140 --> 00:21:36,180
-We can call different
-methods and properties
+У него мы можем вызывать
 
 488
 00:21:36,180 --> 00:21:38,950
-on the full name variable by typing dot
+методы, напечатав точку
 
 489
 00:21:38,950 --> 00:21:40,310
-to get perhaps the length.
+например, чтобы узнать длину строки
 
 490
 00:21:41,768 --> 00:21:43,792
-This will provide us the length here.
+Так мы получим длину строки
 
 491
 00:21:43,792 --> 00:21:46,130
-I'm gonna duplicate this
-line by pressing command D.
+Я скопирую эту строку с помощью
+хоткея cmd+D
 
 492
 00:21:46,130 --> 00:21:50,630
-I can also get the actual characters
+Можно получить все символы строки
 
 493
 00:21:50,630 --> 00:21:53,690
-which are gonna provide us
-a extreme of characters.
+которые мы получим в виде
+набора символов
 
 494
 00:21:53,690 --> 00:21:55,730
-I can do a whole bunch
-of different other things
+Можно использовать очень много
 
 495
 00:21:55,730 --> 00:21:57,300
-on-site of here as well.
+готовых функций
 
 496
 00:21:57,300 --> 00:22:00,060
-So for example, I can decapitalize it.
+например, я могу привести к
+строчному виду первый символ строки
 
 497
 00:22:00,060 --> 00:22:01,880
-So let's do decapitalize.
+Давайте приведем к строчному виду
 
 498
 00:22:01,880 --> 00:22:06,250
-And if I were to run these,
-we're gonna see that we have
+и запустим программу,
+снизу мы увидим
 
 499
 00:22:06,250 --> 00:22:11,250
-Donn Felker and then decapitalize
-was decapitalizing this,
+"donn Felker" - наша строка
+в строчном виде
 
 500
 00:22:11,350 --> 00:22:14,820
-if this was a sentence, so
-I could say, hello world.
+Если мы будем работать с предложением,
+допустим строкой "Hello World"
 
 501
 00:22:15,860 --> 00:22:18,220
-If I were to run it again,
-we can see that the sentence
+если я снова запущу
+программу, мы увидим
 
 502
 00:22:18,220 --> 00:22:20,450
-Hello world is decapitalized
-by decapitalizing
+что первый символ новой строки
 
 503
 00:22:20,450 --> 00:22:21,740
-the first letter.
+будет строчным
 
 504
 00:22:21,740 --> 00:22:24,060
-If I realized I wanted
-everything to be lowercase,
+Если я захочу, чтобы вся строка
+была в нижнем регистре
 
 505
 00:22:24,060 --> 00:22:27,730
-let's say two lower case
-and I could say run,
+анпишем toLowercase
+и запустим программу
 
 506
 00:22:27,730 --> 00:22:30,280
-and then that would actually
-allow me to create this
+и это позволяет сделать все символы
 
 507
 00:22:30,280 --> 00:22:31,910
-as all lowercase.
+строки в строчном виде
 
 508
 00:22:31,910 --> 00:22:36,910
-Strings are built inside of
-Kotlin with double quotes.
+Строки в котлине можно создавать
+используя две кавычки
 
 509
 00:22:38,780 --> 00:22:41,320
-So we could just say, first name is Don,
+Мы можем написать firastName "Donn"
 
 510
 00:22:41,320 --> 00:22:42,153
-and that's a double quote.
+обязательно через две кавычки
 
 511
 00:22:42,153 --> 00:22:43,060
-There's also another type.
+Есть еще один тип, когда
 
 512
 00:22:43,060 --> 00:22:45,480
-Anytime we're working
-with like characters,
+мы хотим работать с единичными
+символами
 
 513
 00:22:45,480 --> 00:22:47,900
-we can then use what's known as a char.
+мы можем использовать тип Char
+(character - символ)
 
 514
 00:22:47,900 --> 00:22:51,000
-So I could say file C
+Я напишу "val c"
+с типом Char
 
 515
 00:22:51,000 --> 00:22:54,330
-and that could be of type char equals X.
+и присвою ему значение X
 
 516
 00:22:55,700 --> 00:22:57,850
-Hold on a second, here's the weird thing.
+Стоп, что-то идет не так
 
 517
 00:22:58,710 --> 00:23:01,450
-It's only a single character,
-why is it complaining?
+Почему ругается компилятор?
 
 518
 00:23:01,450 --> 00:23:04,670
-That's because in Kotlin, if
-you want to define a character,
+Все потому что, если в Котлине
+вы хотите объявить символ
 
 519
 00:23:04,670 --> 00:23:07,880
-you have to define it
-with single tick quotes.
+Вам нужно использовать литерал
+одинарных ковычек (апострофоф)
 
 520
 00:23:07,880 --> 00:23:11,550
-So single quotes allows
-you to implement a char,
+Апострофы дают возможность создать
 
 521
 00:23:11,550 --> 00:23:13,810
-which has a single
-character representation.
+символьные объекты
 
 522
 00:23:15,170 --> 00:23:18,940
-Now, there are some things
-that are some caveats to this.
+Тут есть небольшой подвох
 
 523
 00:23:18,940 --> 00:23:22,930
-So there's also characters
-such as the tab character
+Символы бывают разными, например
+символ Tab отступа
 
 524
 00:23:22,930 --> 00:23:25,060
-that you have to escape with a slash T,
+для того чтобы его создать
+нужно указать символ "\" перед "t"
 
 525
 00:23:25,060 --> 00:23:27,221
-there's the end for the new line
+есть еще перенос строки '\n'
 
 526
 00:23:27,221 --> 00:23:29,850
-and of course the double
-slash for backslash
+и, конечно, если вы хотите создать
+символ "\", вам нужно написать '\\'
 
 527
 00:23:29,850 --> 00:23:31,670
-and various other
-different types of escapes
+в Котлине есть еще много специальных
+символов, которые вы
 
 528
 00:23:31,670 --> 00:23:33,750
-that you're going to try to do.
+можете найти самостоятельно.
 
 529
 00:23:33,750 --> 00:23:38,650
-In Kotlin, a char represents
-a 16 bit unicode character.
+В котлине тип Char это
+16-ти битный юникод символ
 
 530
 00:23:39,710 --> 00:23:43,272
-So anytime you need to
-use a single character,
+Поэтому каждый раз, когда
+вам понадобится символ
 
 531
 00:23:43,272 --> 00:23:44,750
-you're going to wanna use char.
+спокойно используйте тип Char
 
 532
 00:23:44,750 --> 00:23:46,800
-Now this doesn't limit you from also using
+Но ничего вам не межает использовать
 
 533
 00:23:46,800 --> 00:23:49,140
-a single character string if you would to.
+строковый тип с одним символом
 
 534
 00:23:52,695 --> 00:23:54,395
-You could say string foo equals Y,
+Можем написать переменную "foo"
+с типом String и написать, что
 
 535
 00:23:55,540 --> 00:23:56,410
-and this would still work.
+это равно "Y" и это
+будет работать
 
 536
 00:23:56,410 --> 00:23:59,360
-You could still work
-with a value of string.
+В этом случае вы будете работать
+с типом String
 
 537
 00:23:59,360 --> 00:24:01,890
-However, a string is going
-to be larger in memory,
+Единственная разнича, что
+строка в памяти будет занимать
 
 538
 00:24:03,010 --> 00:24:04,450
-than a character.
+больше места, чем "Char"
 
 539
 00:24:04,450 --> 00:24:06,100
-But you could still use a
-string if you'd like to.
+Но вряд ли это на что-то сильно повлияет
+и вы можете работать со строкой
 
 540
 00:24:06,100 --> 00:24:08,821
-However, if you know that
-you're only going to be working
+Однако, если вы точно знаете, что
+у переменной будет только один
 
 541
 00:24:08,821 --> 00:24:11,150
-with single characters, then
-you would use the char type.
+символ, то лучше работать
+с типом Char
 
 542
 00:24:13,030 --> 00:24:13,863
-Sometimes when you're
-declaring your strings,
+Иногда, при создании строки,
+вам нужно написать ее в
 
 543
 00:24:13,863 --> 00:24:17,120
-you need to declare
-them in multiple lines.
+несколько строк
 
 544
 00:24:17,120 --> 00:24:19,180
-So I might say, I have a message here
+Наприме, если у нас есть
+переменная "message"
 
 545
 00:24:19,180 --> 00:24:21,700
-and this message would be hello,
+и значение у нее будет "Hello"
 
 546
 00:24:21,700 --> 00:24:22,920
-I put a new line here.
+символ переноса строки
 
 547
 00:24:25,118 --> 00:24:27,550
-My name is Donn Felker, how are you?
+"меня зову Донн Фэлкер"
+символ новой строки
 
 548
 00:24:29,217 --> 00:24:30,360
-Then I would print this to the screen.
+"как ваши дела" и выведу это
+на экран
 
 549
 00:24:31,660 --> 00:24:34,310
-And then once it's ran would
-see a nice little message here,
+И когда я запущу,
+я увижу все свое сообщение
 
 550
 00:24:34,310 --> 00:24:36,510
-Hello, my name's Donn Felker, how are you?
+на нескольких строках
 
 551
 00:24:36,510 --> 00:24:39,240
-However, sometimes this gets kind of ugly
+Но выглядит это очень убого
 
 552
 00:24:39,240 --> 00:24:41,480
-and there is actually a better
-way to do this in Kotlin,
+В Котлине есть способ для
+таких случаев
 
 553
 00:24:41,480 --> 00:24:43,880
-and you can actually use
-the triple quotes here.
+можно использовать три
+ковычки подряд
 
 554
 00:24:45,006 --> 00:24:49,493
-You can say, hello, my name
-is Donn Felker, how are you.
+Перепишем наш текст и уберем
+символы переносы строки
 
 555
 00:24:50,853 --> 00:24:52,260
-And then I'm just gonna run this again.
+и снова запустим программу
 
 556
 00:24:54,040 --> 00:24:55,910
-And I'm using the shortcut key to run it,
+Я для запуска использую шорткат
 
 557
 00:24:55,910 --> 00:24:59,520
-which if you see here is
-actually just going to be
+который можно посмотреть здесь.
+Это шорткат
 
 558
 00:24:59,520 --> 00:25:01,540
-a control+shift R on a Mac
+control+shift+R на Маке
 
 559
 00:25:03,004 --> 00:25:05,075
-and you notice the same
-thing came out here.
+В окне вывода можно увидеть,
+что результат тот же самый
 
 560
 00:25:05,075 --> 00:25:05,908
-Hello, my name is Donn Felker.
+"Hello, my name is Donn Felker."
 
 561
 00:25:05,908 --> 00:25:06,741
-But what does this trim indenting?
+Но что значит trimIndent
 
 562
 00:25:06,741 --> 00:25:07,960
-What is going on here?
+Что тут происходит
 
 563
 00:25:07,960 --> 00:25:11,290
-This is basically a
-rostering triple quoted
+Наш текст форматируется так же как
+он записывается в тройные кавычки
 
 564
 00:25:11,290 --> 00:25:14,068
-and then we have the
-trim and dent function,
+функция trimIndent просто затирает
+ненужные пробелы
 
 565
 00:25:14,068 --> 00:25:14,970
-which basically, if we look at it,
+Мы можем посмотреть
+документацию функции
 
 566
 00:25:14,970 --> 00:25:18,470
-does it detect the minimal
-indentation of the input lines
+trimIndent затирает отступы
+в каждой строке
 
 567
 00:25:18,470 --> 00:25:20,520
-and removes it from every line.
+вашего предложения
 
 568
 00:25:20,520 --> 00:25:23,390
-So if I remove this line, what
-you're gonna see down here
+Если мы уберем этот метод
+мы увидим что
 
 569
 00:25:23,390 --> 00:25:26,130
-is this is actually going to be indented.
+появилось много ненужных отступов
 
 570
 00:25:26,130 --> 00:25:27,280
-It's actually gonna have a new line,
+Строка наша начнется с символа новой строки
 
 571
 00:25:27,280 --> 00:25:29,440
-and then it's gonna be indented.
+и каждая отдельная строка
+будет иметь большой отступ
 
 572
 00:25:29,440 --> 00:25:32,118
-So let's watch this, we'll run this again.
+Запустим и проверим
 
 573
 00:25:32,118 --> 00:25:32,951
-And you can see there's a line above
+Вот наш перенос строки
 
 574
 00:25:32,951 --> 00:25:34,490
-and it's all been indented.
+и везде появились отступы
 
 575
 00:25:34,490 --> 00:25:38,240
-So if I put the trim indent
-back, what it basically is doing
+Вернем наш метод обратно, чтобы
 
 576
 00:25:38,240 --> 00:25:42,970
-is removing all of this and
-the new line that's up here.
+убрать переносы и лишние отступы
 
 577
 00:25:42,970 --> 00:25:46,340
-I'll rerun it and it
-shoves it back in there.
+Я перезапушу программу, чтобы
+вернуть все назад
 
 578
 00:25:46,340 --> 00:25:49,920
-Now I can also do something
-called replace indent.
+Теперь посмотрим на функцию
+replaceIndent
 
 579
 00:25:49,920 --> 00:25:52,160
-Like, for example, if I
-know that maybe I'm building
+Если напрмер я хочу самомстоятельно
+заменить отступы в
 
 580
 00:25:52,160 --> 00:25:55,020
-some string and I'm kind of
-building this stuff up manually,
+строке, но не хочу их убирать,
+а хочу подставить что-то другое
 
 581
 00:25:55,020 --> 00:25:57,700
-I can replace that indent with something
+а хочу подставить что-то другое
 
 582
 00:25:57,700 --> 00:26:02,700
-that looks like ABC, and
-some, maybe a pipe symbol
+например строку "abc" и символ
+вертикальной черточки
 
 583
 00:26:03,710 --> 00:26:05,210
-or whatever like that.
+или что-то другое
 
 584
 00:26:05,210 --> 00:26:07,770
-And if I run this, it'll
-replace that indent,
+Если я запущу это, программа
+заменит отступы
 
 585
 00:26:07,770 --> 00:26:11,160
-which was all those things
-with these on each line.
+в каждой строке на то что
+я ей сказал
 
 586
 00:26:11,160 --> 00:26:15,390
-So ABC hyphen pipe, hyphen,
-which is kind of cool.
+выглядит очень круто
 
 587
 00:26:15,390 --> 00:26:17,890
-So if I'm building something,
-I can actually kind of provide
+Еще это форматирование
+можно регулировать
 
 588
 00:26:17,890 --> 00:26:20,760
-these pre formatted things there.
+с помощью метода
 
 589
 00:26:20,760 --> 00:26:25,760
-I can also say my trim margin
-and I can provide a prefix.
+trimMargin. напишем наш метод
+и укажем какой-нибудь префикс
 
 590
 00:26:27,310 --> 00:26:29,740
-So maybe I've decided that I already know
+Например я хочу чтобы в тексте
 
 591
 00:26:29,740 --> 00:26:33,590
-that I just want that prefix
-to be these three arrows.
+форматировались только строки у
+которых в начале три стрелочки ">>>"
 
 592
 00:26:33,590 --> 00:26:37,600
-So I'll run that and it
-will run and it says,
+Если я запущу программу со строкой
+в таком виде, то мы уидим
 
 593
 00:26:37,600 --> 00:26:39,160
-"All right, well, I didn't trim anything
+что программа не нашла нашего префикса
 
 594
 00:26:39,160 --> 00:26:40,540
-"'cause I didn't find these three arrows."
+поэтому ничего не меняла
 
 595
 00:26:40,540 --> 00:26:43,550
-So what this means is these three arrows
+Это значит, что для этой функции
 
 596
 00:26:43,550 --> 00:26:44,383
-would need to be right here.
+в строке должны быть стрелочки
 
 597
 00:26:44,383 --> 00:26:45,216
-Let's say for whatever reason,
+Допустим эти стрелочки
 
 598
 00:26:45,216 --> 00:26:46,870
-that string had these three arrows.
+появились, добавим их везде
 
 599
 00:26:49,279 --> 00:26:50,540
-We'll run that and there we go.
+И если теперь это запустим
 
 600
 00:26:50,540 --> 00:26:51,890
-Now it's not gonna print those.
+мы увидим, что все три строки
+теперь без отступов
 
 601
 00:26:51,890 --> 00:26:55,670
-If I remove this, we'll
-actually see a print
+Если мы уберем значение
+префикса из функции
 
 602
 00:26:56,917 --> 00:26:59,020
-with those three arrows
-and this area here.
+то эти стрелочки появятся в
+выводе вместе с отступами
 
 603
 00:26:59,020 --> 00:27:03,450
-Now by default, trim
-margin has default itself
+У метода trimmargin
+есть значение по дефолту
 
 604
 00:27:03,450 --> 00:27:07,960
-to pipes, which means I
-could set this to a pipe.
+это символ вертикальной черты "|"
 
 605
 00:27:09,830 --> 00:27:13,480
-I could run that and there we go,
+Я допишу символы и запущу программу
 
 606
 00:27:13,480 --> 00:27:15,320
-it's just gonna replace
-those pipes by default
+Функция нашла строки с вертикальной
+чертой и убрала все отступы
 
 607
 00:27:15,320 --> 00:27:16,860
-it checks for pipes.
+и саму черту
 
 608
 00:27:16,860 --> 00:27:19,470
-So you can do a nice string here,
+Вот таким образом можно делать
 
 609
 00:27:19,470 --> 00:27:21,570
-multi-line string with triple quotes.
+многострочные предложение
 
 610
 00:27:21,570 --> 00:27:24,430
-Another thing you can do is
-let's assume that you have
+Еще одна интересная штуковина:
+допустим, у нас есть
 
 611
 00:27:24,430 --> 00:27:26,650
-a name and we'll just call it Don.
+переменная "name" со значением "Donn"
 
 612
 00:27:26,650 --> 00:27:29,470
-And sometimes you want to print
-a message like we have here.
+Иногда, у вас может возникнуть
+необходимость вывести
 
 613
 00:27:29,470 --> 00:27:30,610
-Let's print this message, Don.
+сообщение в консоль таким образом:
 
 614
 00:27:30,610 --> 00:27:32,460
-Let's say, we wanna say hello to Don.
+представьте, что мы хотим поприветствовать
+человека и написать "Hello Donn"
 
 615
 00:27:33,414 --> 00:27:35,760
-We'll say hello traditionally
-in most languages,
+Мы сделаем это с помощью
+конкатенации строк
 
 616
 00:27:35,760 --> 00:27:38,980
-you just do string
-concatenation, which works fine.
+это самый стандартный метод
+для многих языков и он рабочий
 
 617
 00:27:39,920 --> 00:27:42,581
-We'll hit Enter and it says, hello Don.
+Запустим и увидим в консоли
+"Hello Donn"
 
 618
 00:27:42,581 --> 00:27:43,414
-Now it works fine.
+Все работает как должно
 
 619
 00:27:43,414 --> 00:27:45,050
-Now notice something, there's
-a little squiggly here.
+Но обратите внимание, что
+копилятор подчеркнул нашу строку
 
 620
 00:27:45,050 --> 00:27:47,260
-It says convert concatenation to template.
+В подсказке он предлагает
+перевести конкатенацию в шаблон
 
 621
 00:27:47,260 --> 00:27:49,510
-So you can actually use
-string interpolation
+В Котлине вы можете соединять
+строки без конкатенации,
 
 622
 00:27:49,510 --> 00:27:50,920
-in two templates.
+а с помощью шаблонов
 
 623
 00:27:50,920 --> 00:27:54,060
-So I hit alt enter there
-and it gave me this pop up
+На подсвеченной строке нажмем alt+enter
+и возникнет подсказка
 
 624
 00:27:54,060 --> 00:27:55,970
-and I hit enter again and automatically
+выберем первый пункт и
 
 625
 00:27:55,970 --> 00:27:57,540
-converted this code for me.
+компилятор сам исправит наш код
 
 626
 00:27:57,540 --> 00:27:59,290
-And this does the same exact thing.
+И новый код делает
+ровно ту же вещь
 
 627
 00:28:00,596 --> 00:28:03,130
-And now what this does is
-actually prints Hello Don.
+С единственным исключением
+что в коде это
 
 628
 00:28:03,130 --> 00:28:04,730
-So it's actually one big string.
+выглядит как одна строка
 
 629
 00:28:05,820 --> 00:28:08,290
-And then we could actually
-have one here to say age,
+Добавим еще возраст
 
 630
 00:28:08,290 --> 00:28:09,460
-and we'll just say 32.
+допустим 32
 
 631
 00:28:10,957 --> 00:28:12,410
-And it would say, hello, hello Don,
+И скажем "Приввет имя, твой возраст"
 
 632
 00:28:12,410 --> 00:28:15,948
-it'll name, your age is and
-we put this thing in here
+и добавим age переменную
+в конце
 
 633
 00:28:15,948 --> 00:28:19,650
-to age and it would print
-the age inside of here.
+И теперь возраст тоже выведется
+в этой строке.
 
 634
 00:28:20,780 --> 00:28:23,416
-And now one other thing
-that we can also do
+Еще одна интересная вещь,
+которую мы можем
 
 635
 00:28:23,416 --> 00:28:25,030
-that's cool inside of these things
+делать через шаблоны -
 
 636
 00:28:25,030 --> 00:28:25,863
-is say something like this.
+напишем в таком виде
 
 637
 00:28:25,863 --> 00:28:30,860
-So hello name, your age
-is, and your name is,
+Привет, дальше имя, возраст
+и добавим "длина твоего имени"
 
 638
 00:28:31,890 --> 00:28:33,430
-we would say dollar sign.
+поставим знак доллара
 
 639
 00:28:34,780 --> 00:28:37,100
-We put open curly braces
-'cause now I need to call
+откроем фигурные скобки и
+у переменной вызовем функцию
 
 640
 00:28:37,100 --> 00:28:39,420
-a property or method
-and that's a name dot.
+через точку, чтобы вывести длину
+переменной
 
 641
 00:28:40,910 --> 00:28:42,240
-So name.length.
+получится ${name.length}
 
 642
 00:28:43,450 --> 00:28:44,283
-And that's what this says is it would say,
+И теперь в консоль выведется
 
 643
 00:28:44,283 --> 00:28:46,520
-Hello, Don, your age is 32
+Привет Дон, тебе 32 года
 
 644
 00:28:46,520 --> 00:28:51,520
-and your name is what,
-before care actors log.
+и твое имя такой-то длинны
 
 645
 00:28:52,630 --> 00:28:53,530
-So let's run that.
+запустим этот код
 
 646
 00:28:55,530 --> 00:28:57,540
-So hello, Don, you're age 32 and your name
+Привет Дон, тебе 32 года и твое имя
 
 647
 00:28:57,540 --> 00:28:58,490
-is four characters long.
+длинной 4 символа
 
 648
 00:28:58,490 --> 00:29:03,330
-So now instead of using a
-very complicated replacement
+Таким образом вместо сложной
+конкатенации строк
 
 649
 00:29:03,330 --> 00:29:04,700
-or anything else like that,
+можно просто
 
 650
 00:29:04,700 --> 00:29:07,390
-I can use a string interpolation
+использовать интерполяцию строк
 
 651
 00:29:07,390 --> 00:29:08,870
-and interpolate these variables.
+и шаблонами передавать значения
 
 652
 00:29:08,870 --> 00:29:11,470
-If you're not going to be
-calling into the object graph
+Если вы не вызываете методов
+то можно просто писать знак доллара
 
 653
 00:29:11,470 --> 00:29:14,660
-at all, so you're not
-doing this dot anything.
+а методы нужно оборачивать в
+фигурные скобки
 
 654
 00:29:14,660 --> 00:29:17,550
-Then you can just call
-dollar sign variable name.
+В любом случае компилятор
 
 655
 00:29:17,550 --> 00:29:21,120
-Otherwise you need to do dollar
-sign, open curly bracket,
+и IDE подскажет вам, если что-то
+лишнее или чего-то не хватает
 
 656
 00:29:21,120 --> 00:29:23,260
-put your code and your
-expression inside here
+так вы можете писать код прямо в строку
 
 657
 00:29:23,260 --> 00:29:25,440
-and close curly bracket and that's it.
+и оборачивать его в фигурные скобки
 
 658
 00:29:26,430 --> 00:29:29,890
