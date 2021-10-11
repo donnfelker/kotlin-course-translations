@@ -2953,1095 +2953,1086 @@ trimMargin. напишем наш метод
 
 658
 00:29:26,430 --> 00:29:29,890
-Last, but certainly not
-least is the Boolean value.
+И последний важный тип - Boolean
 
 659
 00:29:29,890 --> 00:29:31,720
-And we could specify one like this.
+Мы можем объявить его
+следующим образом
 
 660
 00:29:31,720 --> 00:29:33,150
-So we could say is blank.
+Создадим переменную isBlank
 
 661
 00:29:34,298 --> 00:29:37,040
-It would provide us a
-truer val false value,
+с типом Boolean, переменная будет
+обозначать "правда" или "ложь"
 
 662
 00:29:37,040 --> 00:29:39,960
-and we'll just initialize it to false.
+присвоим ей "false" значение
 
 663
 00:29:39,960 --> 00:29:42,480
-And so this just basically has two options
+И у этого типа есть всего
+два варианта
 
 664
 00:29:42,480 --> 00:29:44,780
-and that's true or false when
-we go to the implementation.
+он может быть либо true, либо false.
+Посмотрим на реализацию этого типа
 
 665
 00:29:44,780 --> 00:29:47,300
-Again, everything in Kotlin is an object.
+Мы опять видим что это объект
 
 666
 00:29:47,300 --> 00:29:49,280
-And so there's some other
-built-in operators here.
+И в нем есть встроенные
+методы операторы, например "not()"
 
 667
 00:29:49,280 --> 00:29:52,020
-So we can do the inverse of that.
+С помощью него можно
+инвертировать значение
 
 668
 00:29:52,020 --> 00:29:55,350
-So if we wanted to know, for
-example, let's just print this.
+Если мы хотим узнать...
+Давайте я сразу напишу
 
 669
 00:29:55,350 --> 00:30:00,350
-Print ln is blank and then we
-can just do print ln is blank,
+вызовем println и вставим переменную
 
 670
 00:30:03,410 --> 00:30:05,860
-and then not, and this will
-print the inverse of it.
+и напишем то же самое, но укажем
+в конце "not()", чтобы инвертировать
 
 671
 00:30:05,860 --> 00:30:09,110
-If we run it again, we see
-here in our output window,
+Если мы запустим сейчас этот код
+в выводе мы увиди
 
 672
 00:30:09,110 --> 00:30:11,120
-of course we had false
-and then we have true.
+в первую очередь - оригинальное
+значение "false" и инверсию "true"
 
 673
 00:30:11,120 --> 00:30:13,450
-So we initialize it to
-false and then true.
+Мы инициализировали переменную
+как false, а оператор инверсии
 
 674
 00:30:13,450 --> 00:30:16,910
-We can also initialize it, of
-course, using other variables,
+вернул true
+Также мы можем проинициализировать
 
 675
 00:30:16,910 --> 00:30:20,430
-such as a string, so it will say is blank.
+тип Boolean с помощью пустой строки
+и вызвать на ней метод isBlank()
 
 676
 00:30:21,800 --> 00:30:22,760
-And then we can use a string.
+Напишем пустую строку
 
 677
 00:30:22,760 --> 00:30:26,950
-So we go blank, that is blank.
+и вызовем метод
 
 678
 00:30:26,950 --> 00:30:29,440
-So function is blank on a string.
+Функция isBlank у строки проверяет
 
 679
 00:30:29,440 --> 00:30:31,430
-So this is a char sequence
-function that checks
+длину последовательности символов
 
 680
 00:30:31,430 --> 00:30:36,110
-to see if they link the zero
-and return the Boolean value.
+и возвращает нам тип Boolean
+в зависимости от того,
 
 681
 00:30:36,110 --> 00:30:38,320
-And if it's zero, then
-it's going to return true.
+пустая она или нет
+если пустая, то вернет true
 
 682
 00:30:38,320 --> 00:30:40,010
-So we can print this off here.
+теперь мы можем вывести результат тут
 
 683
 00:30:40,010 --> 00:30:44,440
-I'm just gonna copy this and
-then we could see the value
+я просто скопирую код
+и мы сможем увидеть
 
 684
 00:30:44,440 --> 00:30:45,380
-true or false.
+результат true или false
 
 685
 00:30:47,480 --> 00:30:50,220
-So we'll run this and of
-course it's blank of course.
+Запустим программу,
+очевидно что наша строка пустая
 
 686
 00:30:50,220 --> 00:30:53,970
-If we change this to two first name, Don,
+Если я поменяю пустую строку на имя
 
 687
 00:30:53,970 --> 00:30:55,940
-and we run it, it's gonna end up false.
+и запущу, то результат будет false
 
 688
 00:30:56,807 --> 00:30:58,480
-Then it will say false, of
-course we did the inverse,
+единственный true вывод это
+результат действия
 
 689
 00:30:58,480 --> 00:30:59,610
-which is not.
+оператора "not"
 
 690
 00:30:59,610 --> 00:31:02,500
-And there's many other
-functions on this Kotlin object
+У класса Boolean есть еще
+несколько методов
 
 691
 00:31:02,500 --> 00:31:05,330
-that you can also inspect that you can do,
+которые вы можете
+посмотреть самостоятельно
 
 692
 00:31:05,330 --> 00:31:08,150
-which is gonna be or, X or et cetera
+в основном это логически "и", "или",
+"xor" и т.д.
 
 693
 00:31:08,150 --> 00:31:09,510
-and a bunch of other ones inside there.
+И еще разные другие
 
 694
 00:31:09,510 --> 00:31:10,970
-You can check them out by navigating
+Вы можете их посмотреть, нажав
+cmd+клик на типе Boolean
 
 695
 00:31:10,970 --> 00:31:13,600
-to the Boolean section there.
+или ctrl+клик на Windows
 
 696
 00:31:13,600 --> 00:31:16,310
-But if you need something that
-represents a true or false
+Если вам нужна переменная, которая
+имеет два состояния "ложь" или "правда"
 
 697
 00:31:16,310 --> 00:31:18,340
-condition, you'll want to use Boolean.
+то вам нужно использовать тип Boolean
 
 698
 00:31:19,310 --> 00:31:21,630
-Working with conditionals
-is a very common thing
+Работа с такими условными типами
+это очень частая вещь в языке Котлин
 
 699
 00:31:21,630 --> 00:31:23,224
-that you'll do in the Kotlin language.
+тип Boolean используется везде,
+где есть проверки на истинность
 
 700
 00:31:23,224 --> 00:31:26,040
-Let's assume that you're
-building an application
+Давайте представим, что вы работаете
+над приложением, которое
 
 701
 00:31:26,040 --> 00:31:28,580
-which will track your calories.
+отслеживает ваше дневное
+потребление калорий
 
 702
 00:31:28,580 --> 00:31:31,300
-And let's assume we
-start with 2,500 calories
+Допустим мы начинаем день с 2,500 калорий
 
 703
 00:31:31,300 --> 00:31:34,530
-and these would be the calories
-that we consumed already,
+и это калории, которые мы
+уже получили за день
 
 704
 00:31:34,530 --> 00:31:37,328
-or the user has consumed in their tracking
+точнее говоря, пользователь
+уже употребил 2500 калорий
 
 705
 00:31:37,328 --> 00:31:38,330
-for their diet purposes.
+и следит за своей нормой.
 
 706
 00:31:38,330 --> 00:31:40,410
-Now let's assume that we
-had a requirement that says,
+Допустим у нас есть условие, которое
+гласит, что если
 
 707
 00:31:40,410 --> 00:31:43,980
-if the calories that have
-been consumed are over 2000,
+пользователь употребил больше
+2000 калорий, то мы должны вывести
 
 708
 00:31:43,980 --> 00:31:47,300
-then we have to print
-a message to the viewer
+ему сообщение
 
 709
 00:31:47,300 --> 00:31:50,240
-or the end user to let them
-know that they've eaten enough,
+о том, что они уже употребили
+достаточно калорий на сегодня
 
 710
 00:31:50,240 --> 00:31:52,740
-they've consumed all of
-their calories for a day.
+и нужно воздержаться.
 
 711
 00:31:55,260 --> 00:31:57,370
-So, here we have see that they've consumed
+Я добавил сообщение, которое
 
 712
 00:31:57,370 --> 00:31:58,260
-all their calories for a day.
+выведет это в консоль
 
 713
 00:31:58,260 --> 00:32:00,330
-Now, if we run this,
-you're gonna see down here
+Если мы запустим, то
+внизу мы увидим сообщение
 
 714
 00:32:00,330 --> 00:32:02,590
-in the bottom window that we can see
+что пользователь может
 
 715
 00:32:02,590 --> 00:32:04,630
-that they've consumed all
-their calories for the day
+больше ничего не употреблять
 
 716
 00:32:04,630 --> 00:32:06,190
-down here at the bottom.
+и наше условие выполнилось
 
 717
 00:32:06,190 --> 00:32:10,380
-Now, if we were to change
-this, let's say to 1900,
+Теперь, если мы изменим
+значение на 1900
 
 718
 00:32:10,380 --> 00:32:13,261
-we're gonna notice that
-the line of code here
+Мы увидим, что сообщение
+больше не выводится
 
 719
 00:32:13,261 --> 00:32:15,480
-on line four does not get
-run because the calories
+потому что мы не попали в условный
+блок и наше кол-во калорий
 
 720
 00:32:15,480 --> 00:32:18,160
-are less than 2000.
+меньше чем 2000.
 
 721
 00:32:18,160 --> 00:32:20,730
-So that means we're not
-gonna print this line.
+Если мы не попали в блок if
+то все что в нем написано не запустится
 
 722
 00:32:20,730 --> 00:32:25,050
-So let's say for some reason,
-we wanted to check to see.
+Давайте допустим, что мы хотим вывести
+что-то другое, если норма калорий
 
 723
 00:32:25,970 --> 00:32:28,240
-Otherwise, if they haven't eaten all 2000,
+не превысила желаемую
 
 724
 00:32:28,240 --> 00:32:29,930
-we can say something else like,
+для этого мы будем использовать
+блок else
 
 725
 00:32:29,930 --> 00:32:31,930
-okay, you still have some calories left.
+и напишем другой текст.
 
 726
 00:32:31,930 --> 00:32:33,080
-So I'll say print line.
+напишем println.
 
 727
 00:32:35,700 --> 00:32:36,970
-And if we were to run
-this, we would see now
+И если мы запустим код в таком
+виде, то увидим что вывелось второе
 
 728
 00:32:36,970 --> 00:32:39,950
-that you still have some calories left.
+сообщение, о том, что
+нужно добавить еще калорий
 
 729
 00:32:39,950 --> 00:32:42,080
-So we know that again,
-this is a conditional,
+Так выглядят условные if-else
+блоки
 
 730
 00:32:42,080 --> 00:32:44,967
-if conditional, and this
-is the else portion.
+Если условие после if выполняется,
+то мы выполним код в "if", а иначе - код из "else"
 
 731
 00:32:44,967 --> 00:32:48,080
-So if there are over
-2000 calories consumed,
+Если будет больше 2000 калорий
 
 732
 00:32:48,932 --> 00:32:50,200
-this line of code is gonna be printed.
+то мы попадем сюда
 
 733
 00:32:51,234 --> 00:32:53,445
-Otherwise, else we're going to print this.
+иначе - попадем в этот блок кода
 
 734
 00:32:53,445 --> 00:32:55,100
-So any other types of, if it
-does not match this condition,
+На это разветвление логики влияет
+условие в круглых скодках
 
 735
 00:32:55,100 --> 00:32:58,210
-so anything less than 2000
-is gonna show up here.
+И если калорий меньше 2000 мы попадем
+во второй блок
 
 736
 00:32:58,210 --> 00:33:03,000
-So we even just put this
-to 2001 and rerun this.
+Давайте вставим 2001 и перезапустим
 
 737
 00:33:03,000 --> 00:33:05,790
-You're gonna see that we have consumed
+увидим что мы вывели сообщение
+из первого блока
 
 738
 00:33:05,790 --> 00:33:07,390
-all of our calories for the day.
+и пользователю достаточно калорий.
 
 739
 00:33:08,476 --> 00:33:09,610
-Now let's assume that
-you're working with someone
+Теперь давайте допустим, что
+вы работаете с кем-то
 
 740
 00:33:09,610 --> 00:33:11,910
-and they decide, or you decide in your app
+и они решили, или вы решили, что в вашем
 
 741
 00:33:12,766 --> 00:33:15,110
-that you would like to make
-sure that if they've consumed
+приложении вам нужно убедиться, что
+пользователь
 
 742
 00:33:15,110 --> 00:33:18,320
-over 1500, then what you would like to do
+точно употребил больше 1500 калорий
 
 743
 00:33:19,200 --> 00:33:21,080
-is give them a little bit of motivation
+И вам нужно его мотивировать,
 
 744
 00:33:21,080 --> 00:33:23,100
-and to let them know they
-had a little bit of room
+если он еще не достиг
+этой цели и чтобы он
 
 745
 00:33:23,100 --> 00:33:25,170
-to have like a snack or something.
+еще взял чего-нибудь перекусить
 
 746
 00:33:25,170 --> 00:33:29,020
-And so you can say, if
-calories is less than,
+И вы можете написать:
+Если калорий меньше чем...
 
 747
 00:33:29,950 --> 00:33:33,800
-excuse me, is greater than 1500.
+простите, больше чем 1500
 
 748
 00:33:33,800 --> 00:33:37,781
-So here, perhaps it's a 2000.
+допустим сейчас их 2000.
 
 749
 00:33:37,781 --> 00:33:38,750
-So if the calories are greater than 1500,
+Итак, если их больше чем 1500
 
 750
 00:33:38,750 --> 00:33:42,020
-we can say print ln and say,
+напишем что нужно съесть
 
 751
 00:33:42,020 --> 00:33:45,820
-you have a few more calories left to eat.
+еще немного
 
 752
 00:33:46,860 --> 00:33:49,320
-And so if we run this again,
-what we're gonna see here
+И если мы сейчас запустим,
+мы увидим, что выводится
 
 753
 00:33:49,320 --> 00:33:50,520
-is still the top line.
+самое первое условие
 
 754
 00:33:50,520 --> 00:33:53,020
-You've consumed all your
-calories for the day.
+и пользователь употребил
+достаточно калорий
 
 755
 00:33:53,020 --> 00:33:54,380
-Let's go ahead and make an adjustment
+Теперь немного поменяем количество
+калорий
 
 756
 00:33:54,380 --> 00:33:58,460
-saying we've eaten 1750 and
-we were running our program
+пусть это будет 1750
+и перезапустим.
 
 757
 00:33:58,460 --> 00:34:00,080
-and the program would now say,
+теперь программа скажет
 
 758
 00:34:00,080 --> 00:34:01,960
-you have a few more calories to eat
+фразу из второго блока, о том
+что нужно еще поднажать.
 
 759
 00:34:02,808 --> 00:34:04,030
-as we can see down here in the bottom.
+Вот в выводе это написано
 
 760
 00:34:04,030 --> 00:34:08,120
-And then for some reason,
-we even set this to 1499,
+И если теперь поменяем значение
+на 1499
 
 761
 00:34:08,120 --> 00:34:10,520
-which means this condition will be false.
+оба наших условия будут false
 
 762
 00:34:10,520 --> 00:34:11,800
-And then it checks this condition,
+И программа провалится в последний
 
 763
 00:34:11,800 --> 00:34:13,010
-this condition will be false,
+блок кода и выполнит только его
 
 764
 00:34:13,010 --> 00:34:16,420
-which means anything in the
-else block without be printed.
+первые два условия не пройдут,
+останется только else, который
 
 765
 00:34:16,420 --> 00:34:19,750
-So let's run that and we
-can see that you still have
+выполнится, если ни одно из предыдущих
+не выполнилось.
 
 766
 00:34:19,750 --> 00:34:22,480
-some calories left, which is pretty cool.
+Перезапустим и увидим на деле.
 
 767
 00:34:22,480 --> 00:34:26,350
-So you can keep adding on these
-various different else, ifs.
+Вы можете строить такие цепочки
+из if, else if сколько угодно
 
 768
 00:34:26,350 --> 00:34:27,990
-So, if we wanted to add another one here,
+Давайте добавим еще одно условие
 
 769
 00:34:27,990 --> 00:34:30,450
-we can add another else, if as well.
+пусть это будет еще один else-if
 
 770
 00:34:30,450 --> 00:34:31,920
-And we could say something else,
+Представим, что есть еще рубеж,
 
 771
 00:34:31,920 --> 00:34:36,920
-like calories is greater
-than 1200 and perhaps
+например, в 1200 калорий
 
 772
 00:34:39,290 --> 00:34:41,790
-we just wanna give another
-message here like this.
+и добавим еще одно сообщение
+в этом случае
 
 773
 00:34:45,200 --> 00:34:48,070
-And then if you were to run
-this and you were to set this
+И запустим теперь с другим
+значением
 
 774
 00:34:48,070 --> 00:34:51,690
-at, let's say 1400, and
-we were to run this,
+например с 1400, и выводе
 
 775
 00:34:52,540 --> 00:34:54,140
-you could see down here at the bottom,
+внизу увидим
 
 776
 00:34:54,140 --> 00:34:56,670
-you have some room for snacks.
+наше новое сообщение.
 
 777
 00:34:56,670 --> 00:34:59,400
-So we can not keep adjusting
-this and play with this.
+Мы можем написать сколько
+угодно таких проверок.
 
 778
 00:34:59,400 --> 00:35:01,820
-And there's no limit to
-the amount of else ifs
+В Котлине нет предела на использование
+блоков else-if.
 
 779
 00:35:01,820 --> 00:35:03,400
-that you can throw in here.
+В Котлине нет предела на использование
+блоков else-if.
 
 780
 00:35:03,400 --> 00:35:05,510
-So if you have many conditions,
+Если у вас много условий
 
 781
 00:35:05,510 --> 00:35:09,220
-so if you only have one
-condition, it may just equate
+или у вас есть одно if else
+условия
 
 782
 00:35:09,220 --> 00:35:10,520
-to be something like this.
+например так
 
 783
 00:35:11,909 --> 00:35:13,260
-It's very simple, your if or else.
+самое простое if или else
 
 784
 00:35:13,260 --> 00:35:15,300
-You do not have to have an else either.
+Вам совсем необязательны все другие
+условия
 
 785
 00:35:15,300 --> 00:35:17,890
-If you don't wanna have
-an else and you just need
+И даже если вам else не нужен
 
 786
 00:35:19,193 --> 00:35:21,650
-to perform some type of
-action only if one value
+вы можете просто выполнить одну
+if провеку и если
 
 787
 00:35:21,650 --> 00:35:24,640
-is true here, then you
-go ahead and print this.
+условие будет true, то
+выведется этот текст
 
 788
 00:35:24,640 --> 00:35:26,540
-So else is not required.
+Это я к тому что использование
 
 789
 00:35:26,540 --> 00:35:29,190
-The else ifs are not
-required if you're using
+'else' и 'if else'
 
 790
 00:35:29,190 --> 00:35:30,720
-an if statement.
+необязательны в логических блоках.
 
 791
 00:35:30,720 --> 00:35:33,920
-So again, just an if statement
-or you continually add
+Повторим, у нас есть блок с 'if'
 
 792
 00:35:33,920 --> 00:35:37,540
-else ifs and we can continue
-to add these if we wanted to.
+и мы можем добалять сколько угодно
+'else if' блоков
 
 793
 00:35:37,540 --> 00:35:39,890
-So we could add another one here
+можем добавить еще один
 
 794
 00:35:39,890 --> 00:35:43,800
-and we could say, calories
-were greater than 1000,
+и например в нем будет проверка
+на 1000 калорий,
 
 795
 00:35:43,800 --> 00:35:48,800
-you can say, you have plenty
-of calories left, et cetera.
+можете написать другой текст
 
 796
 00:35:50,060 --> 00:35:54,640
-And as we go down, so again,
-if we were to go to 1100,
+И если по условию мы придем
+сюда, то выведется
 
 797
 00:35:54,640 --> 00:35:56,110
-that line would now print,
+эта строка о том
 
 798
 00:35:57,397 --> 00:35:58,230
-you have plenty of calories left.
+что еще много калорий нужно употребить
 
 799
 00:35:58,230 --> 00:36:02,080
-And if again, we dropped
-it down to let's say 800
+И снова, допустим у нас есть
+сейчас 800 калорий
 
 800
 00:36:02,080 --> 00:36:04,340
-and we ran it, which one
-you think would run here.
+и мы запустили программу
 
 801
 00:36:04,340 --> 00:36:06,774
-It's actually going to
-be the bottom one here
+то выведется нижнее сообщение
 
 802
 00:36:06,774 --> 00:36:09,260
-because the calories is
-not greater than 2000.
+потому что калорий не больше
+чем 2000
 
 803
 00:36:09,260 --> 00:36:12,350
-It's not greater than 1500,
-it's not greater than 1200,
+Не больше чем 1500,
+Не больше чем 1200,
 
 804
 00:36:12,350 --> 00:36:13,770
-it's not greater than 1000.
+Не больше чем 1000.
 
 805
 00:36:13,770 --> 00:36:16,690
-So therefore the final
-conditions going to run.
+Поэтому самое последнее условие
+будет выведено
 
 806
 00:36:16,690 --> 00:36:20,460
-And this is a very simple,
-if else conditional
+И это очень простая
+условная проверка
 
 807
 00:36:20,460 --> 00:36:21,293
-that you can use.
+которую вы можете использовать.
 
 808
 00:36:21,293 --> 00:36:23,380
-These are gonna be the most
-traditional type of if elses
+Такие типы проверок будут
+часто встречаться
 
 809
 00:36:23,380 --> 00:36:24,920
-that you see in your programs.
+в ваших программах.
 
 810
 00:36:24,920 --> 00:36:28,330
-In Kotlin, you can also
-omit the closing parentheses
+В Котлине вы можете в условных
+выражениях вообще не писать
 
 811
 00:36:28,330 --> 00:36:31,660
-and open parentheses of a
-condition if it's a one-liner.
+фигурных скобок и это будет
+выглядеть как однострочные условия
 
 812
 00:36:31,660 --> 00:36:34,550
-So let's say if the
-age is greater than 10,
+Допустим, если возраст больше
+10 то можно вывести
 
 813
 00:36:34,550 --> 00:36:39,110
-you can actually just write
-ln is greater than 10.
+текст, который будет об этом
+уведомлять
 
 814
 00:36:40,200 --> 00:36:43,630
-So let's go and change it
-actually two 11 and we run it.
+Давайте поменяем на 11
+и запустим программу
 
 815
 00:36:43,630 --> 00:36:45,460
-We're gonna see that the
-output in a window down here
+Мы увидем в выводе сообщение
+о том что
 
 816
 00:36:45,460 --> 00:36:46,960
-as the age is greater than 10.
+возраст больше чем 10.
 
 817
 00:36:48,376 --> 00:36:50,430
-Now, if for some reason
-we change this to nine,
+Если, по какой-то причине значение
+станет девяткой
 
 818
 00:36:50,430 --> 00:36:54,370
-notice how the steel yet
-we don't get an error,
+Заметьте, что никакой ошибки нет
 
 819
 00:36:54,370 --> 00:36:57,470
-but we don't see that the
-age is greater than 10
+но мы не видим теперь наш текст
 
 820
 00:36:57,470 --> 00:37:02,470
-because a single line statement
-can now just be printed
+Просто наше условие не выполняется
+но при этом
 
 821
 00:37:03,410 --> 00:37:04,280
-without parentheses.
+мы не пишем никаких фигурных скобок.
+Все тоже самое.
 
 822
 00:37:04,280 --> 00:37:06,750
-However, this should be often avoided
+Но постарайтесь избегать
+такой формы записи
 
 823
 00:37:06,750 --> 00:37:09,130
-as it can be confusing even if I divert
+Чем сложнее условие в "if"
+и операции, которые нужно сделать
 
 824
 00:37:09,130 --> 00:37:10,430
-to do something like this.
+если оно выполняется.
+Например мы напишем что-то вроде этого
 
 825
 00:37:12,102 --> 00:37:13,140
-It's hard just to type this.
+Напишем еще один вывод
 
 826
 00:37:14,415 --> 00:37:15,248
-Just basically upon the indentation,
+Основываясь на отступе, вам будет казаться
 
 827
 00:37:15,248 --> 00:37:17,300
-you would think that hello
-there would not be printed,
+что второй текст не будет выведен
 
 828
 00:37:17,300 --> 00:37:21,340
-but however, hello there is
-not part of the if condition.
+но на самом деле, второй текст
+уже не входит в if блок
 
 829
 00:37:21,340 --> 00:37:23,770
-The highlighted area you see here
+Подсвеченый код - это и есть
 
 830
 00:37:23,770 --> 00:37:25,170
-is part of the if condition.
+if условие, которое выполнится
 
 831
 00:37:26,717 --> 00:37:29,070
-This print line, hello there is not part
+Вторая часть в этот блок не входит
 
 832
 00:37:29,070 --> 00:37:31,130
-of the if condition.
+хотя выглядит идентично.
 
 833
 00:37:31,130 --> 00:37:33,230
-So if you know that you're
-gonna have code here,
+Поэтому если у вас есть код
+в несколько строчек
 
 834
 00:37:33,230 --> 00:37:34,300
-it can be very confusing.
+который должен выполнится по
 
 835
 00:37:34,300 --> 00:37:36,940
-So it's usually often
-better to just go ahead
+условию, то лучше явно указать
+фигурные скобки, чтобы
 
 836
 00:37:36,940 --> 00:37:40,350
-and provide the braces as
-it's much more readable.
+было явно видно, что будет
+выполнено, если выполнится условие
 
 837
 00:37:41,408 --> 00:37:42,241
-And when you're writing code,
+И когда вы пишите код, постарайтесь
 
 838
 00:37:42,241 --> 00:37:44,220
-you should be trying to write code
+писать его так, чтобы вы могли понять
 
 839
 00:37:44,220 --> 00:37:46,280
-that you can understand in the future.
+его через какое-то время
 
 840
 00:37:46,280 --> 00:37:49,250
-Now, one thing I did
-mention for a quick second
+Я заикался про однострочные
+условия, но так и не показал
 
 841
 00:37:49,250 --> 00:37:52,820
-was the word one-liner,
-or words one-liner.
+что это значин
 
 842
 00:37:52,820 --> 00:37:54,560
-What that means is you
-can actually put this all
+Это значит, что вы можете
+написать все if условие
 
 843
 00:37:54,560 --> 00:37:55,540
-in the same line here.
+на одной строке
 
 844
 00:37:55,540 --> 00:37:58,880
-Now, if I were to run this
-it'll compile and everything,
+Если мы запустим программу
 
 845
 00:37:58,880 --> 00:38:00,420
-and we'll just see the words, hello there.
+мы увидим, что условие не выполнилось
+и в консоли нет строки из if блоака
 
 846
 00:38:00,420 --> 00:38:02,290
-And that's because it'd be hello there,
+А вот "Hello there" вывелся, потому
 
 847
 00:38:02,290 --> 00:38:05,040
-that's because the age is
-nine and we're looking for age
+что он вне условия,
+а само услое не прошло, потому что
 
 848
 00:38:05,040 --> 00:38:06,090
-greater than 10.
+возраст должен быть больше 10
 
 849
 00:38:06,090 --> 00:38:08,180
-So let's change this to 11.
+Если поменяем на 11
 
 850
 00:38:08,180 --> 00:38:11,273
-And then if we were to run
-this, this single line of code
+и перезапустим, то однострочный
+if выполнится
 
 851
 00:38:11,273 --> 00:38:13,922
-is actually pretty easy to read.
+и такое выражение очень просто читается
 
 852
 00:38:13,922 --> 00:38:16,340
-So now, if you're just
-gonna write a single line,
+Итак, если мы пишем условие
+в одну строку
 
 853
 00:38:16,340 --> 00:38:20,360
-this is very readable and we
-know that this line below it,
+то это удобно читать и мы понимаем,
+что код снизу
 
 854
 00:38:20,360 --> 00:38:22,880
-hello there is not going to get executed.
+не будет зависеть от условия
 
 855
 00:38:22,880 --> 00:38:25,673
-So if you're just running a single line,
+Если вы пишете в таком формате
 
 856
 00:38:25,673 --> 00:38:27,210
-it's very often you'll see
-this and you can remove
+то фигурные скобки можно не писать,
+все просто и понятно
 
 857
 00:38:28,490 --> 00:38:30,050
-the brackets as I've done here.
+очень хороший и понятный код
 
 858
 00:38:30,050 --> 00:38:31,220
-And if again, we're gonna run this,
+Если я запущу, то обе
 
 859
 00:38:31,220 --> 00:38:33,365
-we're gonna see the two things here,
+строки выведутся в консоль
 
 860
 00:38:33,365 --> 00:38:35,790
-the age is grater than 10,
-you dropped this to nine
+Если поменяем возраст на девятку
 
 861
 00:38:35,790 --> 00:38:38,270
-and we're only gonna see
-the words hello there
+то увидим только вторую строку,
+она не входит
 
 862
 00:38:38,270 --> 00:38:40,490
-because if condition has not been met.
+в условие, а пожтому всегда
+выаодится
 
 863
 00:38:40,490 --> 00:38:43,448
-Now, you can also take
-this a step further.
+Можно еще немного усложнить
+и дописать это до 'if else' условия
 
 864
 00:38:43,448 --> 00:38:44,840
-If you know that your, if else condition
+Если вы понимаете, что ваше 'if else'
+условие будет достаточно коротким
 
 865
 00:38:44,840 --> 00:38:47,800
-might be very short, you
-can actually all do this
+то можно дописать else и опять же
+не ставить фигурные
 
 866
 00:38:47,800 --> 00:38:48,633
-on one line.
+скобки. И все делать в одну линию
 
 867
 00:38:48,633 --> 00:38:53,360
-So print line, and we could
-say the age is less than 10.
+Итак, выводим один текст, если возраст
+меньше 10
 
 868
 00:38:54,280 --> 00:38:56,440
-And so we can actually have
-the entire if else condition
+И все наше условное выражение будет
 
 869
 00:38:56,440 --> 00:38:57,880
-right here on a line.
+в одну строку
 
 870
 00:38:57,880 --> 00:39:00,270
-And it's very small,
-it's very easy to read.
+и оно хорошо читается.
 
 871
 00:39:00,270 --> 00:39:02,551
-And so if we're to run this again,
+Если запустим, то увидим
 
 872
 00:39:02,551 --> 00:39:04,230
-we're now going to see down at the bottom,
+Что вывелся текст для условия
 
 873
 00:39:04,230 --> 00:39:07,410
-the age is less than 10 and
-then the words, hello there.
+меньше 10 и наш нижний текст
 
 874
 00:39:07,410 --> 00:39:11,560
-If I change this to 17
-and we run it again,
+Поменяем возраст на 17
+и перезапустим
 
 875
 00:39:11,560 --> 00:39:14,962
-we're not gonna see that
-the age is greater than 10.
+Теперь увидим, что появился другой текст
 
 876
 00:39:14,962 --> 00:39:16,730
-And of course, we're still
-gonna see the words hello there,
+и все еще наш независимый
 
 877
 00:39:16,730 --> 00:39:19,170
-because it's printing its own statement.
+от условия текст снизу
 
 878
 00:39:19,170 --> 00:39:22,670
-So you can definitely
-create if else statements
+Вы можете спокойно писать такие выражения
 
 879
 00:39:22,670 --> 00:39:24,870
-on a single line and it's advice to do it
+если они короткие и их
 
 880
 00:39:24,870 --> 00:39:27,170
-only when there are a single line.
+будет просто читать
 
 881
 00:39:27,170 --> 00:39:29,550
-It's also good to mention
-if your else statement
+Стоит отметить, что если
+в однострочном 'if else'
 
 882
 00:39:29,550 --> 00:39:33,340
-becomes very, very long and
-you have to continually scroll,
+ваш текст уползает далеко
 
 883
 00:39:33,340 --> 00:39:34,850
-and there's just a lot of text over here.
+за пределы экрана.
 
 884
 00:39:34,850 --> 00:39:39,190
-So if I were to say, my
-content went way over here
+Допустим куда-то вот сюда
 
 885
 00:39:39,190 --> 00:39:42,960
-and in the editor, I had
-to kind of look over,
+и в эдиторе вам приходится скроллить,
 
 886
 00:39:42,960 --> 00:39:44,860
-you'll see this little gray line here.
+то в какой-то момент вы заметите
+серую вертикальную линию
 
 887
 00:39:46,026 --> 00:39:48,110
-This gray line is kind of
-the recommended line break.
+Эта линия обозначает рекомендуемую длину
+строки, за которую лучше не переходить.
 
 888
 00:39:48,110 --> 00:39:50,370
-So if you had a bunch of
-texts and I'm just gonna type
+И вот если у вас будет мнооого текста
 
 889
 00:39:50,370 --> 00:39:51,720
-a bunch of garbage in here.
+всякого разного
 
 890
 00:39:53,384 --> 00:39:54,560
-If I had this line and went beyond here,
+и ваша строка заполжет за эту линию
 
 891
 00:39:54,560 --> 00:39:58,150
-this recommended line is where
-your line breaks should be.
+то это индикатор того, что в вашей строке
 
 892
 00:39:58,150 --> 00:40:01,200
-So if it goes past that line,
-you should probably consider
+немного раньше этой линии
+должен быть перенос на новую строку
 
 893
 00:40:01,200 --> 00:40:05,590
-breaking this into a
-traditional if else statement,
+и ваш однострочный 'if else'
+лучше преобразовать в "традиционный"
 
 894
 00:40:05,590 --> 00:40:07,520
-which we can just put
-brackets there and the IDE
+'if else' с фигурными скобками.
 
 895
 00:40:07,520 --> 00:40:08,930
-will apply them for us.
+Так его будет
 
 896
 00:40:08,930 --> 00:40:10,660
-Now it's much easier to read.
+гораздо легче читать и понимать.
 
 897
 00:40:10,660 --> 00:40:13,610
-It doesn't require that I
-do any horizontal scrolling
+В таком случае вам и тем кто с вами
+работает не придется скроллить
 
 898
 00:40:13,610 --> 00:40:15,550
-and makes it easier to understand the code
+ваши условия и будет легче
+понять код
 
 899
 00:40:15,550 --> 00:40:17,160
-by just looking at it.
+просто посмотрев на него
 
 900
 00:40:17,160 --> 00:40:20,280
