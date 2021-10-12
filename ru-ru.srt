@@ -4618,442 +4618,425 @@ if выполнится
 
 1037
 00:46:10,460 --> 00:46:12,590
-In Kotlin, there are
-two types of equality,
+В котлине два вида вида
+сравния -
 
 1038
 00:46:12,590 --> 00:46:15,230
-structural and referential.
+по значению и по ссылке
 
 1039
 00:46:15,230 --> 00:46:17,810
-Let's assume that we
-have two string variables
+Допустим у нас есть две
+строковые переменные
 
 1040
 00:46:17,810 --> 00:46:20,970
-by the name of name one and name two,
+с именами nameOne и nameTwo
 
 1041
 00:46:20,970 --> 00:46:23,700
-both containing different strings.
+обе содержат разные строки
 
 1042
 00:46:23,700 --> 00:46:26,780
-We could compare them and
-see if they're the same
+мы можем сравнить их
 
 1043
 00:46:26,780 --> 00:46:30,650
-by using the structural
-equivalent operator,
+по значению используя
+оператор сравнения "=="
 
 1044
 00:46:30,650 --> 00:46:33,470
-which is the equals equal sign to say,
+Нельзя писать просто "=" потому что
+"=" это оператор присваивания
 
 1045
 00:46:33,470 --> 00:46:36,720
-"Hey, is name one equal to name two?"
+Тут мы проверяем равно
+ли nameOne и nameTwo
 
 1046
 00:46:36,720 --> 00:46:38,930
-And if we were to run
-this, it would output
+и если запустим, то в
 
 1047
 00:46:38,930 --> 00:46:41,550
-to the terminal window
-saying that it's false,
+терминале будет false
 
 1048
 00:46:41,550 --> 00:46:44,000
-that named one does not equal name two.
+и первое имя не равно второму
 
 1049
 00:46:44,840 --> 00:46:46,710
-Now this is very similar
-to other languages
+это реализовано, как и в других
+языках программироваия
 
 1050
 00:46:46,710 --> 00:46:50,490
-such as Java's equals method,
-which you can also use.
+напрмер в Java для этого используется
+метод equals()
 
 1051
 00:46:50,490 --> 00:46:52,150
-And you'll see this here.
+И это можно увидеть тут -
 
 1052
 00:46:52,150 --> 00:46:56,110
-And if we run this, we'll
-also get false here as well.
+если запусти, то результат тоже
+будет false
 
 1053
 00:46:56,110 --> 00:46:57,700
-Notice this squiggly line here.
+Заметьте что Котлин подчеркнул
+нашу такую запись
 
 1054
 00:46:57,700 --> 00:47:00,850
-If you put your cursor
-there and you hit alt enter,
+Можете навести курсор и нажать
+alt+enter
 
 1055
 00:47:00,850 --> 00:47:01,910
-you'll get a pop-up.
+появится окно
 
 1056
 00:47:01,910 --> 00:47:04,580
-Otherwise you can just click
-on the little light bulb
+Еще можно нажать на лампочку
 
 1057
 00:47:04,580 --> 00:47:07,030
-and say replace with equals equals.
+и нажать "заменить на "==""
 
 1058
 00:47:07,030 --> 00:47:10,140
-This is the more idiomatic
-way to do it in Kotlin.
+Использовать "==" вместо "equals"
+это синтаксический сахар Котлина
 
 1059
 00:47:10,140 --> 00:47:14,880
-So this says, hey, is name
-one equal to name two.
+Это условие проверяет равенство
+двух имен
 
 1060
 00:47:14,880 --> 00:47:18,100
-Now there's also, if
-we were to change this.
+Если мы поменяем второе имя
 
 1061
 00:47:18,100 --> 00:47:21,840
-So let's say that this was
-changed name two to Don.
+на аналогичное первому
 
 1062
 00:47:21,840 --> 00:47:23,620
-This would then evaluate the true
+условие превратится в true
 
 1063
 00:47:24,694 --> 00:47:27,050
-because the structure of
-the contents are the same.
+потому что контент двух строк одинаковый
 
 1064
 00:47:27,050 --> 00:47:29,230
-So they are the same types,
+и они одного типа..
 
 1065
 00:47:29,230 --> 00:47:31,010
-same types and the same contents.
+Одного типа и с одним и тем же
+содержимым
 
 1066
 00:47:32,137 --> 00:47:33,770
-So structural equality is true.
+поэтому равенство будет давать истину
 
 1067
 00:47:33,770 --> 00:47:36,020
-And so if we were turned this
-back to char, and we say,
+Вернем второе имя назад, допустим
+мы хотим проверить
 
 1068
 00:47:36,020 --> 00:47:37,870
-"Hey, I wanna see if these are different."
+что они разные
 
 1069
 00:47:37,870 --> 00:47:40,580
-We can use, what's known
-as structural inequality,
+для этого мы можем использовать
+оператор неравенства
 
 1070
 00:47:40,580 --> 00:47:44,431
-and that's going to be with
-the exclamation and equal sign.
+выглядеть он будет как отрицание
+равенства "!="
 
 1071
 00:47:44,431 --> 00:47:47,431
-Now, if we run this, we're going
-to see that we have a true,
+Если теперь запустим то получим true
 
 1072
 00:47:48,853 --> 00:47:50,100
-that Donn does not equal to char.
+потому что имена не равны
 
 1073
 00:47:50,100 --> 00:47:53,520
-Now, if I change the
-second one to Donn again,
+Если опять поменяем второе имя,
 
 1074
 00:47:54,936 --> 00:47:55,940
-what do we think is gonna happen here?
+то что получится теперь?
 
 1075
 00:47:55,940 --> 00:47:58,486
-Donn does not equal Don.
+"Donn" != "Donn"
 
 1076
 00:47:58,486 --> 00:47:59,870
-Well, that's gonna be
-false because these two
+ответ будет false
+потому что жти два
 
 1077
 00:47:59,870 --> 00:48:01,060
-are exactly the same.
+имени одинаковые.
 
 1078
 00:48:02,602 --> 00:48:06,940
-So that is the way that you
-can use structural equalities
+Таким образом можно проверять
+на равенство по значению
 
 1079
 00:48:06,940 --> 00:48:08,750
-inside of Kotlin.
+в языке Котлин
 
 1080
 00:48:08,750 --> 00:48:12,080
-You're going to get the first
-one, which is equals equals
+Вы будете использовать "=="
+при проверках равенства
 
 1081
 00:48:12,080 --> 00:48:14,744
-is the regular equal equality.
+значений
 
 1082
 00:48:14,744 --> 00:48:19,130
-And exclamation equals is inequality.
+И "!=" при проверке на неравенство.
 
 1083
 00:48:19,130 --> 00:48:20,890
-The other type of equality checking
+Еще один тип сравнения -
 
 1084
 00:48:20,890 --> 00:48:23,390
-is referential equalities.
+сравнение по ссылке.
 
 1085
 00:48:23,390 --> 00:48:26,740
-And we can determine those
-using a different operator.
+Для него используется другой оператор
 
 1086
 00:48:26,740 --> 00:48:30,360
-So let's assume that we have
-one variable that's equal to 12
+Допустим у нас есть переменна A со
+значением 12
 
 1087
 00:48:30,360 --> 00:48:34,760
-named A and another variable
-that's equal to 12 is B.
+И переменная B со значением 12
 
 1088
 00:48:35,987 --> 00:48:39,610
-And since every object,
-everything in Kotlin is an object,
+Из-за того что в Котлин все является
+объектами и при создании нового
 
 1089
 00:48:39,610 --> 00:48:42,920
-these, you would think
-would be different objects.
+двух объектов ссылки на них будут разными
+не смотря на то что они равны
 
 1090
 00:48:42,920 --> 00:48:46,840
-So if we were to run this, we're gonna use
+Для того чтобы сравнить по ссылкам
+будем использовать "==="
 
 1091
 00:48:46,840 --> 00:48:49,280
-referential equality with
-the three equal signs,
+чтобы проверить
 
 1092
 00:48:49,280 --> 00:48:51,080
-which is referential quality saying,
+равны ли ссылки на объект A
 
 1093
 00:48:52,055 --> 00:48:54,100
-hey is A equal to the same object as B,
+и объект B
 
 1094
 00:48:55,020 --> 00:48:55,960
-we were gonna get true.
+то мы получим результат true
 
 1095
 00:48:57,362 --> 00:48:59,870
-Which if you know about
-references and memory,
+И этот результат будет странным
+для тек кто понимает суть ссылок и памяти
 
 1096
 00:48:59,870 --> 00:49:01,760
-this was not making any sense,
+но в Котлине есть фишка -
 
 1097
 00:49:01,760 --> 00:49:04,360
-except there is a caveat in Kotlin
+числа, символы и boolean
 
 1098
 00:49:04,360 --> 00:49:07,770
-and that is number,
-characters and Boolean.
+в Котлине реализованны
 
 1099
 00:49:07,770 --> 00:49:12,770
-So numbers and Booleans,
-all have a special
+с помощью примитивных
 
 1100
 00:49:12,930 --> 00:49:14,550
-internal representation
+типов данных
 
 1101
 00:49:14,550 --> 00:49:17,330
-and they're represented
-as primitives at runtime.
+когда программа запущена
 
 1102
 00:49:17,330 --> 00:49:19,940
-But to users, they look
-like ordinary classes.
+Но для пользователей кажется
+что это объекты
 
 1103
 00:49:19,940 --> 00:49:23,680
-Therefore the triples equals
-is the same effective thing
+И для примитивных типов тройное
+равно работает
 
 1104
 00:49:23,680 --> 00:49:28,590
-as the double equals when
-we're using primitives.
+точно так же как двойное
 
 1105
 00:49:28,590 --> 00:49:31,680
-So let's get rid of these
-primitives here and let's go ahead
+Давайте избавимся от примитивных типов
 
 1106
 00:49:31,680 --> 00:49:33,110
-and we're gonna jump ahead real quick,
+И создадим наш
 
 1107
 00:49:33,110 --> 00:49:34,370
-and we're gonna create a class.
+первый класс
 
 1108
 00:49:34,370 --> 00:49:37,385
-And this is a very simple class
-with a user who has a name
+Это будет очень простой класс,
+он будет описывать пользователя
 
 1109
 00:49:37,385 --> 00:49:40,350
-that is a string.
+у которого есть имя
 
 1110
 00:49:40,350 --> 00:49:43,746
-And let's set person A equal two person,
+И поменяем переменные на этот класс
 
 1111
 00:49:43,746 --> 00:49:44,630
-and we'll give them the name of Don,
+Первый будет с имене Дон
 
 1112
 00:49:44,630 --> 00:49:48,090
-and then person B will also
-have the same name, Don.
+И второй пусть будет с именем Дон
 
 1113
 00:49:48,090 --> 00:49:51,600
-And then what we'll do
-is we'll do referential,
+И теперь мы проверим их
 
 1114
 00:49:51,600 --> 00:49:53,470
-a referral equality check here,
+на равенство по ссылке
 
 1115
 00:49:55,266 --> 00:49:57,730
-run the program to see if
-object A equals object B.
+запустим программу, чтобы проверить
 
 1116
 00:49:57,730 --> 00:50:00,510
-And as it runs down here, we have false,
+и увидим false результат
 
 1117
 00:50:00,510 --> 00:50:04,220
-which means that object A
-does not equal object B,
+это значит что ссылка объекта A
+и ссылка объекта B отличаются
 
 1118
 00:50:04,220 --> 00:50:06,610
-meaning that it does not
-share the same object,
+И это не один и тот же объект,
+а два разных
 
 1119
 00:50:06,610 --> 00:50:09,210
-it's not the same object whatsoever.
+Не смотря на одинаковые имена
 
 1120
 00:50:09,210 --> 00:50:11,600
-We could also change these things around
+Можно еще проверить неравенство
+по ссылке
 
 1121
 00:50:11,600 --> 00:50:15,596
-and do referential inequality.
+и написать "!=="
 
 1122
 00:50:15,596 --> 00:50:16,890
-So we would do exclamation equal equals,
+и написать "!=="
 
 1123
 00:50:16,890 --> 00:50:21,460
-that would say object A
-does not equal object B.
+мы говорим что ссылка объекта
+A не равна ссылке объекта B
 
 1124
 00:50:21,460 --> 00:50:24,140
-So they're not pointing at
-the same place in memory.
+И эти ссылки указывают на разные объекты
+в паяти программы
 
 1125
 00:50:24,140 --> 00:50:26,240
-So for, to run this, you would see
+Запустим и увидим
 
 1126
 00:50:27,531 --> 00:50:28,364
-that we now get back true.
+результат true
 
 1127
 00:50:28,364 --> 00:50:29,980
-Then we're getting back
-true because person A
+Еще раз, так происходит потому
+что объект A и объект B
 
 1128
 00:50:31,002 --> 00:50:31,890
-is a completely different
-object than person B,
+два абсолютно разных объекта
 
 1129
 00:50:31,890 --> 00:50:34,810
-they're stored in completely
-different parts of memory.
+они хранятся в разных местах в памяти.
 
 1130
 00:50:34,810 --> 00:50:38,100
-So for referential integrity,
-we have the triple equals,
+Для сравнения по ссылке
+мы используем "==="
 
 1131
 00:50:38,100 --> 00:50:40,730
-which is equality.
+...
 
 1132
 00:50:40,730 --> 00:50:43,880
-And then we have
-exclamation equals equals,
+И для неравенства ссылок
 
 1133
 00:50:43,880 --> 00:50:45,620
-which is inequality.
+используем "!=="
 
 1134
 00:50:47,991 --> 00:50:48,824
