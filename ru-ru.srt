@@ -4036,617 +4036,585 @@ if выполнится
 
 900
 00:40:17,160 --> 00:40:20,280
-A fundamental understanding
-of truth tables will help you
+Базовые знания таблиц
+инстинности помогут
 
 901
 00:40:20,280 --> 00:40:23,560
-understand what's going on
-inside of your if statement
+вам лучше понимать, что
+происходит в вашем 'if' условии
 
 902
 00:40:23,560 --> 00:40:25,730
-and if it will evaluate to true,
+и будет оно равно 'true'
 
 903
 00:40:25,730 --> 00:40:29,850
-or if it will evaluate the
-false and execute this line
+или результат превратится в 'false'
+и выполнится этот блок
 
 904
 00:40:29,850 --> 00:40:30,683
-down here.
+снизу.
 
 905
 00:40:31,671 --> 00:40:32,504
-So let's hop over and take a look
+Давайте быстро пройдемся
 
 906
 00:40:32,504 --> 00:40:34,190
-at some simple truth tables.
+по простым таблицам истинности.
 
 907
 00:40:34,190 --> 00:40:36,090
-Here, I have created two truth tables,
+Я создал две таблицы,
 
 908
 00:40:37,078 --> 00:40:40,093
-one on the left, which is the
-logic well conjunction and
+столбец слева это таблица
+истинности для "И" условия
 
 909
 00:40:40,093 --> 00:40:40,926
-which we'll talk about first.
+о ней мы поговорим вначале,
 
 910
 00:40:40,926 --> 00:40:43,990
-And then we'll move on to
-the logical conjunction or.
+А потом мы поговорим про
+"ИЛИ" условие
 
 911
 00:40:43,990 --> 00:40:47,480
-A logical conjunction and state
-that we have two variables,
+В Логическом отношении "И"
+у нас есть две Boolean переменные
 
 912
 00:40:47,480 --> 00:40:48,820
-P and Q.
+"P" и "Q"
 
 913
 00:40:50,218 --> 00:40:51,800
-And this is red on the
-light right hand side.
+И справа результат
 
 914
 00:40:51,800 --> 00:40:55,660
-P and Q, so you'd be at P the up arrow Q
+Читается как "P И Q"
 
 915
 00:40:55,660 --> 00:40:57,310
-and it's red as P Q.
+Читается как "P И Q"
 
 916
 00:40:57,310 --> 00:40:59,412
-And that's what it evaluates too.
+И снузу результат логического И
 
 917
 00:40:59,412 --> 00:41:02,490
-So if P is true and Q is true,
+Если "P" истина и "Q" истина
 
 918
 00:41:02,490 --> 00:41:06,000
-then if we were to combine
-them, P and Q would be true.
+То результат "истина И истина"
+будет "истина"
 
 919
 00:41:07,954 --> 00:41:10,700
-If we have a P that is
-true, but that is false,
+Если P - истина, но Q - ложь
 
 920
 00:41:10,700 --> 00:41:14,440
-well, then that would equate
-to a false representation
+то и результат будет "ложь"
 
 921
 00:41:14,440 --> 00:41:15,273
-in this truth table.
+в логисеском "И"
 
 922
 00:41:15,273 --> 00:41:18,980
-So if the first expression,
-so if we go back to our code,
+Если первое выражение..
+Давайте вернемся в код,
 
 923
 00:41:18,980 --> 00:41:23,400
-if our first expression was
-true, our second expression
+если наше первое выражение истина
+и второе выражение
 
 924
 00:41:23,400 --> 00:41:26,120
-was false and we're using a logical and,
+это ложь, и мы используем логическое "И"
 
 925
 00:41:26,120 --> 00:41:28,770
-this is an and operator
-that the Emerson Emerson
+оператор "&&" означает
+логическое "И",
 
 926
 00:41:28,770 --> 00:41:33,770
-means logical and, then
-the false will be executed
+тогда результат условия будет "ложь"
 
 927
 00:41:34,110 --> 00:41:36,180
-because the second item here is false.
+потому что выражение справа ложь
 
 928
 00:41:36,180 --> 00:41:37,480
-We can move on to the third line.
+Посмотрим на третью строчку
 
 929
 00:41:37,480 --> 00:41:41,270
-If the first item is false
-and the second item is true,
+если первое ложь и
+второе - истина
 
 930
 00:41:41,270 --> 00:41:43,450
-it's still gonna be false because in order
+то результат будет ложь,
+потому что в логическом "И"
 
 931
 00:41:43,450 --> 00:41:46,720
-to get a true value, we need
-both of them to be true.
+истина будет только, если оба
+выражения истина
 
 932
 00:41:46,720 --> 00:41:50,700
-So back to the code, this one
-at this point would be false
+Вернемся к коду, левая часть будет
+ложью и правая истина
 
 933
 00:41:50,700 --> 00:41:52,050
-and this one would be true.
+то результат "И"
 
 934
 00:41:53,247 --> 00:41:54,080
-If we were to add these together,
+все равно будет "ложь"
 
 935
 00:41:54,080 --> 00:41:56,017
-that would not equate to true.
+поэтому мы попадем
 
 936
 00:41:56,017 --> 00:41:57,670
-So we will be executing the
-else statement down here.
+В нижний блок кода
 
 937
 00:41:57,670 --> 00:42:01,830
-And lastly, if both the items
-are false, then of course,
+И последняя, если оба выражения
+"ложь" и мы применяем "И"
 
 938
 00:42:01,830 --> 00:42:04,292
-if we logically and them together,
+то результат такого
 
 939
 00:42:04,292 --> 00:42:05,125
-we're going to get a false statement.
+отношения будет "ложь"
 
 940
 00:42:05,125 --> 00:42:07,770
-So back in the code, if both
-of these are false up here,
+Обратно в код - если левое и
+правое условие
 
 941
 00:42:07,770 --> 00:42:11,000
-this is false and this statement is false,
+ложь то и результат будет ложь
 
 942
 00:42:11,000 --> 00:42:13,630
-then of course, it's
-gonna execute down here.
+и мы снова попадаем в нижний блок
 
 943
 00:42:13,630 --> 00:42:14,720
-Now on the other side of the fence,
+Теперь посомтим вторую забличку
 
 944
 00:42:14,720 --> 00:42:16,990
-we have a logical conjunction or.
+тут у нас логическое "ИЛИ"
 
 945
 00:42:16,990 --> 00:42:19,713
-Now this is operated in code,
+В коде это выглядит по другому,
 
 946
 00:42:19,713 --> 00:42:20,546
-let's go back to the code here.
+вернемся в код
 
 947
 00:42:20,546 --> 00:42:24,820
-And we change a or two B with two lines.
+И сменим "&&" на "||"
 
 948
 00:42:24,820 --> 00:42:26,890
-And so that's gonna be a logical or.
+это оператор логического "ИЛИ"
 
 949
 00:42:27,834 --> 00:42:31,870
-So what this says is here is
-this statement has to be true
+Теперь это значит, что условие будет
 
 950
 00:42:31,870 --> 00:42:34,110
-or this statement has to be true.
+истиной, если одно из подусловий
+истина
 
 951
 00:42:34,110 --> 00:42:35,650
-And if either one of these are true,
+И если одно из них истина
 
 952
 00:42:35,650 --> 00:42:39,260
-if this one's true or this one's true,
+то мы попадем
 
 953
 00:42:39,260 --> 00:42:43,000
-then it's okay to continue on
-and execute this line of code.
+в блок кода под if
 
 954
 00:42:43,000 --> 00:42:44,900
-However, both of them are false,
+Но если они оба false
 
 955
 00:42:44,900 --> 00:42:47,050
-well, then it's gonna
-execute this false statement
+тогда мы перейдем в "else" блок
 
 956
 00:42:47,050 --> 00:42:48,040
-down here in the else.
+вот сюда
 
 957
 00:42:48,040 --> 00:42:48,910
-And so let's take a look at them again.
+Посмотрим еще раз на таблицу
 
 958
 00:42:48,910 --> 00:42:52,525
-We're using P and Q
-and it's red as P or Q.
+У нас опять "P" и "Q"
+переменные
 
 959
 00:42:52,525 --> 00:42:54,993
-And that's that little V thing there
+и вот этот знак "V" обозначает
 
 960
 00:42:54,993 --> 00:42:55,826
-used to be a down arrow.
+логическое "ИЛИ"
 
 961
 00:42:55,826 --> 00:42:58,760
-And so if P is true or Q is true,
+Если "P" или "Q" это истина
 
 962
 00:42:58,760 --> 00:43:01,440
-then of course the resulting
-truth would be true.
+то и результат будет истина
 
 963
 00:43:02,320 --> 00:43:06,510
-If P is true and Q is false,
-well, we're still saying,
+Если и "P" истина и "Q" ложь
+мы как бы говорим
 
 964
 00:43:06,510 --> 00:43:07,960
-"Hey, either one of these is fine,
+"Все истина, если хотя бы одно
 
 965
 00:43:07,960 --> 00:43:09,370
-"so let's go ahead and move forward."
+из них истина"
 
 966
 00:43:09,370 --> 00:43:12,670
-And that would be basically
-like saying if this is true,
+Это значит, что если хотя бы одно
 
 967
 00:43:12,670 --> 00:43:13,830
-then okay, we can continue.
+истина, то мы можем продолжать
 
 968
 00:43:13,830 --> 00:43:17,020
-Or if this is true, that's
-okay, let's continue.
+Или, если это истина, то все окей
+и можно продолжать
 
 969
 00:43:17,020 --> 00:43:19,690
-Same thing here, if the
-first item in the evaluation
+Тоже самое тут, если первое
+условие ложь
 
 970
 00:43:19,690 --> 00:43:23,570
-is false, so P is false and Q is true,
+"P" - ложь, а "Q" - истина
 
 971
 00:43:23,570 --> 00:43:26,890
-then our logical or conjunction
-would equate to true.
+то результат будет истиной
 
 972
 00:43:26,890 --> 00:43:29,739
-Then our logical or conjunction
-would equate to true.
+и логическое "ИЛИ" вернет истину
 
 973
 00:43:29,739 --> 00:43:31,860
-so this equates to false.
+если это у нас будет ложью
 
 974
 00:43:32,814 --> 00:43:35,330
-So false, it's gonna go
-to the next item over here
+ложь, то мы перейдем
+люда
 
 975
 00:43:35,330 --> 00:43:36,830
-and it's going to return true.
+и это будет истиной
 
 976
 00:43:38,245 --> 00:43:39,078
-So it says, "Oh, I found a true here,
+В общем выражение говорит:
+Я нашла истину, а значит
 
 977
 00:43:39,078 --> 00:43:40,620
-"which means I'm going to
-execute this line here."
+я буду выполнять это строчку кода
 
 978
 00:43:41,575 --> 00:43:44,096
-And lastly, we have the false or false.
+И наконец, если у нас ложь "ИЛИ" ложь
 
 979
 00:43:44,096 --> 00:43:46,683
-So if both of them are
-false, back in the code.
+Вернемся к коду
 
 980
 00:43:46,683 --> 00:43:49,720
-if both of them are
-false back in the code.
+Если оба подвыражения ложь
 
 981
 00:43:49,720 --> 00:43:52,000
-which means they're both false
-means neither one of them
+а значит они оба не истина
 
 982
 00:43:53,117 --> 00:43:54,420
-are true, then it's gonna
-execute the else statement.
+то мы попадем в "else" блок
 
 983
 00:43:55,741 --> 00:43:56,574
-There's one thing important to note
+Один важный момент
 
 984
 00:43:56,574 --> 00:43:57,830
-is that these conditionals, when we use
+Когда мы используем операторы "&&" и "||"
 
 985
 00:43:57,830 --> 00:44:02,000
-the logical operation or,
-or the logical operation and
+нужно помнить что это оптимизированные
+логические операторы
 
 986
 00:44:02,000 --> 00:44:04,250
-are known as short circuiting,
+это значит, что если
 
 987
 00:44:05,833 --> 00:44:09,073
-which means that if this
-operation here is false,
+первое условие ложь
 
 988
 00:44:10,780 --> 00:44:12,530
-it's just gonna skip this together.
+то оператор даже не будет проверять
+правое условие
 
 989
 00:44:14,025 --> 00:44:14,858
-It will happen is Kotlin will say,
+Котлин при проверке
 
 990
 00:44:14,858 --> 00:44:15,930
-"Oh, you want me to add these together.
+будет смотреть на левое вырадение
 
 991
 00:44:15,930 --> 00:44:17,630
-"So I'm going to need this value."
+и если он увидит, что левое значение
 
 992
 00:44:20,815 --> 00:44:23,350
-What it's gonna do is at
-runtime, it'll check say,
+ложь, то он сразу
 
 993
 00:44:23,350 --> 00:44:24,183
-"Hey, is this false?
+будет понимать,
 
 994
 00:44:24,183 --> 00:44:26,392
-"Okay, I already know this is false,
+что дальше проверка
 
 995
 00:44:26,392 --> 00:44:28,390
-"which means this whole statement
-is gonna equate to false
+безполезна и все выражение
 
 996
 00:44:28,390 --> 00:44:30,550
-"because the first one's already false
+будет ложью, потому что
 
 997
 00:44:30,550 --> 00:44:33,670
-"and you're asking me to
-have both of them be true."
+одна из частей ложь
 
 998
 00:44:33,670 --> 00:44:36,500
-So what you would then do
-is, Kotlin would then do,
+И котлин под капотом
 
 999
 00:44:36,500 --> 00:44:39,549
-is say, "All right, well, I'm
-just gonna go and skip this.
+будет оптимизировать эту проверку
 
 1000
 00:44:39,549 --> 00:44:40,530
-"I'm a short circuit this because
-I know that there's no way
+потому что, если левое выражение ложь
 
 1001
 00:44:40,530 --> 00:44:42,770
-"and no reason for me to
-even run this code over here,
+то правое выражение
 
 1002
 00:44:42,770 --> 00:44:46,206
-"because I've already
-determined that this first piece
+никак не повлияет на результат.
 
 1003
 00:44:46,206 --> 00:44:49,120
-"is false and we need
-both of them to be true
+Они оба должны быть true
 
 1004
 00:44:49,120 --> 00:44:50,440
-"in order to continue."
+чтобы мы попали в if блок
 
 1005
 00:44:50,440 --> 00:44:53,170
-On the opposite side of
-the spectrum we have or,
+С другой стороны оператор
+"||" Котлин оптимизирует
 
 1006
 00:44:54,030 --> 00:44:56,662
-or this could be short-circuited here.
+немного по другому
 
 1007
 00:44:56,662 --> 00:44:59,598
-So for example, let's
-assume that this was true.
+Если первая часть выражения истина
 
 1008
 00:44:59,598 --> 00:45:01,310
-So we're basically saying if this is true,
+то котлин не будет проверять правую
 
 1009
 00:45:01,310 --> 00:45:04,890
-or this is true, print
-this statement right here.
+часть выражения
 
 1010
 00:45:04,890 --> 00:45:08,035
-So what this would mean is
-Kotlin would short circuit.
+Потому что уже есть результат
 
 1011
 00:45:08,035 --> 00:45:10,280
-If this was true, it
-wouldn't even bother checking
+и в любом случае выполнение
 
 1012
 00:45:10,280 --> 00:45:11,370
-to see if this was true at all.
+кода продолжется в блоке "if"
 
 1013
 00:45:11,370 --> 00:45:13,760
-So it would, short-circuit
-this entire operation.
+Получается правая часть улсловия
+не проверится
 
 1014
 00:45:13,760 --> 00:45:14,620
-So, all right, this is true.
+потому что левая уже истина
 
 1015
 00:45:14,620 --> 00:45:17,441
-All right, cool, I'm
-not even going to worry
+и Котлин при выполнении скажет:
 
 1016
 00:45:17,441 --> 00:45:18,570
-about executing the statement over here.
+"Все ок, левое истина, значит все истина"
 
 1017
 00:45:18,570 --> 00:45:21,290
-However, if this was false
-right here, it would say,
+Но если левая часть будет ложью
 
 1018
 00:45:22,316 --> 00:45:23,370
-"Okay, this is false, so I
-need to go check the next one,
+То котлин пойдет проверять правую
 
 1019
 00:45:23,370 --> 00:45:24,990
-"because I'm going to logically or them.
+чать, потому что ему недостаточно
 
 1020
 00:45:24,990 --> 00:45:27,190
-"And I'll check to see
-if this one is true."
+инофрмации, чтобы сделать вывод
+о логическом "ИЛИ"
 
 1021
 00:45:28,387 --> 00:45:29,220
-And it says, "Oh, this one's true.
+Котлин скажет, ок правая часть истина
 
 1022
 00:45:29,220 --> 00:45:30,610
-"Okay, I'm going to use this."
+и этого достаточно
 
 1023
 00:45:30,610 --> 00:45:32,930
-Now, this could continue on as well
+чтобы пойти в блок "If"
 
 1024
 00:45:32,930 --> 00:45:35,160
-if you had a, for example, we could have
+и проверки могут продолжаться дальше,
+если например у вас есть
 
 1025
 00:45:35,160 --> 00:45:39,463
-another condition here, we
-might say, my age equals
+еще одно условие, например
+мой возраст
 
 1026
 00:45:41,370 --> 00:45:43,470
-equals my name.length.
+должен быть равен длине моего имени
 
 1027
 00:45:45,703 --> 00:45:46,630
-And so we can actually
-have three conditions here.
+И тогда у нас будет три выражения
 
 1028
 00:45:46,630 --> 00:45:50,510
-So this one right here
-might equate to false.
+И результат этого, например, ложь
 
 1029
 00:45:50,510 --> 00:45:52,060
-This one might equate the true.
+А этого - истина
 
 1030
 00:45:52,932 --> 00:45:54,040
-And if it does equate the
-true it's going to skip
+И если это истина, то следующая
+проверка пропустится
 
 1031
 00:45:54,040 --> 00:45:55,800
-the rest of the conditional here,
+потому что по таблице истинности
 
 1032
 00:45:55,800 --> 00:45:58,400
-because we've already found
-a true and Kotlin knows,
+не вжно что будет дальше,
+результат уже будет истиной
 
 1033
 00:45:59,611 --> 00:46:02,071
-"Hey, we're just trying to
-or all of these together."
+и Котлин это понимает
 
 1034
 00:46:02,071 --> 00:46:04,720
-And so understanding basic
-truth tables is a humongous help
+Умение читать условные выражения
+и знания таблиц истинности
 
 1035
 00:46:04,720 --> 00:46:06,230
-in understanding of what's gonna happen
+это маст хэв навык, чтобы понимать
+в какую сторону "пойдет" код
 
 1036
 00:46:06,230 --> 00:46:07,780
-in your conditional statements.
+в ваших условных выражениях.
 
 1037
 00:46:10,460 --> 00:46:12,590
