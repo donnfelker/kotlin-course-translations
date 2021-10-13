@@ -5040,506 +5040,488 @@ A не равна ссылке объекта B
 
 1134
 00:50:47,991 --> 00:50:48,824
-One of the goals of Kotlin's type system
+Одна из главных задач  Котлина
 
 1135
 00:50:48,824 --> 00:50:51,400
-is to eliminate no reference exceptions.
+это избавиться от ссылок на null.
 
 1136
 00:50:51,400 --> 00:50:54,090
-So if you two were to take
-this existing name variable
+Если вы, например, возьмете эту
+переменную name
 
 1137
 00:50:54,090 --> 00:50:56,450
-and set it equal to null, you would notice
+и попытаетесь сделать ее null
 
 1138
 00:50:56,450 --> 00:50:58,440
-that you would not be allowed to do that.
+то компилятор вам не позволит.
 
 1139
 00:50:58,440 --> 00:51:00,570
-And the reason being
-is this string is known
+И причина в том что тип этой
+переменной явно говорит, что
 
 1140
 00:51:00,570 --> 00:51:02,480
-as a non null reference.
+эта переменная не моет ссылаться на null.
 
 1141
 00:51:02,480 --> 00:51:04,640
-If you wanted to create
+Если вы хотите создать переменную,
+которая может ссылаться на null
 a nullable reference,
 
 1142
 00:51:04,640 --> 00:51:05,830
-you would still say string,
+вы все так же должны объявить тип
 
 1143
 00:51:05,830 --> 00:51:08,820
-but you would add the
-question mark at the end.
+но в конце вы должны
+добавить знак вопроса.
 
 1144
 00:51:08,820 --> 00:51:13,820
-This would allow the name
-to be reassigned to null.
+Это позволит присваивать null
+этой переменной
 
 1145
 00:51:14,020 --> 00:51:17,820
-The same goes for other
-types as well, such as age.
+Это одинаковое правило для всех
+типов в Котлин
 
 1146
 00:51:17,820 --> 00:51:21,050
-We might say, this is int, we've got 32.
+Мы можем написать, что это Int
+который равен 32.
 
 1147
 00:51:21,050 --> 00:51:24,410
-However, if we tried
-to assign age to null,
+Но если мы попытаемся присвоить null
 
 1148
 00:51:25,281 --> 00:51:26,420
-this would not be allowed either.
+У нас это не получится
 
 1149
 00:51:26,420 --> 00:51:29,330
-So anytime we would like to make maybe age
+Поэтому каждый раз, когда мы захотим
 
 1150
 00:51:29,330 --> 00:51:32,344
-or any other type, we
-need to remember to add
+присвоить возрасту или
+любому другому типу null
 
 1151
 00:51:32,344 --> 00:51:35,050
-the question Mark at the end,
-which then would allow us
+нам нужно добавлять к типу "?"
+чтобы дать понять компилятору
 
 1152
 00:51:35,050 --> 00:51:38,120
-to set the type to null.
+что это nullable тип.
 
 1153
 00:51:38,120 --> 00:51:42,540
-Even if we had a simple
-class such as a person class,
+Тоже самое работает с нашими
+самописными классами
 
 1154
 00:51:44,550 --> 00:51:49,550
-we could say var person equals
-person, that would work fine.
+Мы можем спокойно написать
+person = Person
 
 1155
 00:51:50,470 --> 00:51:54,130
-But if we were to
-reassign person to a null,
+но если мы попытаемся присвоить
+person нуль ссылку
 
 1156
 00:51:54,130 --> 00:51:56,710
-this would not be allowed
-because we are guaranteeing
+компилятор будет ругаться,
+потому что типом без вопросительного
 
 1157
 00:51:56,710 --> 00:51:59,080
-that this is a non-nullable reference.
+знака мы гарантируем что значение
+не будет null
 
 1158
 00:51:59,080 --> 00:52:01,500
-However, if we did want a null reference,
+Опять же, если мы хотим ссылаться на
 
 1159
 00:52:01,500 --> 00:52:04,460
-we could say person two,
-we would need to provide
+null, мы должны
 
 1160
 00:52:04,460 --> 00:52:06,390
-the type here 'cause it's
-going to be a nullable type.
+явно указать что тип может
+ссылаться на null
 
 1161
 00:52:06,390 --> 00:52:09,300
-And then we could say equals person Fu.
+и теперь мы можем сказать что
 
 1162
 00:52:09,300 --> 00:52:12,430
-Now I could set person two equal to null
+personTwo равняется null
 
 1163
 00:52:12,430 --> 00:52:14,670
-when working with non-nullable references
+Когда мы работаем с типами
+которые не могут равняться null
 
 1164
 00:52:14,670 --> 00:52:16,880
-as the first name variable here.
+как например с переменной name
 
 1165
 00:52:16,880 --> 00:52:19,790
-If we wanted to see the
-length of the first name,
+Если мы захотим посчитать длинну имени
 
 1166
 00:52:19,790 --> 00:52:21,740
-we would simply say, first name.length.
+мы можем вызвать метода name.length
 
 1167
 00:52:22,680 --> 00:52:24,330
-This would give us the length.
+и получим длину в результате
 
 1168
 00:52:24,330 --> 00:52:26,300
-There's no need to check
-to see a first name is null
+тут нам не нужно проверять
+ссылается ли эта переменная на null
 
 1169
 00:52:26,300 --> 00:52:28,300
-because we're using a
-non-nullable reference
+потому что мы используем
+не null тип
 
 1170
 00:52:28,300 --> 00:52:30,980
-and Kotlin guarantees that
-that will not be null.
+и Котлин гарантирует нам безопасный
+вызов метода
 
 1171
 00:52:30,980 --> 00:52:32,700
-When we were using a
-non-nullable reference
+Когда мы работаем с типом
+который может равняться
 
 1172
 00:52:32,700 --> 00:52:34,080
-if we attempt to do the same thing
+null и пытаемся сделать точно
+такую же операцию
 
 1173
 00:52:34,080 --> 00:52:37,000
-and we'd get the last name.length,
+то есть вызвать lastName.length
 
 1174
 00:52:37,000 --> 00:52:39,080
-you'll notice that we
-have a red squiggly here.
+вы можете заметить небольшую
+красную линию.
 
 1175
 00:52:39,080 --> 00:52:40,420
-So what we have to do is introduce
+Представляю вам метод
 
 1176
 00:52:40,420 --> 00:52:42,560
-what's known as a safe call.
+который называется "безопасный вызов"
 
 1177
 00:52:42,560 --> 00:52:46,370
-This basically says, if
-the last name is null,
+Фактически это значит, что если
+lastName ссылается на null
 
 1178
 00:52:46,370 --> 00:52:48,050
-then go ahead and make this null.
+то результат этой операции будет null
 
 1179
 00:52:48,050 --> 00:52:49,780
-Otherwise give the length.
+иначе - вернется длина фамилии
 
 1180
 00:52:49,780 --> 00:52:53,160
-So this variable could be
-equivalent to one of two things,
+Как итог эта переменная может
+быть либо null
 
 1181
 00:52:53,160 --> 00:52:55,550
-either null or the number six,
+либо числом шесть
 
 1182
 00:52:55,550 --> 00:52:58,510
-because there's six
-characters in the word Felker.
+потому что в фамилии шесть символов.
 
 1183
 00:52:59,510 --> 00:53:02,830
-So if the last name is
-null, it would return null.
+А если фамилия по какой-то причине
+ссылается на null
 
 1184
 00:53:02,830 --> 00:53:05,120
-Otherwise it would return length.
+то результат будет null.
 
 1185
 00:53:05,120 --> 00:53:08,010
-You could do the same thing
-with an if statement as well
+Тоже самое можно сделать
+с помощью "if" проверки
 
 1186
 00:53:08,010 --> 00:53:09,190
-in one line.
+в одну линию
 
 1187
 00:53:09,190 --> 00:53:12,000
-So you can say if last
-name does not equal null,
+Если lastName != null
 
 1188
 00:53:12,000 --> 00:53:17,000
-then you could say last
-name.length else will say zero.
+то можно безопасно вызвать
+lastName.length иначе, например "0"
 
 1189
 00:53:17,550 --> 00:53:19,310
-Now what this is doing
-is saying last name.
+Проверям lastName на
 
 1190
 00:53:19,310 --> 00:53:21,320
-We're checking to see if
-the last name is not null.
+null, если не null
+то результат
 
 1191
 00:53:21,320 --> 00:53:22,230
-They're gonna get the length.
+будет длинной фамилии.
 
 1192
 00:53:22,230 --> 00:53:26,150
-Now notice how I did not use
-the safe call operator here.
+Заметьте, что здест нет красного
+подчеркивания.
 
 1193
 00:53:26,150 --> 00:53:29,070
-The reason is, is Kotlin
-recognizes in this if statement,
+Это все потому что котлин достаточно
+умный и после проверки на null
 
 1194
 00:53:29,070 --> 00:53:31,330
-we are checking to see
-if last name is null,
+он неявно приводит тип переменной
+к String
 
 1195
 00:53:31,330 --> 00:53:34,180
-therefore I don't have
-to check for null here
+И нам уже не нужно ничего
 
 1196
 00:53:34,180 --> 00:53:37,120
-because it was already
-taken care of in this step.
+проверять дополнительно
 
 1197
 00:53:37,120 --> 00:53:39,190
-However, if for some reason
-the last name is null,
+А если lastName ссылается на null
 
 1198
 00:53:39,190 --> 00:53:41,080
-then we'll just go ahead
-and return a value of zero.
+то результатом будет "0"
 
 1199
 00:53:41,080 --> 00:53:44,050
-So either way, the answer here
-would be we're either going
+В любом случае, после этой проверки
 
 1200
 00:53:44,050 --> 00:53:46,220
-to get six or we're going to get zero.
+ответ будет либо 6, либо 0
 
 1201
 00:53:46,220 --> 00:53:49,110
-Now of course you could
-change this to null
+Конечно можно поменять это на null
 
 1202
 00:53:49,110 --> 00:53:51,530
-if you would like, though to
-essentially do the same thing
+Но концептуально это будет
+то же самое, что написано
 
 1203
 00:53:51,530 --> 00:53:54,250
-as the above, but most
-likely you probably want
+сверху, а вы скорее всего
 
 1204
 00:53:54,250 --> 00:53:56,320
-some type of value in your code
+хотите избавиться от лишних проверок
 
 1205
 00:53:56,320 --> 00:53:58,630
-so you can do this with a single line if.
+и это можно сделать одним if
 
 1206
 00:53:58,630 --> 00:54:00,600
-And you can also chain
-these safe calls together.
+Вы можете вызывать эти проверки
+по цепочке
 
 1207
 00:54:00,600 --> 00:54:04,230
-So let's say that we wanted
-the first two letters
+например мы хотим получить
+первые две буквы фамилии
 
 1208
 00:54:04,230 --> 00:54:08,790
-of the last name, and
-then we wanted the length
+и потом получить длину
 
 1209
 00:54:08,790 --> 00:54:10,840
-of the last name.
+фамилии
 
 1210
 00:54:10,840 --> 00:54:12,090
-Notice how we would need.
+Заметьте как мы будем это получать
 
 1211
 00:54:13,200 --> 00:54:16,360
-So we'll say link four, so last name says
+результат. мы вызовем две функции
 
 1212
 00:54:16,360 --> 00:54:20,470
-it needs a safe call and
-notice now the next one
+и после каждой функции
+нам нужно сделать безопасный
 
 1213
 00:54:20,470 --> 00:54:21,303
-needs the safe call.
+вызов другой функции
 
 1214
 00:54:21,303 --> 00:54:22,760
-So what this one will do is says,
+Фактически это значит
 
 1215
 00:54:22,760 --> 00:54:26,330
-hey, if last name is
-null, then just go ahead
+что если lastName ссылается на null
+то мы пропускаем остальные операции и
 
 1216
 00:54:26,330 --> 00:54:27,970
-and return null, if last name's not null,
+возвращаем null,
+если lastName не null
 
 1217
 00:54:27,970 --> 00:54:29,950
-go ahead and pull the
-sub string off of that.
+то идем дальге и берем подстроку
+от фамилии
 
 1218
 00:54:29,950 --> 00:54:32,210
-So grab the first two characters.
+берем первые два символа
 
 1219
 00:54:32,210 --> 00:54:34,240
-And if for some reason that's null,
+И если по какойто причине они null
 
 1220
 00:54:34,240 --> 00:54:35,910
-go ahead and return null.
+То возвращаем null,
 
 1221
 00:54:35,910 --> 00:54:37,610
-Otherwise go ahead and return length.
+а иначе возвращаем их длину.
 
 1222
 00:54:37,610 --> 00:54:39,370
-Now you may have another
-language has seen something
+Возможно вы видели что-то подобное
 
 1223
 00:54:39,370 --> 00:54:40,410
-very similar to this.
+в других языках
 
 1224
 00:54:40,410 --> 00:54:45,350
-If last name does not equal
-null and last name.length
+Если lastName не равно null
+и lastName.length больше
 
 1225
 00:54:47,440 --> 00:54:52,440
-is greater than one, then you
-might wanna continue off there
+чем единица, то мы можем рподолжить
 
 1226
 00:54:53,037 --> 00:54:57,690
-then you could have your
-statement to say that your length
+дальше нам нужно будет проверить
 
 1227
 00:54:57,690 --> 00:55:01,750
-or whatever is, to check
-to make sure it's not null.
+что длина не null
 
 1228
 00:55:01,750 --> 00:55:05,180
-So this would be very common
-in our languages such as Java,
+это очень типично для языка Java
+ошибки которого пытается исправить Котлин
 
 1229
 00:55:05,180 --> 00:55:08,660
-but here you can start
-chaining these calls together.
+Можно все эти запросы связать
 
 1230
 00:55:08,660 --> 00:55:10,900
-You could even take this
-even further by saying
+и можно вызвать
 
 1231
 00:55:10,900 --> 00:55:13,520
-last name.sub string would say 05.
+lastName.substring от нуля до пяти
 
 1232
 00:55:13,520 --> 00:55:15,840
-So we get the first five characters,
+и получить пят ьсимволов
 
 1233
 00:55:15,840 --> 00:55:17,230
-then we could say something different,
+А потом можно, например,
 
 1234
 00:55:17,230 --> 00:55:20,740
-like drop the last two characters.
+удалить последние два символа
 
 1235
 00:55:20,740 --> 00:55:22,869
-Then we could get another
-sub string of those
+Потом можно сделать еще один
 
 1236
 00:55:22,869 --> 00:55:26,480
-and then we would say, let's
-say we want the second one
+substring и допустим от 2 до 3
 
 1237
 00:55:26,480 --> 00:55:29,760
-to the third one and
-then we would say length.
+и потом уже узнать длину
 
 1238
 00:55:29,760 --> 00:55:33,330
-And so we could say
-length five equals this.
+И теперь еще вот так
 
 1239
 00:55:33,330 --> 00:55:36,170
-Now, because this could be
-null all the way across,
+Вся эта цепочка может
+оборваться в любой момент
 
 1240
 00:55:36,170 --> 00:55:38,200
-we would need to use safe calls.
+и нам нужно использовать
+безопасные вызовы
 
 1241
 00:55:38,200 --> 00:55:40,510
-So every time all the
-way across we need to use
+И каждый раз на протяжении
 
 1242
 00:55:40,510 --> 00:55:42,930
-these safe calls, meaning
-that if any of these
+всей цепочки нужно использовать
+безопасные вызовы
 
 1243
 00:55:42,930 --> 00:55:46,180
-were to return null
-length five will be null.
+потому что люой метод цепочки, в теории
+может вернуть null.
 
 1244
 00:55:46,180 --> 00:55:48,190
