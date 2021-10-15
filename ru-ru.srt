@@ -5525,478 +5525,464 @@ substring и допустим от 2 до 3
 
 1244
 00:55:46,180 --> 00:55:48,190
-Otherwise it will be
-the length when working
+Вы часто будете работать с типами
+которые могут содержать null,
 
 1245
 00:55:48,190 --> 00:55:52,010
-with nullable types, it's often
-to wanna retrieve a value.
+но непонятно как дальше быть, поэтому
+хочется вместо null подставлять какое-то значение
 
 1246
 00:55:52,010 --> 00:55:54,510
-So let's say the length
-again of a certain,
+Допустим мы хотим узнать
+длину имени нашей
 
 1247
 00:55:54,510 --> 00:55:55,860
-maybe the last name string,
+строковой переменной
 
 1248
 00:55:55,860 --> 00:55:57,330
-you wanna get the length of that.
+мы сделаем это через
+безопасный вызов
 
 1249
 00:55:57,330 --> 00:56:00,090
-And so the need to perform
-some type of safe operation
+безопасный вызов, чтобы
 
 1250
 00:56:00,090 --> 00:56:01,600
-to get that value.
+не возникло ошибки.
 
 1251
 00:56:01,600 --> 00:56:04,310
-However, this is going to
-leave us in a certain situation
+Но это ставит нас в положение
 
 1252
 00:56:04,310 --> 00:56:06,070
-where we could either have null
+что результат этого вызова будет
+либо null
 
 1253
 00:56:06,070 --> 00:56:09,110
-or the length of the string,
-last name which is six,
+либо конкретное число,
+в нашем случае шесть
 
 1254
 00:56:09,110 --> 00:56:10,630
-so we could get either one.
+и мы можем получить любое из них.
 
 1255
 00:56:10,630 --> 00:56:13,660
-Let's say for whatever reason,
-we determined that we know
+Давайте представим, что мы
+не хотим дальше работать
 
 1256
 00:56:13,660 --> 00:56:16,197
-we wanted a non-null reference.
+с null типом.
 
 1257
 00:56:16,197 --> 00:56:17,980
-So in that case, we're
-going to get an error
+В этом случаем ммы получим ошибку
 
 1258
 00:56:17,980 --> 00:56:21,500
-because last name dot length
-is going to return us a null.
+потому что name.length
+потенциально возвращает null.
 
 1259
 00:56:21,500 --> 00:56:23,370
-So how would we fix that?
+Как это исправить?
 
 1260
 00:56:23,370 --> 00:56:25,150
-You could fix that with
-a simple if statement.
+Можно по старинке - с помощью
+условного блока if
 
 1261
 00:56:25,150 --> 00:56:28,050
-So what we could do is we
-could just check to see
+Просто проверяем
 
 1262
 00:56:28,050 --> 00:56:31,360
-if the last name does not equal null,
+равняется ли имя null
 
 1263
 00:56:31,360 --> 00:56:34,000
-then give us a length,
-otherwise give us zero.
+если да - возвращаем ноль,
+если нет - длину имени
 
 1264
 00:56:34,839 --> 00:56:36,090
-And we can get rid of the safe call here
+И можно убрать безопасный вызов тут
+потому что проверка уже была и
 
 1265
 00:56:36,090 --> 00:56:39,770
-because again, this null
-has already been checked.
+компилятор понимает что имя
+уже не будет null
 
 1266
 00:56:40,670 --> 00:56:44,790
-So what this will return is a
-non-null reference of length,
+Так мы получаем не null тип
+результатом которого будет
 
 1267
 00:56:44,790 --> 00:56:47,330
-either the length of the
-actual string variable,
+ноль или длина имени
 
 1268
 00:56:47,330 --> 00:56:48,163
-otherwise zero.
+ноль или длина имени
 
 1269
 00:56:49,599 --> 00:56:52,150
-Now this can also be
-short-circuited as well.
+У Котлина есть "синтаксический сахар"
+для такого случая
 
 1270
 00:56:52,150 --> 00:56:56,516
-So we'll say linked to int,
-and this can be short circuit,
+Добавим переменную "длинна2"
+и выражение которое мы напишем
 
 1271
 00:56:56,516 --> 00:56:59,240
-so we're gonna use in what's
-known as the Elvis operator.
+в Котлине называется
+оператором Элвиса
 
 1272
 00:56:59,240 --> 00:57:02,120
-And Elvis operator looks like
-this, is a question mark,
+Элвис оператор пишется как
 
 1273
 00:57:02,120 --> 00:57:03,850
-colon and then a value.
+двоеточие со знаком вопроса
 
 1274
 00:57:03,850 --> 00:57:07,317
-And what this means is the
-Elvis operator means is,
+И читается это следующим образом:
 
 1275
 00:57:07,317 --> 00:57:10,400
-if anything on the left-hand
-side of this Elvis operator
+"Если значение выражения
 
 1276
 00:57:10,400 --> 00:57:12,530
-is null, then return this value.
+в левой части равно null, то мы подставляем
+то что в правой части"
 
 1277
 00:57:12,530 --> 00:57:15,480
-So if last name is null, then return it.
+Если lastName null, тогда возвращаем
+выражение справа
 
 1278
 00:57:15,480 --> 00:57:16,840
-We could even go a step further
+Можно выражение слева усложнить
 
 1279
 00:57:16,840 --> 00:57:19,050
-and change some things together.
+и сделать цепочкой вызовов
 
 1280
 00:57:19,050 --> 00:57:24,050
-So we could actually say
-0,2 and we could do multiple
+Напишем substring от 0 до 2
+и у нас будет несколько
 
 1281
 00:57:24,390 --> 00:57:26,698
-safe calls in order.
+безопасных вызовов подряд.
 
 1282
 00:57:26,698 --> 00:57:29,540
-So if last name is no, or
-this sub string is null,
+Если lastName null или подстрока null
 
 1283
 00:57:29,540 --> 00:57:32,920
-then return zero, otherwise
-return us the length here.
+то возвращаем ноль, а иначе
+результат выражения слева
 
 1284
 00:57:32,920 --> 00:57:35,770
-And this will give us
-a non-Konoll reference.
+И такой подход в результате тоже даст
+не нулевой тип
 
 1285
 00:57:35,770 --> 00:57:37,600
-Now you may be wondering
-why is this called
+Если вас интересует, почему этот
+оператор называется
 
 1286
 00:57:37,600 --> 00:57:38,670
-the Elvis operator?
+оператором Элвиса
 
 1287
 00:57:40,000 --> 00:57:41,810
-Well, if we turn it sideways and zoom in
+Ответ прост, если повернуть его на
+90 градусов и приблизить
 
 1288
 00:57:41,810 --> 00:57:44,390
-and have this image here, you can see
+то будет казаться
 
 1289
 00:57:44,390 --> 00:57:46,520
-that it looks like Elvis Presley's hair,
+будто это прическа Элвиса Пресли)
 
 1290
 00:57:46,520 --> 00:57:48,920
-and that's why it's
-called the Elvis operator.
+Поэтому и назвали оператором Элвиса)
 
 1291
 00:57:48,920 --> 00:57:51,620
-To create a function in
-Kotlin, what you'll need to do
+Чтобы в Котлине создать функцию
 
 1292
 00:57:52,888 --> 00:57:55,080
-is use the keyword fun and
-then the name of your function.
+можно использовать ключевое слово
+fun, а потом написать ия функции
 
 1293
 00:57:55,080 --> 00:57:57,760
-So we can create one called hello world,
+Мы напишем простую функцию helloWorld
 
 1294
 00:57:57,760 --> 00:57:59,980
-and you'll have open
-and closed parentheses
+и вконце нужно поставить скобочки
 
 1295
 00:57:59,980 --> 00:58:01,470
-and then open and close brackets here
+и потом фигурные скобки
+в которых будет код
 
 1296
 00:58:01,470 --> 00:58:04,440
-will give you a function
-that you can call.
+так вы получите функцию, которую
+позже сможете переиспользовать.
 
 1297
 00:58:04,440 --> 00:58:07,420
-Now, if we were to call
-hello world from somewhere,
+Теперь, если мы хотим где-нибудь
+вызвать helloWorld
 
 1298
 00:58:07,420 --> 00:58:10,450
-to call that, again, our main
-function is going to be called
+Наша main функция вызывается,
+когда мы нажимаем на
 
 1299
 00:58:10,450 --> 00:58:12,987
-because we have a little run button here.
+зеленую стрелочку
 
 1300
 00:58:12,987 --> 00:58:16,800
-If we want to execute
-what's whatever is inside
+Если мы хотим вызвать то что находится
+в функции helloWorld
 
 1301
 00:58:16,800 --> 00:58:18,630
-of the hello world function,
+мы должны вызвать
 
 1302
 00:58:18,630 --> 00:58:21,200
-we would need to call
-the hello world function.
+эту функцию где-нибудь
 
 1303
 00:58:21,200 --> 00:58:24,700
-And we do that by just
-typing the word, hello world,
+И сделаем мы это из нашей main
+функции.
 
 1304
 00:58:24,700 --> 00:58:26,170
-the name of the function
-here with the open
+вызовем нашу функцию и допишем
+две скобки, открывающую и
 
 1305
 00:58:26,170 --> 00:58:27,850
-and closed parentheses.
+закрывающую.
 
 1306
 00:58:27,850 --> 00:58:29,570
-Now, if I were to run this,
+Если сейчас запустим программу,
 
 1307
 00:58:29,570 --> 00:58:31,250
-you would see that
-nothing is going to happen
+то в выводе мы ничего не увидим,
+потому что по своей сути
 
 1308
 00:58:31,250 --> 00:58:33,713
-because inside of this function,
+helloWorld - ничего не делает,
+а main вызывает функию, которая
 
 1309
 00:58:33,713 --> 00:58:35,800
-we're not really telling
-Kotlin to do anything at all.
+ничего не делает.
 
 1310
 00:58:35,800 --> 00:58:38,510
-You can see it the program exited.
+Поэтому мы просто увидим
+что функция завершилась.
 
 1311
 00:58:38,510 --> 00:58:39,780
-If we want to do something in here,
+Если мы что-то хотим сделать внутри
 
 1312
 00:58:39,780 --> 00:58:42,430
-what we can say is we say print line.
+например вывести что-то в консоль
 
 1313
 00:58:42,430 --> 00:58:46,580
-And what we could say is,
-hello world inside of here
+и текст "Hello World"
 
 1314
 00:58:46,580 --> 00:58:51,580
-with double quotes and then
-ups here when we've now run it,
+И теперь при запуске мы
 
 1315
 00:58:51,630 --> 00:58:54,520
-we'll see Kotlin will
-compile it and we will print
+увидим что Котлин вывел в
 
 1316
 00:58:54,520 --> 00:58:57,330
-hello world right here to the screen.
+консоль "Hello World"
 
 1317
 00:58:57,330 --> 00:59:00,070
-Now we could change his
-function name to something else.
+Теперь поменяем название
+функции на какое-нибудь другое.
 
 1318
 00:59:00,070 --> 00:59:05,070
-So let's call it something
-fancy like purple cow.
+Например, пусть это будет функция
+с милым названием purpleCow
 
 1319
 00:59:05,190 --> 00:59:08,050
-So we have purple cow here
-and I'm gonna go ahead
+Теперь у нас тут фиолетовая корова
+и я просто
 
 1320
 00:59:08,050 --> 00:59:10,480
-and copy and paste that
-name there, purple cow.
+скопирую новое название
+метода сюда
 
 1321
 00:59:10,480 --> 00:59:13,400
-Anytime I call purple cow, it's
-going to print hello world.
+Ничего не изменилось, кроме имени метода
+и результат останется таким же
 
 1322
 00:59:13,400 --> 00:59:15,660
-Again, we'll just double
-check that here to make sure.
+Перепроверим это
 
 1323
 00:59:15,660 --> 00:59:17,940
-And there we go, we see hello world here.
+Мы видим что вывод точно такой же
 
 1324
 00:59:17,940 --> 00:59:20,080
-Now the cool thing about
-functions is you can call them
+Полезное свойство функций это
 
 1325
 00:59:20,080 --> 00:59:21,380
-over and over.
+их переиспользуемость.
 
 1326
 00:59:21,380 --> 00:59:22,213
-So I'm gonna copy this
-and go to a new line,
+Я скопирую функцию и
 
 1327
 00:59:22,213 --> 00:59:25,400
-I'm gonna paste it again
-and again and again.
+И вставлю ее на следующую строчку
+и еще несколько раз
 
 1328
 00:59:25,400 --> 00:59:26,830
-So if you're wondering,
-what's gonna happen
+Если вам интересно, каков будет эффект
+то все довольно просто
 
 1329
 00:59:26,830 --> 00:59:29,860
-is due to the procedural nature of Kotlin,
+Котлин поддерживает процедурную парадигму
 
 1330
 00:59:29,860 --> 00:59:32,000
-it's going to execute this code,
+и он вызовет одну и ту же функцию
+несколько раз.
 
 1331
 00:59:32,000 --> 00:59:35,070
-which means it's going to
-walk into this function
+Это значит что котлин построчно будет
+выполнять main функцию
 
 1332
 00:59:35,070 --> 00:59:37,300
-and it's going to run
-whatever inside of here.
+и зайдет в purpleCow функцию,
 
 1333
 00:59:37,300 --> 00:59:39,568
-Now it's going to, and then after that,
+И потом зайдет в следующую
 
 1334
 00:59:39,568 --> 00:59:41,360
-it's gonna come into
-this function and call
+и каждый раз когда в main будет
+вызов purpleCow
 
 1335
 00:59:41,360 --> 00:59:42,193
-into whatever is inside of here.
+он будет проходить по коду этой функции
 
 1336
 00:59:42,193 --> 00:59:44,130
-So basically it's gonna call
-this purple cow function
+Фактически функция purpleCow
+вызовется
 
 1337
 00:59:44,130 --> 00:59:46,150
-one, two, three, four times.
+раз, два, три, четыре раза.
 
 1338
 00:59:46,150 --> 00:59:49,810
-So we should see print line
-of hello world four times
+И в консоли мы должны увидеть
+четыре строчки с
 
 1339
 00:59:49,810 --> 00:59:53,100
-down in here in our run
-window, which we do.
+текстом "Hello world"
 
 1340
 00:59:53,100 --> 00:59:54,290
-We see hello world.
+И.. мы их видим
 
 1341
 00:59:54,290 --> 00:59:56,560
-Now the cool thing about
-functions is that we can actually
+Еще одна крутая вещь -
+это то что поведение функции может
 
 1342
 00:59:56,560 --> 00:59:59,007
-change what's inside of
-them and it will change
+меняться, каждый раз
 
 1343
 00:59:59,007 --> 01:00:00,870
-anytime you call it.
+когда вы ее вызываете.
 
 1344
 01:00:00,870 --> 01:00:03,440
-So if I realize I have in
-my application purple cow
+Допустим, я осознал, что
+мое приложение вызывает purpleCow
 
 1345
 01:00:03,440 --> 01:00:05,910
-called four times, and I
-wanna change this to say,
+четыре раза, и я хочу чтобы
+текст немного изменился
 
 1346
 01:00:05,910 --> 01:00:08,040
-"Oops, you know what,
-this should actually say,
+например, чтобы выводилось
 
 1347
 01:00:08,040 --> 01:00:09,730
@@ -6004,372 +5990,359 @@ this should actually say,
 
 1348
 01:00:09,730 --> 01:00:10,900
-I can just change here.
+Я могу поменять это прямо в функции
+purpleCow
 
 1349
 01:00:10,900 --> 01:00:13,400
-Now when I run it, we
-should see down here,
+Если запущу, мы увидим результат
 
 1350
 01:00:13,400 --> 01:00:15,960
-hello purple cow four times.
+"hello purple cow" четыре раза
 
 1351
 01:00:15,960 --> 01:00:17,860
-So we'll see hello world purple cow.
+И мы видим "hello purple cow"
 
 1352
 01:00:17,860 --> 01:00:20,120
-There we go, it shows up four times.
+Да, ровно четыре раза
 
 1353
 01:00:20,120 --> 01:00:22,460
-Now I can also do other things
-inside of this function.
+То же самое можно сделать немного по другому
 
 1354
 01:00:22,460 --> 01:00:25,170
-So a function is just a place
-where we can put other code
+Функция это просто место куда можно
+сложить код для выполнения
 
 1355
 01:00:25,170 --> 01:00:27,680
-that we would like to call
-it over and over and over.
+чтобы переиспользовать
+ее несколько раз
 
 1356
 01:00:27,680 --> 01:00:30,920
-So it's kind of like a reusable
-piece of application code
+Получается что-то вроде куска
 
 1357
 01:00:30,920 --> 01:00:31,753
-that you can use over.
+переиспользуемого кода
 
 1358
 01:00:31,753 --> 01:00:33,250
-So if I were to do something else,
+Если я захочу сделать что-то дургое
 
 1359
 01:00:33,250 --> 01:00:36,450
-I could say per line, hello there.
+Я могу написать еще один
+вывод в консоль "hello there"
 
 1360
 01:00:36,450 --> 01:00:38,480
-And now what we're going
-to see is hello purple cow.
+И теперь мы увидим
 
 1361
 01:00:38,480 --> 01:00:41,065
-And then it's going to print hello there,
+обе строки в консоли
 
 1362
 01:00:41,065 --> 01:00:41,898
-but it's gonna print that four times.
+написанные четыре раза
 
 1363
 01:00:41,898 --> 01:00:44,040
-So if we run this here,
-you're going to see
+Запустим программу
 
 1364
 01:00:44,040 --> 01:00:47,500
-that it's going to call hello purple cow,
+и видим результат
 
 1365
 01:00:47,500 --> 01:00:49,010
-hello there, hello purple cow.
+добавления еще одного вывода
 
 1366
 01:00:49,010 --> 01:00:51,670
-Hello there because what's
-happening is each time
+Теперь, каждый раз когда зовется
+функция, все что в ней
 
 1367
 01:00:51,670 --> 01:00:54,790
-this line of purple cow is called,
+написано вызывается,
 
 1368
 01:00:54,790 --> 01:00:57,730
-two things are being
-executed inside of here.
+то есть обе наши команды вывода.
 
 1369
 01:00:57,730 --> 01:00:59,930
-Now functions can also
-call other functions.
+Функции могут вызывать другие функции
 
 1370
 01:00:59,930 --> 01:01:02,554
-So it was just kind of makes sense
+Это как бы уже понятно,
 
 1371
 01:01:02,554 --> 01:01:04,740
-because inside of the main function here,
+потому что наша main функция
 
 1372
 01:01:04,740 --> 01:01:07,010
-we're calling another
-function called purple cow,
+вызывает purpleCow функцию
 
 1373
 01:01:07,010 --> 01:01:10,760
-but also inside a purple
-cow, we could also call
+в purpleCow мы тоже можем вызвать функцию
 
 1374
 01:01:10,760 --> 01:01:12,540
-another functional call moo.
+пусть это будет функция moo.
 
 1375
 01:01:12,540 --> 01:01:14,630
-And maybe this function might just say moo
+И пусть эта функция просто выводит "Муу"
 
 1376
 01:01:14,630 --> 01:01:16,800
-and we'll call function called moo.
+и вызовем ее.
 
 1377
 01:01:16,800 --> 01:01:20,140
-And inside of here, we'll do print ln moo.
+И внутри функции напишем метод вывода и текст.
 
 1378
 01:01:21,260 --> 01:01:24,160
-Now what will happen is
-when purple cow is called,
+Теперь, когда мы вызовем purpleCow
 
 1379
 01:01:24,160 --> 01:01:27,450
-we'll see, hello purple cow
-and then we're gonna see
+мы увидим две строки вывода из
 
 1380
 01:01:27,450 --> 01:01:29,520
-print line is gonna be called hello there
+purpleCow,
 
 1381
 01:01:29,520 --> 01:01:31,079
-it's gonna be called.
+purpleCow,
 
 1382
 01:01:31,079 --> 01:01:32,350
-So hello purple cow, hello there.
+В консоли будет "hello purple cow"
+"hello there"
 
 1383
 01:01:32,350 --> 01:01:35,140
-And then the purple cow function
-is going to call the moo
+и потом функция purpleCow
+вызовет функцию moo
 
 1384
 01:01:35,140 --> 01:01:37,783
-function and the moo
-function is going to say moo.
+и функция moo выведет текст "moo"
 
 1385
 01:01:37,783 --> 01:01:40,270
-And so if we were to run this year,
+Запустим и посмотрим
 
 1386
 01:01:42,630 --> 01:01:44,200
-you would see that's going to call.
+на результат
 
 1387
 01:01:44,200 --> 01:01:45,660
-Here we go, hello purple cow,
+Получили "hello purple cow"
 
 1388
 01:01:45,660 --> 01:01:46,600
-hello there moo.
+"hello there" и "moo"
 
 1389
 01:01:46,600 --> 01:01:48,630
-Hello, purple cow, hello there moo.
+"hello purple cow", "hello there", "moo"
 
 1390
 01:01:48,630 --> 01:01:51,540
-So now I can actually change
-this around if I decided,
+И еще немного изменим,
+допустим я хочу сказать:
 
 1391
 01:01:51,540 --> 01:01:55,830
-"Hey, you know what, I
-wanna move this up here
+"А теперь я хочу поднять функцию повыше
 
 1392
 01:01:55,830 --> 01:02:00,330
-"and I wanted to change this
-to say, hello pink cow."
+и хочу, чтобы этот вывод писал
+"hello pink cow""
 
 1393
 01:02:01,860 --> 01:02:02,900
-Or let's do blue.
+А лучше "hello blue cow"
 
 1394
 01:02:02,900 --> 01:02:06,230
-Let's do hello blue cow and we'll do moo.
+давайте сделаем синюю и вызовем
+moo еще разок
 
 1395
 01:02:06,230 --> 01:02:08,793
-Now, if I hit run again, we're gonna see
+Если запустим теперь
 
 1396
 01:02:08,793 --> 01:02:09,626
-what do you think was gonna happen?
+то что мы получим?
 
 1397
 01:02:09,626 --> 01:02:12,480
-We're gonna see hello purple
-cow, moo, hello blue cow, moo.
+мы увидим фиолетовую корову, потом "муу",
+потому синюю корову, потому снова "муу"
 
 1398
 01:02:12,480 --> 01:02:14,500
-And so we just see move
-between each one of these
+И теперь мы будем видеть строчку "Муу"
+между каждой коровой
 
 1399
 01:02:14,500 --> 01:02:16,570
-because that's all that moo is doing.
+потому что так расположены наши
+функции
 
 1400
 01:02:16,570 --> 01:02:18,150
-And then we could add
-something to this if we want.
+И можем еще немного накрутить
 
 1401
 01:02:18,150 --> 01:02:21,000
-Of course, to say moomoo Buckaroo.
+Конечно мы допишем "Moo moo buckaroo"
 
 1402
 01:02:22,480 --> 01:02:24,350
-And if I were to run this again,
+И если запустим
 
 1403
 01:02:24,350 --> 01:02:26,700
-we would see all different
-types of stuff here.
+то увидим уже жуткую мешанину, но все
 
 1404
 01:02:26,700 --> 01:02:27,910
-So it kinda makes sense.
+проходит в том порядке, в котором должно
 
 1405
 01:02:27,910 --> 01:02:30,260
-Hello purple cow, moo, moo moo Buckaroo.
+"Hello purple cow, moo, moo moo Buckaroo."
 
 1406
 01:02:30,260 --> 01:02:32,946
-Hello, blue cow, moo, moo moo Buckaroo.
+"Hello, blue cow, moo, moo moo Buckaroo."
 
 1407
 01:02:32,946 --> 01:02:35,090
-Say that 10 times fast.
+Попробуйте произнести это быстро
+десять раз, сломаете язык
 
 1408
 01:02:35,090 --> 01:02:37,580
-So as you can see, these are
-just very simple functions,
+Так пишутся самы простые функции,
 
 1409
 01:02:37,580 --> 01:02:39,480
-but the functions allow you to reuse code.
+которые позволяют вам
+переиспользовать код.
 
 1410
 01:02:39,480 --> 01:02:41,504
-Now I can also come up here and say,
+Допустим мы теперь решили, что
 
 1411
 01:02:41,504 --> 01:02:43,870
-I can say I wanna do moo right here,
+мы хтим писать "Moo" тут,
 
 1412
 01:02:43,870 --> 01:02:45,820
-and I don't really wanna have it here.
+но не очень хотим тут
 
 1413
 01:02:45,820 --> 01:02:48,900
-So I can kind of use these
-reusable chunks here.
+То есть мы можем вставлять эти куски
+где угодно
 
 1414
 01:02:48,900 --> 01:02:51,140
-And this case, we're
-gonna say purple cow once,
+И в таком случае мы один раз позовем
+фиолетовую корову, потом moo
 
 1415
 01:02:51,140 --> 01:02:53,150
-we'll do the moo routine
-and then will just print
+потом опять коровы
 
 1416
 01:02:53,150 --> 01:02:54,350
-purple cow.
+до самого конца
 
 1417
 01:02:54,350 --> 01:02:56,790
-And so, like I said, each
-one of these functions
+Как я уже сказал, эти функции позволяют нам
 
 1418
 01:02:56,790 --> 01:02:58,730
-allows us to have reusable chunks of code.
+создать переиспользуемые куски кода
 
 1419
 01:02:58,730 --> 01:03:01,260
-So we started off with hello,
-purple cow, hello, blue cow.
+Мы начинаем с приветствия
 
 1420
 01:03:01,260 --> 01:03:02,950
-And then we did the moo, moo Buckaroo,
+потом мычим, а потом
 
 1421
 01:03:02,950 --> 01:03:06,080
-and then it went back and
-executed the purple cow function
+вызываем фиолетовую корову
 
 1422
 01:03:06,080 --> 01:03:07,380
-three or four times.
+три раза.
 
 1423
 01:03:07,380 --> 01:03:09,760
-So this is how you create
-a very simple function.
+Это пример самых простых функций.
 
 1424
 01:03:09,760 --> 01:03:12,670
-This function has, as you currently see,
+У этих функций нет
 
 1425
 01:03:12,670 --> 01:03:14,810
-no return type specified.
+никакого возвращаемого типа
 
 1426
 01:03:14,810 --> 01:03:17,290
-And because we don't have
-any returns type specified,
+потому что мы только делаем вывод и
+возвращать нам нечего
 
 1427
 01:03:17,290 --> 01:03:19,570
-what is actually returned is a unit type.
+на самом деле тут неявно возвращается
+объект типа Unit
 
 1428
 01:03:19,570 --> 01:03:20,810
-And we'll talk about the hair in a second,
+Мы поговорим об этом через секунду
 
 1429
 01:03:20,810 --> 01:03:23,480
-but if we leave it off there by default,
+Но если мы не будем указывать
 
 1430
 01:03:23,480 --> 01:03:27,140
-any function that does not
-specify a particular return type
+явно возвращаемый тип функции, то она
+по дефолту будет
 
 1431
 01:03:27,140 --> 01:03:28,000
-will return a unit.
+возвращать Unit.
 
 1432
 01:03:28,000 --> 01:03:30,100
