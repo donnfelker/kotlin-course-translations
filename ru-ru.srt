@@ -6346,900 +6346,873 @@ moo еще разок
 
 1432
 01:03:28,000 --> 01:03:30,100
-So we'll get to that in a second.
+Мы рассмотрим это через секунду
 
 1433
 01:03:30,100 --> 01:03:32,360
-By default, all functions in Kotlin
+По дефолту все фукции в Котлине
 
 1434
 01:03:32,360 --> 01:03:33,840
-have a returned type of units.
+возвращают тип Unit.
 
 1435
 01:03:33,840 --> 01:03:36,410
-So if we create a function called say hi,
+Если мы создадим функцию с
+названием sayHi
 
 1436
 01:03:36,410 --> 01:03:40,390
-that's just going to print
-out some text to the screen,
+которая просто будет
+выводить какой-то текст в консоль,
 
 1437
 01:03:40,390 --> 01:03:44,640
-such as hello world and we call it here,
+например "Hello world"
+и вызовем ее тут
 
 1438
 01:03:47,030 --> 01:03:49,030
-it's actually, it doesn't
-have a return type.
+У этой функции не будет возвращаемого типа
 
 1439
 01:03:49,030 --> 01:03:52,370
-And then to specify a return
-type in Kotlin's functions,
+Чтобы его явно указать
 
 1440
 01:03:52,370 --> 01:03:55,280
-you're just going to,
-after the parentheses here,
+нужно добавить двоеточие
+после скобочек
 
 1441
 01:03:55,280 --> 01:03:58,690
-you'll put a colon and then
-the type that this function
+и написать тип, который
 
 1442
 01:03:58,690 --> 01:03:59,523
-is going to return.
+функция будет возвращать.
 
 1443
 01:03:59,523 --> 01:04:00,830
-So if it returns something
-back, you could say
+Если функция что-то возвращает
+мы можем написать
 
 1444
 01:04:00,830 --> 01:04:02,260
-it's gonna return back a unit.
+тип Unit
 
 1445
 01:04:02,260 --> 01:04:03,660
-So you'll notice at this point in time,
+И вы можете заметить что внутри функции
 
 1446
 01:04:03,660 --> 01:04:06,060
-I don't have any type of
-statement to tell it to return
+нет ключевого слова return
 
 1447
 01:04:06,060 --> 01:04:07,650
-a unit or anything like that.
+с типом Unit или чего-то подобного.
 
 1448
 01:04:08,540 --> 01:04:11,050
-I could do this, and it
-would work just fine.
+Я просто могу написать так и
+все будет работать.
 
 1449
 01:04:11,050 --> 01:04:13,680
-But by default all
-functions that don't have
+Еще раз, по дефолту все функции
 
 1450
 01:04:13,680 --> 01:04:15,120
-a return type return unit,
+без явно указанного возвращаемого
+типа возвращают Unit,
 
 1451
 01:04:15,120 --> 01:04:17,810
-which if you see the
-IDE IntelliJ is saying
+о чем дополнительно аодсказывает
+IDE и предлагает
 
 1452
 01:04:17,810 --> 01:04:21,120
-that the unit is it
-redundant so I can alt enter,
+нам убрать возвращаемый тип
 
 1453
 01:04:21,120 --> 01:04:23,790
-or I can click on this
-little light bulb and say,
+Мы можем нажать на лампочку
 
 1454
 01:04:23,790 --> 01:04:26,260
-remove the explicit type declaration.
+и кликнуть опцию "убрать лишнее объявление типа"
 
 1455
 01:04:26,260 --> 01:04:30,700
-So I've done that now to prove
-that this does return a unit,
+Я сделал такую запись, чтобы
+доказать, что эта функия возвращает Unit
 
 1456
 01:04:30,700 --> 01:04:32,800
-I can actually just create a variable
+Еще я могу создать переменную
 
 1457
 01:04:32,800 --> 01:04:36,210
-and I'm gonna print this
-variable to the screen.
+И вывести ее в консоль.
 
 1458
 01:04:36,210 --> 01:04:39,780
-So whatever X is here,
-because again, say hi
+Функция всегад что-то возвращает
+и эта переменная X будет
 
 1459
 01:04:39,780 --> 01:04:41,030
-is going to return something.
+обладать типом,
 
 1460
 01:04:41,030 --> 01:04:44,600
-And because this function
-does not have a return type
+который возвращает функция,
+а тип этот будет
 
 1461
 01:04:44,600 --> 01:04:48,400
-specified by default, it's
-actually just going to be a unit.
+нашим Unit, который функции
+возвращают по дефолту.
 
 1462
 01:04:48,400 --> 01:04:51,210
-We'll just leave that
-off to show you that.
+Удалим явное объявление
 
 1463
 01:04:51,210 --> 01:04:52,670
-And since it's returning something,
+И так как функция что-то возвращает,
 
 1464
 01:04:52,670 --> 01:04:53,980
-I can set it equal to a value.
+в переменную что-то запишется
 
 1465
 01:04:53,980 --> 01:04:57,580
-So this is also valid to
-call this just like this
+Функцию можно вызывать без
+присваивания переменной,
 
 1466
 01:04:57,580 --> 01:04:58,810
-and have it execute the function.
+если мы просто хотим ее запустить.
 
 1467
 01:04:58,810 --> 01:05:00,570
-I don't have to do
-anything with return type,
+Я могу ничего не делать с
+возвращаемым типом,
 
 1468
 01:05:00,570 --> 01:05:03,680
-but if I would like to, I
-could actually take that stuff
+но если я все таки хочу работать
+дальше с типом,
 
 1469
 01:05:03,680 --> 01:05:05,930
-into a variable as I'm
-doing here into the say
+я могу записать его в переменную
 
 1470
 01:05:05,930 --> 01:05:08,940
-at two variable X and I'm
-a print to the screen.
+как например в нашу "X"
+и вывести результат в консоль
 
 1471
 01:05:08,940 --> 01:05:11,910
-Now, once we run this here,
-say high is gonna execute
+Когда я запущу программу
 
 1472
 01:05:11,910 --> 01:05:13,870
-and return a unit and
-you can see it printed
+мы увидим в выводе тип переменной
 
 1473
 01:05:13,870 --> 01:05:17,090
-the hello world text and
-then it printed the type
+потому что x теперь
 
 1474
 01:05:17,090 --> 01:05:21,048
-which is Kotlin.unit,
-so that is a unit type.
+имеет тип kotlin.Unit
 
 1475
 01:05:21,048 --> 01:05:23,280
-And so again, if I just
-specify it here, units.
+имеет тип kotlin.Unit
 
 1476
 01:05:23,280 --> 01:05:26,110
-Again, I'm not having to
-specify a return statement
+Повторюсь, что тип я могу
+указать явно,
 
 1477
 01:05:26,110 --> 01:05:29,650
-because just by default, if
-it's a function like this,
+но это совсем не обязательно,
+потому что все функции по дефолту
 
 1478
 01:05:29,650 --> 01:05:30,640
-it will return a unit.
+возвращают Unit.
 
 1479
 01:05:30,640 --> 01:05:34,440
-And there we go, as you can
-see it returns a unit here.
+И мы видим результат в консоли.
 
 1480
 01:05:34,440 --> 01:05:36,220
-Now let's say for whatever reason,
+Давайте допустим, что мы хотим
 
 1481
 01:05:36,220 --> 01:05:38,390
-we want it to return a string though.
+возвращать какую-нибудь строку.
 
 1482
 01:05:38,390 --> 01:05:39,840
-And so you'll see here,
-as soon as I did that,
+И вы заметите, что как только
+я явно укажу тип String
 
 1483
 01:05:39,840 --> 01:05:41,010
-got a squiggly line here.
+снизу появится красная полоска.
 
 1484
 01:05:41,010 --> 01:05:42,620
-Now what that's saying
-is we haven't returned
+Она подсказывает, что мы
+не возвращаем строку,
 
 1485
 01:05:42,620 --> 01:05:43,453
-any string here.
+но функия должна это делать.
 
 1486
 01:05:43,453 --> 01:05:45,550
-So let's say, I wanna return something.
+Я хочу вернуть какую-то строку
 
 1487
 01:05:45,550 --> 01:05:49,410
-So let's say, hello, is this
-return the word hello world.
+допустим "Hello World"
+я должен написать ключевое слово "return"
 
 1488
 01:05:49,410 --> 01:05:51,830
-So instead of printing it,
-let's just return it here.
+И вместо вывода в консоль, после
+return я напишу эту строку
 
 1489
 01:05:53,465 --> 01:05:55,726
-And it's going to return
-the value hello world.
+И теперь функция возвращает строку
 
 1490
 01:05:55,726 --> 01:05:57,150
-And then when we print it to the screen,
+которую мы будем выводить в консоль
+из main() функции
 
 1491
 01:05:58,830 --> 01:06:00,200
-we can say hello world.
+которую мы будем выводить в консоль
+из main() функции
 
 1492
 01:06:00,200 --> 01:06:02,790
-And did go ahead and print to the screen
+И получим наш вывод.
 
 1493
 01:06:02,790 --> 01:06:05,770
-because what happened here
-is these say hi function
+функция sayHi теперь сама ничего не
+выводит в консоль,
 
 1494
 01:06:05,770 --> 01:06:08,120
-is now returning hello world.
+она отдает строку функции,
+которая вызвала ее.
 
 1495
 01:06:08,120 --> 01:06:11,230
-We're gonna stuff that
-value into this variable X
+Мы записываем эту строку в переменную
 
 1496
 01:06:11,230 --> 01:06:13,620
-and then we're gonna print
-the variable X to the screen
+и выводим значение
+переменной в консоль
 
 1497
 01:06:13,620 --> 01:06:15,360
-with the print ln statement.
+с помощью println.
 
 1498
 01:06:15,360 --> 01:06:17,170
-So now something interesting happens.
+Интересное знамечание -
 
 1499
 01:06:17,170 --> 01:06:18,800
-You may be thinking, well,
-let's just call say hi
+Вы можете подумать, что будет
+если мы несколько раз
 
 1500
 01:06:18,800 --> 01:06:22,050
-a few times here and
-let's see what happens.
+вызовем функцию sayHi
 
 1501
 01:06:22,050 --> 01:06:24,510
-And if I run this, you'll
-notice that we're just going
+И если вы запустите программу, то
 
 1502
 01:06:24,510 --> 01:06:28,040
-to get on the screen hello world one time.
+ничего не изменится и вывод в
+консоли будет только один
 
 1503
 01:06:28,040 --> 01:06:30,775
-And the reason why we're
-only getting hello world
+И причиной этому является то, что
+сама по себе функция
 
 1504
 01:06:30,775 --> 01:06:32,660
-to the screen one time
-is because remember,
+sayHi больше не выводит ниего в консоль
+она просто отдает результат
 
 1505
 01:06:32,660 --> 01:06:36,820
-say hi is returning something,
-it's returning a string.
+вызывающей ее функции
 
 1506
 01:06:36,820 --> 01:06:38,260
-So it's not doing anything in here,
+А внутри ничего не происходит
 
 1507
 01:06:38,260 --> 01:06:40,080
-but saying, hey, I'm gonna have this value
+кроме созданя строки
 
 1508
 01:06:40,080 --> 01:06:42,400
-and I'm going to return hello world.
+и возвращения ее.
 
 1509
 01:06:42,400 --> 01:06:44,500
-And at that point you can do
-whatever you want with it.
+И вы можете делать с этим выводом
+все что захотите уже вне функции.
 
 1510
 01:06:44,500 --> 01:06:47,184
-And in that case, we are just
-assigning it to a variable X
+В нашем случае мы записываем
+строку в переменную
 
 1511
 01:06:47,184 --> 01:06:48,700
-and printing it to the screen.
+и выводим на экран.
 
 1512
 01:06:48,700 --> 01:06:51,190
-Now, these last three,
-aren't doing anything.
+Следующие три функции возвращают
+строку "Hello World",
 
 1513
 01:06:51,190 --> 01:06:53,580
-It's calling this and it's
-returning hello world,
+но мы ничего не
 
 1514
 01:06:53,580 --> 01:06:55,200
-but we're not doing
-anything with the results.
+делаем с результатом
 
 1515
 01:06:55,200 --> 01:07:00,200
-So if I did val Y equals
-this, I did val X,
+Если я напишу переменные "X" и "Y"
 
 1516
 01:07:01,418 --> 01:07:03,060
-(indistinct) would have X, Z equals this.
+"X" уже используется, пусть будет "Z"
 
 1517
 01:07:03,060 --> 01:07:08,060
-I'm val A equals this, those
-variables would then be set
+и переменную "A", то в них запишется
 
 1518
 01:07:09,180 --> 01:07:12,650
-and I could actually print
-them to the screen as well.
+результат.
+И давайте выведем их в консоль
 
 1519
 01:07:12,650 --> 01:07:17,620
-So I'll change these from Y to Z to A.
+Заменю вывод на "y" "z" и "a"
 
 1520
 01:07:21,300 --> 01:07:23,320
-And if we'd run this
-again, you're gonna see
+и если запустим программу
 
 1521
 01:07:23,320 --> 01:07:28,320
-that all the values are running
-and printed to the screen.
+мы увидим, что эти строки вывелись
+в нашу консоль
 
 1522
 01:07:28,580 --> 01:07:30,910
-So hello world, hello world, hello world,
+получилось много "Hello World"-ов
 
 1523
 01:07:30,910 --> 01:07:32,340
-because we had to actually do something
+потому что теперь мы действительно
 
 1524
 01:07:32,340 --> 01:07:33,300
-with those return values.
+что-то делаем в возвращаемым значением.
 
 1525
 01:07:33,300 --> 01:07:34,630
-And if I get rid of this right here,
+И если я сейчас удалю переменные
 
 1526
 01:07:34,630 --> 01:07:37,530
-we're gonna see that we
-have an error on the screen,
+мы получим ошибку, потому что
+переменные, которые мы пытаемся вывести
 
 1527
 01:07:37,530 --> 01:07:40,220
-simply because those variables
-have not been declared.
+не были объявлены в коде.
 
 1528
 01:07:40,220 --> 01:07:42,580
-So that's just not gonna
-work, it won't even compile.
+Поэтому программа просто напросто
+не скомпилируется.
 
 1529
 01:07:42,580 --> 01:07:44,180
-So this is a return type.
+Итак, это функция с возвращаемым типом
 
 1530
 01:07:44,180 --> 01:07:46,040
-If we wanna change the return
-type to something else,
+и я поменяю его на что-нибудь другое.
 
 1531
 01:07:46,040 --> 01:07:48,280
-we can say int, so it's gonna return int.
+Допустим на Int, теперь будем возвращать Int
 
 1532
 01:07:48,280 --> 01:07:50,030
-And by default, this will not work.
+И все снова сломается, компилятор говорит
 
 1533
 01:07:51,095 --> 01:07:51,928
-You'll say, hey, there's a problem here.
+Что возвращаемый тип
 
 1534
 01:07:51,928 --> 01:07:54,650
-And so I can return the value
-of 32 or something like that.
+функции и то что мы возвращаем - разного типа.
+Заменим строку на число, например 32
 
 1535
 01:07:54,650 --> 01:07:58,120
-And if we run this again,
-we can then execute it.
+И если теперь запустим,
+то все сработает.
 
 1536
 01:07:58,120 --> 01:07:59,550
-Now, of course, because
-this is a function,
+В этой функции мы можем делать
+что угодно помимо return
 
 1537
 01:07:59,550 --> 01:08:01,880
-We can say something, we
-could put some if statements
+например мы можем записать
+условное выражение if
 
 1538
 01:08:01,880 --> 01:08:04,570
-inside of here or whatever we wanted to,
+мы даже можем вернуть тип на String
 
 1539
 01:08:04,570 --> 01:08:06,750
-even if we wanted to
-return it to the string,
+и наше число
 
 1540
 01:08:06,750 --> 01:08:08,340
-but we only had a integer in here.
+32 привести к типу
 
 1541
 01:08:08,340 --> 01:08:12,540
-I could say dot two string
-and that would then print 32
+String. для этого напишем 32.toSting()
 
 1542
 01:08:12,540 --> 01:08:14,630
-as a string to the screen.
+и это переведет Int в String.
 
 1543
 01:08:14,630 --> 01:08:16,797
-So now whatever return types are,
+Возвращаемый тип может быть
 
 1544
 01:08:16,797 --> 01:08:18,020
-which could be any of the built-in types
+строенным или нашим собственным
 
 1545
 01:08:18,020 --> 01:08:20,160
-that you've already learned could be here.
+строенным или нашим собственным
 
 1546
 01:08:20,160 --> 01:08:23,340
-So it could be a Boolean
-value, it could be a long,
+То есть это может быть Boolean,
+может быть Long
 
 1547
 01:08:23,340 --> 01:08:26,138
-it could be a double,
-if it can be any float,
+Double, Float
 
 1548
 01:08:26,138 --> 01:08:27,753
-whatever you're working
-with at that point in time,
+зависит от того что делает
+ваша функция
 
 1549
 01:08:27,753 --> 01:08:29,340
-you'll need to return that.
+вы можете вернуть любой тип
 
 1550
 01:08:30,181 --> 01:08:31,820
-So in this case, I'd say return true,
+Я напишу return true
 
 1551
 01:08:31,820 --> 01:08:33,190
-and it would return that value.
+и функция будет теперь возвращать
 
 1552
 01:08:33,190 --> 01:08:35,050
-So you need to return
-whatever the value is.
+это значение.
 
 1553
 01:08:35,050 --> 01:08:39,060
-And of course, as we know,
-if we don't return anything
+И конечно, как вы уже знаете,
+мы можем не указывать тип
 
 1554
 01:08:39,060 --> 01:08:41,410
-at all, it's going to return a unit,
+и тогда будет возвращаться
+тип Unit.
 
 1555
 01:08:41,410 --> 01:08:44,350
-which even if the function
-does nothing whatsoever,
+в случае, когда функия ничего
+не возвращает,
 
 1556
 01:08:44,350 --> 01:08:46,830
-it's still going to return a unit,
+возвращается тип Unit
 
 1557
 01:08:46,830 --> 01:08:48,780
-which then we print to the screen here.
+который мы можем вывести в консоль.
 
 1558
 01:08:50,360 --> 01:08:52,450
-Functions instead of
-Kotlin are first class.
+В котлине функции это "объекты
+первого порядка"
 
 1559
 01:08:52,450 --> 01:08:56,480
-So if we have a function, say hi,
+Объяснение через секунду.
+Если у нас есть функция sayHi
 
 1560
 01:08:56,480 --> 01:08:59,230
-we might have something
-that look like this.
+которая будет выводить текст
 
 1561
 01:08:59,230 --> 01:09:01,080
-And inside of here, when I say hello.
+допустим "Hello"
 
 1562
 01:09:02,171 --> 01:09:03,004
-And if we were to call this function,
+и вызовем эту функцию из main()
 
 1563
 01:09:03,004 --> 01:09:04,740
-of course, we just call
-it in the main function
+функции
 
 1564
 01:09:04,740 --> 01:09:08,030
-and it's just going to
-print hello to the screen.
+в результате она просто выведет текст
+в консоль.
 
 1565
 01:09:08,030 --> 01:09:10,320
-However, one a bit are cool
-things that you can also do
+Но функции это объекты первого порядка
 
 1566
 01:09:10,320 --> 01:09:12,667
-inside of Kotlin with functions
+и технически функция в
+Котлине это тоже объект
 
 1567
 01:09:12,667 --> 01:09:14,410
-since they are first-class
-citizens and technically objects,
+поэтому внутри одной
 
 1568
 01:09:14,410 --> 01:09:16,930
-which we will get to is
-you create another function
+функции вы можете объявить
 
 1569
 01:09:16,930 --> 01:09:18,300
-inside of another function.
+другую, новую, функцию
 
 1570
 01:09:18,300 --> 01:09:23,030
-So we can say bye and that
-would look something like this.
+Например функцию sayBye,
+которая будет выглядеть вот так
 
 1571
 01:09:23,030 --> 01:09:26,630
-So now I'm creating a function
-inside of another function.
+И так мы создаем функцию внутри
+другой функции
 
 1572
 01:09:26,630 --> 01:09:29,280
-And this one just gonna be bye.
+И тут тоже выведем текст.
 
 1573
 01:09:29,280 --> 01:09:31,220
-Now, if I wanna call this function,
+И теперь, если я захочу вызвать
+эту функцию
 
 1574
 01:09:32,816 --> 01:09:35,001
-if I go up here and I try to say, say bye,
+из метода main и запуши ее вызов тут
 
 1575
 01:09:35,001 --> 01:09:36,234
-you'll notice I can't call this up here
+вы увидете, что функция подсвечена красным
 
 1576
 01:09:36,234 --> 01:09:37,780
-because this function is not found.
+потому что main функция ее не видит
 
 1577
 01:09:37,780 --> 01:09:41,510
-It's because the scope of this
-function is within say hi.
+это происходит из-за того что
+область видимости внутренней функции
+ограничена
 
 1578
 01:09:41,510 --> 01:09:44,480
-So the only place I can call say bye,
+И единственное место, где я могу вызвать
 
 1579
 01:09:44,480 --> 01:09:47,420
-is it within the say hi
-function, so this won't work.
+функцию sayBye это функция
+sayHi, где наша внутренняя функция
 
 1580
 01:09:47,420 --> 01:09:50,940
-So if I wanna call it, I can
-come in here and call it.
+создается.
 
 1581
 01:09:50,940 --> 01:09:52,970
-But if I try it right
-here, you'll notice again,
+Но если я вызову фнкцию тут,
+то она опять бует красной
 
 1582
 01:09:52,970 --> 01:09:54,920
-it's red, which means it can't be found
+а значит не найдена.
 
 1583
 01:09:55,818 --> 01:09:58,040
-and the reason why Kotlin can't find it
+И причина в том, что функция,
+которую я пытаюсь вызвать
 
 1584
 01:09:58,040 --> 01:09:59,060
-is because it has not been declared yet.
+еще не создана.
 
 1585
 01:09:59,060 --> 01:10:01,410
-So by the time the code gets here,
+Когда код будет выполняться и мы будем в этой
+строчке, то компилятор понятия не имеет
 
 1586
 01:10:01,410 --> 01:10:03,420
-you have no idea what say bye means
+что за функция такая sayBye
 
 1587
 01:10:03,420 --> 01:10:05,380
-because it's been declared below.
+потому что она объявлена на следующей строчке.
 
 1588
 01:10:05,380 --> 01:10:08,190
-So we can go underneath
-the function and call it.
+Если мы вызовем функцию после ее создания
 
 1589
 01:10:08,190 --> 01:10:11,320
-And so say bye, and if
-we were to run this now,
+И запустим программу
 
 1590
 01:10:11,320 --> 01:10:13,990
-what we see to say hi and then bye.
+то увидим "Hi" и "Bye" текст
 
 1591
 01:10:15,472 --> 01:10:17,690
-And if we run it, we
-would see hello and bye.
+Запустим..
+И да, результат такой, какой мы ожидали.
 
 1592
 01:10:17,690 --> 01:10:20,080
-Now, of course, we should
-probably rename this
+Теперь мы конечно должны переименовать
+нашу функцию на sayHiAndBye
 
 1593
 01:10:20,080 --> 01:10:23,030
-to something else to say hi and bye.
+чтобы она подходила по смыслу.
 
 1594
 01:10:23,030 --> 01:10:25,781
-And that was a simple rename,
+Я использовал шорткат для переименования
 
 1595
 01:10:25,781 --> 01:10:27,300
-which is done with a short cut key
+который вы можете посмотреть
 
 1596
 01:10:27,300 --> 01:10:30,090
-or you could just do refactor rename.
+нажав правой кнопкой мыши
+и выбрав пункт Refactor->Rename
 
 1597
 01:10:30,090 --> 01:10:32,280
-So I used the shift F six here on a Mac.
+Я использовал хоткей shift+F6 на своем маке
 
 1598
 01:10:32,280 --> 01:10:34,870
-So shifted F six giving
-the highlight to change it.
+И этот хоткей подсвечивает нам функию
+и меняет ее имя везде в коде
 
 1599
 01:10:34,870 --> 01:10:36,980
-So say, hi and bye and it will say hello.
+Итак при вызове sayHiAndBye
 
 1600
 01:10:36,980 --> 01:10:39,290
-And then it will say goodbye or just bye.
+нам будут выводится все наши строки
 
 1601
 01:10:41,490 --> 01:10:43,850
-And then that function inside
-of their head of function.
+Потому что одна функция создает
+и вызывает внутри себя другую
 
 1602
 01:10:43,850 --> 01:10:45,220
-You can also put another function
+Мы так же можем создать еще
 
 1603
 01:10:45,220 --> 01:10:46,900
-inside of something in here.
+одну функцию внутри bye
 
 1604
 01:10:47,752 --> 01:10:50,520
-So you could say move like a
-cow, it would say print ln.
+например функцию moo которая
 
 1605
 01:10:50,520 --> 01:10:52,250
-And this could say moo.
+будет мычать в консоль
 
 1606
 01:10:53,330 --> 01:10:56,450
-Now of course, I need a call
-moon after I've declared it.
+И нам обязательно нужно не забыть
+вызвать эту функцию, потому что
 
 1607
 01:10:56,450 --> 01:10:59,280
-So at this point, I'm
-gonna call say, hi and bye
+создание функции не означает
+что она вызовется
 
 1608
 01:10:59,280 --> 01:11:02,260
-and then print hello, this
-function will be declared
+И так по цепочке
+у нас будут
 
 1609
 01:11:02,260 --> 01:11:04,650
-and then we'll call say bye
-which then we'll hop into here.
+создаваться и вызываться
 
 1610
 01:11:04,650 --> 01:11:07,220
-It'll say bye, we'll declare moo.
+функции одна за другой.
 
 1611
 01:11:07,220 --> 01:11:09,260
-Then moo will be called, which
-will print inside of here.
+В самом конце вызовется функция moo
+которая заверщит вывод в консоль.
 
 1612
 01:11:09,260 --> 01:11:11,100
-So all different kinds of stuff happening.
+В небольшом куске кода происходит очень
+много действий
 
 1613
 01:11:11,100 --> 01:11:12,430
-We're going here to here to here
+Мы идем сюда, сюда и сюда
 
 1614
 01:11:12,430 --> 01:11:14,600
-kind of jumping around all over.
+и прыгаем по разным частям кода.
 
 1615
 01:11:14,600 --> 01:11:16,450
-And if we were to run this again,
+И если запустим
 
 1616
 01:11:16,450 --> 01:11:20,070
-we're going to see hello, bye, moo
+то в консоли будет "hello", "bye" и "moo"
 
 1617
 01:11:20,070 --> 01:11:21,560
-as we see on the helmet here.
+то в консоли будет "hello", "bye" и "moo"
 
 1618
 01:11:21,560 --> 01:11:24,530
-Now there are again,
-functions inside of functions.
+на самом деле создание и вызов
+функиц внутри других функций
 
 1619
 01:11:24,530 --> 01:11:28,090
-This can get really squarely
-looking and look real nasty
+это довольно редкая практика
+и не стоит ей злоупотреблять,
 
 1620
 01:11:28,090 --> 01:11:29,390
-after a period of time.
+потому что код становится
+неразборчивой кашей из вызовов
 
 1621
 01:11:29,390 --> 01:11:32,540
-So I advise that you be
-very careful with declaring
+Используйте такой подход
 
 1622
 01:11:32,540 --> 01:11:34,730
-functions inside of
-functions and make sure
+только когда это действительно
 
 1623
 01:11:34,730 --> 01:11:36,570
-that's the proper right thing to do,
+необходимо или иначе сделать нельзя,
 
 1624
 01:11:36,570 --> 01:11:38,840
-because it can make the
-code very hard to read.
+потому что читать такой код
+очень турдно.
 
 1625
 01:11:38,840 --> 01:11:41,290
-So unless you have a really
-good idea for making a function
+Итак, используйте создание функций
+в других функция
 
 1626
 01:11:41,290 --> 01:11:43,460
-inside of a function, then you
-might wanna steer clear of it
+только когда на это действительно
+есть веская причина
 
 1627
 01:11:43,460 --> 01:11:46,170
-until you have a good grasp on
-when you might want to do it,
+и когда вы понимаете зачем это нужно.
 
 1628
 01:11:46,170 --> 01:11:48,220
-which there are various
-different implementations
+но сейчас можно обойтись
+просто созданием отдельных функций
 
 1629
 01:11:48,220 --> 01:11:50,220
-that are beyond the scope of this video.
+кейсы создания функций в функиях
+это тема не для этого курса.
 
 1630
 01:11:51,890 --> 01:11:56,090
