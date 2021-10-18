@@ -7216,604 +7216,591 @@ sayHi, где наша внутренняя функция
 
 1630
 01:11:51,890 --> 01:11:56,090
-Functions in Kotlin typically
-look something like this
+Функции в Котлине
+обычно выглядят так,
 
 1631
 01:11:56,090 --> 01:11:59,570
-and this function called say
-hi, what we'll actually have
+как наша функция sayHi
 
 1632
 01:11:59,570 --> 01:12:04,360
-is a print line statement that says hi.
+которая здоровается с нами
+в консоли при запуске
 
 1633
 01:12:04,360 --> 01:12:07,230
-And so if I were to call
-this from the main function,
+И если мы выззовем ее из
 
 1634
 01:12:07,230 --> 01:12:09,580
-we're gonna go ahead and
-see high printed down here
+функции main, то в выводе
 
 1635
 01:12:09,580 --> 01:12:11,800
-to the output screen says hi.
+мы увидим нашу строчку текста.
 
 1636
 01:12:13,499 --> 01:12:15,650
-Now, unfortunately,
-with a lot of languages,
+И если посмотреть на все объявление
 
 1637
 01:12:15,650 --> 01:12:17,910
-this bracket and this
-bracket is kind of verbose
+метода то можно заметить, что
+фигурные скобки
 
 1638
 01:12:17,910 --> 01:12:19,310
-for just a simple statement.
+прилично увеличивают функцию
+в объеме.
 
 1639
 01:12:20,503 --> 01:12:21,790
-Now, of course, this
-function could have multiple
+Конечно, сама по себе функция
+могла бы содержать
 
 1640
 01:12:21,790 --> 01:12:23,860
-different things in here,
-but let's just assume
+гораздо больше действий, но
+давайте представим, что она
 
 1641
 01:12:23,860 --> 01:12:25,490
-it did one thing for now.
+делает одну единственную
+вещь.
 
 1642
 01:12:25,490 --> 01:12:27,190
-So Kotlin actually has a concept
+И для этого у котлина есть подход
+который называется
 
 1643
 01:12:27,190 --> 01:12:29,640
-known as a single expression function.
+"функция единственного выражения".
 
 1644
 01:12:29,640 --> 01:12:32,610
-So we could do this here,
-say hi is equivalent
+И мы можем написать название функции
+потом знак "равно" и действие,
 
 1645
 01:12:32,610 --> 01:12:34,280
-to what we had before.
+которое делали до этого.
 
 1646
 01:12:34,280 --> 01:12:37,820
-What this means is I have a
-function, it's name is say hi,
+Это значит, что у нас есть функция
+с названием sayHi и пустым набором
 
 1647
 01:12:37,820 --> 01:12:39,580
-it doesn't have any parameters.
+параметров (пустые круглые скобки)
 
 1648
 01:12:39,580 --> 01:12:42,070
-And it's body of the
-function is the equivalent
+И тело этой функции равно тому
+действию, которое
 
 1649
 01:12:42,997 --> 01:12:45,455
-to this stuff over here, which
-is on the right hand side
+находится по правую сторону
 
 1650
 01:12:45,455 --> 01:12:46,530
-of the equals sign.
+от знака равно.
 
 1651
 01:12:46,530 --> 01:12:47,790
-So inside the body of the function
+И так у нас получается, что тело
+функции это просто
 
 1652
 01:12:47,790 --> 01:12:49,140
-is just gonna be print line.
+вызов метода println.
 
 1653
 01:12:49,140 --> 01:12:52,130
-So if I run this, we'll see
-the same exact thing here.
+Если мы запустим программу,
+то увидим все тот же вывод
 
 1654
 01:12:52,130 --> 01:12:53,870
-So we can actually see hi.
+Программа с нами здоровается.
 
 1655
 01:12:53,870 --> 01:12:57,020
-Since Kotlin supports
-functions inside of functions
+Мы помним, что Котлин поддерживает
+создание функций внутри других функций
 
 1656
 01:12:57,020 --> 01:12:59,756
-because functions are actually objects,
+потому что функции это тоже объекты,
 
 1657
 01:12:59,756 --> 01:13:01,980
-we can actually declare a function
+объявим функцию
 
 1658
 01:13:01,980 --> 01:13:04,310
-inside of another function,
-which you could decide
+внутри нашей функции main
 
 1659
 01:13:04,310 --> 01:13:07,120
-to do or not and we'd say do work.
+назовем ее напрмер doWork.
 
 1660
 01:13:07,120 --> 01:13:10,780
-Let's say we had a variable
-peer called age equals 32.
+И создадим переменную age с
+числом 32.
 
 1661
 01:13:10,780 --> 01:13:13,680
-And then it said, if age is less than 32,
+И теперь напишем тело функции -
+если возраст меньше 32,
 
 1662
 01:13:13,680 --> 01:13:17,230
-excuse me, less than 21, we
-would go ahead and print out
+ой, извините, меньше 21, мы
+выведем, что возраст пользователя
 
 1663
 01:13:17,230 --> 01:13:22,230
-that the whatever person or
-whoever is less than at 21,
+меньше чем 21
 
 1664
 01:13:24,770 --> 01:13:29,770
-and otherwise they are say
-eligible for whatever reason,
+или иначе, пользователь подходит
+для чего-то, неважно
 
 1665
 01:13:31,580 --> 01:13:34,030
-maybe have some reason
-someone has to be over 21.
+возможно есть какое-то
+возрстное ограничение.
 
 1666
 01:13:35,600 --> 01:13:38,470
-So now if we were to call do
-work out or try to of course,
+И если мы вызовем функцию doWork
 
 1667
 01:13:38,470 --> 01:13:40,830
-type a here do work has
-not been declared yet
+не тут конечно, потому что doWork
+в этой строчке кода еще не создан
 
 1668
 01:13:40,830 --> 01:13:44,800
-so I can't call it, so I'm
-going to call it from down here.
+вызовем этотм метод после его создания.
 
 1669
 01:13:44,800 --> 01:13:47,270
-And if I run this, we're
-going to see say hi
+И если запустим то увидим
+приветствие
 
 1670
 01:13:47,270 --> 01:13:51,070
-and then we'll see eligible
-because the person is eligible.
+а потом увидим, что пользователь
+проходит возрастное ограничение
 
 1671
 01:13:51,070 --> 01:13:53,880
-Let's set this to 12 and run it.
+Давайте поменяем на 12 и запустим.
 
 1672
 01:13:53,880 --> 01:13:58,130
-And you're going to see
-that it says less than 21.
+Теперь увидим предупреждение.
 
 1673
 01:13:58,130 --> 01:14:00,760
-Now we can also perform, this is kind of
+И весь наш код написан
 
 1674
 01:14:00,760 --> 01:14:01,950
-as we know multi-line statement.
+в несколько строк.
 
 1675
 01:14:01,950 --> 01:14:05,530
-But since we can use
-single line if statements,
+Но мы уже знаем, что короткие "if"
+условия можно переписать в одну строку,
 
 1676
 01:14:05,530 --> 01:14:08,010
-we can also turn this into
-a single line expression.
+а функцию переписать как функцию
+единственного выражения.
 
 1677
 01:14:08,010 --> 01:14:10,080
-So what I'm gonna do is I'm gonna get rid
+Для этого я просто поубираю все
 
 1678
 01:14:10,080 --> 01:14:13,380
-of these brackets, basically all of them.
+ненужные фигурные скобки
 
 1679
 01:14:14,990 --> 01:14:18,190
-And we'll do is kind of
-line this stuff up here
+из нашей функции
 
 1680
 01:14:19,080 --> 01:14:22,580
-and turn this into a
-single line expression.
+и перетащу все действия в одну строку.
 
 1681
 01:14:22,580 --> 01:14:25,850
-And so again, the age is
-12 if it's less than 21,
+И условие все тоже самое,
+если возраст меньше 21
 
 1682
 01:14:25,850 --> 01:14:29,160
-it'll print line here, else
-that'll print this other thing.
+выведем эту строку, а если больше
+то другую из "else".
 
 1683
 01:14:29,160 --> 01:14:32,430
-If we run it, we can
-actually, we see less than 21.
+Если запущу то увидим все тот же результат,
 
 1684
 01:14:32,430 --> 01:14:36,580
-And of course, if I changed
-it to 32, run it again,
+и по традиции поставим значение
+побольше
 
 1685
 01:14:36,580 --> 01:14:39,470
-you'll see that the output is eligible,
+и получим, что пользователь
+проходит по возрасту,
 
 1686
 01:14:39,470 --> 01:14:41,950
-which is the other part
-of the statement here.
+а это как раз условие после "else".
 
 1687
 01:14:41,950 --> 01:14:43,900
-So you can clean up a lot of your code
+И так вы можете убрать кучу лишнего
+кода и читать его будет гораздо
 
 1688
 01:14:43,900 --> 01:14:45,510
-by using single line expressions.
+легче в одну строку.
 
 1689
 01:14:45,510 --> 01:14:48,710
-There is a heuristic that
-you should follow though.
+И опять же - главное правило
+по стилю написания кода.
 
 1690
 01:14:48,710 --> 01:14:52,380
-Let's close this window
-over here and you'll notice
+Закроем это окно и вы заметите
 
 1691
 01:14:52,380 --> 01:14:55,220
-the right-hand margin with
-this little gray line here.
+вертикальную линию
 
 1692
 01:14:55,220 --> 01:14:58,380
-If you find your code
-approaching this over here.
+Если ваш код доходит до нее.
 
 1693
 01:14:58,380 --> 01:15:01,980
-So let's just go ahead and type
-eligible a couple of times,
+Давайте для примера несколько
 
 1694
 01:15:01,980 --> 01:15:04,180
-if for whatever reason eligible,
+раз продублируем текст
 
 1695
 01:15:04,180 --> 01:15:06,208
-you've typed a bunch of stuff here,
+чтобы он был больше.
 
 1696
 01:15:06,208 --> 01:15:07,650
-it goes beyond the right margin,
+И теперь код выходит за эту границу
 
 1697
 01:15:07,650 --> 01:15:11,180
-it's usually advisable that
-you'd turn this instead of this
+Главный совет по код стайлу -
+если ваш код доходит до этой границы
 
 1698
 01:15:11,180 --> 01:15:15,180
-into an old fashioned multiline function
+то лучше использовать условный блок
+if в несколько строк с фигурными скобками
 
 1699
 01:15:15,180 --> 01:15:16,830
-just so that it's more readable.
+так он будет читабельнее.
 
 1700
 01:15:16,830 --> 01:15:19,070
-So here you'd wanna go
-ahead and of course,
+И нам нужно вернуть
 
 1701
 01:15:19,070 --> 01:15:20,410
-add your brackets.
+фигурные скобки
 
 1702
 01:15:20,410 --> 01:15:22,810
-And you'd kind of do
-this thing right here.
+и вернуть их везде и в функции
+и в "if" условии
 
 1703
 01:15:24,080 --> 01:15:28,560
-And as we've kind of seen
-before, we'll put this down here.
+И перенесем все на отдельные линии.
 
 1704
 01:15:29,420 --> 01:15:32,800
-Oops, we'll clean this up a
-little bit, so there we go.
+Упс, через секунду поправлю.
 
 1705
 01:15:32,800 --> 01:15:37,800
-So now if the age is less than
-21, we're gonna print line.
+Опять же, если возраст меньше
+21 то выведем эту строку,
 
 1706
 01:15:37,979 --> 01:15:39,960
-Otherwise we're gonna
-print eligible, eligible,
+если больше, то вот эту
 
 1707
 01:15:39,960 --> 01:15:41,290
-eligible, eligible.
+если больше, то вот эту
 
 1708
 01:15:41,290 --> 01:15:43,840
-Again, now the reason is
-because the right-hand margin,
+И причина этому - стандарты написания
 
 1709
 01:15:43,840 --> 01:15:46,020
-it's just a common coding practice.
+кода, которые привычны
+всем разработчикам.
 
 1710
 01:15:46,020 --> 01:15:48,770
-If your code goes beyond
-that right-hand margin,
+Если ваш код превышает какое-то
+колличество символов в длинну,
 
 1711
 01:15:48,770 --> 01:15:51,410
-you should figure out a way
-to break into a new line.
+то вам нужно найти способ,
+как разнести его на несколько строк.
 
 1712
 01:15:51,410 --> 01:15:53,610
-And usually if you're using
-a single line expression,
+И если вы используете
+однострочную функцию
 
 1713
 01:15:53,610 --> 01:15:55,850
-you'll wanna go ahead and
-that's usually an indicator
+и доходите до индикатора,
+то это верный знак, что ваша
 
 1714
 01:15:55,850 --> 01:15:57,500
-that you should probably
-use a regular function body
+функция слишком сложная и ее
 
 1715
 01:15:57,500 --> 01:15:59,300
-instead of a single line expression.
+нужно разбить на несколько строк.
 
 1716
 01:16:00,370 --> 01:16:03,130
-Functions in Kotlin without any parameters
+Функции без параметров
 
 1717
 01:16:03,130 --> 01:16:04,710
-are going to look just like this
+выглядят именно так -
 
 1718
 01:16:04,710 --> 01:16:06,240
-with an open and close parentheses.
+название функции и две скобки.
 
 1719
 01:16:06,240 --> 01:16:07,850
-So the parameters are gonna be
+Если мы хотим передать в функцию
+параметры
 
 1720
 01:16:07,850 --> 01:16:09,760
-in between the parentheses here
+то мы запишем их между двумя скобками.
 
 1721
 01:16:09,760 --> 01:16:11,050
-and there are no parameters here.
+сейчас у нас нет параметров.
 
 1722
 01:16:11,050 --> 01:16:13,270
-So if we were to call do work,
+Если мы вызовем doWork,
 
 1723
 01:16:13,270 --> 01:16:14,930
-of course, nothing would happen.
+то ничего не произойдет.
 
 1724
 01:16:14,930 --> 01:16:18,690
-We could say print the
-line work is happening.
+Мы можем дописать вывод
+и текст "Work is happening"
 
 1725
 01:16:19,670 --> 01:16:23,040
-And then if we were to run
-it, of course we'll do that.
+И если сейчас запустим, то
+в консоль выведется текст.
 
 1726
 01:16:23,040 --> 01:16:24,121
-Now, parameter is something
+Параметр функции это нечто,
+что мы можем передать
 
 1727
 01:16:24,121 --> 01:16:26,220
-that we can parse into a function
+в функцию и функция
 
 1728
 01:16:26,220 --> 01:16:27,730
-to do work with it.
+сможет использовать, чтобы
+работать как-то иначе.
 
 1729
 01:16:27,730 --> 01:16:29,500
-We can perform some type of value.
+Мы можем передать какое-то значение
+в функцию.
 
 1730
 01:16:29,500 --> 01:16:31,290
-So what I would like to
-do maybe is I would like
+Напрмер я хочу передать
 
 1731
 01:16:31,290 --> 01:16:34,166
-to provide some type of value here,
+какое-нибудь значение в функцию.
 
 1732
 01:16:34,166 --> 01:16:36,360
-I wanna type in the value
-of 32 into this function.
+Пусть это будет целое число 32.
 
 1733
 01:16:36,360 --> 01:16:38,230
-So what I'll do is take
-the value 32 and say,
+И я как бы говорю функции:
+"Сделай свою работу и вот тебе
 
 1734
 01:16:38,230 --> 01:16:42,170
-"Hey, do work, you need to do
-something with this 32 value."
+дополнительно число 32, можешь его
+использовать"
 
 1735
 01:16:42,170 --> 01:16:44,700
-But in order to do that, I
-need to provide a parameter
+Но для того чтобы это работало,
+необходимо, чтобы функция
 
 1736
 01:16:44,700 --> 01:16:46,450
-inside of the function declaration.
+ожидала что-то на вход в своих аргументах.
 
 1737
 01:16:47,497 --> 01:16:49,340
-And so to do that, what I'm
-going to do is type the word age
+И для этого между скобками
+я напишу "age" и его тип -
 
 1738
 01:16:49,340 --> 01:16:50,420
-and its type.
+целочисленный Int.
 
 1739
 01:16:50,420 --> 01:16:55,320
-So here age is gonna be an
-integer and its value up here
+Теперь тут возраст это целое число
+и мы видим что при вызове функции
 
 1740
 01:16:55,320 --> 01:16:56,750
-is gonna be 32.
+оно будет равно 32.
 
 1741
 01:16:56,750 --> 01:17:01,060
-So now what I can do is I can say age is,
+Теперь я могу использовать возраст
+в функции и написать "Age is $age"
 
 1742
 01:17:01,060 --> 01:17:03,170
-and of course, when you
-string interpolation here
+я использую интерполяцию строк,
+чтобы возраст можно было
 
 1743
 01:17:03,170 --> 01:17:06,440
-and say age is age and whatever.
+запихнуть сразу в строку
 
 1744
 01:17:08,053 --> 01:17:08,970
-Let's just do the reads a little better.
+и код выглядел лучше.
 
 1745
 01:17:08,970 --> 01:17:11,510
-You are blank.
+Давайте лучше напишем "You are $age"
 
 1746
 01:17:11,510 --> 01:17:13,840
-And so let's say you are
-32 in this case so far.
+И давайте напишем что вам,
+например 32 года.
 
 1747
 01:17:13,840 --> 01:17:18,430
-To run this, we would see
-that do work functions
+Если запустим то в выводе
+увидим
 
 1748
 01:17:18,430 --> 01:17:20,790
-says you are 32, which is great.
+что вам 32, отлично.
 
 1749
 01:17:20,790 --> 01:17:23,720
-Now if I call this function
-with another value,
+Если я теперь вызову эту функцию
+с другим значением
 
 1750
 01:17:23,720 --> 01:17:26,400
-let's say 12, we're gonna
-see two different values
+допустим 12, мы увидим два разных
+фисла в строках консоли
 
 1751
 01:17:26,400 --> 01:17:28,770
-returned here, you are 32 and you are 12.
+один с 32, а другой с 12
 
 1752
 01:17:28,770 --> 01:17:31,660
-So what the parameter allows you to do
+Параметры в функциях помогают передать
 
 1753
 01:17:31,660 --> 01:17:34,630
-is allows you to parse in
-values to your function.
+разные значения в вашу
+функцию
 
 1754
 01:17:34,630 --> 01:17:38,420
-So you say you are 32.
+Так например происходит со
+значением 32.
 
 1755
 01:17:38,420 --> 01:17:41,370
-Now I could also provide
-other additional values here
+Таким же образом вы можете передать
+дополнительные значения,
 
 1756
 01:17:41,370 --> 01:17:43,740
-so I can put name and
-access can be a string.
+например имя с типом String
 
 1757
 01:17:43,740 --> 01:17:47,350
-So I need to provide the
-variable argument name
+вам нужно написать аргумент в функции.
 
 1758
 01:17:47,350 --> 01:17:49,980
-and the argument type, which
-is string for both of them.
+И его тип String
 
 1759
 01:17:49,980 --> 01:17:53,900
-So again, this is the argument
-name, argument type comma.
+И у нас получится, возраст с
+типом Int, потом запятая
 
 1760
 01:17:53,900 --> 01:17:55,870
-So I need another one in there.
+а потом имя с
 
 1761
 01:17:55,870 --> 01:17:57,080
-Argument name, argument type.
+типом String.
 
 1762
 01:17:57,080 --> 01:17:58,980
