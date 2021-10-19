@@ -7804,1121 +7804,1063 @@ if в несколько строк с фигурными скобками
 
 1762
 01:17:57,080 --> 01:17:58,980
-Now you'll see that we have
-a red squiggly up here,
+Теперь мы омжем заметить
+красное подчеркивание
 
 1763
 01:17:58,980 --> 01:18:00,770
-that is because IntelliJ says,
+Идея говорит нам:
 
 1764
 01:18:00,770 --> 01:18:03,650
-"Hey, you're missing a additional value."
+"Вы потеряли передаваемое значение"
 
 1765
 01:18:03,650 --> 01:18:06,960
-So I'm gonna type in Donn
-and instead of saying,
+И я напечатаю сюда "Donn"
+и в строке заменю
 
 1766
 01:18:08,478 --> 01:18:11,750
-I can say, string interpolation
-again, name, comma,
+с помощью интерполяции
+добавлю имя в начало
 
 1767
 01:18:14,247 --> 01:18:16,697
-and we'll have proper
-punctuation here, period.
+и расставлю еще знаки препинания
 
 1768
 01:18:17,900 --> 01:18:20,560
-And if we hit run here,
-what we'll see is 32
+Если я сейчас запущу, то
+в консоли будет
 
 1769
 01:18:20,560 --> 01:18:23,850
-and Donn says, Don, you are 32 now.
+мое имя и сколько мне лет.
 
 1770
 01:18:23,850 --> 01:18:27,950
-If I to change their own,
-I could say something else
+Я могу поменять аргументы
+и вызвать функцию с другими аргументами,
 
 1771
 01:18:27,950 --> 01:18:32,710
-like 12 and I could put Jonas,
+например Jonas и 12 лет;
 
 1772
 01:18:32,710 --> 01:18:35,660
-and Jonas might be 12 for whatever reason.
+И Jonas будет у на 12-ти летним парнем
 
 1773
 01:18:36,818 --> 01:18:39,820
-And if we print that out here,
-well, I'd have you're 12.
+И в консоль теперь будет выдаваться
+моя новая строка.
 
 1774
 01:18:39,820 --> 01:18:42,230
-Now the cool thing you
-can do with this thing
+И крутая штука аргументов функции
 
 1775
 01:18:42,230 --> 01:18:44,570
-inside of the do work
-function is now you can start
+это то что я теперь могу работать
+с ними внутри функции
 
 1776
 01:18:44,570 --> 01:18:46,720
-working with these values inside of here.
+и делать дополнительные проверки.
 
 1777
 01:18:46,720 --> 01:18:48,870
-So maybe you might have an if statement.
+Допустим мы хотим проверить возраст
+и в зависимости от результата написать строку
 
 1778
 01:18:48,870 --> 01:18:51,780
-If the age is less than 21,
+Я напишу if который будет
+говорить, что пользователь
 
 1779
 01:18:51,780 --> 01:18:54,060
-you might wanna say something different,
+недостаточно взрослый, если
 
 1780
 01:18:54,060 --> 01:18:58,500
-like I wanna cut this out
-here and we'll say the name,
+аргумент age который пришел
+в функцию
 
 1781
 01:18:58,500 --> 01:19:03,220
-you are not old enough.
+меньше чем 21.
 
 1782
 01:19:03,220 --> 01:19:05,410
-Now, for whatever reason,
-perhaps you have some logic
+Представим, что у нас есть какая-то логика
 
 1783
 01:19:05,410 --> 01:19:08,150
-that states that for someone
-to use this application,
+которая должна выполняться
+только для пользователей
 
 1784
 01:19:08,150 --> 01:19:11,180
-they have to be over the age
-of 21 for whatever reason.
+которые старше 21-ого
 
 1785
 01:19:11,180 --> 01:19:14,336
-And we wanna put it you're not enough.
+Допишем строку, что они недостаточно
 
 1786
 01:19:14,336 --> 01:19:17,094
-You are blank, let's say age.
+взрослые и им "столько-то" лет.
 
 1787
 01:19:17,094 --> 01:19:22,094
-As I say, Don, you are say far
-too old at the ripe age of,
+И я напишу для else, что пользователь
 
 1788
 01:19:28,080 --> 01:19:30,310
-and then we'll put the age of 32.
+слишком старый и ему столько-то лет
 
 1789
 01:19:30,310 --> 01:19:32,860
-And so now as I run this,
-we'll get two different values
+и если я сейчас запущу это
+то в консоль выведутся разные значения
 
 1790
 01:19:32,860 --> 01:19:34,120
-that we're we're working with here.
+для пользователей с разным возрастом.
 
 1791
 01:19:34,120 --> 01:19:36,190
-So we'll see the first one is Donn
+Мы видим сначала результат для "Donn"
 
 1792
 01:19:36,190 --> 01:19:37,040
-and the next one is Jonah.
+а потом результат для "Jonah"
 
 1793
 01:19:37,040 --> 01:19:40,270
-So Donn far too old at the ripe age of 32,
+Донн у нас слишком старый и ему 32,
 
 1794
 01:19:40,270 --> 01:19:43,100
-Jonas, you are not old enough, you are 12.
+а Jonas слишком моложой и ему 12
 
 1795
 01:19:43,100 --> 01:19:44,980
-And so I can continue down this road here.
+И я могу переиспользовать эту функцию
+сколько угодно раз
 
 1796
 01:19:44,980 --> 01:19:47,910
-Now, if I wanted to start
-having, if I call this function
+Я вызову ее еще раз
 
 1797
 01:19:47,910 --> 01:19:51,370
-all over the place, let's
-say I have a 71 year old
+И например для возраста 71
 
 1798
 01:19:51,370 --> 01:19:55,100
-and her name is Evelyn and
-Evelyn's using the app too
+напишу имя "Evelyn"
+пусть она тоже пользуется приложением
 
 1799
 01:19:55,100 --> 01:19:57,520
-and she types in her age and we run it.
+И запустим
 
 1800
 01:19:57,520 --> 01:19:59,700
-We'll see now that
-Evelyn also has an entry,
+Мы увидим, что под Evelyn тоже
+появилась запись
 
 1801
 01:19:59,700 --> 01:20:02,820
-Evelyn far too old at the ripe age of 71.
+И Evelyn тоже старая и ей 71.
 
 1802
 01:20:02,820 --> 01:20:04,910
-Sorry, Evelyn, if you're really not 71.
+Прости Эвелин, если это не так)
 
 1803
 01:20:05,800 --> 01:20:08,610
-So we can actually start
-various different values in here
+И теперь мы можем пихать какие угодно
+имена и возраста в эту функцию
 
 1804
 01:20:08,610 --> 01:20:10,730
-that can be any different types here.
+да и добавлять новые типы аргументов.
 
 1805
 01:20:10,730 --> 01:20:13,050
-You can provide one
-that's a Boolean value.
+Мы можем добавить Boolean
 
 1806
 01:20:13,050 --> 01:20:16,850
-So you could say, yeah is
-happy and you could tap in
+Добавим аргумент isHappy
+и укажем тип
 
 1807
 01:20:16,850 --> 01:20:17,890
-a Boolean value.
+Boolean для аргумента.
 
 1808
 01:20:19,583 --> 01:20:21,703
-And of course, because everybody's happy,
+И конечно же все у нас счастливые
 
 1809
 01:20:21,703 --> 01:20:22,800
-we'll just put true here.
+поэтому везде передадим true.
 
 1810
 01:20:23,680 --> 01:20:25,900
-And we'll say true and you
-see IntelliJ is giving us
+И из-за того что у нас везде true
+Идея подсказывает нам, для какого
 
 1811
 01:20:25,900 --> 01:20:29,880
-some nice little hints here of
-what the actual (indistinct)
+аргумента мы добавляем значение true
 
 1812
 01:20:29,880 --> 01:20:31,900
-this is not something I typed
-here is happy or age or name.
+Это не я писал, а идея сама содержит
+такие подсказки,
 
 1813
 01:20:31,900 --> 01:20:33,670
-That's IntelliJ saying, "Hey, by the way,
+чтобы не приходилось ходить в метод
 
 1814
 01:20:33,670 --> 01:20:36,400
-"the name of this parameter is happy."
+и смотреть как называются его аргументы
+и какой у них порядок.
 
 1815
 01:20:36,400 --> 01:20:38,500
-And then we've put true here because,
+И осталось добавить true для Эвелин,
 
 1816
 01:20:38,500 --> 01:20:40,450
-Evelyn, everybody's happy.
+теперь все счастливы.
 
 1817
 01:20:40,450 --> 01:20:42,210
-Then we can hit run.
+Теперь можем запустить
 
 1818
 01:20:42,210 --> 01:20:43,810
-And of course, we're gonna run it again.
+И все будет работать.
 
 1819
 01:20:43,810 --> 01:20:45,970
-Donn you're far too old age, ripe 32.
+Появится вывод про возраст.
 
 1820
 01:20:45,970 --> 01:20:49,190
-You notice, hey, we didn't
-do anything with that value.
+Вы уже заметили, что мы ничего с
+новым значением не делали,
 
 1821
 01:20:49,190 --> 01:20:51,920
-So we, of course, we might
-need to do something with it,
+но потенциально мы можем придумать
+что-нибудь с ним
 
 1822
 01:20:51,920 --> 01:20:55,110
-which has says you are happy.
+например вывести строку "You are happy? "
 
 1823
 01:20:56,890 --> 01:20:58,630
-And then we could put something like this.
+И как ответ вывести
 
 1824
 01:20:58,630 --> 01:21:01,300
-We could actually put some
-other type of code in here.
+аргумент, который мы передали в функцию.
 
 1825
 01:21:02,240 --> 01:21:06,910
-We'll say, boom is happy
-and then we'll run it again.
+Запустим программу.
 
 1826
 01:21:08,053 --> 01:21:10,170
-And again, of course, now we're
-gonna see each one of them's
+И теперь мы эту дополнительную
+строку увидим для каждого человека
 
 1827
 01:21:10,170 --> 01:21:12,050
-for Don, Jonas and Evelyn,
-you are happy, true,
+Для всех трех выведется что они счастливы
 
 1828
 01:21:12,050 --> 01:21:13,500
-you are happy, true, you're happy, true.
+Дон счастлив, эвелин счастлива.
 
 1829
 01:21:13,500 --> 01:21:16,420
-For some reason today I was not happy,
+По какой-то причине я сегодня не счастлив,
 
 1830
 01:21:16,420 --> 01:21:19,700
-maybe I stubbed my toe or to run it again.
+может мизинцем саданулся, запустим заново
 
 1831
 01:21:19,700 --> 01:21:22,780
-We would see that Donn is not happy
+И увидим, что Дон не счастлив,
 
 1832
 01:21:22,780 --> 01:21:24,310
-because he stubbed his toe.
+потому что мизинец пошел в разнос.
 
 1833
 01:21:24,310 --> 01:21:27,200
-Jonas and Evelyn though are
-still happy and so forth.
+Джонас и Эвелин все равно счастливы
+их аргументы не менялись.
 
 1834
 01:21:27,200 --> 01:21:28,790
-So this is how we can start adding in
+Мы можем добавлять сколько угодно
 
 1835
 01:21:28,790 --> 01:21:30,650
-various different parameters.
+параметров и использовать их
+внути функции.
 
 1836
 01:21:30,650 --> 01:21:33,320
-Again, if you need another
-one, you're gonna put a comma
+Если вам нужен ваш параметр, просто
+напишите его название после запятой
 
 1837
 01:21:33,320 --> 01:21:35,260
-in here and you're going
-to add another one.
+и укажите его тип, можете
+попробовать сами, это просто.
 
 1838
 01:21:35,260 --> 01:21:38,520
-So we could say foo is
-going to be of type long,
+Напишем еще один, пусть будет foo с типом Long
 
 1839
 01:21:38,520 --> 01:21:40,630
-for whatever reason, you may
-need some different types here.
+просто для примера.
 
 1840
 01:21:40,630 --> 01:21:41,920
-And of course, IntelliJ is gonna say,
+Как всегда Идея подсветит наши вызовы
 
 1841
 01:21:41,920 --> 01:21:43,890
-hey, that's not gonna work 'cause you need
+функций и скажет, что в них не достает
 
 1842
 01:21:43,890 --> 01:21:45,710
-to provide that value up top.
+параметров.
 
 1843
 01:21:45,710 --> 01:21:48,800
-So this how you provide
-arguments to a function.
+И вот так мы передаем аргументы в функции.
 
 1844
 01:21:48,800 --> 01:21:51,900
-Let's assume we have a function
-called print and user info.
+Давайте представим, что у нас есть
+функция с названием printUserInfo
 
 1845
 01:21:51,900 --> 01:21:55,053
-It takes a bunch of arguments
-such as the first name,
+в нее передается куча параметров,
+например имя
 
 1846
 01:21:55,053 --> 01:21:57,580
-last name, age, if the user sunburned,
+фамилия, возраст, сгорали ли они на солнце
 
 1847
 01:21:57,580 --> 01:22:00,120
-if they like movies and
-if they love popcorn.
+любят ли кино
+и попкорн
 
 1848
 01:22:00,120 --> 01:22:02,590
-And if you would like to
-do something with this,
+И если я захочу эти аргументы
+использовать и, например,
 
 1849
 01:22:02,590 --> 01:22:04,780
-and perhaps we just want
-to print it to the screen,
+вывести информацию как-то в консоль
 
 1850
 01:22:04,780 --> 01:22:07,850
-we could provide some
-implementation that looks like this,
+мы можем написать функцию
 
 1851
 01:22:07,850 --> 01:22:09,950
-that uses string literals
-and prints it to the screen.
+вывода с помощью литералов
 
 1852
 01:22:09,950 --> 01:22:11,000
-Fair enough.
+звучит логично.
 
 1853
 01:22:11,000 --> 01:22:13,970
-Now, if we wanna call it, we're
-going to call it like this.
+Если мы захотим теперь вызвать ее
 
 1854
 01:22:13,970 --> 01:22:15,150
-We'll say print user info.
+мы должны предоставить ей все аргументы
 
 1855
 01:22:15,150 --> 01:22:18,190
-And then we have to start
-providing all of the information
+Я начну передавать информацию в функцию
 
 1856
 01:22:18,190 --> 01:22:22,580
-such as Donn Felker and then
-we have to provide the age.
+имя - Дон, фамилия - Фэлкер,
+передам возраст
 
 1857
 01:22:22,580 --> 01:22:25,270
-And then we say, is he sunburned?
+Сгорал ли я на на солнце,
 
 1858
 01:22:25,270 --> 01:22:26,430
-No, he's not sunburned.
+напишу что нет
 
 1859
 01:22:26,430 --> 01:22:28,880
-He loves movies or likes movies, true
+люблю кино
 
 1860
 01:22:28,880 --> 01:22:31,300
-and he loves popcorn, of course, why not?
+и конечно люблю попкорн!
 
 1861
 01:22:32,190 --> 01:22:34,920
-So this now very simple,
-we've covered this before,
+Было довольно просто
 
 1862
 01:22:34,920 --> 01:22:37,690
-but now we have these nice
-little IDE hints in here
+и у нас есть подсказки от Идеи
+и мы видим названия аргументов,
 
 1863
 01:22:37,690 --> 01:22:41,880
-that say, Hey, this is
-what this argument is.
+которые мы пердали
 
 1864
 01:22:41,880 --> 01:22:42,720
-It's his sunburn.
+И все это работает чудесно
 
 1865
 01:22:42,720 --> 01:22:45,300
-And this has works great
-except until it goes
+пока мы находимся в Идее,
+но эти подсказки не будут работать
 
 1866
 01:22:45,300 --> 01:22:48,730
-outside of the IDE because
-IntelliJ and other IDEs
+вне Идеи, потому
 
 1867
 01:22:48,730 --> 01:22:51,940
-that are from IntelliJ
-brains do this for us.
+что это именно ее встроенная функциональность
 
 1868
 01:22:51,940 --> 01:22:53,470
-But once we get online
-or into another IDE,
+Если мы перенесем этот код
+куда-то онлайн или в другую IDE
 
 1869
 01:22:53,470 --> 01:22:54,710
-we don't get the same feature.
+то они могут не поддерживать эту фичу
 
 1870
 01:22:54,710 --> 01:22:56,640
-So let's hop over into another IDE.
+Давайте перейдем в другую IDE.
 
 1871
 01:22:56,640 --> 01:22:58,710
-Okay, we're inside of visual studio code.
+Окей, теперь мы в Visual Studio Code
 
 1872
 01:22:58,710 --> 01:23:00,290
-I'm gonna paste the code
-in here and you'll notice
+Я вставлю наш написанный код и вы увидите
 
 1873
 01:23:00,290 --> 01:23:02,330
-that we don't get those
-nice little previews
+что подсказки
 
 1874
 01:23:02,330 --> 01:23:03,430
-like we see over here.
+у функции пропали.
 
 1875
 01:23:05,152 --> 01:23:07,657
-So we have first name, last
-name, age, sunburned, et cetera.
+Тут мы видим имя, фамилию и т.д.
 
 1876
 01:23:07,657 --> 01:23:09,038
-If we go back to visual studio code,
+Если вернемся в Visual Studio
 
 1877
 01:23:09,038 --> 01:23:11,480
-we don't have those values over here.
+у нас этих подсказок нет
 
 1878
 01:23:11,480 --> 01:23:13,610
-That's a feature of the IntelliJ IDE.
+Это фича для котлина в Intellij IDEA
 
 1879
 01:23:13,610 --> 01:23:15,930
-So at this point when
-we're reading this code,
+И теперь когда мы читаем этот код
 
 1880
 01:23:15,930 --> 01:23:18,980
-and this will be the case, if
-you're doing a poll request
+и это частый кейс, если вы работаете
+с Git и делаете например мердж реквест
 
 1881
 01:23:18,980 --> 01:23:22,250
-or viewing the source code
-online through a web browser,
+Или смотрите код где-то на стэковерфлоу
 
 1882
 01:23:22,250 --> 01:23:24,470
-you're not gonna understand
-what this false even means,
+вы не будете понимать что значат эти
+false/true/true
 
 1883
 01:23:24,470 --> 01:23:26,599
-especially a couple of
-months down the road.
+особенно, если вы писали код пару
+месяцев назад
 
 1884
 01:23:26,599 --> 01:23:27,910
-You're not gonna
-understand what true means.
+Вы точно не поймете что значит true
 
 1885
 01:23:27,910 --> 01:23:30,880
-True here, we have no idea
-what print user info is.
+Эта true, у нас нет никакого понимания
+что передается в printUserInfo.
 
 1886
 01:23:30,880 --> 01:23:33,840
-And most likely this
-method is somewhere perhaps
+И конечно нужно понимать,
+что эта функция не будет
 
 1887
 01:23:33,840 --> 01:23:36,470
-in another file, perhaps further
-down where I can't see it
+сидеть рядом с местом,
+где она вызывается
 
 1888
 01:23:36,470 --> 01:23:38,620
-unless I have to scroll
-for it and find it.
+а будет спрятана где-то среди тысячи
+других файлов с кодом
 
 1889
 01:23:39,719 --> 01:23:40,552
-And it just makes it more difficult
+И от этого понимание функции
+становится сложнее
 
 1890
 01:23:40,552 --> 01:23:42,810
-and I have to do a lot of
-context switching to find it.
+Нам нужно будет переключатся чтобы понять,
+что в нее передается.
 
 1891
 01:23:45,805 --> 01:23:47,680
-Now, the interesting thing
-here is that we can fix this
+Хорошая новость, что мы можем
+это поправить средствами языка
 
 1892
 01:23:47,680 --> 01:23:48,530
-inside of Kotlin.
+Котлин.
 
 1893
 01:23:49,457 --> 01:23:50,750
-Let me go back to IntelliJ
-and what we can do
+Вернемся в Идею, и штука которую
 
 1894
 01:23:50,750 --> 01:23:52,810
-is actually provide the
-name parameters here.
+мы можем дописать называется
+"именованные аргументы"
 
 1895
 01:23:52,810 --> 01:23:55,270
-So I'm gonna type first name.
+Я явно напишу firstName и равно
 
 1896
 01:23:55,270 --> 01:23:57,340
-So this is what is known
-as a named parameter.
+это называется именованным аргументом
 
 1897
 01:23:57,340 --> 01:24:01,450
-I'm using the name of the
-parameter and at the call site,
+я дописываю названия в месте вызова
 
 1898
 01:24:01,450 --> 01:24:03,270
-I'm actually providing the name here.
+и справа от равно будет значение
+которое я передаю аргументу
 
 1899
 01:24:03,270 --> 01:24:06,980
-So is sunburned, that's false.
+isSunburned = false
 
 1900
 01:24:06,980 --> 01:24:09,640
-And then we could say
-it likes movies, true
+и тоже самое для кино
 
 1901
 01:24:09,640 --> 01:24:12,720
-and loves popcorn is true.
+и попкорна.
 
 1902
 01:24:12,720 --> 01:24:14,660
-Now, if I actually, I'm
-gonna copy and paste
+Я скопирую этот вызов
 
 1903
 01:24:14,660 --> 01:24:17,040
-this code again, go back
-to visual studio code,
+вернусь в VisualStudio
 
 1904
 01:24:17,040 --> 01:24:18,880
-delete this code here and paste it.
+удалю старый и вставлю новый.
 
 1905
 01:24:18,880 --> 01:24:22,590
-You'll see we actually get
-those name parameters over,
+и теперь эти параметры явно указаны
 
 1906
 01:24:22,590 --> 01:24:25,080
-By default, Kotilin will
-still compile those code.
+По дефолту, Котлин сможет
+скомпилировать код в таком виде
 
 1907
 01:24:25,080 --> 01:24:27,800
-So back inside of IntelliJ,
-it will still compile
+Вернемся в Идею, все будет работать
 
 1908
 01:24:27,800 --> 01:24:28,850
-this code right here.
+просто у аргументов в месте вызове будут
+явные наименования.
 
 1909
 01:24:29,824 --> 01:24:34,470
-And if we were to run it, we
-would see this as Donn Felker
+Запущу и увидим
 
 1910
 01:24:34,470 --> 01:24:36,650
-is of age 32 sunburned,
-false, likes movies, true,
+32 года, не сгорел на солнце,
+любит кино и попкорн
 
 1911
 01:24:36,650 --> 01:24:38,080
-loves popcorn, true.
+все верно.
 
 1912
 01:24:38,080 --> 01:24:40,450
-So the things all run
-in, which is really nice.
+Все работает по прежнему.
 
 1913
 01:24:40,450 --> 01:24:42,910
-Now the other great thing
-about named parameters
+Еще одна хорошая фича именнованых
+аргументов
 
 1914
 01:24:42,910 --> 01:24:44,690
-is they're also positional based.
+это их позиционированние
 
 1915
 01:24:44,690 --> 01:24:46,600
-So let's get rid of this one down here
+Удалим именование у последнего аргумента
 
 1916
 01:24:46,600 --> 01:24:48,595
-so you can see what I'm talking about.
+и вы увидите то о чем я говорю
 
 1917
 01:24:48,595 --> 01:24:49,640
-We get a little squiggly here.
+Идея теперь подсвечивает его
+и говорит,
 
 1918
 01:24:49,640 --> 01:24:52,470
-It says mixing named
-and positioned arguments
+что смешивание обычных и
 
 1919
 01:24:52,470 --> 01:24:53,960
-is not allowed, meaning that we can't...
+именованных аргументов запрещено
 
 1920
 01:24:53,960 --> 01:24:56,220
-We're using a positional
-based argument right now.
+Это к разговору о позиционированнии
 
 1921
 01:24:56,220 --> 01:24:57,670
-This is a positional based argument,
+Последний аргумент должен быть
+именнованным, если перед ним есть
 
 1922
 01:24:57,670 --> 01:25:01,740
-it's the last one here
-in the list of arguments.
+именнованные аргументы.
 
 1923
 01:25:01,740 --> 01:25:02,990
-I could also undo this and say,
+я верну как было
 
 1924
 01:25:02,990 --> 01:25:05,380
-hey, let's get rid of the age one here.
+И, например удалим именование у возраста
 
 1925
 01:25:05,380 --> 01:25:06,870
-and I'd get the same thing here and say,
+и получим ту же проблему
 
 1926
 01:25:06,870 --> 01:25:11,520
-hey, this is basically the
-third item in the argument list.
+из-за того что перед ним есть
+именнованные аргументы
 
 1927
 01:25:11,520 --> 01:25:13,180
-Kotlin says, "I don't know
-what you're trying to do.
+Котлин не понимает, что мы
+пытаемся сделать
 
 1928
 01:25:13,180 --> 01:25:15,280
-"You wanna use name parameters,
-but now you're using one
+Мы пытаемся использовать именнованные аргументы
 
 1929
 01:25:15,280 --> 01:25:17,800
-"that's a positional based,
-decide what you wanna do."
+и обычные, смешивая их
 
 1930
 01:25:17,800 --> 01:25:19,070
-But it won't compile.
+Это не скомпилируется
 
 1931
 01:25:19,070 --> 01:25:20,620
-So if you're gonna use one name,
+Если вы собираетесь использовать имя
+хотя бы для одного аргумента
 
 1932
 01:25:20,620 --> 01:25:22,470
-you need to provide the
-name for all of them,
+вам придется писать имена для
+всех аргументов функции
 
 1933
 01:25:22,470 --> 01:25:24,170
-which is much more readable.
+и так читаемость повысится и
+компилятор не сойдет с ума
 
 1934
 01:25:24,170 --> 01:25:26,300
-Now because we're using name parameters,
+И такое именование позволяет менять
 
 1935
 01:25:26,300 --> 01:25:29,360
-I can actually move these
-around, which is very cool.
+аргументы местами, Котлин
+сам поставит их на свои места.
 
 1936
 01:25:29,360 --> 01:25:33,010
-So the print user info
-method takes a first name,
+Метод printUserInfo принимает  имя
 
 1937
 01:25:33,010 --> 01:25:35,520
-last name, age, those
-are the parameter order.
+фамилию, возраст.
 
 1938
 01:25:35,520 --> 01:25:38,050
-So in traditional languages
-that you're used to working
+В традиционных языках
 
 1939
 01:25:38,050 --> 01:25:41,970
-with otherwise, you always
-have to provide the values
+вам придется передавать аргументы
+в том порядке,
 
 1940
 01:25:41,970 --> 01:25:43,340
-in that order.
+который объявляет функция.
 
 1941
 01:25:43,340 --> 01:25:45,320
-However, with Kotlin you can
-provide a named argument.
+Но не в Котлине, если вы используете
+именованные аргументы,
 
 1942
 01:25:45,320 --> 01:25:48,150
-So it says, hey, age is
-32, Kotlin will know to map
+Мы ставим возраст на первое место,
+а котлин увидит именование
 
 1943
 01:25:48,150 --> 01:25:52,840
-this value here over
-into this age parameter.
+и сам подставит его на третье место
+в функцию.
 
 1944
 01:25:52,840 --> 01:25:54,480
-Now, if I wanna move his sunburned
+Если мы хотим переместить этот Boolean
 
 1945
 01:25:54,480 --> 01:25:56,540
-maybe a little bit closer,
-'cause for whatever reason
+куда-нибудь в другое место
 
 1946
 01:25:56,540 --> 01:25:59,020
-in my program, it makes more sense,
+где это несет больше смысла
 
 1947
 01:25:59,020 --> 01:26:01,150
-I can do that here in
-Cottonwood note to map
+И Котлин сам перенесет
+и подставит это значение
 
 1948
 01:26:01,150 --> 01:26:03,460
-this parameter value,
-which is second the list
+в нужное место под капотом.
 
 1949
 01:26:04,344 --> 01:26:06,050
-in the positional sense, map it over here
+в нашем случае, на четвертую позицию
 
 1950
 01:26:06,050 --> 01:26:08,560
-because we're using the
-actual named parameter.
+потому что у этого Boolean
 
 1951
 01:26:08,560 --> 01:26:11,190
-So we're using the name
-parameter to map it over.
+есть явное название аргумента.
 
 1952
 01:26:11,190 --> 01:26:14,560
-And that's how you can use
-name parameters in Kotlin.
+Вот так вы можете использовать именованые
+аргументы в Котлин.
 
 1953
 01:26:14,560 --> 01:26:17,940
-In Kotlin, there's a concept
-known as a default argument.
+В Котлин есть концепт, который
+называется "дефолтные агрументы"
 
 1954
 01:26:17,940 --> 01:26:20,390
-Now, every time I call
-this print user function.
+Каждый раз, когда я вызываю
+printUserFunction
 
 1955
 01:26:20,390 --> 01:26:22,910
-So let's say I had to call it a few times,
+Допустим я несколько раз ее вызываю
 
 1956
 01:26:22,910 --> 01:26:26,310
-I have to change this
-from every time of course,
+Я буду менять аргументы для
 
 1957
 01:26:26,310 --> 01:26:28,850
-these values are gonna
-change to some other types
+некоторых типор, потому что они меняются
 
 1958
 01:26:28,850 --> 01:26:32,970
-of thing and it's gonna
-say 31 to 37 and 12
+например возраст 31, 37 и 12
 
 1959
 01:26:32,970 --> 01:26:34,110
-and all these different types of things.
+и вообще почти все можно заменить
 
 1960
 01:26:34,110 --> 01:26:37,100
-And this person is sunburned, et cetera.
+Пользователь сгорел на солнце и так далее
 
 1961
 01:26:37,100 --> 01:26:39,030
-But perhaps the majority of the time,
+Но допустим, что в большинстве
 
 1962
 01:26:39,030 --> 01:26:40,880
-I always know that these
-people are not sunburned
+случаев я знаю, что пользователь
+не сгорел на солнце
 
 1963
 01:26:40,880 --> 01:26:43,130
-and maybe because these
-people are my family,
+И например они точно любят попкорн
 
 1964
 01:26:43,130 --> 01:26:45,720
-they like movies and I know
-that they love popcorn,
+и кино
 
 1965
 01:26:45,720 --> 01:26:48,310
-but having to repeat these
-things many times as troublesome.
+Записывать эти вещи из раза в раз
+превраается в рутину.
 
 1966
 01:26:48,310 --> 01:26:52,040
-So we can actually use the
-power of default arguments.
+Для того, чтобы этого избежать мы можем использовать
+дефолтные параметры.
 
 1967
 01:26:52,040 --> 01:26:55,070
-And to do so we can specify a
-default value for an argument.
+И для этого мы напишем дефолтной значение
+для аргумента функции
 
 1968
 01:26:55,070 --> 01:26:57,870
-So it will say the user loves popcorn.
+Например "lovesPopcorn: Boolean = true"
 
 1969
 01:26:57,870 --> 01:26:59,300
-So we're gonna set it to true here.
+Выставим true gj ltajkne
 
 1970
 01:26:59,300 --> 01:27:01,570
-Now, if Love's popcorn is not provided,
+Теперь у нас нет необходимости
 
 1971
 01:27:02,468 --> 01:27:03,990
-we can actually remove
-it from this call site,
+писать это значение при вызове функции
 
 1972
 01:27:03,990 --> 01:27:05,640
-it will just default to true.
+оно по дефолту будет равно true
 
 1973
 01:27:06,813 --> 01:27:08,450
-So I can actually remove it
-from these other ones as well.
+Уберу этот аргумент у всех вызовов.
 
 1974
 01:27:08,450 --> 01:27:13,450
-And I can provide a default
-argument for likes movies.
+Я могу сделать тоже самое для
+переменной "любит кино"
 
 1975
 01:27:13,760 --> 01:27:14,790
-And we're gonna default that the true,
+и по дефолту тоже true
 
 1976
 01:27:14,790 --> 01:27:17,240
-because everybody should
-like movies, I think.
+потому что все любят кино, верно?
 
 1977
 01:27:17,240 --> 01:27:19,790
-And then again, I can remove
-this from the call site.
+И уберы эти аргументы из вызова.
 
 1978
 01:27:19,790 --> 01:27:22,710
-And because I'm removing
-it, the default value
+И теперь, если мы явно не передаем
+аргумент при вызове функции
 
 1979
 01:27:22,710 --> 01:27:25,470
-of likes movies is going to be true.
+то внутри функции будет
+дефолтное значение true
 
 1980
 01:27:25,470 --> 01:27:29,513
-And of course, it's not often
-that everyone is sunburned.
+И конечно для переменной "сгорел на солнце"
 
 1981
 01:27:29,513 --> 01:27:32,010
-So let's go ahead and set this to false.
+я поставлю false, потому что
+все редко сгорают на солнце.
 
 1982
 01:27:32,010 --> 01:27:34,610
-And it's pretty easy to
-do, so I'll say false.
+И эт отак же просто, я просто говорю что
+этот аргумент по дефолту false
 
 1983
 01:27:34,610 --> 01:27:37,248
-Now we can go ahead and
-remove this from here.
+и убираю это из вызова функций.
 
 1984
 01:27:37,248 --> 01:27:38,081
-And now this cleans up the call side
+И теперь наши вызовы выглядят гораздо проще
 
 1985
 01:27:38,081 --> 01:27:39,880
-of these three functions quite a bit.
+чем раньше.
 
 1986
 01:27:39,880 --> 01:27:42,860
-We can actually see the
-only relevant information
+Мы теперь видим только важную
 
 1987
 01:27:42,860 --> 01:27:46,180
-that is changed in each
-print user info function.
+информацию, которая часто меняется для функции
 
 1988
 01:27:46,180 --> 01:27:48,130
-And if we were to run
-these here, let's run it.
+И если запустим
 
 1989
 01:27:48,130 --> 01:27:50,081
-You're gonna see it's printed three times
+увидим три записи
 
 1990
 01:27:50,081 --> 01:27:51,310
-and we see sunburned,
-false, likes movies, true,
+с нашими дефолтными значениями
 
 1991
 01:27:51,310 --> 01:27:52,620
-loves popcorn, true.
+с нашими дефолтными значениями
 
 1992
 01:27:52,620 --> 01:27:56,032
-Now, if for some reason
-that I know that this time,
+И теперь, если я вдруг понимаю
 
 1993
 01:27:56,032 --> 01:27:58,420
-perhaps I've just eaten a lot popcorn
+что я съел много попкорна
 
 1994
 01:27:58,420 --> 01:27:59,980
-and I'm just not really fond of it lately,
+и не очень сильно его переношу,
 
 1995
 01:27:59,980 --> 01:28:01,590
-I'm just gonna say it
-loves popcorn, false.
+Я могу явно передать аргумент
+и сделать его false.
 
 1996
 01:28:01,590 --> 01:28:05,320
-And maybe I know that Bob
-this week is sunburned
+И допусти Боб на этой неделе сгорел
 
 1997
 01:28:05,320 --> 01:28:07,981
-'cause he just got back
-from the beach here over
+потому что заснул на пляже
 
 1998
 01:28:07,981 --> 01:28:09,090
-in New Jersey and the Jersey shore.
+на берегу залива
 
 1999
 01:28:10,165 --> 01:28:12,309
-And perhaps Sarah, for whatever reason
+И Сара не любит кино, а чаще
 
 2000
 01:28:12,309 --> 01:28:15,170
-just does not like movies and
-we're gonna put false there.
+смотрит сериалы, вставлю false
 
 2001
 01:28:15,170 --> 01:28:17,220
-So actually Bob is sunburned.
+Боб сгорел,
 
 2002
 01:28:17,220 --> 01:28:18,610
-So make that true.
+нужно поставить trueю
 
 2003
 01:28:18,610 --> 01:28:21,030
-So now what will happen
-is when we call the print
+Теперь что происходит?
+Когда мы вызовем функцию
 
 2004
 01:28:21,030 --> 01:28:23,320
-and user function, all
-these values are set.
+значения которые мы указали
+будет приоритетней дефолтных.
 
 2005
 01:28:23,320 --> 01:28:26,550
-Now loves popcorn, which
-is traditionally true,
+И дефолтные значения для аргументов,
+которые были явно указаны,
 
 2006
 01:28:26,550 --> 01:28:29,990
-is gonna be set to false
-for this function call.
+будет проигнорировано.
 
 2007
 01:28:29,990 --> 01:28:32,640
