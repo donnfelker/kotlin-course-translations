@@ -8864,410 +8864,397 @@ printUserFunction
 
 2007
 01:28:29,990 --> 01:28:32,640
-For the next function
-call print user info,
+Для следующего вызова функции
 
 2008
 01:28:32,640 --> 01:28:34,690
-it's going to be the true
-cause I haven't provided it
+будет срабатывать
+дефолтный параметр
 
 2009
 01:28:34,690 --> 01:28:36,570
-up here because it's
-using the default value.
+потому что мы не передали свой.
 
 2010
 01:28:36,570 --> 01:28:38,440
-However I'm saying, hey, it is sunburned.
+Но мы передали сгорел ли пользователь
 
 2011
 01:28:38,440 --> 01:28:40,600
-This time don't use the
-false value, use true
+И в аргумент попадет наше
+значение, а дефолтное
 
 2012
 01:28:40,600 --> 01:28:42,720
-'cause Bob has actually sunburned.
+будет проигнорированно.
 
 2013
 01:28:42,720 --> 01:28:45,070
-And then finally we have
-the print user function
+И в последнем вызове функции
 
 2014
 01:28:45,070 --> 01:28:47,060
-down here at the bottom for Sarah.
+для Сары
 
 2015
 01:28:47,060 --> 01:28:48,860
-And she actually doesn't like movies,
+указано, что он не любит кино
 
 2016
 01:28:48,860 --> 01:28:50,550
-so we're not going to
-default that to true,
+и это перезапишет дефолтный параметр
 
 2017
 01:28:50,550 --> 01:28:51,750
-we're gonna set it to false.
+и передаст false в функцию
 
 2018
 01:28:51,750 --> 01:28:54,060
-And if we run this
-again, we're going to see
+И если мы запустим наши функции
 
 2019
 01:28:54,060 --> 01:28:56,150
-that these values actually
-render correctly here.
+То увидим что вывод соответствует
+тому что мы только что описали.
 
 2020
 01:28:56,150 --> 01:28:58,720
-So Donn loves popcorn is false.
+Дон не любит попкорн
 
 2021
 01:28:59,825 --> 01:29:03,360
-The Bob Felker here is a sunburned, true
+Боб сгорел на солнце true
 
 2022
 01:29:03,360 --> 01:29:06,840
-and Sarah Felker likes movies, false.
+и Сара не любит кино.
 
 2023
 01:29:06,840 --> 01:29:10,870
-So these are all of their
-default values that you can have
+И это дефолтные значениея которые вы можете
+использовать для любых аргументов
 
 2024
 01:29:10,870 --> 01:29:12,160
-inside of Kotlin.
+в Котлине
 
 2025
 01:29:12,160 --> 01:29:15,140
-Now, if there is a string, for example,
+Если например, наш тип String
 
 2026
 01:29:15,140 --> 01:29:18,000
-we could say that a string,
-let's make a string here
+давайте добавим еще один аргумент
+строковый в конце
 
 2027
 01:29:18,000 --> 01:29:22,220
-at the end, we'll say favorite color.
+например для любимого цвета.
 
 2028
 01:29:23,710 --> 01:29:25,680
-And it could be string and would've say
+И это будет
 
 2029
 01:29:25,680 --> 01:29:26,880
-that's going to be blue.
+синий цвет по дефолту.
 
 2030
 01:29:28,438 --> 01:29:31,500
-And if you provide that
-favorite color, then up here,
+И если вы теперь укажете цвет в
+месте вызова функции
 
 2031
 01:29:31,500 --> 01:29:35,210
-you can override it, otherwise
-it will just default to blue.
+вы можете изменить и установить
+недефолтное значение
 
 2032
 01:29:35,210 --> 01:29:36,910
-So you can do any of these things.
+И вы можете так делать абсолютно для
+любых типов
 
 2033
 01:29:37,971 --> 01:29:39,680
-Could be a built-in primitive
-type, could be a class.
+Для встроенных типов и
+для ваших собственных.
 
 2034
 01:29:39,680 --> 01:29:42,880
-And then like that you can
-set to a default value.
+Для встроенных типов и
+для ваших собственных.
 
 2035
 01:29:42,880 --> 01:29:45,870
-Now, traditionally the default arguments
+Чаще всего аргументы с дефолтными
 
 2036
 01:29:45,870 --> 01:29:48,700
-are usually placed at the
-end of the method call.
+значениями записываются
+в аргументы в конце
 
 2037
 01:29:48,700 --> 01:29:50,920
-Now this is not a steadfast rule.
+Но это правило не железнобетонное
 
 2038
 01:29:50,920 --> 01:29:52,950
-You can actually place them in the middle.
+Вы можете вставлять их в середину
+и в начало
 
 2039
 01:29:52,950 --> 01:29:54,800
-So if you'd like to
-say, well, the last name
+например, если вы хотите
+для фамилии указать
 
 2040
 01:29:54,800 --> 01:29:57,650
-is actually supposed to
-be defaulting to Smith
+дефолтное значение
+напрмер "Smith"
 
 2041
 01:29:57,650 --> 01:29:59,590
-because we are working
-with the Smith family.
+потому что мы, напрмер,
+работаем с семьей
 
 2042
 01:29:59,590 --> 01:30:03,340
-But whatever reason we
-realized we gave Sarah
+и удалим нае текущее значение.
 
 2043
 01:30:03,340 --> 01:30:04,850
-the wrong last name.
+и удалим нае текущее значение.
+
 
 2044
 01:30:04,850 --> 01:30:07,060
-Now, if we were to run
-that again, we could run it
+Если теперь запустим увидим,
 
 2045
 01:30:07,060 --> 01:30:11,190
-and we'd see Bob Felker, Donn
-Felker and Sarah Smith here.
+что у Сары сменилась фамили на дефолтную
 
 2046
 01:30:11,190 --> 01:30:15,650
-So we've used a default
-argument right inside
+И это пример, когда дефолтное значение
 
 2047
 01:30:15,650 --> 01:30:18,400
-of the middle of the call site here.
+у нас прямо посереине метода
 
 2048
 01:30:18,400 --> 01:30:20,910
-So right in the middle of
-the definition of the method.
+Между недефолтными значениями.
 
 2049
 01:30:20,910 --> 01:30:22,710
-Now, but age has not been specified.
+У нас не указан возраст
 
 2050
 01:30:22,710 --> 01:30:24,120
-So you do need to provide that.
+и нужно его дописать
 
 2051
 01:30:24,120 --> 01:30:28,072
-So if we do leave off age,
-we're gonna get an error here
+если мы не напишем, то получим ошибку
+потому что у него нет дефолтного значения
 
 2052
 01:30:28,072 --> 01:30:30,310
-and we'll see that no value
-parse for parameter age.
+и age просто не передается в метод
 
 2053
 01:30:30,310 --> 01:30:32,450
-And because we're using named
-values, I can do that up here,
+И из-за того что мы используем
+именованные аргументы
 
 2054
 01:30:32,450 --> 01:30:35,290
-say, our age is 32.
+мы можем добавить его в конце.
 
 2055
 01:30:35,290 --> 01:30:37,080
-And I can move these around
-anywhere that I would like,
+И из-за того что аргументы именнованные
 
 2056
 01:30:37,080 --> 01:30:39,140
-because we are using the name parameters.
+я вообще могу их писать в любом порядке.
 
 2057
 01:30:39,140 --> 01:30:42,610
-And that's how you can use
-default arguments parameters
+И так используются дефолтные
+аргументы
 
 2058
 01:30:42,610 --> 01:30:43,970
-inside of Kotlin.
+в языке Котлин.
 
 2059
 01:30:43,970 --> 01:30:47,530
-A common pattern in Kotlin
-is once your column length
+Один из подходов который мы убсуждали
+эт опереносить строки кода на новую линию
 
 2060
 01:30:47,530 --> 01:30:50,040
-for your code exceeds the
-right-hand margin length,
+если ваш код достиг вертикального
 
 2061
 01:30:50,040 --> 01:30:51,800
-which is his right hand line,
+серого индитакора справа
 
 2062
 01:30:51,800 --> 01:30:54,720
-it's common to start placing
-values on the next line,
+Обычная практика - переносить
+каждый аргумент функции на
 
 2063
 01:30:54,720 --> 01:30:58,730
-such as we're doing here, makes
-it much more easy to read.
+новую строку, чтобы их
+было легче читать
 
 2064
 01:30:58,730 --> 01:31:01,540
-Now this can get quite old pretty fast
+И это довольно рутинная работа,
+если делать ее вручную -
 
 2065
 01:31:01,540 --> 01:31:04,200
-and can become very slow and error prone.
+очень долго и можно допустить ошибку.
 
 2066
 01:31:04,200 --> 01:31:06,890
-Now, thankfully, if we're using an IDE,
+Хорошие новости - в IDE для Котлина
 
 2067
 01:31:06,890 --> 01:31:09,130
-such as IntelliJ, Android
-Studio or anything like that,
+например в IntelliJ IDEA и в Android Studio
+есть шоркаты, которые сделают это
 
 2068
 01:31:09,130 --> 01:31:10,760
-this is built into the platform.
+за вас.
 
 2069
 01:31:10,760 --> 01:31:12,580
-So put your cursor on the left-hand side
+Вам нужно только поставить курсор
 
 2070
 01:31:12,580 --> 01:31:15,430
-of the open parentheses at Alt and enter,
+перед открывающей скобкой
+и нажать Alt+Enter
 
 2071
 01:31:15,430 --> 01:31:18,260
-and you can say put
-arguments on separate lines
+и выбрать пункт "Put arguments on separate lines"
 
 2072
 01:31:18,260 --> 01:31:20,990
-and now it'll put it on
-separate lines, which is great.
+И Идея сама раскидает аргументы
+на разные строки
 
 2073
 01:31:20,990 --> 01:31:22,800
-So it saves you a lot
-of time really quickly.
+и экономит ваше время
 
 2074
 01:31:22,800 --> 01:31:24,520
-So anytime you wanna do that,
+Это шорткат, который
 
 2075
 01:31:24,520 --> 01:31:26,570
-you can use that little shortcut.
+вам необходимо запомнить.
 
 2076
 01:31:26,570 --> 01:31:29,360
-Now we do get these nice
-names here that are built in
+Теперь Идея подсвечивает нам
 
 2077
 01:31:29,360 --> 01:31:30,760
-from the platform.
+имена наших аргументов
 
 2078
 01:31:30,760 --> 01:31:32,700
-Again, this is the IDE
-giving us these names.
+Это фича исключительно IDE
 
 2079
 01:31:32,700 --> 01:31:34,990
-So if we copy these into another IDE,
+и если мы скопируем код в другую IDE
 
 2080
 01:31:34,990 --> 01:31:39,080
-such as Visual Studio Code, we
-don't get those values back.
+например Visual Srudio,
+то эти подсказки пропадут.
 
 2081
 01:31:39,080 --> 01:31:42,380
-So how do we add those
-named values of actual
+Как нам добавить все эти
 
 2082
 01:31:42,380 --> 01:31:43,430
-those argument names?
+имена аргументов?
 
 2083
 01:31:45,124 --> 01:31:48,360
-You can go back to IntelliJ,
-Android Studio or whatever,
+Мы вернемся в нашу IDE
+и конечно самый банальный способ
 
 2084
 01:31:48,360 --> 01:31:49,520
-and start adding them by hand.
+добавлять их вручную
 
 2085
 01:31:49,520 --> 01:31:51,760
-Again, this is gonna take a lot
-of time if you're doing this
+И опять, это займет дикую кучу
+времени, писать
 
 2086
 01:31:51,760 --> 01:31:52,740
-over and over and over.
+каждый аргумент снова и снова
 
 2087
 01:31:52,740 --> 01:31:55,120
-Thankfully again, place your
-cursor on the left-hand side
+Опять же Идея, предоставляет отличный
+шорткат - поставьте указатель
 
 2088
 01:31:55,120 --> 01:31:57,600
-of the parentheses and
-select the add names
+перед скобкой, нажмите Alt+Enter
+и выберите пункт "Add names to
 
 2089
 01:31:57,600 --> 01:31:59,310
-to call arguments and boom,
+call arguments" и вуаля,
 
 2090
 01:32:00,443 --> 01:32:02,160
-all of a sudden you have
-now cleaned up your code
+теперь все наименования добавились к
+вашему коду
 
 2091
 01:32:02,160 --> 01:32:04,210
-by placing each of the
-arguments on a separate line,
+оба этих подхода -
+перенос аргументов
 
 2092
 01:32:04,210 --> 01:32:05,610
-making it much more readable,
+на разнае строки
 
 2093
 01:32:05,610 --> 01:32:08,010
-as well as adding the
-names of the arguments
+и добавление имен к аргументам
 
 2094
 01:32:08,010 --> 01:32:09,300
-to each of the parameters,
+делают ваш код
 
 2095
 01:32:09,300 --> 01:32:11,030
-which makes it even more readable
+гораздо читабельнее
 
 2096
 01:32:11,030 --> 01:32:13,790
-and saves you time at the end of the day.
+и сохраняют кучу времени вашим коллегам
+и вам в будущем.
 
 2097
 01:32:13,790 --> 01:32:16,250
