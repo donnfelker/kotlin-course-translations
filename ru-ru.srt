@@ -10644,434 +10644,421 @@ create a class here in Kotlin.
 
 2407
 01:45:31,340 --> 01:45:33,440
-Let's assume that I
-have a class called user
+Допустим у нас есть класс который
+называется User
 
 2408
 01:45:33,440 --> 01:45:35,910
-with first and last name
-and a couple of functions
+с именем, фамилией и парочкой
 
 2409
 01:45:35,910 --> 01:45:36,840
-inside of it.
+функций внутри.
 
 2410
 01:45:36,840 --> 01:45:38,360
-If I'd like to use a constructor,
+Если я хочу создать конструктор,
 
 2411
 01:45:38,360 --> 01:45:42,190
-what I can actually do is
-use the keyword constructor.
+я могу использовать
+ключевое слово constructor
 
 2412
 01:45:42,190 --> 01:45:44,350
-Now I can actually bring these properties
+И передать эти параметры пользователя
 
 2413
 01:45:44,350 --> 01:45:45,590
-into the constructor.
+через конструктор.
 
 2414
 01:45:45,590 --> 01:45:48,860
-So let's actually get rid of
-these and actually actually say
+Теперь я могу убрать эти поля
 
 2415
 01:45:48,860 --> 01:45:53,860
-first name and I can say, this
-is a string and last name.
+и перенести их в конструктор.
+Имя с типом String
 
 2416
 01:45:54,410 --> 01:45:55,260
-This is a string.
+и фамилию с типом String.
 
 2417
 01:45:57,164 --> 01:45:59,350
-Now, usually you wanna
-default everything to vals
+Часто вы будете делать их
+неизменяемыми, поэтому сменим все на "val"
 
 2418
 01:45:59,350 --> 01:46:01,570
-because it's going to
-help you with immutability
+это позволит вам запретить их
+изменение и избежать ошибок
 
 2419
 01:46:01,570 --> 01:46:03,710
-and help you not make as many mistakes.
+в будующем, чтобы никто не мог
+сменить имя вашего пользователя.
 
 2420
 01:46:03,710 --> 01:46:05,350
-But we can try that here,
+После того как мы это сделаем,
 
 2421
 01:46:05,350 --> 01:46:08,175
-but we noticed that there's
-actually a problem here.
+мы заметим ошибку вот тут.
 
 2422
 01:46:08,175 --> 01:46:10,372
-So we have the update name method,
+У нас есть метод updateName
 
 2423
 01:46:10,372 --> 01:46:11,870
-actually updates the first name.
+который должен присваивать новое имя
 
 2424
 01:46:11,870 --> 01:46:13,986
-And if it's a val, we can't do that.
+Но из-за того что имя у нас неизменяемая
+переменная, мы не можем этого сделать
 
 2425
 01:46:13,986 --> 01:46:15,209
-So let's just change these to vars.
+Вернем var, чтобы все работало
 
 2426
 01:46:15,209 --> 01:46:16,990
-so the properties that can be mutated,
+и наши поля были изменяемыми
 
 2427
 01:46:16,990 --> 01:46:18,480
-which means they can be changed.
+и наши поля были изменяемыми
 
 2428
 01:46:18,480 --> 01:46:21,720
-So now we have a constructor
-for our user class,
+Теперь у нас есть конструктор для
+нашего класса
 
 2429
 01:46:21,720 --> 01:46:23,140
-which takes in the first
-name and last name.
+он принимает имя и фамилию
 
 2430
 01:46:23,140 --> 01:46:25,920
-And if we go back to our main
-file, we're actually using it.
+И если мы вернемся в наш main
+файл мы сможем его использовать.
 
 2431
 01:46:25,920 --> 01:46:27,980
-You can actually see a
-couple of things here.
+Тут вы сразу заметите нессколько вещей
 
 2432
 01:46:27,980 --> 01:46:31,370
-First we have in the user class,
+Первое различие будет в классе User
 
 2433
 01:46:31,370 --> 01:46:33,630
-you can actually see when we type user,
+Теперь, когда мы печатаем тип и
 
 2434
 01:46:33,630 --> 01:46:35,740
-open and close parentheses.
+скобочки
 
 2435
 01:46:35,740 --> 01:46:39,630
-We have a string for first
-name and a last name as well.
+мы должны указать имя
+и фамилию прямо в них
 
 2436
 01:46:39,630 --> 01:46:42,900
-So we put Donn and Felker.
+Я запишу "Donn" и "Felker".
 
 2437
 01:46:45,133 --> 01:46:45,966
-Now, if I would like to rewrite these,
+Теперь я хочу немного поменять наш
+старый код
 
 2438
 01:46:45,966 --> 01:46:47,880
-I could easily do that with
-this property right here
+На строчках 6 и 7
 
 2439
 01:46:47,880 --> 01:46:50,730
-on line six and seven, I can change these
+я изменю строки
 
 2440
 01:46:50,730 --> 01:46:55,450
-to perhaps it should
-have been Jason Smith.
+пусть это будет Jason Smith
 
 2441
 01:46:55,450 --> 01:46:58,320
-I can reset those here so
-I can actually change those
+Я могу менять имя и фамилию пользователя
+после его создания
 
 2442
 01:46:58,320 --> 01:46:59,460
-or I can actually just get rid of them
+но сейчас я просто удалю эти строчки
 
 2443
 01:46:59,460 --> 01:47:01,000
-'cause I don't need them anymore.
+потому что болье они нам не нужны.
 
 2444
 01:47:01,000 --> 01:47:06,000
-And then here I'd actually
-do Jane changes to Doe,
+И тут я впишу имя и фамилию
+прямо в конструктов
 
 2445
 01:47:08,816 --> 01:47:09,660
-I can get rid of the
-property setting here.
+и уберу явное присвоения полям
+имени и фамилии.
 
 2446
 01:47:09,660 --> 01:47:11,420
-And if I to run this again, you'll notice
+И если я запущу этот код
 
 2447
 01:47:11,420 --> 01:47:14,586
-that we're gonna get the same
-result that we got before,
+то результат будет точно такой же
 
 2448
 01:47:14,586 --> 01:47:19,586
-this time we've just used a
-constructor with the parameters
+но тут мы использовали
+конструктор для создания пользователя
 
 2449
 01:47:21,090 --> 01:47:21,923
-and properties inside of here.
+и поля у нас теперь в конструкторе.
 
 2450
 01:47:21,923 --> 01:47:24,030
-So these parameters are
-turned into properties,
+И эти поля в конструкторе
+вы все так же можете использовать
 
 2451
 01:47:24,939 --> 01:47:26,870
-which you can use inside of your class.
+во все вашем классе.
 
 2452
 01:47:26,870 --> 01:47:28,370
-So you can see that down here.
+Как, например, вот тут.
 
 2453
 01:47:29,995 --> 01:47:31,730
-Now you can also, as you
-can probably imagine,
+Вы наверное уже догадались,
 
 2454
 01:47:31,730 --> 01:47:34,859
-put your cursor here and
-you can add the names
+что вы можете навести курсор сюда
 
 2455
 01:47:34,859 --> 01:47:35,692
-to the call arguments.
+и сделать конструктор с именнованными
+параметрами
 
 2456
 01:47:35,692 --> 01:47:37,740
-So you can actually see that
-that's actually the first name
+Чтобы явно видеть, что это у нас имя,
 
 2457
 01:47:37,740 --> 01:47:39,820
-and that's actually the last name.
+а это фамилия.
 
 2458
 01:47:39,820 --> 01:47:41,410
-So you can actually see
-what these values are
+И так будет легче
 
 2459
 01:47:41,410 --> 01:47:43,080
-as you parse them in.
+читать ваш код.
 
 2460
 01:47:43,080 --> 01:47:46,700
-Furthermore, in the user
-class, if the constructor
+К тому же, если в конструкторе
 
 2461
 01:47:46,700 --> 01:47:49,280
-does not have any modifiers on it,
+класса нет никаких
+модификаторов доступа,
 
 2462
 01:47:50,393 --> 01:47:53,093
-such as the internal keyword,
-which we'll cover later,
+как например ключевое слово internal,
+о котором мы поговорим позже.
 
 2463
 01:47:54,140 --> 01:47:55,900
-you can actually, so if it doesn't have
+Так вот, если у вас нет никаких ключевых
 
 2464
 01:47:55,900 --> 01:47:59,980
-any of these annotations or modifiers,
+слов перед конструктором,
 
 2465
 01:47:59,980 --> 01:48:02,535
-you can actually get rid
-of the constructor word
+то вы можете не писать слово
+"constructor"
 
 2466
 01:48:02,535 --> 01:48:03,368
-and this will be the primary constructor.
+и это будет нашим основным конструктором.
 
 2467
 01:48:03,368 --> 01:48:05,630
-So now we've actually cleaned
-up the code a little bit more.
+И наш код теперь стал почище
 
 2468
 01:48:05,630 --> 01:48:06,500
-We have the user class,
+У нас есть класс User
 
 2469
 01:48:06,500 --> 01:48:08,830
-which takes in a first
-name and a last name.
+который принимает имя и
+фамилию в конструкторе
 
 2470
 01:48:09,890 --> 01:48:12,340
-So we can see, I hear to
-a first name, last name
+И мы можем обращаться
 
 2471
 01:48:12,340 --> 01:48:13,680
-works just fine.
+к полям.
 
 2472
 01:48:13,680 --> 01:48:16,590
-We don't have to have the
-constructor keyword on there
+Нам не нужно писать ключевое слово
+construcor
 
 2473
 01:48:16,590 --> 01:48:17,950
-though if you could still
-use if you'd like to,
+вы все равно можете писать
+его, если хотите)
 
 2474
 01:48:17,950 --> 01:48:20,890
-but it's very common if you
-have a primary constructor
+но обычно его не пишут, потому
 
 2475
 01:48:20,890 --> 01:48:24,170
-and that's it, you just
-remove the constructor word.
+что эффект тот же самый,
+а кода меньше.
 
 2476
 01:48:24,170 --> 01:48:26,540
-Now, if you wanted to have perhaps this
+Теперь, если вы зохотите поставить
 
 2477
 01:48:26,540 --> 01:48:29,720
-to only be for internal and
-you wanna have constructor,
+какое-то ключевое слово, напрмер internal
+и убрать constructor
 
 2478
 01:48:29,720 --> 01:48:32,389
-and you tried to get rid
-of the constructor word,
+то у васс не получится
 
 2479
 01:48:32,389 --> 01:48:34,030
-you would see that this
-is not going to work,
+и котлин покажет вам ошибку.
 
 2480
 01:48:34,030 --> 01:48:36,120
-use constructor keyword
-after any modifiers
+вам нужно использовать, "constructor",
+если перед ним
 
 2481
 01:48:36,120 --> 01:48:37,250
-of a primary constructor.
+есть ключевые слова.
 
 2482
 01:48:37,250 --> 01:48:39,460
-So we need to put constructor
-here if we were to restrict
+Если мы закрываем доступ к конструктору
 
 2483
 01:48:39,460 --> 01:48:43,610
-the visibility of the
-user classes constructor.
+то мы явно должны писать ключевое слово
+"construcor"
 
 2484
 01:48:43,610 --> 01:48:45,255
-But we're not doing that here.
+Но тут мы не будем этого делать.
 
 2485
 01:48:45,255 --> 01:48:47,500
-So this is a basic class
-with a primary constructor.
+Это стандартный класс
+с реализацией основного конструктора.
 
 2486
 01:48:47,500 --> 01:48:48,940
-One of the additional things you can do
+Еще одна вещь, которую вы можете сделать
 
 2487
 01:48:48,940 --> 01:48:51,280
-instead of a constructor
-is also set default value.
+вместо конструктора мы можете выставить
+дефолтные значения
 
 2488
 01:48:51,280 --> 01:48:54,610
-So we could set this to be a blank string.
+То есть эту строку мы можем сделать пустой
 
 2489
 01:48:54,610 --> 01:48:56,370
-And perhaps we knew we were
-always gonna be working
+И, допустим, мы знаем, что мы
+создаем пользователей для
 
 2490
 01:48:56,370 --> 01:48:58,130
-with the Smith family for whatever reason,
+семейства с фамилией "Smith"
 
 2491
 01:48:58,130 --> 01:48:59,920
-we could just say this is Smith.
+мы выставид дефолтное Smith на фамилии.
 
 2492
 01:48:59,920 --> 01:49:02,790
-And so if I'd like to back
-inside of our main file,
+Вернемся в main
 
 2493
 01:49:02,790 --> 01:49:04,410
-I can actually get rid of the last name.
+и теперь можем не писать фамилию.
 
 2494
 01:49:04,410 --> 01:49:06,320
-If I didn't want that there
-fall into override a here
+И если я не хочу дефолтное
+значение тут, а хочу чтобы
 
 2495
 01:49:06,320 --> 01:49:07,310
-to be Doe, I could do that.
+фамилия была "Doe",
+я могу явно ее написать.
 
 2496
 01:49:07,310 --> 01:49:10,760
-And so now this is just gonna
-say Donn Smith and Mr. Smith
+И теперь наш вывод сменится
+и будут выводится дефолтные
 
 2497
 01:49:10,760 --> 01:49:12,810
-and Jane Doe and Ms. Doe,
+значения так, где мы
+не передали свои
 
 2498
 01:49:12,810 --> 01:49:15,180
-because we're using the default values
+получился Donn Smith
 
 2499
 01:49:15,180 --> 01:49:18,020
-inside of this primary constructor.
+и Jane Doe.
 
 2500
 01:49:18,020 --> 01:49:20,500
-Class can have more than one constructor.
+У классов может быть несколько конструкторов.
 
 2501
 01:49:20,500 --> 01:49:22,900
-This is a primary constructor up top here.
+Основной будет навершу после названия класса.
 
 2502
 01:49:22,900 --> 01:49:24,650
-We can also have a secondary constructor.
+Второстепенные мы можем создать сами.
 
 2503
 01:49:24,650 --> 01:49:25,950
