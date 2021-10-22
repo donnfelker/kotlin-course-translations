@@ -9258,700 +9258,680 @@ call arguments" и вуаля,
 
 2097
 01:32:13,790 --> 01:32:16,250
-Let's assume you have a
-function called print book info
+Допустим у нас есть функция
+которая выводит информацию о книге
 
 2098
 01:32:16,250 --> 01:32:18,590
-that prints the title of
-a book and the author.
+она выводит название
+и автора книги
 
 2099
 01:32:18,590 --> 01:32:20,830
-Here, we have green eggs and
-ham, and if we were to run it,
+Тут мы функцию вызываем с названием
+и автором, если запустим
 
 2100
 01:32:20,830 --> 01:32:23,000
-we would see that it's just going to print
+увидим что в консоль
 
 2101
 01:32:23,000 --> 01:32:25,190
-green eggs and ham, the
-author is Dr. Seuss.
+все правильно выведется.
 
 2102
 01:32:25,190 --> 01:32:28,180
-Now, however, if we had
-the instance where we knew
+Но теперь, если нам понадобится
+сделать книгу у которой
 
 2103
 01:32:28,180 --> 01:32:30,510
-that we needed to add
-an additional author,
+будет несколько авторов,
+напрмер есть соавторы у книги
 
 2104
 01:32:30,510 --> 01:32:32,850
-because sometimes books have coauthors,
+потому что так иногда бывает,
+люди редко пишут книги самостоятельно,
 
 2105
 01:32:32,850 --> 01:32:36,830
-we would have to maybe create
-an overload of this function.
+Для этого мы могли бы переопределить
+эту функцию но с двумя авторами
 
 2106
 01:32:36,830 --> 01:32:38,940
-And we'd say this would be author two.
+и написать, что это второй автор.
 
 2107
 01:32:38,940 --> 01:32:40,420
-This would be author an author two
+Это первый, а это второй автор
 
 2108
 01:32:40,420 --> 01:32:43,350
-and then perhaps we might
-change it to say authors,
+И изменить вывод нашей функции
 
 2109
 01:32:43,350 --> 01:32:44,510
-and then we'd have another comment
+чтобы он выводил
 
 2110
 01:32:44,510 --> 01:32:46,940
-with another string interpolation here.
+сразу несколько авторов.
 
 2111
 01:32:46,940 --> 01:32:48,230
-It would for author two.
+Это будет работать для двух авторов.
 
 2112
 01:32:48,230 --> 01:32:50,774
-Now, if the book has three authors,
+Если у мниги будет три автора
 
 2113
 01:32:50,774 --> 01:32:51,740
-we would have to create
-another function and four
+то придется создавать еще
+одну функцию
 
 2114
 01:32:51,740 --> 01:32:55,040
-and five and six, and you
-can see where this is going.
+и придется дублировать для
+четерех, пяти, шести второв
 
 2115
 01:32:55,040 --> 01:32:58,600
-So thankfully Kotlin has
-a way for us to do that
+В языке Котлин есть специальное
+ключевое слово для таких случаев
 
 2116
 01:32:58,600 --> 01:33:00,250
-without having to write extra code really.
+чтобы не писать дополнительный код
 
 2117
 01:33:00,250 --> 01:33:02,070
-And so what we can do is
-take this last parameter
+Мы можем взять наш последний параметр
 
 2118
 01:33:02,070 --> 01:33:03,790
-and turn this into a var arg.
+и превратить его в "vararg"
 
 2119
 01:33:03,790 --> 01:33:07,010
-And that's a keyword var arg,
-which means variable argument.
+И переводится это как переменный
+аргумент функции
 
 2120
 01:33:07,010 --> 01:33:08,960
-And then I'm just gonna
-change this to authors,
+И поменяем его название
+на "авторы"
 
 2121
 01:33:08,960 --> 01:33:12,300
-which means that this value
-could take zero to many values.
+Это значит, что теперь этот аргумент
+может принимать от нуля до бесконечного
 
 2122
 01:33:12,300 --> 01:33:14,410
-So there could be many authors here.
+числа авторов.
 
 2123
 01:33:14,410 --> 01:33:16,830
-And since this is going to be an array,
+И под капотом это превратится в массив
 
 2124
 01:33:16,830 --> 01:33:18,740
-if we were to print
-this now, let's go ahead
+если мы попытаемся его вывести в таком
+виде, давайте еще
 
 2125
 01:33:18,740 --> 01:33:20,260
-and just add another person in here.
+добавим автора.
 
 2126
 01:33:20,260 --> 01:33:23,460
-So maybe I was the coauthor,
-which we know I'm not,
+Добавим еще одного гипотетического
 
 2127
 01:33:23,460 --> 01:33:24,710
-but this is hypothetical.
+соавтора книги.
 
 2128
 01:33:25,759 --> 01:33:28,090
-We'll run this here and you
-can see that we actually have
+Если мы теперь это запустим
 
 2129
 01:33:28,090 --> 01:33:31,260
-open bracket and it's starting
-to print the information.
+в консоль выведется квадратная
+скобка и какая-то информация
 
 2130
 01:33:31,260 --> 01:33:32,350
-This is now an array.
+так выводится в консоль массив
+в Котлине.
 
 2131
 01:33:32,350 --> 01:33:34,800
-And so this is printing the
-information about the array.
+И это вывод информации про массив,
+из полезного - он пишет какой тип он содержит.
 
 2132
 01:33:34,800 --> 01:33:36,640
-If we actually wanna print
-the contents of the array,
+Если мы захотим вывести сам
+контент массива
 
 2133
 01:33:36,640 --> 01:33:37,820
-we're gonna hop into a little bit
+нам нужно погрузится в немного
 
 2134
 01:33:37,820 --> 01:33:41,130
-of an advanced concept here and we'll use
+продвинутые средства языка
 
 2135
 01:33:41,130 --> 01:33:44,840
-a lambda expression and
-we'll print it to the screen.
+а именно в лямбда выражения
+и вывести все в консоль
 
 2136
 01:33:44,840 --> 01:33:47,590
-And it is the key word at the front line.
+И "it" это ключевое слово, которое
+собержит одного автора.
 
 2137
 01:33:48,485 --> 01:33:50,485
-And if we're to run it now, we would see
+Если мы запустим то увидим
 
 2138
 01:33:51,350 --> 01:33:54,000
-also this array value here,
-which we can get rid of
+информацию о массиве, которую можно удаалить
 
 2139
 01:33:55,329 --> 01:33:57,762
-and clean it up a little
-bit and run it again.
+И перезапустим снова
 
 2140
 01:33:57,762 --> 01:33:58,800
-And you would see that we
-have green eggs and ham
+Теперь мы видим название книги
 
 2141
 01:33:58,800 --> 01:34:01,980
-and the author, we should say authors
+и авторов, которых мы передали
 
 2142
 01:34:01,980 --> 01:34:04,480
-would be Dr. Seuss and Donn Felker
+в функцию
 
 2143
 01:34:04,480 --> 01:34:06,190
-as it's now rendering here.
+теперь все выводится.
 
 2144
 01:34:06,190 --> 01:34:07,990
-We could also take this
-and add additional ones.
+Можем добавить еще одного
 
 2145
 01:34:07,990 --> 01:34:11,490
-So if we had Jane Doe, Jon Doe,
+например Jane Doe
 
 2146
 01:34:11,490 --> 01:34:13,330
-and we had all kinds of other ones,
+и можем еще сколько угодно,
 
 2147
 01:34:13,330 --> 01:34:15,300
-we could keep adding them in there.
+на самом деле добавить.
 
 2148
 01:34:15,300 --> 01:34:16,570
-Now the other cool thing is too,
+Самое классное, что у книги
 
 2149
 01:34:16,570 --> 01:34:19,720
-we could also have the situation
-where for whatever reason,
+может вообще не быть автора
 
 2150
 01:34:19,720 --> 01:34:22,800
-this book just doesn't have
-an author and it's unknown.
+возсожно это какая-то анонимная нига
 
 2151
 01:34:22,800 --> 01:34:24,420
-We could run this as well.
+Мы можем все так же запустить
 
 2152
 01:34:24,420 --> 01:34:26,940
-And we would see that
-there's no values returned.
+И просто увидим, что ничего не вывелось.
 
 2153
 01:34:26,940 --> 01:34:30,520
-So if you need to have
-a function that takes in
+Если у вас будут кейсы,
+когда функция должна принимать
 
 2154
 01:34:30,520 --> 01:34:33,050
-multiple inputs of that particular type,
+несколько аргументов определенного типа
 
 2155
 01:34:33,050 --> 01:34:34,750
-you wanna make sure that the var arg
+вы можете использовать vararg
 
 2156
 01:34:34,750 --> 01:34:37,130
-is the last argument in the function,
+в последнем аргументе функции.
 
 2157
 01:34:37,130 --> 01:34:40,350
-slap on the var arg keyword
-and then you can pars
+к аргугменту просто добавляется "vararg"
 
 2158
 01:34:40,350 --> 01:34:43,170
-multiple values in so
-such as we're doing here.
+и теперь можно передавать
+сколько угодно переменных этого типа
 
 2159
 01:34:43,170 --> 01:34:47,100
-So like X, Y, and Z, and
-then all these values
+Например у нас есть разные буквы
 
 2160
 01:34:47,100 --> 01:34:49,190
-would then be stuffed
-into this author's array
+и все они могут влезть в этот массив
 
 2161
 01:34:49,190 --> 01:34:52,893
-and you could loop over it
-using either a lambda expression
+И потом в функции вы можете пройти
+по массиву с помощью лябды
 
 2162
 01:34:52,893 --> 01:34:55,990
-or any other array manipulation
-or iteration techniques.
+или сделать любую другую операцию.
 
 2163
 01:34:58,040 --> 01:35:00,890
-Let's assume we had a function
-called print user info
+Давайте допустим что у нас есть
+функция, которая выводит инфу о пользователе
 
 2164
 01:35:00,890 --> 01:35:02,380
-and it just printed a name.
+и сейчас просто выводит имя
 
 2165
 01:35:02,380 --> 01:35:04,750
-So very simple, we're just gonna
-take the name and print it.
+Очень простая, мы просто передаем
+имя и оно выводится
 
 2166
 01:35:04,750 --> 01:35:07,050
-And it says name Donn Felker.
+В консоль вывелось имя
 
 2167
 01:35:07,050 --> 01:35:08,560
-Now let's say for whatever reason,
+Допустим, по какой-то причине
 
 2168
 01:35:08,560 --> 01:35:10,760
-I also need to have it take
+мне иногда нужно
 
 2169
 01:35:10,760 --> 01:35:12,210
-sometimes it only needs the name,
+выводить только имя
 
 2170
 01:35:12,210 --> 01:35:14,840
-sometimes it only needs the age.
+а иногда только возраст
 
 2171
 01:35:14,840 --> 01:35:16,800
-So I'll say, you know what,
-I actually kind of need
+И тут напрашивается еще одна
 
 2172
 01:35:16,800 --> 01:35:18,600
-another print user info function.
+функция для вывода информации о пользователе.
 
 2173
 01:35:19,530 --> 01:35:20,990
-And this one is going
-to have age and this one
+И она должна принимать возраст и выводить его
 
 2174
 01:35:20,990 --> 01:35:22,330
-is gonna be int.
+тип укажем Int.
 
 2175
 01:35:22,330 --> 01:35:25,057
-And so at this time I can actually say,
+И теперь я могу продублировать
 
 2176
 01:35:25,057 --> 01:35:25,940
-all right, well, I'm
-gonna call this new one,
+пользователя и дать ему новое
+имя и возраст
 
 2177
 01:35:25,940 --> 01:35:27,550
-it's gonna be a new user.
+Это наш новый пользователь
 
 2178
 01:35:27,550 --> 01:35:29,560
-And this one's called Jane Doe
+Назовем "Jane Doe"
 
 2179
 01:35:29,560 --> 01:35:32,030
-and I'm gonna make her age of 37.
+И путь будет 37 лет
 
 2180
 01:35:32,910 --> 01:35:34,920
-So now this one print
-user info is going to,
+И теперь, если мы пойдем в определение
+функции (cmd+B на маке)
 
 2181
 01:35:34,920 --> 01:35:36,210
-if we go to the definition of it,
+Провалимся в определение первого вызова
 
 2182
 01:35:36,210 --> 01:35:37,560
-it's gonna go to this function.
+И попадем в эту функцию
 
 2183
 01:35:37,560 --> 01:35:39,380
-And this one is gonna go to this function.
+А во втором в эту функцию
 
 2184
 01:35:39,380 --> 01:35:41,060
-This is called function overloading,
+Это называется перегрузкой функций
 
 2185
 01:35:41,060 --> 01:35:44,450
-we're overloading the
-term print user info.
+Мы перегружаем функию printUserInfo
 
 2186
 01:35:44,450 --> 01:35:47,120
-So has two different has the same name,
+и теперь она в двух вариациях, одна
+принмает имя, а вторая имя и возраст
 
 2187
 01:35:47,120 --> 01:35:48,770
-but it's taking different arguments here.
+Функция называется перегруженной, только тогда
+когда у ее вариаций отличаются аргументы;
 
 2188
 01:35:48,770 --> 01:35:51,180
-Now, if I were to remove this argument,
+Если мы уберем этот аргумент
 
 2189
 01:35:51,180 --> 01:35:52,290
-you'd see we get some errors here
+мы увидим сообщение об ошибке
 
 2190
 01:35:52,290 --> 01:35:55,100
-because we had the exact
-same definition here.
+потому что аргументы совпадают
+и это конфликт в определении функции
 
 2191
 01:35:55,100 --> 01:35:58,380
-This is the exact same function
-name and function parameters
+И первая и вторая
+функции это одно и то же,
 
 2192
 01:35:58,380 --> 01:36:00,950
-right here that are right here
+поэтому компилятор не сможет понять
+какую именно функцию вы будете
 
 2193
 01:36:00,950 --> 01:36:02,330
-and that's going to be a problem.
+вызвать, так как их две одинаковые.
 
 2194
 01:36:02,330 --> 01:36:07,010
-So because we have a
-different parameter here age,
+Из-за того что аргументы функции разные
 
 2195
 01:36:07,010 --> 01:36:09,490
-it's now considered a
-different signature to Kotlin
+Котлин начинает считать, что это одна
+и таже функция, но вызывать ее
 
 2196
 01:36:09,490 --> 01:36:11,490
-and say, all right you
-can overload that function
+можно с разными входными данными.
+Поэтому Котлин не видит конфликтов
 
 2197
 01:36:11,490 --> 01:36:14,604
-and then of course, we're
-probably going to have
+так как названия функций
+и их возращщаемы тип
 
 2198
 01:36:14,604 --> 01:36:15,810
-some information here that's
-a little bit different.
+одинаковый, а аргументы на входе
+разные.
 
 2199
 01:36:17,034 --> 01:36:19,263
-Now, again, we could say,
-well, now I also want
+И опять мы можем сказать, что
+теперь мы хотим
 
 2200
 01:36:19,263 --> 01:36:20,700
-their favorite color to be inside of here.
+передавать и выводить
+любимый цвет пользователя
 
 2201
 01:36:20,700 --> 01:36:23,550
-So I'd say fave color.
+Допишем favoriteColor
 
 2202
 01:36:23,550 --> 01:36:26,450
-And that might just be
-a string for simplicity.
+И пусть это будет строкой
+для простоты
 
 2203
 01:36:26,450 --> 01:36:27,960
-Now I have three overloads.
+Теперь одна функция у нас
+перегружена тремя вариациями аргументов
 
 2204
 01:36:27,960 --> 01:36:31,080
-So what we could do here
-is I say, print user info.
+И теперь я могу вызвать
+printUserInfo
 
 2205
 01:36:31,080 --> 01:36:33,231
-You see, I have three different options.
+и в подсказке мы увидим 3
+возможных варианта вызова.
 
 2206
 01:36:33,231 --> 01:36:35,030
-So one takes a string, one takes integer,
+Одна берет имя, другая имя и возраст
 
 2207
 01:36:35,030 --> 01:36:36,120
-a string and an integer,
+с типами Sting и Int
 
 2208
 01:36:36,120 --> 01:36:39,030
-and one takes string
-integer and favorite color.
+А третья Sting Int и еще String
+c любимым цветом,
 
 2209
 01:36:39,030 --> 01:36:42,080
-And so of course, then
-we'd want to change this.
+И конечно, нам нужно
+изменить вывод
 
 2210
 01:36:42,080 --> 01:36:44,230
-So it said feed color.
+и вывести любимый цвет.
 
 2211
 01:36:44,230 --> 01:36:47,500
-And this would say using
-string interpolation again,
+Как всегда, с помощью интерполяции,
 
 2212
 01:36:47,500 --> 01:36:48,980
-their favorite color.
+выводим любимый цвет
 
 2213
 01:36:48,980 --> 01:36:51,530
-So then I could print this user info.
+Теперь я могу вывести информацию
 
 2214
 01:36:51,530 --> 01:36:54,513
-And I would say Frank Bendo,
+например, про Фрэнка,
 
 2215
 01:36:57,220 --> 01:37:00,850
-and we would say that his age is 22
+скажем что ему 22
 
 2216
 01:37:00,850 --> 01:37:03,100
-and his favorite color is purple.
+и его любимый цвет фиолетовый.
 
 2217
 01:37:04,050 --> 01:37:05,970
-And at that point in time,
-if we were to run these,
+Если запустим то увидим
 
 2218
 01:37:05,970 --> 01:37:09,890
-each one of these are going
-to run a different function.
+три разных вывода
 
 2219
 01:37:09,890 --> 01:37:11,440
-So the top ones are in the top one here,
+Первый быдет из этой функции
 
 2220
 01:37:11,440 --> 01:37:13,050
-the second one's going
-to run this one here,
+Второй из этой,
 
 2221
 01:37:13,050 --> 01:37:15,680
-and the third one's going
-to run this one here.
+а третий из этой функции
 
 2222
 01:37:15,680 --> 01:37:18,718
-Now, if you're already
-familiar with Kotlin
+Теперь, когда вы уже знакомы
+понятием именованных аргументов
 
 2223
 01:37:18,718 --> 01:37:22,130
-and also it's named parameters
-and his default values,
+и дефолтных аргументов
 
 2224
 01:37:22,130 --> 01:37:24,813
-well, then now I'm sure you
-can already imagine that
+Вы уже можете заметить,
+что наш когд можно
 
 2225
 01:37:24,813 --> 01:37:26,940
-well, we could actually kind
-of clean this up a little bit.
+почистить и сделать удобнее
 
 2226
 01:37:26,940 --> 01:37:29,715
-And to clean this up, you can
-actually kind of get right rid
+Удалим все лишнее
 
 2227
 01:37:29,715 --> 01:37:31,030
-of this and say, hey, you know what,
+и напишем что
 
 2228
 01:37:32,016 --> 01:37:33,390
-well, age is going to be an integer.
+возраст у нас будет типа Int
 
 2229
 01:37:34,273 --> 01:37:36,070
-And if they don't provide it,
-I want it to default to zero.
+и если его не укажут в месте
+вызова функции то дефолтным будет 0
 
 2230
 01:37:37,093 --> 01:37:39,870
-And a favorite color is going
-to be a string, of course.
+цвет будет строкой
 
 2231
 01:37:39,870 --> 01:37:43,030
-And if they don't provide
-it will default to purple.
+и дефолтное значение будет
+фиолетовым цветом
 
 2232
 01:37:43,030 --> 01:37:44,270
-And so we'll do that.
+И теперь...
 
 2233
 01:37:44,270 --> 01:37:46,260
-Actually no, we can actually default it
+Стоп, цвет можно сделать пустым
+по дефолту, так будет удобнее
 
 2234
 01:37:46,260 --> 01:37:47,910
-to an empty string if you'd like,
+добавим пустую строку по дефолту
 
 2235
 01:37:49,236 --> 01:37:51,210
-and then what will allow us
-to do is get rid of this,
+и теперь нам можно
 
 2236
 01:37:51,210 --> 01:37:52,700
-see how we have this here.
+удалить все перегрузки
 
 2237
 01:37:52,700 --> 01:37:54,640
-It says, hey, there's
-a conflicting overload
+Потому что теперь Котлин ругается
 
 2238
 01:37:54,640 --> 01:37:57,850
-because we have this up
-here with the same values.
+что у нас конфликт и две
+функции принимают одинаковые аргументы
 
 2239
 01:37:57,850 --> 01:38:00,710
-Now, if I get rid of this,
-all of these still work
+Если вс удалим, то все будет
 
 2240
 01:38:00,710 --> 01:38:03,160
-because we're using the name parameters.
+работать потому что у нас
+есть дефолтные параметры.
 
 2241
 01:38:03,160 --> 01:38:06,030
-Now, of course I would
-wanna say age like this
+Нужно конечно все добавить в вывод
 
 2242
 01:38:06,030 --> 01:38:10,810
-and fave color, so we can
-actually render the stuff
+чтобы у нас эта информация
 
 2243
 01:38:10,810 --> 01:38:11,643
-and it would be there.
+отображалась в консоли
 
 2244
 01:38:11,643 --> 01:38:14,030
-So if I don't provide a favorite
-color, just gonna be blank,
+Если я не указыаю любимый цвет,
+то по дефолту он будет пустым
 
 2245
 01:38:14,030 --> 01:38:16,570
-if I don't provide an age, it'll be zero
+если не добавляю возраст,
+то он будет ноль
 
 2246
 01:38:16,570 --> 01:38:18,120
-and I've kind of cleaned it up.
+и при этом мы избавились от
+перегруженных функций
 
 2247
 01:38:19,029 --> 01:38:21,309
-And I still have this function
-overload options here,
+И в подсказке у нас теперь будут
+отображаться дефолтные ззначения
 
 2248
 01:38:21,309 --> 01:38:23,020
-which I can say, print, user info.
+которые мы можем заполнить,
+а можем проигнорировать.
 
 2249
 01:38:23,020 --> 01:38:24,740
-And then it's gonna give me the option of,
+...
 
 2250
 01:38:24,740 --> 01:38:26,440
-hey, don't use any default values.
+...
 
 2251
 01:38:27,540 --> 01:38:30,400
-And that's how you can
-overload a function in Kotlin.
+И так вы вожете перегрузать функции
+в языке Котлин.
 
 2252
 01:38:30,400 --> 01:38:34,690
