@@ -11062,218 +11062,217 @@ construcor
 
 2503
 01:49:24,650 --> 01:49:25,950
-To create a secondary constructor,
+Чтобы создать второстепенный конструктор
 
 2504
 01:49:25,950 --> 01:49:27,980
-you can use the constructor keyword,
+мы будем использовать ключевое
+слово constructor
 
 2505
 01:49:27,980 --> 01:49:30,752
-and then you wanna parse
-in some additional values.
+и в него передадим наши
+дополнительные аргументы
 
 2506
 01:49:30,752 --> 01:49:31,585
-But first let's get that set up.
+Но давайте сначала опишем ситуацию.
 
 2507
 01:49:31,585 --> 01:49:35,240
-Let's assume that this user
-can be of a particular type.
+Допустим пользователь
+у нас обладает особым свойством
 
 2508
 01:49:35,240 --> 01:49:39,860
-And so we'll say is platinum
-and be perhaps a platinum user
+добавим поле isPlatinum
 
 2509
 01:49:39,860 --> 01:49:41,620
-for a particular,
+оно используется для каких-то
 
 2510
 01:49:41,620 --> 01:49:44,960
-you could say it's a
-financial institution.
+финансовых кейсов в нашей
+программе.
 
 2511
 01:49:44,960 --> 01:49:48,120
-And so we wanna create
-another constructor.
+И теперь создадим второстепенный
+конструктор.
 
 2512
 01:49:48,120 --> 01:49:49,830
-So sometimes we wanna be able to provide,
+Иногда мы хотим добавлять только
 
 2513
 01:49:49,830 --> 01:49:53,060
-instead of the first
-name and the last name,
+имя и фамилию
 
 2514
 01:49:53,060 --> 01:49:54,740
-we already know by default,
-they're not platinum.
+и нам уже известно, что такие
+пользователи не будут платиновыми.
 
 2515
 01:49:54,740 --> 01:49:58,900
-So what we can do is we can
-call this constructor here.
+И теперь нам нужно использовать
+ключевое слово "this"
 
 2516
 01:49:58,900 --> 01:50:02,930
-Now this constructor will
-take the first and last name,
+и передать ему все параметры
+основного конструктора.
 
 2517
 01:50:02,930 --> 01:50:03,770
-but then what we need to do
+это неявный вызов основного конструктора
+из второстепенного, чтобы
 
 2518
 01:50:03,770 --> 01:50:06,200
-is call into the original version.
+проинициализировать
+все поля класса.
 
 2519
 01:50:06,200 --> 01:50:08,926
-So we're say the first
-name of parse it in.
+Мы передадим имя,
+фамилию
 
 2520
 01:50:08,926 --> 01:50:11,199
-So this first name value
-is coming from here.
+и значение isPlatinum, которое
 
 2521
 01:50:11,199 --> 01:50:12,920
-And then the last name and
-they'll say is platinum,
+будет равно false при
 
 2522
 01:50:12,920 --> 01:50:14,640
-we're gonna say false.
+вызове второстепенного конструктора.
 
 2523
 01:50:14,640 --> 01:50:16,590
-Now, we can to see here
-is we no longer have
+И теперь у нас нет
 
 2524
 01:50:16,590 --> 01:50:17,423
-any red squigglies.
+никаких подсвечнных ошибок в коде.
 
 2525
 01:50:17,423 --> 01:50:20,310
-What this means is I can
-use this new constructor.
+Это значит, что теперь второстепенный
+конструктор можно использовать
 
 2526
 01:50:20,310 --> 01:50:23,390
-Now I don't have to provide
-a body for this here.
+Не обязательно у второстепенного
+конструктора явно писать тело функции
 
 2527
 01:50:23,390 --> 01:50:25,360
-But if I would like to, I
-can also provide a body,
+Но если мне что-то еще нужно
+сделать при вызове конструктора,
 
 2528
 01:50:25,360 --> 01:50:26,590
-may be able to do something in here.
+я могу это сделать здесь.
 
 2529
 01:50:26,590 --> 01:50:30,120
-Like print line you could say is platinum
+Например вывести в консоль, что
 
 2530
 01:50:32,270 --> 01:50:33,870
-is false by default.
+пользователь не платиновый по дефолту.
 
 2531
 01:50:34,951 --> 01:50:36,890
-So if I use this one, if
-I use this constructor,
+И если теперь я создаю пользователя
+с помощью этого конструктора
 
 2532
 01:50:36,890 --> 01:50:38,040
-this line of code will get run.
+эта строчка кода выполнится при создании.
 
 2533
 01:50:38,040 --> 01:50:39,998
-So let's go back to our example
+Вернемся к нашему примеру
 
 2534
 01:50:39,998 --> 01:50:42,560
-and let's change this one here.
+и поменяем логику.
 
 2535
 01:50:42,560 --> 01:50:45,960
-So by default, both of
-these are going to call
+По дефолту оба этих создания
+пользователя будут вызывать
 
 2536
 01:50:45,960 --> 01:50:48,210
-into this here.
+второстепенный конструктор.
 
 2537
 01:50:48,210 --> 01:50:50,130
-Now, of course we have
-not provided a last name,
+И тут нужно поправить
+и добавить фамилию пользователю
 
 2538
 01:50:50,130 --> 01:50:51,780
-so let's provide a last name here
+Напишем фамилию,
 
 2539
 01:50:53,193 --> 01:50:54,660
-and that's going to be Felker.
+пусть будет моей - Felker.
 
 2540
 01:50:54,660 --> 01:50:57,160
-And then it'll say, it's platinum is true.
+и допишем значение isPlatinum,
+пусть будет истиной.
 
 2541
 01:50:57,160 --> 01:50:59,290
-Now I'm a platinum user,
-but in this user down here
+Теперь я платиновый пользователь
+а пользователь ниже
 
 2542
 01:50:59,290 --> 01:51:00,160
-is not a platinum user.
+не платиновый.
 
 2543
 01:51:00,160 --> 01:51:04,300
-So now if we were to run this
-on the second call down here,
+Если запустим, то увидим
+строчку вывода, которая написана
 
 2544
 01:51:04,300 --> 01:51:09,300
-we're gonna see is platinum
-is false by default.
+в теле второстепенного конструктора
 
 2545
 01:51:09,590 --> 01:51:11,250
-That's because when we go here,
+Если мы залезем в
 
 2546
 01:51:12,314 --> 01:51:13,147
-I'll go to the implementation,
+реализацию этого конструктора
 
 2547
 01:51:13,147 --> 01:51:14,890
-it's using the secondary constructor.
+то мы попадем в второстепенный конструктор.
 
 2548
 01:51:14,890 --> 01:51:17,451
-Now we can even go even further and say,
+Можем пойти еще дальше
 
 2549
 01:51:17,451 --> 01:51:18,284
-if we want another constructor,
+и сделать еще один
+второстепенный конструктор
 
 2550
 01:51:18,284 --> 01:51:20,180
-so multiple constructors
-who can keep going to here.
+Все второстепенные конструкторы
+будут внутри класса.
 
 2551
 01:51:20,180 --> 01:51:21,480
