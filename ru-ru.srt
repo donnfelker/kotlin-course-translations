@@ -11276,424 +11276,414 @@ construcor
 
 2551
 01:51:20,180 --> 01:51:21,480
-So I might say first name,
+И я могу внести в него имя
 
 2552
 01:51:22,845 --> 01:51:23,678
-and then might just skip that and say,
+и потом сразу обратиться к какому-нибудь
 
 2553
 01:51:23,678 --> 01:51:25,941
-all right, this which
-means, hey, call another one
+другому конструктору и передать
 
 2554
 01:51:25,941 --> 01:51:26,774
-of these instructors.
+ему имя,
 
 2555
 01:51:26,774 --> 01:51:29,430
-And this one is going to call
-in first name and this time,
+А фамилию, мы, например,
 
 2556
 01:51:29,430 --> 01:51:31,920
-I don't know what the
-last name is going to do.
+не знаем и напишем "unknown".
 
 2557
 01:51:31,920 --> 01:51:36,160
-So I'm gonna call and perhaps I'll watch.
+Платиновость пользователя тоже не
+будем указывать.
 
 2558
 01:51:36,160 --> 01:51:39,068
-Just for completion sake, we'll say hey
+Просто для примера мы опять напишем
+тело конструктора и выведем
 
 2559
 01:51:39,068 --> 01:51:41,450
-in the third constructor.
+скрочку, чтобы понять, что
+он вызвался.
 
 2560
 01:51:42,460 --> 01:51:46,244
-And if I go back to the
-screen here and let's go ahead
+И вернумся в метсо создания пользователя
 
 2561
 01:51:46,244 --> 01:51:49,220
-and create another one, var
-we say it's your cousin,
+и создадим еще одного
+например какого-то кузена,
 
 2562
 01:51:49,220 --> 01:51:53,060
-and I'll say to user, it
-we'll say, first name is Nick.
+И вызовем наш конструктор
+и назовоме пользователя Ник.
 
 2563
 01:51:55,840 --> 01:51:58,060
-And then we'll say, we're
-not gonna do anything here
+И больше мы ничего не будем писать
 
 2564
 01:51:58,060 --> 01:52:00,140
-because if we look at this implementation,
+давайте перейдем к реализации конструктора
 
 2565
 01:52:00,140 --> 01:52:02,140
-it's using the third constructor here,
+Мы попадем в третий конструктор
+(второй второстепенный)
 
 2566
 01:52:02,140 --> 01:52:04,830
-which is gonna say, hey, I'm
-in the third constructor,
+который выпонится и выведет
+строчку текста,
 
 2567
 01:52:04,830 --> 01:52:07,880
-but look, something
-else is going to happen.
+но сомтрите что случится дальше.
 
 2568
 01:52:07,880 --> 01:52:11,730
-And what's gonna happen is
-when this third is called,
+дальше, конструктор через "this"
+вызовет другой конструктор
 
 2569
 01:52:11,730 --> 01:52:13,740
-the word Nick's gonna put
-it into the first name
+И передаст ему имя
 
 2570
 01:52:13,740 --> 01:52:15,130
-and then it's gonna call into this.
+и строчку Unknown.
+А что еще у нас принимает такие аргументы?
 
 2571
 01:52:15,130 --> 01:52:18,150
-It's gonna parse this
-first name value into this.
+Правильно, другой наш конмтруктор,
+и в него передастся
 
 2572
 01:52:18,150 --> 01:52:20,960
-And it's gonna give an unknown last name.
+имя и фамилия
 
 2573
 01:52:20,960 --> 01:52:23,480
-Now this is actually gonna
-call this constructor,
+через ключевое слово "this"
+мы вызваем другой конструктор
 
 2574
 01:52:24,790 --> 01:52:27,540
-which is going to say, boom,
-all right, now it's unknown.
+который примет имя и фамилию
 
 2575
 01:52:27,540 --> 01:52:30,080
-And then it's going to print
-as platinum by default.
+И выведет свою строку текста в консоль
 
 2576
 01:52:30,080 --> 01:52:31,340
-So let's actually see that run.
+Давайте посмотрим на это все в действии
 
 2577
 01:52:31,340 --> 01:52:34,120
-And then all the values
-of course are then parse d
+Збыл сказать, что конечно в итоге
+все значения
 
 2578
 01:52:34,120 --> 01:52:35,670
-into the root constructor here,
+передаются в основной конструктор
 
 2579
 01:52:37,402 --> 01:52:38,534
-and then we can actually see everything.
+и все поля заполняются данными.
 
 2580
 01:52:38,534 --> 01:52:39,840
-So if we run this now, what you'll notice
+Если запустим вы заметите,
 
 2581
 01:52:39,840 --> 01:52:42,290
-is something interesting
-is going to happen here.
+что произойдет кое что интересное
 
 2582
 01:52:43,320 --> 01:52:45,336
-Now there's a lot of stuff going on here.
+Очень много всего вывелось в консоль
 
 2583
 01:52:45,336 --> 01:52:46,169
-So let's this up a bit.
+Давайте посмотрим по подробнее
 
 2584
 01:52:46,169 --> 01:52:47,925
-So let's go ahead and just kind of get rid
+Для начала давайте уберем
 
 2585
 01:52:47,925 --> 01:52:48,758
-of all this stuff here.
+все что мешает.
 
 2586
 01:52:48,758 --> 01:52:51,070
-We just wanna see when one of
-the constructors is called.
+Оставим только вещи, которые
+выводятся при вызове конструкторов.
 
 2587
 01:52:51,070 --> 01:52:54,500
-And so we have have those
-methods inside of there
+Нас интересуют только эти
 
 2588
 01:52:54,500 --> 01:52:59,060
-that's going to call line when
-the constructor is called.
+строчки и ничего больше.
 
 2589
 01:52:59,060 --> 01:53:01,990
-So if we run it now, we'll see is platinum
+Запустили и видим, появилось сообщение
+от кунструктора с двумя значениями,
 
 2590
 01:53:01,990 --> 01:53:03,230
-is false by default.
+где платиновость будет false
+по дефолту
 
 2591
 01:53:03,230 --> 01:53:04,350
-And we see the same thing again
+И потом снова видим эту строчку,
 
 2592
 01:53:04,350 --> 01:53:06,280
-and then I'm in a third constructor.
+а потом видим строчку из третьего
+конструктора.
 
 2593
 01:53:06,280 --> 01:53:08,490
-So if we were to go to
-this first one here,
+Если зайдем в первое создание пользователя
 
 2594
 01:53:08,490 --> 01:53:10,800
-this first one uses the
-primary constructor.
+то увидим, что оно вызвает
+основной конструктор.
 
 2595
 01:53:10,800 --> 01:53:12,680
-Nothing happens here,
-we just set up an object
+Тут ничего не происходит,
+мы просто создаем объект
 
 2596
 01:53:12,680 --> 01:53:14,040
-and that's the end.
+и на этом все заканчивается.
 
 2597
 01:53:14,040 --> 01:53:17,710
-The second one uses a constructor here
+Второе создание использует
+первый второстепенный конструктор
 
 2598
 01:53:17,710 --> 01:53:19,150
-that uses the first name and the last name
+Второе создание использует
+первый второстепенный конструктор
 
 2599
 01:53:19,150 --> 01:53:21,400
-and then defaults to
-platinum field is false.
+который выводит строчку
 
 2600
 01:53:22,243 --> 01:53:24,440
-And it says it is platinum
-is false by default.
+и выставляет платиновось в false.
 
 2601
 01:53:24,440 --> 01:53:27,091
-Now the third one is
-interesting 'cause the third one
+Третее создание пользователя
+использует третий конструктор
 
 2602
 01:53:27,091 --> 01:53:28,650
-will say, hey, the first name is Nick.
+Выставляет имя Nick
 
 2603
 01:53:28,650 --> 01:53:31,660
-It calls into the other constructor here.
+и по цепочке вызывает остальные конструкторы
 
 2604
 01:53:31,660 --> 01:53:34,440
-So it'll say the first name
-was Nick, last name is unknown.
+Тут передается имя Ник и фамилия uniknown
 
 2605
 01:53:34,440 --> 01:53:36,680
-And then what happens is
-this construct will call
+и этот конструктор вызывает
 
 2606
 01:53:36,680 --> 01:53:38,120
-into the root constructor.
+основной конструктор.
 
 2607
 01:53:38,120 --> 01:53:41,870
-So it's gonna go this
-executes first, this line
+В итоге - сначала вызывается
+этот конструктор
 
 2608
 01:53:41,870 --> 01:53:43,720
-then this line is gonna execute,
+потом этот
 
 2609
 01:53:43,720 --> 01:53:46,900
-which calls in up to
-the primary instructor.
+а он уже вызовет основной конструктор.
 
 2610
 01:53:46,900 --> 01:53:51,170
-After that is complete,
-which is this line here,
+После того как основной конструктор
 
 2611
 01:53:51,170 --> 01:53:54,130
-which calls the primary
-constructor up here,
+ыполнился и пользователь создан
 
 2612
 01:53:54,130 --> 01:53:56,580
-then it will procedurally call this one.
+мы вызываем строку с выводом
+из второстепенного конструктора
 
 2613
 01:53:56,580 --> 01:53:59,950
-And then now that this
-whole method is done running
+И после того как строка вывелась
 
 2614
 01:53:59,950 --> 01:54:03,780
-which is right here,
-then it will run this.
+мы вызываем следующий блок вывода.
 
 2615
 01:54:03,780 --> 01:54:07,520
-So what we're seeing here is
-this is being called first
+Тут нужно запомнить цепь вызовов
+сначала зовется этот конструктор
 
 2616
 01:54:07,520 --> 01:54:11,240
-because again, this gets
-called, which goes into here,
+потом через this зовется
+второй, а потом основной конструктор
 
 2617
 01:54:11,240 --> 01:54:14,070
-nothing happens up here, that's complete.
+в основном конструкторе ничего не происходит
+и он просто выполняется
 
 2618
 01:54:14,070 --> 01:54:17,040
-Then it runs this whatever's
-in this constructor,
+потом, задо наперед, выполняется тело
+предыдущего конструктора
 
 2619
 01:54:17,920 --> 01:54:19,170
-which is this call here.
+это вот этот вызов
 
 2620
 01:54:19,170 --> 01:54:20,420
-It says, okay, that's done now.
+Потом это выполнилось
 
 2621
 01:54:20,420 --> 01:54:23,060
-Now run finally what's
-in your constructor.
+и мы можем вернуться в самый первый
+конструктор и вызвать его тело
 
 2622
 01:54:23,060 --> 01:54:23,893
-And so these three things are happening.
+И именно в ткой последовательности
+выполняется цепочка
 
 2623
 01:54:23,893 --> 01:54:26,190
-So if we really wanna make
-it simple, let's go ahead
+Давайте еще немного упростим
 
 2624
 01:54:26,190 --> 01:54:31,190
-and say so third, just to
-really make it kind of obvious,
+явно в тексте пометим что это третий,
+чтобы это было очевидно
 
 2625
 01:54:31,340 --> 01:54:32,910
-second and there we go.
+а этот второй.
 
 2626
 01:54:34,047 --> 01:54:35,950
-I'm gonna go back back and
-we're going to just comment out
+Я вернусь в место вызова и удалю второго
+пользователя
 
 2627
 01:54:35,950 --> 01:54:37,400
-this one.
+чтобы логи были чище.
 
 2628
 01:54:37,400 --> 01:54:40,575
-And what that'll do is we're
-just gonna run this one here
+И теперь мы в консоли явно увидим
 
 2629
 01:54:40,575 --> 01:54:41,980
-and we see second then third.
+последовательность вызова ТЕЛА
+конструктора
 
 2630
 01:54:41,980 --> 01:54:43,750
-So first thing that happened
-is it printed second
+Первое что вывелось -
+текст из второго конструктора
 
 2631
 01:54:43,750 --> 01:54:45,230
-because it hit this constructor first
+потому что по нашей цепочки
+в обратном направлении мы сначала попадаем
 
 2632
 01:54:45,230 --> 01:54:47,790
-from kind of walking this call chain
+в его тело
 
 2633
 01:54:47,790 --> 01:54:48,850
-and then it went to the third one.
+а потом выводится тело третьего
 
 2634
 01:54:48,850 --> 01:54:50,110
-Now we could actually get around this here
+И мы можем немного эту цепочку поменять
 
 2635
 01:54:50,110 --> 01:54:53,155
-and say, hey, this one
-here is, we'll just say
+и при выызове третьего конструктора
+укажем значение isPlatinum
 
 2636
 01:54:53,155 --> 01:54:55,220
-is platinum is false.
+пусть будет false.
 
 2637
 01:54:55,220 --> 01:54:57,434
-And we could even say true if we want,
+хотя можем написать true, но
+поставим false, это ни на что не влияет
 
 2638
 01:54:57,434 --> 01:54:59,460
-it doesn't really matter, but
-let's just leave it false,
+поэтому не так важно что мы передаем
 
 2639
 01:54:59,460 --> 01:55:00,750
-let's do a true actually.
+нет, давайте поставим true.
 
 2640
 01:55:00,750 --> 01:55:03,070
-So if we call this and
-we parse in a first name
+Если мы вызовем третий конструктор
+и передадим имя фамилию
 
 2641
 01:55:03,070 --> 01:55:05,590
-or you an unknown last name
-and they're a platinum user.
+и платиновый статус, то мы сразу
+пойдем в основной конструктор.
 
 2642
 01:55:05,590 --> 01:55:08,470
-Now when we run this,
-you're just gonna see third
+И, если запустим, в консоли
+увидим только
 
 2643
 01:55:08,470 --> 01:55:10,640
-being printed to the screen
-because it's only calling
+вывод третьего конструктора
 
 2644
 01:55:10,640 --> 01:55:13,370
