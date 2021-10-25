@@ -11687,612 +11687,587 @@ construcor
 
 2644
 01:55:10,640 --> 01:55:13,370
-the third instructor 'cause by default,
+потому что теперь нам
 
 2645
 01:55:13,370 --> 01:55:16,270
-what happens is this
-construct will be instantiated
+нет нужны идти во второй конструктор
 
 2646
 01:55:16,270 --> 01:55:18,939
-in turn it takes its first name value
+потому что мы предоставили достаточно
 
 2647
 01:55:18,939 --> 01:55:20,070
-and calls the primary constructor.
+данных, чтобы вызвать
+основной конструктор.
 
 2648
 01:55:20,070 --> 01:55:21,780
-So this are here's the primary constructor
+И тут слово this будет ссылаться
+на основной конструктор
 
 2649
 01:55:21,780 --> 01:55:24,120
-because it has three parameters.
+потому что тут три аргумента.
 
 2650
 01:55:24,120 --> 01:55:27,040
-If we then took this one out, last one,
+Если мы уберем последний аргумент
 
 2651
 01:55:27,040 --> 01:55:28,990
-it's now going to call
-the second constructor.
+то вызовется второй конструктор.
 
 2652
 01:55:28,990 --> 01:55:32,270
-So let's assume this wasn't
-here, so let's comment it out.
+Если представить, что его не существует
 
 2653
 01:55:32,270 --> 01:55:33,370
-That's not going to run.
+программа не скомпилируется.
 
 2654
 01:55:33,370 --> 01:55:35,320
-Now, you'll see that we
-don't have a constructor
+Все потому что у нас теперь нет
 
 2655
 01:55:35,320 --> 01:55:37,100
-that matches the signature,
+конструктора, который бы подходил
+по сигнатуре вызова
 
 2656
 01:55:37,100 --> 01:55:40,610
-which is a string and another string.
+а именно два строковых аргумента.
 
 2657
 01:55:40,610 --> 01:55:43,390
-We have a constructor with
-two strings and a Boolean.
+У нас есть конструктор с
+двумя строковыми аргументами и Boolean.
 
 2658
 01:55:43,390 --> 01:55:47,786
-So that's why we're seeing
-multiple different versions here.
+Поэтому нас нужны разные
+версии конструкторов.
 
 2659
 01:55:47,786 --> 01:55:50,230
-And again, if we can come
-in here this time we run it,
+И если мы вернем конструктор
+и снова запустим
 
 2660
 01:55:50,230 --> 01:55:52,540
-we're gonna see second and then third.
+мы опять увидим вызов второго
+и третьего конструктора
 
 2661
 01:55:53,950 --> 01:55:56,720
-Now you can have multiple
-different constructors
+У вас может быть какое угодно
+кол-во конструкторов
 
 2662
 01:55:56,720 --> 01:55:57,553
-inside of here.
+внутри класса.
 
 2663
 01:55:57,553 --> 01:56:01,280
-So you can keep creating
-different types of constructors.
+И вы можете продолжать создавать
+разные их версии
 
 2664
 01:56:01,280 --> 01:56:03,820
-You could set them platinum, et cetera.
+добавлять платиновый статус и тому
+подобное.
 
 2665
 01:56:03,820 --> 01:56:06,210
-Now, of course, some of
-these things may not even be
+Но, конечно, это
 
 2666
 01:56:06,210 --> 01:56:07,043
-need to happen.
+не обязательно.
 
 2667
 01:56:07,043 --> 01:56:08,980
-So we can say, hey, perhaps
-we don't even need this,
+Мы например можем вообще удалить
 
 2668
 01:56:08,980 --> 01:56:11,270
-we can use some default
-parameters here as well.
+все наши второстепенные конструкторы
+и использовать дефолтные параметры.
 
 2669
 01:56:11,270 --> 01:56:12,810
-So if the last name is not known,
+Если фамилия не известна
 
 2670
 01:56:12,810 --> 01:56:15,730
-then it should use unknown.
+по дефолту будет "Unknown"
 
 2671
 01:56:15,730 --> 01:56:19,440
-And then if it's by default,
-we're gonna set this to false.
+и платиновость будет false.
 
 2672
 01:56:20,376 --> 01:56:21,209
-So now if I come back here,
+И если вернемся в код
 
 2673
 01:56:21,209 --> 01:56:22,980
-I can still do this exact same thing.
+то увидим что все работает.
 
 2674
 01:56:22,980 --> 01:56:25,660
-Even this would work and still gonna work
+Оба создания пользователей
+будут работать
 
 2675
 01:56:25,660 --> 01:56:27,570
-because it's using default parameters
+потому что есть дефолтные значения
 
 2676
 01:56:28,450 --> 01:56:31,819
-and the named arguments,
-the default argument values.
+при создании объекта.
 
 2677
 01:56:31,819 --> 01:56:34,460
-And so then we can see
-everything how it should be.
+и именованные аргументы
+помогаю нам это проще читать.
 
 2678
 01:56:34,460 --> 01:56:37,150
-So each of the objects
-is going to be created,
+Каждый объект создастся
 
 2679
 01:56:37,150 --> 01:56:39,130
-number is going to be
-allocated, et cetera.
+с полным набором параметров.
 
 2680
 01:56:39,985 --> 01:56:42,180
-And then we kind of get
-all that safety right here
+И весь код у нас будет в одну строчку
 
 2681
 01:56:42,180 --> 01:56:43,920
-and the various different constructors.
+и с одним конструктором.
 
 2682
 01:56:43,920 --> 01:56:45,900
-However, if you do need
-different constructors
+Но если по какой-то причине вам понадобятся
 
 2683
 01:56:45,900 --> 01:56:47,360
-for whatever reason,
-or you need to perform
+дополнительные конструкторы,
+или вам нужно сделать еще какие-то
 
 2684
 01:56:47,360 --> 01:56:49,450
-some type of different values,
+дополнительные манипуляции
 
 2685
 01:56:49,450 --> 01:56:51,710
-you can call it from
-functions to do different,
+вы можете использовать тело конструктора
+и делать в них все что захотите.
 
 2686
 01:56:51,710 --> 01:56:54,240
-run all different types of code in here
+можете считать дополнительные вещи
+или вызывать функции
 
 2687
 01:56:54,240 --> 01:56:56,650
-and run different code
-in here, you can do that,
+можете считать дополнительные вещи
+или вызывать функции
 
 2688
 01:56:56,650 --> 01:56:57,820
-just provide a different constructor
+просто создавайте конструктор
+через ключевое слово
 
 2689
 01:56:57,820 --> 01:56:59,810
-using the constructor keyword
+и делайте все что
 
 2690
 01:56:59,810 --> 01:57:01,290
-and you're off to the races.
+вам необходимо.
 
 2691
 01:57:01,290 --> 01:57:03,870
-Now, additionally, you can also restrict
+Еще одна вещь - доступ к конструкторам
 
 2692
 01:57:03,870 --> 01:57:08,070
-some of the constructors using
-modifiers, such as protected,
+можно закрывать ключевыми словами
 
 2693
 01:57:08,070 --> 01:57:13,040
-or you could call internal, et cetera.
+protected, internal, private и так далее.
 
 2694
 01:57:13,040 --> 01:57:14,670
-So you can actually lock down who can call
+Так вы сможете сузить круг лиц,
+которые смогус создавать ваш
 
 2695
 01:57:14,670 --> 01:57:17,560
-into a constructor based upon a modifier.
+объект в зависимости от модификатора,
+который вы укажете.
 
 2696
 01:57:19,940 --> 01:57:22,400
-We have a user class and
-instead of a user class,
+У нас есть класс Юзера
+и внутри класса пользователя вы
 
 2697
 01:57:22,400 --> 01:57:26,388
-you can also have what are
-known as initializer blocks.
+можете объявить так называемый
+блок инициализации.
 
 2698
 01:57:26,388 --> 01:57:28,517
-And these initializer blocks are created
+Блоки инициализации создаются
+с помощью ключевого слова "init"
 
 2699
 01:57:28,517 --> 01:57:31,090
-with the init keyword and
-open and closed curly brace.
+и двух фигурных скобок.
 
 2700
 01:57:31,090 --> 01:57:34,690
-So this would be perhaps
-somewhere where you could perform
+И в этом месте вы можете
+выполнять подготовительные
 
 2701
 01:57:34,690 --> 01:57:38,160
-some type of initialization
-for your class.
+действия перед тем как ваш
+класс начнут использовать.
 
 2702
 01:57:38,160 --> 01:57:41,570
-Initializer blocks are called
-after the primary constructor
+блики инициализации вызываются после
 
 2703
 01:57:41,570 --> 01:57:42,403
-has been invoked.
+выполнения основного конструктора.
 
 2704
 01:57:42,403 --> 01:57:45,250
-So again, this is the
-primary constructor up here.
+Итак, шаг назад -
+это наш основной конструктор.
 
 2705
 01:57:45,250 --> 01:57:47,260
-So after the primary
-constructors have been invoked,
+Когда он вызовется и сделает
+все свои дела,
 
 2706
 01:57:47,260 --> 01:57:49,460
-the initializer block will be called.
+вызовется блик инициализации.
 
 2707
 01:57:49,460 --> 01:57:51,870
-So something interesting that we can do
+Интересная вещь -
 
 2708
 01:57:51,870 --> 01:57:55,340
-is we can just go back
-to our main file here
+мы можем вернуться в наш основной файл
 
 2709
 01:57:56,274 --> 01:57:58,310
-and we'll create an
-instance of our user class.
+и создадим нового юзера.
 
 2710
 01:57:58,310 --> 01:58:01,460
-And we'll just say Donn
-Felker here for the first
+В качестве имени и фамилии
 
 2711
 01:58:01,460 --> 01:58:02,930
-and the last name and we're gonna run it.
+укажем "Donn Felker"
+и запустим
 
 2712
 01:58:02,930 --> 01:58:04,690
-Now we're not putting
-it into the screen here,
+Мы ничего не выводим дополнительно
 
 2713
 01:58:04,690 --> 01:58:07,870
-but notice how we do see
-hello one is output down here
+но вы можете заметить, что текст из
+нашего блока инициализации
 
 2714
 01:58:07,870 --> 01:58:09,400
-in the run window.
+вывелся на экран.
 
 2715
 01:58:09,400 --> 01:58:11,910
-The reason for that is
-because in the user class,
+Теперь после инициализации
+объекта срабатывает
 
 2716
 01:58:11,910 --> 01:58:15,060
-inside the initializer block,
-I'm printing out hello one.
+блок инициализации
+и выводится текст.
 
 2717
 01:58:16,190 --> 01:58:17,990
-Now there's also something
-interesting you can do
+Еще одна интересная штука, которую
 
 2718
 01:58:17,990 --> 01:58:19,150
-with initializer blocks.
+можно сделать с блоком
+инициализации -
 
 2719
 01:58:19,150 --> 01:58:21,805
-Is where you can have
-multiple initializer blocks
+их может быть несколько
 
 2720
 01:58:21,805 --> 01:58:25,400
-and this initializer
-blocks will then operate
+и блоки инициализации
+будут запускаться
 
 2721
 01:58:25,400 --> 01:58:28,150
-in the order in which they
-are defined within the class.
+в том порядке в каком они описаны
+в классе - сверху вниз.
 
 2722
 01:58:28,150 --> 01:58:31,040
-So what will happen is
-the primary constructor
+В начале у нас выполнится
+основной конструктор
 
 2723
 01:58:31,040 --> 01:58:33,880
-will be called first and last name,
+потом блок инициализации с
+первым текстом,
 
 2724
 01:58:33,880 --> 01:58:37,070
-and then we'll get hello one
-called and then hello two.
+а потом со вторым.
 
 2725
 01:58:37,070 --> 01:58:39,720
-So if we go back and rerun this here,
+Если перезапустим
 
 2726
 01:58:39,720 --> 01:58:41,230
-what we're going to see
-instead of hello one,
+то вместо одного текста
 
 2727
 01:58:41,230 --> 01:58:44,320
-we'll see hello one and hello
-two as we see down here.
+увидим "Hello 1" и "Hello 2"
 
 2728
 01:58:45,290 --> 01:58:48,120
-If we go back to the user
-class just to demonstrate this,
+Зайдем в класс пользователя
 
 2729
 01:58:48,120 --> 01:58:53,120
-when we move this below
-hello two and we rerun this,
+и поменяем init блоки местами
 
 2730
 01:58:53,370 --> 01:58:55,840
-what will the notice is
-we'll see hello two show up
+теперь текст с "Hello 2"
+будет появляться
 
 2731
 01:58:55,840 --> 01:58:57,010
-before hello one.
+равньше "Hello 1".
 
 2732
 01:58:58,070 --> 01:59:00,530
-Now one last thing here
-too, just to demonstrate
+Еще один способ проверить
+что блоки инициализации
 
 2733
 01:59:00,530 --> 01:59:04,170
-that the initializer and blocks are called
+запускаются после конструктора
 
 2734
 01:59:04,170 --> 01:59:06,370
-right after the primary constructor,
+запускаются после конструктора -
 
 2735
 01:59:06,370 --> 01:59:08,530
-let's go ahead and create
-another constructor
+давайте создадим еще один конструктор
 
 2736
 01:59:08,530 --> 01:59:11,620
-that just perhaps provides the first name,
+в который, например, передается
+только имя
 
 2737
 01:59:11,620 --> 01:59:15,840
-which is a string and then
-it's just gonna default
+и фамилию мы передадим
 
 2738
 01:59:15,840 --> 01:59:16,740
-the last name for us.
+какую-нибудь дефолтную.
 
 2739
 01:59:16,740 --> 01:59:19,710
-So we're gonna call into
-this parsing the first name
+Вызовем this и передадим имя
 
 2740
 01:59:19,710 --> 01:59:22,490
-and then the last name we'll
-just default to Felker here.
+а фамилия будет по дефолту "Felker"
 
 2741
 01:59:23,762 --> 01:59:25,630
-And if I go back to this here,
-I'll get rid of my last name,
+И вернемся в основной файл
 
 2742
 01:59:25,630 --> 01:59:28,100
-which will then use that
-second constructor here,
+и удалим фамилию, чтобы
+вызывать второстепенный
 
 2743
 01:59:28,100 --> 01:59:29,600
-which we can see here.
+конструктор.
 
 2744
 01:59:29,600 --> 01:59:32,160
-Now what's gonna happen
-is we can actually provide
+И теперь мы добавим тело в
+конструктор, чтобы сделать что-то
 
 2745
 01:59:32,160 --> 01:59:34,370
-a block here so we can do something
+после того
 
 2746
 01:59:34,370 --> 01:59:35,640
-after this constructor's call.
+как этот конструктор вызовется.
 
 2747
 01:59:35,640 --> 01:59:37,610
-So let's do that here, say constructor,
+Давайте просто выведем простой текст
 
 2748
 01:59:39,160 --> 01:59:42,720
-second constructor call so we'll say here.
+например напишем что вызвался второй конструктор
 
 2749
 01:59:42,720 --> 01:59:44,870
-So our expected output at this time,
+И ожидаем мы примерно такое поведение
 
 2750
 01:59:44,870 --> 01:59:48,110
-when we create a new class,
-you might think would be okay,
+создается наш класс через
+второстепенный конструктор
 
 2751
 01:59:48,110 --> 01:59:51,130
-we're gonna call the
-second constructor called.
+потом мы вызываем основной конструктор.
 
 2752
 01:59:51,130 --> 01:59:54,670
-And then of course it's going
-to be the primary constructor
+потом выполняем тело
 
 2753
 01:59:54,670 --> 01:59:57,850
-and then we'll get basically
-hello one, hello two
+второстепенного конструктора
+и вызываем init блоки.
 
 2754
 01:59:57,850 --> 02:00:00,219
-because that's the order to show up in.
+примерно такой порядок
 
 2755
 02:00:00,219 --> 02:00:02,360
-However, what you'll
-notice if we run this,
+Но это в корне не так
 
 2756
 02:00:02,360 --> 02:00:03,250
-that's not the case.
+и вывод будет другим.
 
 2757
 02:00:03,250 --> 02:00:05,260
-And as you can see here, it's
-actually a little backwards.
+вы можете заметить что порядок немного перепутан
 
 2758
 02:00:05,260 --> 02:00:06,890
-We have hello one, hello two,
+у нас есть вызовы init блоков
 
 2759
 02:00:06,890 --> 02:00:09,110
-and then second constructor called.
+а только потом вызов тела
 
 2760
 02:00:09,110 --> 02:00:10,520
-So it seems kind of backwards.
+второстепенного конструктора.
 
 2761
 02:00:10,520 --> 02:00:14,330
-But when you think about the
-execution of the actual class,
+Надо просто запомнить,
 
 2762
 02:00:15,360 --> 02:00:17,290
-this here is called immediately.
+что блоки init вызываются
 
 2763
 02:00:17,290 --> 02:00:19,000
-So as soon as this constructor is called,
+сразу после вызова основного конструктора
 
 2764
 02:00:19,000 --> 02:00:20,710
-immediately those values are parse d
+не смотря ни на что
 
 2765
 02:00:20,710 --> 02:00:22,740
-into the primary constructor.
+не смотря ни на что
 
 2766
 02:00:22,740 --> 02:00:25,210
-And then after the primary
-constructor is called,
+Еще раз - вызывается основной конструктор,
 
 2767
 02:00:25,210 --> 02:00:27,220
-the initializer blocks are then called.
+вызываются блоки init,
+а потом все остальное.
 
 2768
 02:00:27,220 --> 02:00:30,640
-After those are called,
-then execution will return
+После инит блоков мы пройдемся по
 
 2769
 02:00:30,640 --> 02:00:34,340
-to inside of whatever
-constructor you're in,
+телам всех конструкторов,
+которые участвовали в цепочке,
 
 2770
 02:00:34,340 --> 02:00:37,470
-which is the second one
-here into that block there
+в нашем случае это второй конструктор
 
 2771
 02:00:37,470 --> 02:00:40,500
-and you'll execute that,
-which is why we see hello one,
+и выполнится эта строчка
+и вы увидите "Hello 1"
 
 2772
 02:00:40,500 --> 02:00:44,470
-hello two and then finally the
-second constructor is called.
+"Hello 2" и в конце концов
+строку из тела второго конструктора.
 
 2773
 02:00:44,470 --> 02:00:46,690
-Now you can use the
-initializer blocks to perform
+Теперь вы знаете о init блоках
 
 2774
 02:00:46,690 --> 02:00:49,369
-some type of initialization
-for your class,
+и можете делать действия необходимые
+для работы с
 
 2775
 02:00:49,369 --> 02:00:50,930
-perhaps some basic setup of the class
+вашим классом после
 
 2776
 02:00:50,930 --> 02:00:54,260
-and initialization type
-of tasks are a great place
+его инициализации.
 
 2777
 02:00:54,260 --> 02:00:55,860
-to put it inside the init block.
+его инициализации.
 
 2778
 02:00:58,220 --> 02:01:01,240
