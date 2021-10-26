@@ -12271,1001 +12271,966 @@ protected, internal, private и так далее.
 
 2778
 02:00:58,220 --> 02:01:01,240
-In classes, you can also
-create properties in line here.
+В классах так же можно
+создавать поля.
 
 2779
 02:01:01,240 --> 02:01:03,970
-So I will type a property
-called full name,
+Я создам поле "полное имя"
 
 2780
 02:01:03,970 --> 02:01:07,090
-and then I can initialize
-it with the values
+и сразу проинициализирую
+его значениями
 
 2781
 02:01:07,090 --> 02:01:09,800
-that are being provided to
-me through the constructor.
+которые мы передали в конструктор.
 
 2782
 02:01:09,800 --> 02:01:11,580
-So we can use the first name property,
+Используем firstName
 
 2783
 02:01:11,580 --> 02:01:14,040
-and I can use the last name property
+и lastName
 
 2784
 02:01:14,040 --> 02:01:15,770
-to create a full name here.
+чтобы создать полное имя.
 
 2785
 02:01:15,770 --> 02:01:17,430
-Now, if I go back to the main class
+Вернемся в main функцию
 
 2786
 02:01:17,430 --> 02:01:19,100
-and I decide I would like to print that,
+и выведем наше новое поле
 
 2787
 02:01:19,100 --> 02:01:22,710
-I could say print ln and
-would say user.full name,
+в консоль, напишем println(user.fullName),
 
 2788
 02:01:22,710 --> 02:01:24,380
-and you see that I have access here too
+и у нас есть доступ к этому полю
 
 2789
 02:01:24,380 --> 02:01:27,810
-because it's in the same
-package and so I have access.
+потому что мы находимся в том же
+пакете что и класс пользователя.
 
 2790
 02:01:27,810 --> 02:01:30,090
-If I were to run this, we would just see
+Если я запущу программу
 
 2791
 02:01:30,090 --> 02:01:31,600
-that Donn Felker is printed.
+то увижу наше полное имя.
 
 2792
 02:01:32,803 --> 02:01:34,900
-Now you also see that
-we have an init block
+И еще в консоль выводится
 
 2793
 02:01:34,900 --> 02:01:37,430
-that's been printed is here as well.
+текст, который мы написали в
+init блоке.
 
 2794
 02:01:37,430 --> 02:01:38,500
-So we have init blocks.
+init блок еще тут, не будем
+забывать про это.
 
 2795
 02:01:38,500 --> 02:01:41,410
-And one of the nice too is we can also,
+И еще одна крутая штука
 
 2796
 02:01:41,410 --> 02:01:43,210
-if let's go back to the main class,
+если вернемся в main функцию
 
 2797
 02:01:44,164 --> 02:01:44,997
-we can also change this value.
+то мы можем поменять это значение
 
 2798
 02:01:44,997 --> 02:01:47,280
-So since this is a property,
-it means it's mutable.
+Поля класса изменяемые.
 
 2799
 02:01:47,280 --> 02:01:49,585
-And we've of course, because we set it
+И это потому что поле у нас
 
 2800
 02:01:49,585 --> 02:01:50,490
-to be a var type here.
+объявлено с помощью "var".
 
 2801
 02:01:50,490 --> 02:01:53,270
-And so what I can do
-here say user.full name,
+Я могу написать user.fullName
 
 2802
 02:01:53,270 --> 02:01:56,760
-and I can actually reassign
-this volume, say hello world.
+и присвоить ему новое значение
+например "Hello world".
 
 2803
 02:01:56,760 --> 02:01:59,570
-And it's gonna completely
-overwrite that value.
+И это полностью заменит наше
+исходное значение.
 
 2804
 02:01:59,570 --> 02:02:03,110
-And then what I'll do here
-is I will say print line,
+Теперь, чтоыбы проверить
+я сделаю еще один вывод
 
 2805
 02:02:03,110 --> 02:02:06,170
-and then we'll put user.full name again.
+и снова выведу fullName.
 
 2806
 02:02:06,170 --> 02:02:07,420
-And when we run it this time,
+Запустим по новой,
 
 2807
 02:02:07,420 --> 02:02:09,620
-what we're going to see is the init block
+видим вывод init блока,
 
 2808
 02:02:09,620 --> 02:02:11,020
-then we will see Donn Felker
+потом видим исходное
+полное имя
 
 2809
 02:02:12,312 --> 02:02:13,780
-and then we'll see hello world.
+и потом видим новое значение.
 
 2810
 02:02:13,780 --> 02:02:16,920
-Now back inside of the class,
-there's an interesting thing
+Вернемся в класс пользователя
 
 2811
 02:02:16,920 --> 02:02:18,410
-that we can do as well.
+тут у нас есть еще одна фишка,
 
 2812
 02:02:18,410 --> 02:02:22,640
-Inside of the init block, I
-have access to this property.
+Внутри init блока я могу получить
+доступ к этому полю.
 
 2813
 02:02:22,640 --> 02:02:25,070
-So if I were to type
-something inside of here
+Например, если мы что-то
+хотим вывести
 
 2814
 02:02:25,070 --> 02:02:26,210
-for the init block,
+в init блоке
 
 2815
 02:02:26,210 --> 02:02:28,480
-perhaps I just wanted to
-print something to the screen.
+связанное с полным именем,
 
 2816
 02:02:28,480 --> 02:02:33,480
-I'd say this class is for user
-and I could say full name.
+можем написать такую строчку
+и вывести полное имя.
 
 2817
 02:02:35,915 --> 02:02:37,710
-Now what you're gonna notice
-is I get a red squiggly here.
+Вы заметите что компилятору
+что-то не нравится
 
 2818
 02:02:37,710 --> 02:02:39,160
-And what that red squiggly is telling me
+и он сигнализирует нам красной линией
 
 2819
 02:02:39,160 --> 02:02:42,680
-is that it's not initialized,
-but as we can tell
+и говорит, что полное имя еще
+не проинициализировалось
 
 2820
 02:02:42,680 --> 02:02:45,820
-it is initialized, but
-here's what we need to do.
+что мы можем в этом случае сделать?
 
 2821
 02:02:45,820 --> 02:02:48,260
-We need to actually take that
-and move the initialization up
+нужно просто перенести инициализацию
+поля и поставить его
 
 2822
 02:02:48,260 --> 02:02:49,093
-a little bit higher.
+над блоком init.
 
 2823
 02:02:49,093 --> 02:02:51,360
-Now based upon the file format
+Порядок инициализации зависит
+от порядка кода
 
 2824
 02:02:51,360 --> 02:02:52,860
-and how everything's organized,
+в классе
 
 2825
 02:02:52,860 --> 02:02:56,280
-the init block can now see
-the full name is there.
+теперь init блок видит наше поле.
 
 2826
 02:02:56,280 --> 02:02:58,290
-If I come back and run this,
+Пойдем обратно и запустим код,
 
 2827
 02:02:58,290 --> 02:02:59,790
-we're gonna see that the unit block runs.
+видим что init блок запустился
 
 2828
 02:02:59,790 --> 02:03:03,120
-It says, hey, I'm in the
-init block and this is class,
+вывел свою первую строку
 
 2829
 02:03:04,389 --> 02:03:06,556
-or this is class four, user Donn Felker.
+и нашу строку с полным именем.
 
 2830
 02:03:06,556 --> 02:03:07,389
-That's really bad English.
+Сделал опечатку в тексте
 
 2831
 02:03:07,389 --> 02:03:11,640
-So this is the class for user Donn Felker.
+Перепишем как надо
 
 2832
 02:03:11,640 --> 02:03:14,360
-Of course we rerun that
-cause we don't want typos.
+И конечно запустим заново,
+нам не нужны очепятки в консоли.
 
 2833
 02:03:14,360 --> 02:03:16,910
-We'll see, this is the
-class for user Donn Felker.
+Мы видим исправленный текст.
 
 2834
 02:03:16,910 --> 02:03:19,310
-And of course here we're
-gonna print the full name
+и наше полное имя, которое
 
 2835
 02:03:19,310 --> 02:03:20,180
-shows Donn Felker.
+мы рпосто выводим через поле
 
 2836
 02:03:20,180 --> 02:03:23,610
-Next we reassign it and
-then it shows full name.
+Дальше мы видим измененное полное имя.
 
 2837
 02:03:23,610 --> 02:03:26,710
-Now each one of these, you
-can have multiple of these
+Вы можете сделать сколько угодно
 
 2838
 02:03:26,710 --> 02:03:28,156
-if you'd want.
+полей в классе.
 
 2839
 02:03:28,156 --> 02:03:29,050
-They don't have to be initialized
+И не обязательно их сразу
+инициализировать
 
 2840
 02:03:29,050 --> 02:03:33,270
-from a particular instance.
+для каждого класса.
 
 2841
 02:03:33,270 --> 02:03:35,870
-We could actually just set
-it to something like this.
+Мы можем написать примерно так -
+пусть есть какой-то возраст,
 
 2842
 02:03:35,870 --> 02:03:37,210
-Say it's zero.
+но пока он равен нулю.
 
 2843
 02:03:37,210 --> 02:03:40,110
-It could be of any type that
-you want your proper to be.
+Так можно делать с любым типом.
 
 2844
 02:03:40,110 --> 02:03:44,260
-And I can actually come
-here and say user.age equals
+И потом, когда код будет выполняться,
+мы можем изменить возраст
 
 2845
 02:03:44,260 --> 02:03:48,980
-let's say 22, which I'm not
-22, but that would be fun.
+например 22 года, мне конечно не
+22, но почему бы и нет
 
 2846
 02:03:48,980 --> 02:03:51,360
-And then I can then print
-it or do something with it
+И теперь я могу его вывести
 
 2847
 02:03:51,360 --> 02:03:52,430
-at that point in time.
+или делать с ним что-то другое.
 
 2848
 02:03:52,430 --> 02:03:56,250
-So that's how you can work with
-properties using accessories
+Теперь вы знаете как получать
+и изменять
 
 2849
 02:03:56,250 --> 02:03:59,710
-and mutators inside of Kotlin.
+поля классов в Котлине.
 
 2850
 02:04:00,760 --> 02:04:02,880
-You can also define read-only properties
+Вы можете запрещать изменение полей
 
 2851
 02:04:02,880 --> 02:04:04,450
-inside of your class.
+и делать их доступными только
+для чтения.
 
 2852
 02:04:04,450 --> 02:04:06,700
-So you might wanna know
-the full name length,
+Например вам нужно узнать
+длину полного имени
 
 2853
 02:04:07,624 --> 02:04:10,180
-and decide to store that as an
-integer inside of your class.
+и сохранить это как число в вашем классе.
 
 2854
 02:04:10,180 --> 02:04:12,570
-And so you can say full name.length.
+проинициализируем наше новое поле
 
 2855
 02:04:12,570 --> 02:04:16,960
-Now we'll have a full name
-length read only property
+с помощью fullName.length
+из-за "val" это поле больше нельзя менять
 
 2856
 02:04:16,960 --> 02:04:20,710
-that we can use inside
-of our main.kt file.
+но мы можем его читать
+из main функции
 
 2857
 02:04:20,710 --> 02:04:23,750
-So if we say user.full name length,
+Напишем user.fullNameLength
 
 2858
 02:04:23,750 --> 02:04:25,580
-we can actually get access to it.
+и у нас будет к нему доступ,
+никаких ошибок.
 
 2859
 02:04:25,580 --> 02:04:27,600
-We can print it to the screen.
+Выведем его на экран
 
 2860
 02:04:27,600 --> 02:04:32,370
-However, if we attempt
-to reassign it to 12,
+А если попробуем изменить его на 12
 
 2861
 02:04:32,370 --> 02:04:34,200
-we'll get a little error
-message saying that the val
+нам выпадет ошибка, которая будет
+пояснять что это поле val
 
 2862
 02:04:34,200 --> 02:04:35,830
-cannot be reassigned.
+и недоступно для изменения.
 
 2863
 02:04:35,830 --> 02:04:38,670
-So these values have been assigned
+Это поле создается с помощью
 
 2864
 02:04:38,670 --> 02:04:40,230
-based upon the other properties.
+другого поля
 
 2865
 02:04:40,230 --> 02:04:43,520
-You could also perform
-this off of a property
+Мы так же тожем создать его с
+помощью
 
 2866
 02:04:43,520 --> 02:04:45,730
-directly off of the constructor.
+аргумента конструктора.
 
 2867
 02:04:45,730 --> 02:04:49,820
-You can also decide to set
-this initially such as 12
+Вы можете сами сразу
+дать ему значение
 
 2868
 02:04:49,820 --> 02:04:51,300
-or something like this.
+Вы можете сами сразу
+дать ему значение
 
 2869
 02:04:51,300 --> 02:04:53,600
-And if you'd like, you can
-provide the type as well.
+Можно дописать тип.
 
 2870
 02:04:54,570 --> 02:04:56,390
-And let's assume inside
-of your user class,
+Давайте допустим, что каждый раз
 
 2871
 02:04:56,390 --> 02:05:00,100
-you wanted to decide that
-anytime someone requested
+когда кто-то хочет прочитать
 
 2872
 02:05:00,100 --> 02:05:01,430
-the full name property,
+поле полного имени,
 
 2873
 02:05:01,430 --> 02:05:04,260
-you wanted to make sure it was
-prefixed with the word name.
+вы должны отдать полное имя
+с префиксом "name"
 
 2874
 02:05:04,260 --> 02:05:08,730
-We can do that very easily
-by providing an override
+В Котлине это легко сделать,
+для этого нужно переопределить
 
 2875
 02:05:08,730 --> 02:05:13,190
-of the accessor for
-the full name property.
+функцию чтения get()
 
 2876
 02:05:13,190 --> 02:05:15,070
-Now, what we can do here is
-we can actually type in name
+В ней мы можем отдавать новою строку
 
 2877
 02:05:15,070 --> 02:05:17,000
-and then what we can actually type in here
+в которой будет префикс
 
 2878
 02:05:17,000 --> 02:05:18,090
-is the word field.
+и ключевое слово field
 
 2879
 02:05:18,090 --> 02:05:20,780
-And what the word field means
-is this field right here,
+filed это не что иное, как
 
 2880
 02:05:20,780 --> 02:05:23,200
-whatever is stored in this property,
+ссылка на текущее значение поля,
 
 2881
 02:05:23,200 --> 02:05:25,150
-go ahead and we're gonna
-use that right here.
+мы будем использовать его.
 
 2882
 02:05:25,150 --> 02:05:30,150
-So anytime someone calls a get
-on this, which is by default,
+И теперь кажный раз, когда кто-то читает
+это поле, в коде обычно
 
 2883
 02:05:30,428 --> 02:05:32,582
-anytime we call something like this,
+чтение пишется через точку,
 
 2884
 02:05:32,582 --> 02:05:33,450
-it's actually calling the get,
+вызов подменяется на то что мы
+написали в get блоке
 
 2885
 02:05:34,782 --> 02:05:35,920
-it's going to return name:field.
+в нашем случае вернется "Name: полное имя"
 
 2886
 02:05:36,967 --> 02:05:39,095
-So in this instance,
-if we were to run this,
+Теперь если мы
 
 2887
 02:05:39,095 --> 02:05:39,928
-we're gonna see something
-like John Franks.
+запустим то увидим не полное имя,
 
 2888
 02:05:39,928 --> 02:05:42,540
-But instead of that, we'll
-see name: John Franks.
+а полное имя с новым префиксом.
 
 2889
 02:05:42,540 --> 02:05:46,130
-Now, if I were to leave
-this off or comment that out
+Если мы закомментируем этот get
 
 2890
 02:05:46,130 --> 02:05:47,690
-where to rerun this again,
+и перезапустим,
 
 2891
 02:05:47,690 --> 02:05:50,310
-we would see that the
-name is just John Franks,
+то увидим что префикс пропал
 
 2892
 02:05:50,310 --> 02:05:52,530
-because it's just printing out the field,
+и чтение поля теперь
 
 2893
 02:05:52,530 --> 02:05:56,380
-which is been stored by
-default as initialized
+идет прямиком из поля
 
 2894
 02:05:57,320 --> 02:05:58,770
-with the first and last name.
+у которого значение имя + фамилия.
 
 2895
 02:05:59,964 --> 02:06:02,990
-Now here, I was able to
-override the get implementation
+С помощью get мы переопределяем
 
 2896
 02:06:02,990 --> 02:06:05,780
-so I can say, yeah,
-anytime someone requests
+функцию чтения из поля
 
 2897
 02:06:05,780 --> 02:06:09,140
-the first or last name,
-then we're going to go ahead
+и к нашему имени и фамилии
 
 2898
 02:06:09,140 --> 02:06:13,320
-and say name: John Frank.
+добавляется префикс.
 
 2899
 02:06:13,320 --> 02:06:15,930
-Now it'd probably make more
-sense if we just said full name
+Так, нужно поменять префикс,
 
 2900
 02:06:15,930 --> 02:06:18,550
-so it wouldn't match
-the variable name there.
+чтобы он отражал действительность.
 
 2901
 02:06:18,550 --> 02:06:21,350
-And then once we run it with
-the full name, John Franks.
+И теперь, после запуска мы видим
+Full name и наше полное имя.
 
 2902
 02:06:22,520 --> 02:06:25,260
-One important thing to note, this field
+Важная вещь на которой
+нужно заострить внимание -
 
 2903
 02:06:25,260 --> 02:06:28,740
-is actually the backing field
-for this full name property.
+ключевое слово field это
+вспомогательное поле для поля fullName
 
 2904
 02:06:28,740 --> 02:06:31,040
-So this is what contains the contents
+это значит что оно
+содержит контент
 
 2905
 02:06:31,040 --> 02:06:32,530
-of the full name property.
+поля fullName.
 
 2906
 02:06:32,530 --> 02:06:34,430
-So this is known as the backing field.
+поля fullName.
 
 2907
 02:06:35,590 --> 02:06:37,750
-Now I can also override the setter,
+Таким же образом мы можем
+переопределить метод записи в поле
 
 2908
 02:06:37,750 --> 02:06:38,720
-also known as the mutator.
+метод записи в поле.
 
 2909
 02:06:38,720 --> 02:06:39,640
-I could say set.
+Делаем это с помощью функции set()
 
 2910
 02:06:40,833 --> 02:06:43,560
-And by default, the
-value that's parse d in
+И по дефолту, значение, которое я
 
 2911
 02:06:43,560 --> 02:06:46,060
-to the full name when it's
-changed is gonna be called value.
+хочу записать будет в ключевом
+слове value
 
 2912
 02:06:46,060 --> 02:06:50,770
-So if I were to say something
-like this user.full name
+Если я хочу записать в поле
+строку "John"
 
 2913
 02:06:50,770 --> 02:06:54,850
-equals Jon, like this
-was a school lowercase,
+давайте сделаем рпосто "Jon"
 
 2914
 02:06:54,850 --> 02:06:59,610
-jon without the H, then what
-would happen is this Jon
+без буквы "h", в общем
+эта строка
 
 2915
 02:07:00,607 --> 02:07:02,739
-would be shoved into full name,
+должна стать полным именем
 
 2916
 02:07:02,739 --> 02:07:03,990
-which then would call this code block here
+и вызовется этот участок кода
 
 2917
 02:07:03,990 --> 02:07:07,980
-and what would be inside
-of this value variable
+и внутри нашего value
 
 2918
 02:07:09,191 --> 02:07:11,400
-would be these three letters, J-O-N.
+будет наша строка "Jon".
 
 2919
 02:07:11,400 --> 02:07:12,630
-Now I can actually do some stuff,
+теперь я могу сделать с ней что-то
 
 2920
 02:07:12,630 --> 02:07:13,860
-anything I'd like to do in here.
+что я захочу
 
 2921
 02:07:13,860 --> 02:07:17,540
-So I can actually say
-if value starts with,
+Напрмер, если value
+у нас начинается
 
 2922
 02:07:17,540 --> 02:07:19,040
-maybe I wanna know if it
-starts with something.
+с какой-то последовательности символов
 
 2923
 02:07:19,040 --> 02:07:21,730
-I say, hey, if it starts with Jon, J-O-N,
+Пусть ээта последовательность
+тоже будет "Jon"
 
 2924
 02:07:21,730 --> 02:07:25,220
-then what I want this field to be equal to
+то я хочу ее видо изменить
 
 2925
 02:07:25,220 --> 02:07:29,810
-is going to be Jon Doe.
+и дописать "Doe"
 
 2926
 02:07:30,910 --> 02:07:33,150
-So if anyone says, sets us to Jon
+И если теперь кто-то передает
+нам полное имя, которе начинается
 
 2927
 02:07:33,150 --> 02:07:36,390
-and then our to print line anything else
+с "Jon", то мы меняем
 
 2928
 02:07:36,390 --> 02:07:40,650
-for user's full name, it
-should now say Jon Doe.
+его на "Jon Doe"
 
 2929
 02:07:40,650 --> 02:07:42,860
-So if we've run this, we'll have in here
+Если запустим сейчас
 
 2930
 02:07:42,860 --> 02:07:44,720
-is we'll see John Franks, of course,
+то увидим "John Franks", потому что
 
 2931
 02:07:45,610 --> 02:07:47,520
-we're printing that the
-first time we've reset this
+это наш старыей вывод.
 
 2932
 02:07:47,520 --> 02:07:50,251
-to say, hey, the full
-name is actually Jon,
+Потом мы меняем полное имя на "Jon"
 
 2933
 02:07:50,251 --> 02:07:51,084
-which we know is not the real case,
+но мы при записи переходим
+в мутатор (set функция)
 
 2934
 02:07:51,084 --> 02:07:53,120
-but if we look at the
-mutator, the setter here,
+И видим нашу
 
 2935
 02:07:54,135 --> 02:07:56,500
-we're saying, hey, if
-the first name is Jon,
+нехитрую проверку, если начинается
+с "Jon"
 
 2936
 02:07:56,500 --> 02:07:59,030
-then go ahead and actually
-set the backing field
+то мы меняем значение
+и записываем его
 
 2937
 02:07:59,030 --> 02:08:01,020
-to actually equal Jon
-Doe, for whatever reason,
+в вспомогательное поле.
+Кейс странный, но
 
 2938
 02:08:01,020 --> 02:08:03,300
-maybe we have some business requirement
+допустим, что это какая-то наша
+бизнес логика,
 
 2939
 02:08:03,300 --> 02:08:05,514
-that states that we need to do that.
+которая от нас требует такой замены.
 
 2940
 02:08:05,514 --> 02:08:06,410
-And then once I print the full name,
+И уже теперь, когда мы выводим
 
 2941
 02:08:06,410 --> 02:08:08,500
-of course, it's going to say full name
+наше новое полное имя
 
 2942
 02:08:08,500 --> 02:08:10,480
-and then print that backing field,
+мы выводим его с помощью переопределенно
 
 2943
 02:08:10,480 --> 02:08:12,330
-which has now been turned to Jon Doe.
+функции чтения и видим новый результат.
 
 2944
 02:08:13,500 --> 02:08:15,820
-Now we do have a problem here actually,
+Тут у нас конечно появляется
+небольшая проблема
 
 2945
 02:08:15,820 --> 02:08:18,500
-if I were to attempt to reassign full name
+Если мы попробуем изменить полное имя
 
 2946
 02:08:18,500 --> 02:08:23,390
-to something else, such
-as let's say Jane Sparks.
+на что-то без "Jon"
+напрмер "Jane Sparks".
 
 2947
 02:08:23,390 --> 02:08:26,410
-And if I were to try to print
-that to the screen as well,
+и попытаемся вывести это в консоль
 
 2948
 02:08:26,410 --> 02:08:28,510
-what we would end up seeing immediately
+мы увидим странный и неожиданный результат
 
 2949
 02:08:28,510 --> 02:08:30,860
-is something we probably wouldn't expect,
+fullName тоже будет
 
 2950
 02:08:30,860 --> 02:08:34,370
-which is we're still
-gonna see Jon Doe printed.
+равен "Jon Doe"
 
 2951
 02:08:34,370 --> 02:08:36,760
-But hold on, I set it to Jane Sparks,
+Но мы же задавали "Jane Sparks"
+и эта строка не начаниется на "Jon"
 
 2952
 02:08:36,760 --> 02:08:38,080
-why isn't that working?
+почему это работает не так?
 
 2953
 02:08:38,080 --> 02:08:41,300
-The reason that it's not
-working is because the full name
+Все на самом деле очень просто,
+мы переопределили функцию
 
 2954
 02:08:41,300 --> 02:08:44,340
-property we have overrided the setter,
+записи в поле
 
 2955
 02:08:44,340 --> 02:08:49,010
-we're checking the value that
-was set to that backfield.
+и проверяем на наше условие,
 
 2956
 02:08:49,010 --> 02:08:51,090
-If it started with Jon Doe and
-then we set at the Jon Doe,
+Если новое значение начинается на "jon"
+то меняем значение
 
 2957
 02:08:51,090 --> 02:08:53,090
-but what we didn't take into account is,
+что мы не учли
 
 2958
 02:08:53,960 --> 02:08:54,890
-hey, what about the else condition here?
+в этой проверке?
 
 2959
 02:08:54,890 --> 02:08:56,850
-So we needed to do an else condition.
+Нам нужно else условие
 
 2960
 02:08:56,850 --> 02:08:58,970
-If this value starts with this,
+Если начинается с Jon
 
 2961
 02:08:58,970 --> 02:09:01,635
-it starts with Jon and set the Jon Doe
+то записываем Jon Doe,
 
 2962
 02:09:01,635 --> 02:09:02,800
-otherwise set the field equal to the value
+а иначе просто делаем field = value
 
 2963
 02:09:02,800 --> 02:09:04,180
-that was parse d in.
+и пропускаем новое значение без изменений.
 
 2964
 02:09:04,180 --> 02:09:07,190
-So now if we come back here
-and we were to run this,
+Вернемся обратно и проверим.
 
 2965
 02:09:07,190 --> 02:09:09,340
-we'll now see that we have John Franks,
+Теперь последний вывод у нас
 
 2966
 02:09:09,340 --> 02:09:12,040
-Jon Doe and Jane Sparks that are returned.
+это нормально полное имя.
 
 2967
 02:09:12,040 --> 02:09:14,660
-So you wanna make sure that
-you handle all of the various
+При переопределении методов
+записи стоит
 
 2968
 02:09:14,660 --> 02:09:17,050
-different types of scenarios you can have.
+учитывать подобные кейсы, чтобы
+не потерять значения.
 
 2969
 02:09:17,050 --> 02:09:19,490
-This could very well be a valid scenario
+Этот сценарий вполне может
 
 2970
 02:09:19,490 --> 02:09:20,620
-for your application.
+случиться в вашем приложении.
 
 2971
 02:09:20,620 --> 02:09:24,450
-You may only wanna decide
-that only you can change
+Возможно у вас будут ситуации,
+когда вам нужно
 
 2972
 02:09:24,450 --> 02:09:28,760
-that value to certain
-values or there's some type
+будет перезаписывать некоторые
 
 2973
 02:09:28,760 --> 02:09:31,580
-of logic for the setter
-that you need to adhere to.
+поля исключительно в каких-нибудь
+ситуациях.
 
 2974
 02:09:31,580 --> 02:09:34,002
-However, if you need an else condition,
+И если у вас будут условные выражения
 
 2975
 02:09:34,002 --> 02:09:35,980
-be sure to also implement
-that so that your property
+не забывайте присваивать
+вашим полям
 
 2976
 02:09:35,980 --> 02:09:37,590
-does act like a normal property,
+значения, которые
 
 2977
 02:09:38,579 --> 02:09:41,179
-which can have the properties
-red and have them set.
+будут их менять, если это нужно
+будет делать.
 
 2978
 02:09:42,310 --> 02:09:44,540
-Let's assume that you wanna
-have multiple properties
+Давайте допустим, что у нас есть
+несколько полей
 
 2979
 02:09:44,540 --> 02:09:46,980
-in a class, you can easily do that.
+и вы без проблем можете их дописть
 
 2980
 02:09:46,980 --> 02:09:49,480
-So of course we have
-these properties up here,
+у нас конечно есть поля, которые
+объявлены в конструкторе,
 
 2981
 02:09:49,480 --> 02:09:52,380
-but let's assume that you
-also want another property
+но давайте допустим что нам нужно
 
 2982
 02:09:52,380 --> 02:09:56,160
-in your class called age,
-and you're gonna default that
+еще поле, которое будет
+показывать возраст, и по дефолту
 
 2983
 02:09:56,160 --> 02:09:59,330
-to zero and then perhaps
-you have a favorite color
+пусть будет ноль, и, напрмер,
+поле любимого цвета пользователя
 
 2984
 02:10:00,580 --> 02:10:03,980
-and that's a string, and you're
-gonna default that to blue.
+пусть будет строкой, и по дефолту - синий.
 
 2985
 02:10:05,009 --> 02:10:07,730
-So you can have multiple of
-these inside of your application
+И их может быть очень много
+в вашем классе
 
 2986
 02:10:07,730 --> 02:10:10,900
-and it can easily be accessed and modified
+и ко всем ним будет доступ
+ферез функции
 
 2987
 02:10:13,710 --> 02:10:18,210
-through the property
-accessor's and mutators,
+чтения и записи
 
 2988
 02:10:18,210 --> 02:10:19,070
-which are default.
+из вне вашего класса.
 
 2989
 02:10:19,070 --> 02:10:23,043
-So say first name, age X, age equals 30.
+Напишем что возраст равен 30
 
 2990
 02:10:25,650 --> 02:10:28,590
-And I can say, use the
-user that favorite color
+И новый любимый цвет
 
 2991
 02:10:28,590 --> 02:10:30,770
-equals green.
+будет равен зеоеному.
 
 2992
 02:10:30,770 --> 02:10:32,240
-And so these are all possible.
+И это все доступные действия.
 
 2993
 02:10:32,240 --> 02:10:35,540
-You can have as many these
-properties as you would like
+У вас может быть сколько
+угодно таких полей
 
 2994
 02:10:35,540 --> 02:10:38,060
-inside of your class, just like functions.
+внутри класса, прямо как с функциями
 
 2995
 02:10:38,060 --> 02:10:41,960
-You can have more functions
-and new, like you say, say hi,
+МОжно написать еще функию sayHi
 
 2996
 02:10:41,960 --> 02:10:45,820
-and this could just be a
-simple little print line
+которая просто выводит в консоль
 
 2997
 02:10:45,820 --> 02:10:48,520
-that just says hi.
+текст и говорит "привет."
 
 2998
 02:10:48,520 --> 02:10:53,520
-And so of course we could say, user.say hi
+и конечно мы теперь можем вызывать
+эти методы у пользователя и написать user.sayHi
 
 2999
 02:10:54,268 --> 02:10:55,101
-and that would print to the screen.
+и в консоль бросится строка.
 
 3000
 02:10:55,101 --> 02:10:56,900
-I could come in here and
-change that of course,
+Я могу пойти в метод
+и поменять вывод,
 
 3001
 02:10:56,900 --> 02:11:00,170
