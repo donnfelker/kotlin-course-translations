@@ -13234,916 +13234,895 @@ fullName тоже будет
 
 3001
 02:10:56,900 --> 02:11:00,170
-to hi, full name and then it would say,
+на "Првет" потом полное имя и
 
 3002
 02:11:00,170 --> 02:11:02,710
-hi, Donn Felker in this case.
+вывод будет "Hi, Donn Felker"
+в этом случае.
 
 3003
 02:11:02,710 --> 02:11:05,190
-So you can easily put
-multiple properties here
+Таким образом вы можете
+создавать много полей в классе,
 
 3004
 02:11:05,190 --> 02:11:07,330
-wanting to add another
-one, we can do that here,
+нужно еще какое-то поле,
+можем создать его тут
 
 3005
 02:11:07,330 --> 02:11:09,080
-et cetera, et cetera, et cetera,
+и так далее, и тому подобное,
 
 3006
 02:11:09,080 --> 02:11:10,880
-and put as many there as you'd like.
+сколько вам необходимо.
 
 3007
 02:11:11,960 --> 02:11:14,650
-You can also add functions to your classes
+Мы можем добавлять функции
+специфичные для нашего класса
 
 3008
 02:11:14,650 --> 02:11:17,640
-and you just go inside
-of your class definition
+идем внутрь класса
 
 3009
 02:11:17,640 --> 02:11:19,070
-and start typing your function name.
+и пишем название функции.
 
 3010
 02:11:19,070 --> 02:11:20,940
-So we'll create a
-function called full name,
+Создадим функцию, которую назовем
+fullName и которая
 
 3011
 02:11:20,940 --> 02:11:22,960
-which will return a string.
+будет возвращать строку.
 
 3012
 02:11:22,960 --> 02:11:24,500
-And then inside of here, we'll just use
+И внутри нее мы будем использовать
 
 3013
 02:11:24,500 --> 02:11:28,150
-some string interpolation,
-we'll say first name
+интерполяцию строк,
+напишем иммя и фамилию
 
 3014
 02:11:28,150 --> 02:11:30,560
-and then we'll say last
-name with the dollar bracket
+для интерполяции нужно использовать
+знак доллара, чтобы Котлин
 
 3015
 02:11:30,560 --> 02:11:32,910
-syntax there and it will return us
+мог отличить строку от переменной или поля
 
 3016
 02:11:32,910 --> 02:11:34,340
-the full name of the user.
+эта функция будет возвращать нам
+полное имя пользователя.
 
 3017
 02:11:35,517 --> 02:11:37,440
-Now you may be noticing
-I'm not using the brackets
+Вы уже могли заметить,
+что я не использую скобки
 
 3018
 02:11:37,440 --> 02:11:38,440
-around here.
+в интерполяции.
 
 3019
 02:11:38,440 --> 02:11:42,540
-If I need to use the
-brackets, only time we would
+Они нужны только если наше
+значение для вывода
 
 3020
 02:11:42,540 --> 02:11:45,214
-is if we're using some
-property off of this.
+сложнее и для него нужен вызов
+поля или функции.
 
 3021
 02:11:45,214 --> 02:11:47,425
-So maybe I wanted to get
-the length and you'll notice
+Например, если нам нужна длина
 
 3022
 02:11:47,425 --> 02:11:48,723
-how IntelliJ added those
-brackets there for me.
+IDE самостоятельно добавляет
+нам скобки.
 
 3023
 02:11:48,723 --> 02:11:53,723
-Anytime I'm doing anything off
-of this main expression here,
+Каждый раз, когда у меня будет
+какое-то составное
 
 3024
 02:11:54,700 --> 02:11:57,020
-it's going to require
-we put it in brackets.
+выражение, мне будут
+нужны фигурные скобки.
 
 3025
 02:11:57,020 --> 02:11:59,080
-Now, if I do remove this, I
-could still have brackets here.
+Если я уберу вызов метода,
+я все равно могу оставить скобки
 
 3026
 02:11:59,080 --> 02:12:00,400
-This will compile and this'll work.
+И это будет работать,
 
 3027
 02:12:00,400 --> 02:12:02,270
-But notice there's a
-little gray squiggly here,
+но мы можем заметить
+белесое подчеркивание,
 
 3028
 02:12:02,270 --> 02:12:03,800
-it's kind of hard to see.
+которое довольно турдно разглядеть
 
 3029
 02:12:03,800 --> 02:12:06,092
-If I put that there, I'll
-get a little light bulb
+Если наведем на него,
+то увидим попап с лампочкой
 
 3030
 02:12:06,092 --> 02:12:08,180
-and click on it or hit
-alt+enter, and it will see
+можно на него нажать мышкой
+или использовать alt+enter
 
 3031
 02:12:08,180 --> 02:12:09,760
-remove curly braces.
+и мы увидим подсказку, что фигурные скобки
+можно убрать.
 
 3032
 02:12:09,760 --> 02:12:11,820
-And if I do that, it'll just
-automatically remove them
+И если согласимся
+то IDE сама почистит код
 
 3033
 02:12:11,820 --> 02:12:13,630
-because we don't need them here.
+потому что это излишки,
+без которых все будет работать
 
 3034
 02:12:13,630 --> 02:12:15,200
-Now this could also be cleaned up
+Дальше наш код можно почистить
 
 3035
 02:12:15,200 --> 02:12:16,440
-a little bit further as well.
+еще больше.
 
 3036
 02:12:16,440 --> 02:12:19,060
-So we could kind of turn us
-into a single line function
+Мы можем превратить эту функцию
+в функцию единственного выражения
 
 3037
 02:12:19,060 --> 02:12:22,230
-really easily, and we can
-just click and get rid of this
+для этого удалим фигурные
+скобки вокруг
 
 3038
 02:12:22,230 --> 02:12:25,530
-and make it equal that.
+и теперь функция равна выражению.
 
 3039
 02:12:25,530 --> 02:12:28,810
-And we can make it a Parry,
-small, succinct little function.
+Теперь это очень маленькая
+и удобная функция
 
 3040
 02:12:28,810 --> 02:12:33,073
-Now, to call this, we would
-go back to our main file here
+чтобы ее вызвать нам нужно
+вернуться в main функцию
 
 3041
 02:12:33,073 --> 02:12:34,373
-and we say user.full name.
+и теперь мы можем написать user.fullName()
 
 3042
 02:12:35,699 --> 02:12:37,340
-So we'd actually see that
-if they function here.
+И мы даже видим эту функцию в подсказке
 
 3043
 02:12:37,340 --> 02:12:39,367
-And of course, if we now run it,
+И если запустим, то в консоли будет результат
 
 3044
 02:12:39,367 --> 02:12:42,110
-we will see that we have
-the name, first name John,
+мы увидим комбинацию имени и фамилии,
 
 3045
 02:12:42,110 --> 02:12:45,000
-last name, Franks, and it
-just puts out John Franks.
+имя John, фамилия Franks,
+полное имя - John Franks.
 
 3046
 02:12:45,000 --> 02:12:47,220
-And again, if we wanted to
-again, do something different,
+Если нам нужно что-то другое
 
 3047
 02:12:47,220 --> 02:12:49,500
-we could do dot length.
+например длина фамилии
 
 3048
 02:12:49,500 --> 02:12:52,004
-And for whatever reason
-it would say, John,
+И по какой-то причине нам нужна
+комбинация имени и длины
 
 3049
 02:12:52,004 --> 02:12:53,950
-and then the length of
-the actual last name,
+фамилии пользователя
 
 3050
 02:12:53,950 --> 02:12:56,430
-which we'd see here,
-as soon as it compiles.
+то в консоль выведется уже такой
+вывод
 
 3051
 02:12:56,430 --> 02:13:00,542
-John six, because the word
-Franks has six characters in it.
+"John 6" потому что теперь вместо фамилии
+выводится ее длина
 
 3052
 02:13:00,542 --> 02:13:03,020
-And so you can continually keep adding
+И теперь мы можем добавлять
 
 3053
 02:13:03,020 --> 02:13:04,130
-different functions here.
+самые разные функции для пользователя
 
 3054
 02:13:04,130 --> 02:13:06,150
-So you could even add a
-different function here.
+Напрмер тут можно делать функцию
 
 3055
 02:13:06,150 --> 02:13:09,470
-say, full name length, and
-this one could be very similar.
+которая выводит длинуу полного
+имени пользователя
 
 3056
 02:13:09,470 --> 02:13:12,200
-Again, this one might
-return it int this time
+И эта функция будет возвращать Int
 
 3057
 02:13:12,200 --> 02:13:14,990
-and we could either do it
-on a single line expression,
+мы так же можетм сделать ее
+однострочной
 
 3058
 02:13:14,990 --> 02:13:17,230
-or multiline like we're doing here.
+или на несколько строк,
+как мы делаем тут.
 
 3059
 02:13:17,230 --> 02:13:19,030
-And we could do something
-even call it one function
+И теперь мы можем переиспользовать
+функцию, которая возвращает полное
 
 3060
 02:13:19,030 --> 02:13:20,940
-call another function and say,
+имя и вызвать
 
 3061
 02:13:20,940 --> 02:13:22,990
-let me see you get the length of that.
+на ней метод length.
 
 3062
 02:13:24,204 --> 02:13:27,020
-And then we can also print
-this here and I'll go ahead
+И теперь тоже можем вывести
+результат в консоль
 
 3063
 02:13:27,020 --> 02:13:30,590
-and go to full name length.
+напишем user.fullNameLength
 
 3064
 02:13:31,664 --> 02:13:33,300
-And when we this again, we're going to see
+И теперь мы увидим
 
 3065
 02:13:33,300 --> 02:13:36,240
-that we get the John six again,
-'cause we did the full name.
+строчку "John 6" потому что так
+у нас реализуется fullName
 
 3066
 02:13:36,240 --> 02:13:38,390
-Let's fix that real fast
-'cause we don't want
+давайте быстро это поправим
 
 3067
 02:13:38,390 --> 02:13:40,860
-the length anymore on the last name.
+потому что эта цифра нам не нужна
 
 3068
 02:13:40,860 --> 02:13:44,530
-We just want it to say John
-Franks as the actual output.
+Мы хотим выводить настоящее полное имя
 
 3069
 02:13:44,530 --> 02:13:47,960
-And then we want to actually
-show the length of the name.
+И дальше мы хотим увидеть длину полного имени.
 
 3070
 02:13:47,960 --> 02:13:49,410
-And so we're doing that here.
+И делаем мы это тут.
 
 3071
 02:13:50,252 --> 02:13:52,140
-So we say John Franks and then
-the full name length is 11.
+Мы выводим "John Franks"
+и длина 11.
 
 3072
 02:13:52,140 --> 02:13:54,940
-So we have one function here,
-it's calling another function.
+Итак, у нас есть одна функция,
+которая вызывает другую функцию.
 
 3073
 02:13:54,940 --> 02:13:56,650
-We don't have to do this.
+Но это делать необязательно.
 
 3074
 02:13:56,650 --> 02:14:00,390
-I could replicate this
-functionality down here
+Я мог бы просто продублировать
+функциональность
 
 3075
 02:14:00,390 --> 02:14:03,205
-by doing this, I'm gonna comment this out.
+закомментирую наше текущее решение
 
 3076
 02:14:03,205 --> 02:14:06,778
-And I could say return this
-dot length and would give us
+И теперь ан этой строчке я могу вызвать
+length метод
 
 3077
 02:14:06,778 --> 02:14:07,611
-the same exact thing.
+и результат будет таким же.
 
 3078
 02:14:07,611 --> 02:14:09,790
-But at this point we have
-some code duplication
+Но теперь у нас появились повторения когда
 
 3079
 02:14:09,790 --> 02:14:11,190
-and that's just usually not a good thing
+и часто это не самая хорошая штука
 
 3080
 02:14:11,190 --> 02:14:14,100
-because if for some reason
-I decide that I want
+потому что, если в какой-то момент
+я решу что в полном имени
 
 3081
 02:14:14,100 --> 02:14:16,320
-the full name to have a hyphen in it,
+нам нужен дефис,
 
 3082
 02:14:16,320 --> 02:14:20,180
-well, now this length here
-is not going to be the same
+то, во первых, длина увеличится из-за этого,
+а во вторых мне придется
 
 3083
 02:14:20,180 --> 02:14:21,060
-as a full name length.
+добавлять это изменение в двух
+местах сразу
 
 3084
 02:14:21,060 --> 02:14:23,040
-That kind of depends on what
-kind of app you're building
+Это зависит в основном от того
+приложения, которое вы делаете
 
 3085
 02:14:23,040 --> 02:14:25,220
-and if you need that functionality.
+и если у вас будут подобные кейсы.
 
 3086
 02:14:25,220 --> 02:14:27,960
-So I usually recommend, okay,
-if you already have a function
+И обычно я рекомендую переиспользовать
 
 3087
 02:14:27,960 --> 02:14:30,010
-that provides that value, just go ahead
+функции, которые отдают вам какие-то
+значения, потому что, если логика поменяется,
 
 3088
 02:14:30,010 --> 02:14:31,860
-and call that function and
-then it will be updated.
+то все остальные функции получат
+актуальное значение.
 
 3089
 02:14:31,860 --> 02:14:34,402
-So in this case, it's gonna add us
+Такое изменение добавит нам
 
 3090
 02:14:34,402 --> 02:14:35,235
-two additional characters here
+два дополнительных символа
+в полное имя
 
 3091
 02:14:35,235 --> 02:14:38,480
-because we have an additional
-space and a hyphen.
+а именно пробел и тире,
 
 3092
 02:14:38,480 --> 02:14:42,500
-So instead of the 11,
-we should get back a 13
+поэтому вместо 11 у нас теперь
+будет число 13
 
 3093
 02:14:43,340 --> 02:14:44,550
-as we have here.
+все верно.
 
 3094
 02:14:44,550 --> 02:14:47,770
-And that's how you add
-just very basic functions
+И таким образом вы можете добавлять
+простейшие функции
 
 3095
 02:14:47,770 --> 02:14:49,823
-to your actual class.
+в ваши собственные классы.
 
 3096
 02:14:49,823 --> 02:14:52,200
-And you can continue
-adding as many as you like
+И добавлять их можно сколько угодно
 
 3097
 02:14:52,200 --> 02:14:53,280
-inside of the class body here.
+в теле класса.
 
 3098
 02:14:53,280 --> 02:14:54,730
-They can reference the members,
+Они могут использовать различные
+поля объекта
 
 3099
 02:14:54,730 --> 02:14:57,230
-they can perform different operations,
+делать самые разные операции
 
 3100
 02:14:57,230 --> 02:14:59,230
-they can even alter the members as well.
+и могу даже как-то влиять на состояние
+класса и менять значение полей.
 
 3101
 02:14:59,230 --> 02:15:01,420
-So if we wanted to do that, we'd say fun,
+Напирмер, если мы
+хотим это продемонстрировать
 
 3102
 02:15:02,970 --> 02:15:07,970
-update full name for
-whatever reason with suffix.
+можем создать функцию, которая
+добавляет в имя суффикс.
 
 3103
 02:15:08,680 --> 02:15:11,100
-And we might have parse d
-in a suffix of some sort
+И мы можем этот суффикс передавать
+в саму функцию
 
 3104
 02:15:11,100 --> 02:15:13,600
-and that suffix might be a string
+путсь это будет какая-то строка,
 
 3105
 02:15:14,520 --> 02:15:15,880
-and we might do something like this.
+добавить суффикс можно так
 
 3106
 02:15:15,880 --> 02:15:19,490
-first name equals, let's say suffix.
+к имени прбавляем суффикс
 
 3107
 02:15:20,730 --> 02:15:22,380
-And then we would say first name.
+и присваиваем это значение
+имени пользователя.
 
 3108
 02:15:23,920 --> 02:15:26,020
-And then what we would
-do here is we'd go back
+И теперь мы можем вернуться
 
 3109
 02:15:26,020 --> 02:15:29,260
-to this area here on our main file.
+в main функцию.
 
 3110
 02:15:29,260 --> 02:15:32,640
-And we wanna say user to
-update full name of suffix.
+И теперь мы обновим наше имя
+и добавим в него суффикс
 
 3111
 02:15:32,640 --> 02:15:34,650
-And it will say Mr.
+Например "Mr"
 
 3112
 02:15:34,650 --> 02:15:38,590
-And then as it prints,
-it should say, Mr. John,
+Когда это выведется, мы должны увидеть
+"Mr. John"
 
 3113
 02:15:38,590 --> 02:15:41,800
-which sounds a little weird,
-but that's how it's gonna look.
+что звучит немного странно, но
+так это будет выглядеть.
 
 3114
 02:15:41,800 --> 02:15:45,360
-And we see Mr. John down
-here and the output,
+И да, мы видим правильный
+вывод в консоли
 
 3115
 02:15:45,360 --> 02:15:47,980
-and that's how you can
-add and continually add
+и так вы можете добавлять
 
 3116
 02:15:47,980 --> 02:15:50,080
-additional functions inside of your class.
+различные функции в вашем классе.
 
 3117
 02:15:51,280 --> 02:15:53,490
-To create a companion
-object, what you'll do
+Чтобы создать объект-компаньон
 
 3118
 02:15:53,490 --> 02:15:56,060
-is inside of your clash
-you'll type companion object,
+вам нужно использовать ключевое слово
+"companion object" в вашем классе,
 
 3119
 02:15:57,382 --> 02:15:58,530
-and then you can start typing
-the name of your function.
+и дальше вы можете писать
+ваши функции.
 
 3120
 02:15:58,530 --> 02:16:01,030
-So in this case, it's create
-a function called create user.
+В нашем случае это функция
+для создания пользователя,
 
 3121
 02:16:01,030 --> 02:16:02,640
-It will return a new user.
+которая будет возвращать нового
+пользователя.
 
 3122
 02:16:03,630 --> 02:16:05,440
-In order to do that, we
-actually need the first name
+для нее нам нужны
 
 3123
 02:16:05,440 --> 02:16:06,273
-and a last name.
+имя и фамилия.
 
 3124
 02:16:06,273 --> 02:16:07,960
-So we'll need that provided to us.
+И надо создать для этого аргументы
 
 3125
 02:16:09,080 --> 02:16:10,950
-That's not what we want first name,
+нам понадобится имя
 
 3126
 02:16:10,950 --> 02:16:12,450
-and then we'll have last name.
+и вот тут фамилия.
 
 3127
 02:16:13,671 --> 02:16:15,958
-And then of course, what we'll
-do is we'll have this return
+И внутри функции мы создадим
+пользователя
 
 3128
 02:16:15,958 --> 02:16:16,791
-a new user.
+и вернем его.
 
 3129
 02:16:16,791 --> 02:16:19,260
-And it's very simple, just
-kind of knew what the user
+И для этого мы вызовем конструктор
 
 3130
 02:16:19,260 --> 02:16:21,160
-with the first name and the last name.
+и передадим имя и фамилию.
 
 3131
 02:16:23,440 --> 02:16:26,130
-Now, companion object is
-a function or property
+Объект компаньон содержит
+набор методов и полей,
 
 3132
 02:16:26,130 --> 02:16:28,170
-that's going to be tied
-directly to the class
+которые будут привязаны к
+всему классу,
 
 3133
 02:16:28,170 --> 02:16:30,310
-or rather than it's exact instances.
+а не отдельным экземплярам
 
 3134
 02:16:30,310 --> 02:16:33,000
-And we it's very much like a static method
+Это тоже самое, что статический метод
+или статическое поле
 
 3135
 02:16:33,000 --> 02:16:35,490
-that you would see inside
-of something like Java
+которые есть, напрмер
+в языке Java
 
 3136
 02:16:35,490 --> 02:16:37,390
-and a companion object is a Singleton,
+И объект компаньон это синглтон
 
 3137
 02:16:37,390 --> 02:16:39,810
-so meaning that is tied to
-the actual class itself.
+это значит, что он единственный
+и прявязан ко всему классу
 
 3138
 02:16:39,810 --> 02:16:40,780
-So what does that mean?
+Что это все значит?
 
 3139
 02:16:40,780 --> 02:16:44,033
-Let's go take a look at
-this implementation here.
+Давайте посмотрим на конкретные
+примеры.
 
 3140
 02:16:44,033 --> 02:16:46,610
-I can do this, say user.create user Fu
+В main функции я смогу вызвать User.createUser
 
 3141
 02:16:46,610 --> 02:16:49,670
-and then we'll say bar,
-and I'll say val user.
+с агрументами "foo" и "bar"
+и присвоим это к переменной.
 
 3142
 02:16:52,316 --> 02:16:53,820
-And then what we can do
-here is I'm just print line
+И дальше просто выведем в консоль
 
 3143
 02:16:53,820 --> 02:16:55,670
-the user, they'll say print the user.
+с помощью println.
 
 3144
 02:16:56,651 --> 02:16:58,953
-And what we've done here
-is we've actually created
+И тут мы вызвали статический метод
 
 3145
 02:16:58,953 --> 02:17:00,120
-a basically static type of method
+который привязан к классу User,
 
 3146
 02:17:00,120 --> 02:17:02,310
-attached to the user class.
+а он уже внутри создал нам пользователя.
 
 3147
 02:17:02,310 --> 02:17:04,830
-So now you notice how I didn't
-create an instance of user,
+Вы можете заметить важную деталь,
+что мне не пришлось создавать пользователя
 
 3148
 02:17:04,830 --> 02:17:08,870
-I just called a method that
-was directly on the user class,
+Я просто вызвал метод, который
+напрямую связан с классом пользователя,
 
 3149
 02:17:08,870 --> 02:17:11,620
-and that is going to be
-the create user method.
+и он уже создал пользователя под капотом.
 
 3150
 02:17:11,620 --> 02:17:15,010
-So see, create user and we
-can treat this like a factory
+И теперь мы можем использовать
+метод createUser как паттерн фабрика
 
 3151
 02:17:15,010 --> 02:17:16,200
-to create objects for us.
+и он будет создавать для нас пользователей
 
 3152
 02:17:16,200 --> 02:17:19,270
-Now we could go a little
-bit further too, as well.
+Давайте немного усложним пример
 
 3153
 02:17:19,270 --> 02:17:22,870
-And let's say that we had
-maybe we wanted to create,
+например нам нужно создавать
 
 3154
 02:17:22,870 --> 02:17:25,132
-a way to create a bunch of
-users and I say, create users.
+сразу несколько пользователей,
+я могу сделать метод createUsers
 
 3155
 02:17:25,132 --> 02:17:28,500
-And then what we can do
-inside of here to say,
+И как аргумент мы будем передавать
+кол-во пользователей,
 
 3156
 02:17:28,500 --> 02:17:30,400
-how many users we would like to create
+которое нужно создать
 
 3157
 02:17:30,400 --> 02:17:32,535
-and maybe parse into value.
+и передадим его
 
 3158
 02:17:32,535 --> 02:17:35,970
-What we're gonna do is
-return a list of users.
+Возвращать из этой функции мы
+будем список пользователей.
 
 3159
 02:17:37,010 --> 02:17:38,870
-So in order to do that,
-let's go ahead and create
+Для этого нам для назала нужно
 
 3160
 02:17:38,870 --> 02:17:41,510
-a quick class level Singleton variable.
+создать переменную синглтон в
+объекте компаньоне.
 
 3161
 02:17:41,510 --> 02:17:46,133
-So it will say foul users
-equals a mutable list of users.
+Создадим неизменяемую переменную
+которая будет содержать готовых пользователей
 
 3162
 02:17:47,250 --> 02:17:50,080
-Now we'll be able to
-access that via the class.
+Теперь у нас есть доступ к ней через
+вызов класса.
 
 3163
 02:17:50,080 --> 02:17:55,080
-And what we can say here is
-for I in zero to the count,
+И теперь мы создадим цикл
+от нуля до нашего значения аргумента
 
 3164
 02:17:57,020 --> 02:17:59,440
-which meaning from count
-from zero up to the number
+Этот оборот значит что наш цикл
 
 3165
 02:17:59,440 --> 02:18:00,980
-provided count here.
+будет менять параметр i от 0 до count.
 
 3166
 02:18:00,980 --> 02:18:04,480
-We want to add an item to the users list,
+И дальше в список пользователей мы добавим
 
 3167
 02:18:04,480 --> 02:18:06,060
-and we'll go ahead and say user,
+нового пользователя
 
 3168
 02:18:06,060 --> 02:18:09,320
-and we'll just kind of
-do something first name,
+у которого будет одинаковое имя и фамилия
 
 3169
 02:18:09,320 --> 02:18:11,910
-and then we'll provide some type of value
+но к нему будет добавляться значение
 
 3170
 02:18:11,910 --> 02:18:14,220
-such as the index here.
+нашего счетчика.
 
 3171
 02:18:14,220 --> 02:18:17,280
-And then we'll do the same
-thing here, last name,
+И для фамилии тоже
 
 3172
 02:18:17,280 --> 02:18:19,850
-and then we'll do something
-like the index as well.
+будем добавлять
 
 3173
 02:18:19,850 --> 02:18:21,180
-And as you can see here,
+этот индекс,
 
 3174
 02:18:22,423 --> 02:18:23,256
-it says we can remove the curly braces.
+IDE подсказывает, что мы можем убрать
+фигурные скобки
 
 3175
 02:18:23,256 --> 02:18:24,830
-So we can do that here and here,
+тут и тут
 
 3176
 02:18:24,830 --> 02:18:28,520
-because we're just doing
-a very simple expression.
+потому что выражения у нас простые.
 
 3177
 02:18:28,520 --> 02:18:31,690
-And then of course we'll return the users,
+И в конце мы вернем всех пользователей,
+которых надобавляли
 
 3178
 02:18:31,690 --> 02:18:34,040
-which is a steep to member variable.
+И в конце мы вернем всех пользователей,
+которых надобавляли
 
 3179
 02:18:34,040 --> 02:18:35,970
-So let's go take a look
-at how we would use this.
+Давайте посмотрим, как это все можно запустить
 
 3180
 02:18:35,970 --> 02:18:38,800
-So let's go over here, val users equals,
+и напишем переменную "пользователи"
 
 3181
 02:18:40,240 --> 02:18:42,470
-and we could say user dot create users.
+и вызовем User.createUsers
 
 3182
 02:18:43,565 --> 02:18:45,954
-So maybe you wanna have this
-to create a number of users
+Таким образом вы можете создавать
 
 3183
 02:18:45,954 --> 02:18:47,800
-or objects or one out of a type.
+пользователей, а можете создавать
+какие-то другие объекты.
 
 3184
 02:18:47,800 --> 02:18:50,360
-And then we can say print line
-and they'll actually print
+И потом мы выведем их, чтобы
+посмотреть в консоли
 
 3185
 02:18:50,360 --> 02:18:51,740
-those users out.
+всех созданных пользователей.
 
 3186
 02:18:51,740 --> 02:18:53,430
-And when we run this,
-what we're gonna notice
+И, в консоли они все будут
 
 3187
 02:18:53,430 --> 02:18:56,670
-is that we see all of
-them printed on one line.
+в одну строчку
 
 3188
 02:18:56,670 --> 02:18:59,240
-And the reason for that is
-this is basically Kotlin's way
+Это стандартный вывод Котлина
 
 3189
 02:18:59,240 --> 02:19:02,690
-of showing us, hey, this looks
-like some type of collection
+для списков
 
 3190
 02:19:06,265 --> 02:19:07,160
-because we have a square bracket
-and a closed square bracket
+В начале у нас будут квадратный скобки,
+а в конце списка закрывающие скобки
 
 3191
 02:19:07,160 --> 02:19:09,300
-up here, open and close square brackets.
+вот тут, открывающие и закрывающие
 
 3192
 02:19:09,300 --> 02:19:12,170
-And this is the first
-element inside of our lists.
+И это первый элемент нашего списка
 
 3193
 02:19:12,170 --> 02:19:16,140
-So zero one, two, three, four, five.
+Итерация ноль, один, два, три, четыре, пять
 
 3194
 02:19:16,140 --> 02:19:18,840
-So actually, if we're to
-make this a little bit easier
+Если мы хотим, чтобы это было
 
 3195
 02:19:18,840 --> 02:19:21,500
-to read, we can actually
-use one of the collection
+удобнее читать, мы можем использовать
+вспомогательный метод forEach
 
 3196
 02:19:21,500 --> 02:19:23,780
-helper methods called Foreach.
+для классов коллекций (таких как List)
 
 3197
 02:19:23,780 --> 02:19:26,385
-And it basically iterates over each item.
+И он будет проходить по каждому элементу
 
 3198
 02:19:26,385 --> 02:19:28,280
-And then inside of there,
-we can off the item,
+И внутри этого метода мы
+можем вывести элемент коллекции
 
 3199
 02:19:28,280 --> 02:19:31,340
-which there'll be, it's
-called it by default.
+он будет называться "it" по дефолту
 
 3200
 02:19:31,340 --> 02:19:33,870
-And if we run this, we'll see
-that we actually have them
+И если запустим, то увидим,
 
 3201
 02:19:33,870 --> 02:19:36,230
-printed on all on each individual line.
+что каждый пользователь теперь на новой строке.
 
 3202
 02:19:36,230 --> 02:19:38,330
