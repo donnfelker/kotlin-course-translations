@@ -14126,970 +14126,942 @@ IDE подсказывает, что мы можем убрать
 
 3202
 02:19:36,230 --> 02:19:38,330
-But now the interesting thing is we said,
+Нужно подметить, что мы хотели
 
 3203
 02:19:38,330 --> 02:19:42,730
-let's create five users, one,
-two, three, four, five, six.
+создать пять пользователей,
+а у нас их [считает] шесть.
 
 3204
 02:19:43,593 --> 02:19:44,426
-Now the reason why we have six
+Причина почему у нас шесть
 
 3205
 02:19:44,426 --> 02:19:46,840
-is because this range
-is starting from zero.
+это потому что наш цикл создания
+начинается с нуля
 
 3206
 02:19:46,840 --> 02:19:50,743
-So we could change this to
-count, to count minus one,
+Мы можем поменять верхнюю границу
+на count - 1
 
 3207
 02:19:50,743 --> 02:19:51,640
-or we could just kind of
-make it simple saying,
+или мы можем начать в единицы
 
 3208
 02:19:51,640 --> 02:19:53,260
-hey, go from one up to the count.
+и до кол-ва пользователей,
+которое нам нужно.
 
 3209
 02:19:53,260 --> 02:19:55,990
-So now if we run this again,
-we'll see that we only have
+Если перезапустим, то теперь
 
 3210
 02:19:55,990 --> 02:19:57,300
-one, two, three, four, five.
+у нас будет [считает] пять пользователей.
 
 3211
 02:19:57,300 --> 02:20:00,800
-Now we could count this
-up to 15, which is great.
+Можем теперь создать 15
 
 3212
 02:20:00,800 --> 02:20:03,350
-And we can go in and
-create 15 different users.
+разных пользователей.
 
 3213
 02:20:03,350 --> 02:20:04,710
-And it's all pretty simple to do.
+И это теперь сделать супер просто.
 
 3214
 02:20:04,710 --> 02:20:06,760
-Now also, the cool thing is here as well,
+Еще одна интересная вещь,
 
 3215
 02:20:07,667 --> 02:20:08,840
-let's go ahead and comment this out,
+давайте закоментируем эти строки,
 
 3216
 02:20:08,840 --> 02:20:11,630
-is that we've not created our users,
+теперь мы не выводим пользователей
+а просто создаем их
 
 3217
 02:20:11,630 --> 02:20:14,620
-but perhaps we could say users too.
+но мы все равно можем в любой
 
 3218
 02:20:14,620 --> 02:20:17,470
-So kind of new variable
-here, I'll say user.users.
+момент обрптиться к значению
+User.users
 
 3219
 02:20:17,470 --> 02:20:21,000
-Remember this is a property,
-the Singleton property
+Если вы помните, то это синглтон
 
 3220
 02:20:21,000 --> 02:20:23,110
-that's on the user class.
+привязанный к классу пользователя.
 
 3221
 02:20:23,110 --> 02:20:28,110
-So this method create users
-actually modified this list here
+И метод createUsers при вызове
+модифичирует этот список
 
 3222
 02:20:29,320 --> 02:20:30,660
-by adding to it.
+добавляя в него новых пользователей
 
 3223
 02:20:30,660 --> 02:20:32,550
-Now, again, back here,
-we're not doing anything
+И вот тут, в начале, мы ничего
+не делаем с нашими пользователями
 
 3224
 02:20:32,550 --> 02:20:35,631
-with the users, we're just
-kind of leaving it there.
+мы просто создаем их и оставляем
+в подвешенном состоянии
 
 3225
 02:20:35,631 --> 02:20:36,993
-So technically I could
-just kind of get rid of it
+и можно даже не сохранять
+их в переменную
 
 3226
 02:20:36,993 --> 02:20:38,750
-if I wanted to, and
-then I could say users,
+И из-за того что они привязаны
+к классу и хранятся как синглтон
 
 3227
 02:20:38,750 --> 02:20:40,350
-and then I could say print line.
+я могу в любой момент взять
+и, например, вывести их на экран
 
 3228
 02:20:42,030 --> 02:20:43,770
-Let's actually go ahead
-and copy this up here.
+Давайте, чтобы было проще просто
+скопируем и
 
 3229
 02:20:43,770 --> 02:20:46,980
-To make it easier, I'll say users two.
+поменяем значение на users2
 
 3230
 02:20:48,190 --> 02:20:49,320
-And of course that's not there.
+users у нас больше нет,
+поэтому показывает ошибку
 
 3231
 02:20:49,320 --> 02:20:50,870
-So I'll say users two print line.
+И выводим их в консоль
 
 3232
 02:20:50,870 --> 02:20:53,210
-And if we run this, what we'll notice
+И при запуске мы видим, что пользователи
 
 3233
 02:20:53,210 --> 02:20:55,920
-is that the user's object of course,
+создались при вызове
 
 3234
 02:20:55,920 --> 02:20:57,620
-was populated via the create user.
+createUsers метода.
 
 3235
 02:20:57,620 --> 02:21:00,780
-So now, if I were to come
-up here and say zero,
+И если мы поменяем цифру на ноль
 
 3236
 02:21:01,670 --> 02:21:03,330
-so don't create any
-users, it's gonna to see,
+то пользователи не будут создаваться
 
 3237
 02:21:03,330 --> 02:21:05,020
-like, we have an empty basic list.
+и мы увидим пустой список.
 
 3238
 02:21:05,020 --> 02:21:07,730
-We see foo bar, that's this one up here.
+Мы видим только foo - bar.
 
 3239
 02:21:07,730 --> 02:21:09,980
-So if we were to get
-rid of this guy up here,
+Это старая строчка в самом верху,
 
 3240
 02:21:11,689 --> 02:21:12,522
-we wouldn't have that.
+если уберем ее то будет пусто.
 
 3241
 02:21:12,522 --> 02:21:13,650
-And we're not gonna have anything output
+У нас нет пользователей, чтобы их
 
 3242
 02:21:14,513 --> 02:21:16,820
-to the output of the window
-because we don't have it there.
+вывести, поэтому в консоли пусто.
 
 3243
 02:21:16,820 --> 02:21:19,750
-So that's how you would
-build a companion object
+И так мы создаем объекты компаньоны
 
 3244
 02:21:19,750 --> 02:21:21,340
-inside of your Kotlin class.
+внутри Котлин классов.
 
 3245
 02:21:22,324 --> 02:21:24,433
-You use the companion object, keywords,
+Мы используем ключевое слово
+companion object
 
 3246
 02:21:24,433 --> 02:21:25,400
-open and closed curly braces,
+пишем фигурные скобки,
 
 3247
 02:21:25,400 --> 02:21:27,680
-and any functions and properties
-that are inside of here
+и объявляем переменные и функции,
 
 3248
 02:21:27,680 --> 02:21:30,520
-are class level and it's
-basically Singleton scoped.
+которые будут синглтонами
+и доступны по названию класса.
 
 3249
 02:21:31,980 --> 02:21:33,480
-Let's say that you
-would like to keep track
+Давайте допустим, что нам нужно
+сохранять
 
 3250
 02:21:33,480 --> 02:21:35,270
-of a user's favorite food,
+любимое блюдо пользователя
 
 3251
 02:21:36,600 --> 02:21:38,760
-or even just a favorite
-food for your application.
+или просто любимое
+блюдо в вашем приложении
 
 3252
 02:21:38,760 --> 02:21:41,510
-Let's assume that it has some ingredients
+Представим, что у него
+есть какие-то ингридиенты
 
 3253
 02:21:43,030 --> 02:21:46,930
-and those ingredients are
-a mutable list of string.
+И эти ингридиенты можем представить
+как список строк.
 
 3254
 02:21:46,930 --> 02:21:50,950
-And let's also assume that there is a name
+И у любимого блюда
 
 3255
 02:21:50,950 --> 02:21:52,890
-of a favorite food here,
+есть название,
 
 3256
 02:21:52,890 --> 02:21:56,690
-and I should make this
-one mutable as well,
+и оно должно быть изменяемым
 
 3257
 02:21:56,690 --> 02:21:59,050
-and this one's gonna be a
-string and we can go ahead
+пусть тип будет String
 
 3258
 02:21:59,050 --> 02:22:02,170
-and default this to a known because maybe
+и по дефолту будет "unknown",
 
 3259
 02:22:02,170 --> 02:22:03,830
-you wanna change it later.
+мы изменим это значение позже.
 
 3260
 02:22:03,830 --> 02:22:07,080
-Now with a Singleton and
-software development,
+Если мы хотим, чтобы у нас существовал
+единственный экзепляр объекта
 
 3261
 02:22:07,080 --> 02:22:12,080
-we only want one instance of
-this to be created at any time.
+то нам нужно использовать
+паттерн синглтон.
 
 3262
 02:22:12,360 --> 02:22:14,850
-So if I have one favorite
-food, I can't have multiple.
+И если у меня есть любимое блюдо,
+оно может быть только одно
 
 3263
 02:22:14,850 --> 02:22:16,480
-I mean, I could have
-multiple favorite foods,
+технически конечно их может
+быть несколько
 
 3264
 02:22:16,480 --> 02:22:18,730
-but let's say my most favorite
-food in the whole world
+Давайте представим, что
+мои любимые блюда, это
 
 3265
 02:22:18,730 --> 02:22:20,590
-is X, Y, and Z.
+абстрактные блюда X, Y и Z
 
 3266
 02:22:20,590 --> 02:22:22,770
-I only want one instance
-of this to be created.
+И мне нужно чтобы существовало
+только одно любимое блюдо
 
 3267
 02:22:22,770 --> 02:22:26,030
-But however, if I were to set
-this up, I say, favorite food.
+Но сейчас, с помощью этого класса
 
 3268
 02:22:26,030 --> 02:22:27,600
-I can create one instance of it here,
+Я могу создать любимое блюдо X
 
 3269
 02:22:27,600 --> 02:22:31,650
-I can create another instance here.
+любимое блюдо Y
 
 3270
 02:22:31,650 --> 02:22:34,270
-And how would we do that now in utterly.
+И теперь получается так
 
 3271
 02:22:34,270 --> 02:22:37,090
-So, as you can see, I have
-multiple of these instances,
+что у нас естьвозможность
+создавать несколько
 
 3272
 02:22:37,090 --> 02:22:40,410
-and I only wanna be able
-to restrict the user
+разных экземпляров,
+но мне нужно разрешить
 
 3273
 02:22:40,410 --> 02:22:43,750
-from creating basically
-one instance of this.
+создание любимого блюда только
+один раз
 
 3274
 02:22:43,750 --> 02:22:45,030
-So how would I go about doing that?
+Как это сделать?
 
 3275
 02:22:45,030 --> 02:22:46,650
-Well in other languages, what you would do
+В других языках программирования
 
 3276
 02:22:46,650 --> 02:22:49,200
-is you would mark the constructor private
+вам бы пришлось запрещать использование
+конструктора с помощью
 
 3277
 02:22:49,200 --> 02:22:50,730
-and it's a private constructor.
+модификатора доступа "private".
 
 3278
 02:22:50,730 --> 02:22:52,550
-And now of course, we're
-not gonna have the ability
+Но если мы так сделаем то
+вообще не сможем
 
 3279
 02:22:52,550 --> 02:22:53,383
-to create this.
+создавать пользователей.
 
 3280
 02:22:53,383 --> 02:22:55,870
-But now what we need is
-some type of helper method
+И нам понадобится объект компаньон,
+который будет
 
 3281
 02:22:55,870 --> 02:22:56,703
-to create this.
+создавать нам пользователя.
 
 3282
 02:22:56,703 --> 02:23:00,050
-So maybe we have a companion object
+И в объекте компаньоне, напрмер,
 
 3283
 02:23:00,050 --> 02:23:04,660
-and this companion object has
-a new method called instance.
+будет метод "instance".
 
 3284
 02:23:04,660 --> 02:23:08,140
-And this instance just
-basically create a favorite food
+И этот метод будет создавать
 
 3285
 02:23:08,140 --> 02:23:13,140
-for us, so it's basically a private method
+пользователя
 
 3286
 02:23:13,690 --> 02:23:16,290
-that creates a favorite food for us.
+и возвращать его нам.
 
 3287
 02:23:16,290 --> 02:23:19,475
-But now even then,
-we're gonna keep getting
+но теперь, опять же
+при вызове instance мы будем
 
 3288
 02:23:19,475 --> 02:23:20,308
-new instances here.
+получать нового пользователя.
 
 3289
 02:23:20,308 --> 02:23:23,047
-So even if we did this,
-let's do those things.
+Если мы вызываем instance
 
 3290
 02:23:23,047 --> 02:23:24,570
-We could say favorite food at instance,
+тут, мы создаем новое любимое блюдо
 
 3291
 02:23:25,410 --> 02:23:28,190
-we're still gonna get
-multiple different instances
+и у нас в итоге будет много разных
 
 3292
 02:23:28,190 --> 02:23:29,160
-of this food.
+любимых блюд.
 
 3293
 02:23:29,160 --> 02:23:30,580
-So what we'd have to do is inside of this,
+Чтобы это исправить, нам нужно
 
 3294
 02:23:30,580 --> 02:23:32,851
-we have to kind of lock this down and say,
+немного усложнить код
 
 3295
 02:23:32,851 --> 02:23:34,946
-all right, it's gonna
-return a favorite food.
+и сказать что метод возвращает
+тип FavoriteFood.
 
 3296
 02:23:34,946 --> 02:23:38,420
-And then inside of here, we're
-gonna have to possibly need
+И внутри нашего клласса нам нужен
+будет val поле
 
 3297
 02:23:38,420 --> 02:23:43,413
-a let me say vowel instance
-equals favorite food.
+в котором мы будем хранить
+наш единственный экзепляр.
 
 3298
 02:23:49,820 --> 02:23:52,080
-And we start getting a lot
-into a lot of code here
+И теперь нам нужно будет
+написать очень много
 
 3299
 02:23:52,080 --> 02:23:53,100
-to kind of start managing this.
+кода чтобы все это разрулить.
 
 3300
 02:23:53,100 --> 02:23:54,900
-You can kind of start to
-see that we're gonna start
+Вы уже наверное начали замечать,
 
 3301
 02:23:54,900 --> 02:23:58,320
-getting out of control,
-we need to start handling,
+что ситуация выходит из под контроля
+и, поверьте, это только начало работы -
 
 3302
 02:23:58,320 --> 02:24:01,070
-create the new instance here, et cetera.
+нужно создать хранилище
+для синглтона и так далее.
 
 3303
 02:24:01,070 --> 02:24:03,240
-Now, thankfully in Kotlin,
-this is a lot easier.
+Хорошая новость, что в котлине
+это все делается гораздо проще.
 
 3304
 02:24:03,240 --> 02:24:04,410
-We don't even need to do all this.
+На не нужно делать
+ничего из вышеперечисленного
 
 3305
 02:24:04,410 --> 02:24:06,510
-This is already handled for us.
+Котлин уже все умеет делать за нас.
 
 3306
 02:24:06,510 --> 02:24:09,200
-And to create a Singleton in Kotlin,
+И создать синглтон в Котлине
 
 3307
 02:24:09,200 --> 02:24:10,250
-it's actually really easy.
+очень просто.
 
 3308
 02:24:10,250 --> 02:24:11,950
-So I'm gonna delete this
-private constructor.
+Удалим привантый конструктор.
 
 3309
 02:24:11,950 --> 02:24:14,890
-All we have to do is change
-this class to object.
+И единственное что нужно сделать -
+заменить ключевое слово с class на object.
 
 3310
 02:24:15,760 --> 02:24:19,250
-Now time, we only have one
-instance of favorite food
+и теперь у нас будет
+единственный экземпляр любимой еду
 
 3311
 02:24:19,250 --> 02:24:20,360
-at any time.
+в любой момент времени.
 
 3312
 02:24:20,360 --> 02:24:22,000
-So now if I go favorite food,
+И теперь я просто могу написать
+FavoriteFood
 
 3313
 02:24:25,408 --> 02:24:26,630
-so just give me a favorite food.name,
+дай мне название блюда
 
 3314
 02:24:29,723 --> 02:24:32,920
-excuse me, I could say print line of this,
+прошу прощения, я напишу printl,
+чтобы вывести это в консоль
 
 3315
 02:24:32,920 --> 02:24:35,280
-favorite food.name and
-we're gonna see unknown.
+FavoriteFood.name и мы увидим
+в консоли "unknown".
 
 3316
 02:24:35,280 --> 02:24:37,940
-So if we run this, we'll see unknown.
+Если запущу программу, увидим "unknown"
 
 3317
 02:24:37,940 --> 02:24:39,130
-Of course, this will say unknown.
+И результат верный.
 
 3318
 02:24:39,130 --> 02:24:40,340
-Now, if I were to change this,
+Если я хочу поменять название,
 
 3319
 02:24:40,340 --> 02:24:45,340
-I'd say favorite food.name
-equals maybe you love.
+я могу присвоить новое значение
+через поле name
 
 3320
 02:24:46,070 --> 02:24:47,650
-I know I do, I love watermelon.
+Я, например, люблю арбузы.
 
 3321
 02:24:48,795 --> 02:24:51,570
-So I'd say watermelon
-and our to run it again.
+Я запишу арбуз и снова запущу
 
 3322
 02:24:51,570 --> 02:24:54,940
-We could see still unknown
-because we didn't print it here.
+мы снова увидим "unknown",
+потому что мы вывели его только до
 
 3323
 02:24:54,940 --> 02:24:56,140
-So let's print it again.
+изменения названия.
 
 3324
 02:24:57,090 --> 02:24:59,320
-If I print it now, it'll say watermelon.
+Если я сейчас выведу, то мы увидим арбуз
 
 3325
 02:24:59,320 --> 02:25:02,710
-So I've just only have one
-instance of this at all.
+И у нас будет только один экземпляр
 
 3326
 02:25:02,710 --> 02:25:05,590
-So now even if I were
-to create a function,
+Создадим функцию,
 
 3327
 02:25:05,590 --> 02:25:09,250
-so I'll say fun, let's
-just call it do stuff.
+напрмер "doStuff"
 
 3328
 02:25:09,250 --> 02:25:11,000
-And then do stuff is
-going to do something.
+и она будет что-то делать.
 
 3329
 02:25:11,000 --> 02:25:13,370
-And so I'm gonna say, favorite food.name
+И в ней я снова поменяю значение
 
 3330
 02:25:16,162 --> 02:25:17,462
-is maybe it's chicken now.
+пусть будет курица.
 
 3331
 02:25:18,400 --> 02:25:20,010
-Now, if I come back up
-here, I'm just gonna say,
+Теперь нужно эту функцию вызвать
 
 3332
 02:25:20,010 --> 02:25:21,210
-call, do stuff.
+просто напишем "doStuff"
 
 3333
 02:25:21,210 --> 02:25:22,043
-Oops.
+ой
 
 3334
 02:25:24,920 --> 02:25:25,860
-Say, do stuff.
+напишем doStuff
 
 3335
 02:25:27,390 --> 02:25:30,290
-Actually we need to define
-it before I call it.
+И нам нужно объявить ее до того
+как мы ее вызовем
 
 3336
 02:25:30,290 --> 02:25:32,390
-So I'm actually gonna take
-this and move this outside
+Я возьму все это и вынесу
+за нашу функцию.
 
 3337
 02:25:32,390 --> 02:25:35,470
-of our method here.
+Я возьму все это и вынесу
+за нашу функцию.
 
 3338
 02:25:37,370 --> 02:25:39,890
-So there we go, let's say, do stuff.
+Ура, наконец-то
 
 3339
 02:25:39,890 --> 02:25:42,460
-It's gonna call do stuff and
-then we'll say print line.
+Я вызову doStuff
+и потом снова
 
 3340
 02:25:44,072 --> 02:25:46,650
-I want you to print my
-favorite food.name again.
+вызову вывод в консоль и опять
+выведу имя любимого блюда.
 
 3341
 02:25:46,650 --> 02:25:48,890
-So what we should see here
-is we should see unknown
+И теперь мы увидим сначла "unknown"
 
 3342
 02:25:48,890 --> 02:25:51,004
-then we should print watermelon.
+потом увидим арбуз
 
 3343
 02:25:51,004 --> 02:25:52,350
-And then by the time we get
-here, it should say chicken.
+И теперь, когда мы дойдем
+сюда, должны увидеть курицу
 
 3344
 02:25:52,350 --> 02:25:54,930
-So even though we're calling
-instead of the do stuff method,
+Не смотря на то что мы вызываем
+изменение блюда в другом методе
 
 3345
 02:25:54,930 --> 02:25:57,930
-we're calling favorite food
-instead of a different scope.
+мы просто меняем наш синглтон
+из другого контекста.
 
 3346
 02:25:57,930 --> 02:25:59,470
-Right now we're in a main
-function scope of here,
+Мы теперь не в контексте функции main,
+а в контексте
 
 3347
 02:25:59,470 --> 02:26:01,860
-we're in the do stuff method scope.
+функции doStuff,
 
 3348
 02:26:01,860 --> 02:26:04,120
-What we're gonna see here
-is that this is treated
+мы все равно увидим, что наше
+любимое блюдо это синглтон
 
 3349
 02:26:04,120 --> 02:26:06,180
-as a singleton because
-there's only one instance
+и в программе есть
+только один экземпляр
 
 3350
 02:26:06,180 --> 02:26:07,013
-of it lying around.
+на все приложение.
 
 3351
 02:26:07,013 --> 02:26:09,640
-So once we run it, we should
-see unknown watermelon
+И когда запустим, увидим "unknown",
 
 3352
 02:26:09,640 --> 02:26:11,790
-and chicken as we do here.
+"watermelon" и "chiken" в конце.
 
 3353
 02:26:11,790 --> 02:26:14,180
-So the same thing can go inside of here.
+Та же самая логика будет
 
 3354
 02:26:14,180 --> 02:26:18,060
-For example, if we wanted
-to, let's do this right here.
+распространятся на ингридиенты
 
 3355
 02:26:18,060 --> 02:26:22,250
-So favorite food.ingredients.add
-let's just say salt,
+например тут мы добавим соль,
 
 3356
 02:26:25,540 --> 02:26:26,570
-everyone loves salt.
+какое блюдо без соли.
 
 3357
 02:26:28,247 --> 02:26:30,730
-And then I can actually print here.
+и я выведу ингридиенты тут.
 
 3358
 02:26:30,730 --> 02:26:33,340
-So print line, how many
-ingredients are here,
+И выведем ингридиенты
 
 3359
 02:26:33,340 --> 02:26:34,700
-I'll just print the first one's
+Я просто выведу первый ингридиент
+с помощью специального метода
 
 3360
 02:26:34,700 --> 02:26:36,820
-a favorite food.ingredients.first.
+FavoriteFood.ingredients.first()
 
 3361
 02:26:37,890 --> 02:26:40,940
-It'll print the first one here and then,
+этот метод выведет первый элемент
+в нашем списке ингридиентов
 
 3362
 02:26:41,795 --> 02:26:43,430
-and maybe instead of do so
-let's actually run that to see
+и давайте запустим и проверим,
 
 3363
 02:26:43,430 --> 02:26:44,870
-what that looks like.
+как это все выглядит.
 
 3364
 02:26:44,870 --> 02:26:47,530
-So we'll see that the salt
-is the first ingredient
+И правда видим, соль первым ингридиентом
+в нашем любимом блюде
 
 3365
 02:26:47,530 --> 02:26:48,363
-that's printed there.
+вот тут.
 
 3366
 02:26:48,363 --> 02:26:51,500
-Now inside of do stuff, again
-just to demonstrate this,
+Давайте снова что-нибудь изменим
+внутри функции doStuff
 
 3367
 02:26:51,500 --> 02:26:54,150
-let's just go ahead and say
-favorite food.ingredients.clear.
+напрмер просто очистим список ингридиентов
+с помощью функции clear().
 
 3368
 02:26:54,150 --> 02:26:56,300
-So we're gonna clear out that list
+Она просто удаляет все элементы из списка
 
 3369
 02:26:56,300 --> 02:26:57,890
-and now I wanna print this.
+И снова выведем первый элемент
 
 3370
 02:26:57,890 --> 02:27:01,180
-So kind of put that, so
-it's a little more obvious.
+немного разделим код, чтобы было понятнее
 
 3371
 02:27:01,180 --> 02:27:05,970
-And there we go, kind of
-print break them apart.
+Вот так уже лучше.
 
 3372
 02:27:05,970 --> 02:27:08,530
-If you run this again,
-what we'll see here now
+И если запустим, то увидим
 
 3373
 02:27:08,530 --> 02:27:09,960
-is that the ingredients have been cleared
+что список ингридиентов очистился
 
 3374
 02:27:09,960 --> 02:27:12,680
-and we'll see that this list is empty.
+и увидим что соли больше нет.
 
 3375
 02:27:12,680 --> 02:27:16,810
-So now we get an exception
-here on main line 14,
+И нам выпадает исключение на строчке 14,
 
 3376
 02:27:16,810 --> 02:27:18,030
-because I'm calling first.
+потому что я вызываю метод first,
+но первого элемента нет.
 
 3377
 02:27:18,030 --> 02:27:19,480
-So what I can do here, something different
+Давайте немного изменим, чтобы не было
+исключения
 
 3378
 02:27:19,480 --> 02:27:22,030
-like first or null and
-that would actually give me
+например вызовем метод
+firstOrNull, который, если список
 
 3379
 02:27:22,030 --> 02:27:25,670
-a null value sheets should
-print null there, which it does.
+пустой, вернет нам null
 
 3380
 02:27:25,670 --> 02:27:27,040
-So we could say print null.
+Окей, теперь возвращается null.
 
 3381
 02:27:28,320 --> 02:27:31,090
-And so there's nothing in that
-list at this point in time.
+И теперь наш список пуст.
 
 3382
 02:27:31,090 --> 02:27:35,010
-So this is one way that
-you can create a singleton
+Мы рассмотрели самый лучший и
+легкий способ
 
 3383
 02:27:35,010 --> 02:27:36,240
-inside of Kotlin very easily.
+создавать синглтоны в котлине.
 
 3384
 02:27:36,240 --> 02:27:39,630
-So you're just gonna
-replace the class keyword
+Просто поменяйте "class"
 
 3385
 02:27:39,630 --> 02:27:41,090
-with object.
+на "object".
 
 3386
 02:27:41,090 --> 02:27:43,230
-And of course, you can also put methods
+И конечно внутрь синглтона вы можете
 
 3387
 02:27:43,230 --> 02:27:44,220
-inside of here as well.
+добавлять любые функции.
 
 3388
 02:27:44,220 --> 02:27:48,670
-So you can say fun, you can
-say number of ingredients,
+Напишем функцию, которая будет
 
 3389
 02:27:50,070 --> 02:27:51,910
-and this can be a very simple method
+возвращать кол-во ингридиентов
 
 3390
 02:27:52,758 --> 02:27:57,580
-that kind of just returns
-the ingredients.size.
+просто вернем размер списка
+ingredients.
 
 3391
 02:27:57,580 --> 02:28:00,400
-And of course, we could just
-call that from up here as well.
+И теперь можем это вызывать тут
 
 3392
 02:28:00,400 --> 02:28:03,600
-So print line, we can say,
+и выведем число в консоль
 
 3393
 02:28:03,600 --> 02:28:06,300
-favorite food.number of ingredients.
+FavoriteFood.numberOfIngredients
 
 3394
 02:28:07,150 --> 02:28:09,600
-And if we run that we
-should see zero at the end.
+И если запустим, должны увидеть
+ноль в конце вывода.
 
 3395
 02:28:11,180 --> 02:28:13,080
-Oops, it's asking us for a return type
+Упс, нас просят указать возвращаемый тип,
 
 3396
 02:28:13,999 --> 02:28:15,430
-that I did not specify,
-so I wanna say int.
+который мы забыли, напишем Int
 
 3397
 02:28:16,780 --> 02:28:19,190
-So I run the (indistinct) say zero.
+Запустим и увидим ноль.
 
 3398
 02:28:19,190 --> 02:28:23,290
-If we come back up top here
-where I added an ingredient,
+Вернемся в самый верх,
+где мы добавляли  ингридиенты
 
 3399
 02:28:23,290 --> 02:28:28,040
-we should see one right after we see salt.
+сразу после того как добавили соль.
 
 3400
 02:28:28,040 --> 02:28:31,340
-So we'll see one then chicken,
-of course it was cleared out
+Увидим цифру один, потом курицу,
+потом все очищается
 
 3401
 02:28:31,340 --> 02:28:34,320
-inside of the do stuff
-method, the ingredients were.
+из-за doStuff функции.
 
 3402
 02:28:34,320 --> 02:28:37,530
-And then of course we printed
-the number of ingredients too.
+И потом мы выводи ноль.
 
 3403
 02:28:37,530 --> 02:28:40,258
-So we have a singleton,
-we can have properties.
+В объекте синглтоне
+у нас могут быть различные поля
 
 3404
 02:28:40,258 --> 02:28:42,000
-We can have various
-different items in here.
+Можно вообще использовать что угодно,
+как с обычными классани
 
 3405
 02:28:42,000 --> 02:28:42,860
-We can have functions,
+Может быть больше функций
 
 3406
 02:28:42,860 --> 02:28:44,520
-but this is now traded as a singleton.
+но у этого класса будет только один
+уникальный экземпляр.
 
 3407
 02:28:44,520 --> 02:28:46,820
-I can not create multiple instances of it.
+И я не могу создать
+второй такой вообще никак
 
 3408
 02:28:46,820 --> 02:28:49,600
-And if I were to print off, if I have two,
+И если я выведу их сравнение
 
 3409
 02:28:49,600 --> 02:28:53,960
-print ln, favorite food
-equals equals favorite food.
+сделаем FavoriteFood == FavoriteFood
 
 3410
 02:28:53,960 --> 02:28:55,710
-What do we think would happen here,
+что тут должно быть результатом?
 
 3411
 02:28:57,090 --> 02:28:59,730
-is this equal to itself,
-is this the same instance?
+будет ли оно равно само себе,
+будет это один и тот же экземпляр?
 
 3412
 02:28:59,730 --> 02:29:01,660
-Let's take a look here
-and we'll see down here,
+И в результате внизу в консоли
+мы увидим "true",
 
 3413
 02:29:01,660 --> 02:29:02,670
-we have a true,
+они равны
 
 3414
 02:29:04,516 --> 02:29:06,230
-so these are actually
-the same exact objects
+но не просто равны, это один и тот же
 
 3415
 02:29:06,230 --> 02:29:07,063
-that are stored in memory.
+объект в памяти программы
 
 3416
 02:29:07,063 --> 02:29:09,740
-And that's how you can
-create a singleton in Kotlin.
+На этом завершим разговор
+про синглтоны.
 
 3417
 02:29:09,740 --> 02:29:11,870
