@@ -15065,389 +15065,381 @@ FavoriteFood.numberOfIngredients
 
 3417
 02:29:09,740 --> 02:29:11,870
-To create a constant inside of Kotlin,
+Есть несколько способов
+создать константное
 
 3418
 02:29:11,870 --> 02:29:13,530
-there are a few ways to do it.
+значение в котлин
 
 3419
 02:29:13,530 --> 02:29:16,180
-The first is a local constant.
+Первый это создать локальную константу
 
 3420
 02:29:16,180 --> 02:29:18,610
-Now the is actually let me
-say, there's a const keyword
+Стоит заранее сказать, что
+в Котлине есть ключевое слово
 
 3421
 02:29:18,610 --> 02:29:19,950
-for helping to find a constant.
+const чтобы создать константу
 
 3422
 02:29:19,950 --> 02:29:23,020
-But what you'll see here
-is the val is only allowed
+Но если вы попробуете сделать это
+в классе, вы увидите, что его можно
 
 3423
 02:29:23,020 --> 02:29:25,050
-on top level const, excuse me.
+исопльзовать только на верхних уровнях
+мы обсудим это позже
 
 3424
 02:29:25,050 --> 02:29:27,190
-If we get rid of file
-here, we'll see that const
+Подсказка говорит,
+что нельзя объявить
 
 3425
 02:29:27,190 --> 02:29:28,860
-is not applicable for a member function
+поле класса как константу
 
 3426
 02:29:28,860 --> 02:29:30,680
-or properties in that case.
+поле класса как константу
 
 3427
 02:29:30,680 --> 02:29:32,680
-So we'll need to get rid of that.
+Удалим ключевое слово
 
 3428
 02:29:32,680 --> 02:29:36,170
-Now, constants are usually
-defined in uppercase
+Константы можно без проблем создавать
+с помощью "val" и обычно
 
 3429
 02:29:36,170 --> 02:29:38,030
-and separated with underscores
+их пошут большими буквами и слова
+разделяют нижними подчеркиваниями
 
 3430
 02:29:38,030 --> 02:29:40,030
-is kind of the defacto standard
+это просто стандарт код стайла,
+который быстро дает понять
 
 3431
 02:29:40,030 --> 02:29:42,490
-for many JVM based languages.
+что вы работаете с константой.
 
 3432
 02:29:42,490 --> 02:29:44,680
-But let's say that we have a constant,
+Давайте допустим, что у нас есть
 
 3433
 02:29:44,680 --> 02:29:46,620
-that's a max age of 18.
+константа максимального возраста,
+пусть будет 18
 
 3434
 02:29:46,620 --> 02:29:50,260
-Perhaps this is a application
-for a children's application
+допустим что это детское приложение
 
 3435
 02:29:50,260 --> 02:29:53,400
-and we want the max age to
-be 18 for whatever reason.
+и у нас есть максимальный возраст пользователя
 
 3436
 02:29:53,400 --> 02:29:55,480
-Now I can use this inside of here,
+Теперь я могу использовать
+константу в функциях
 
 3437
 02:29:55,480 --> 02:29:58,690
-I can say max age and I
-can do something with it
+я могу ее получить
 
 3438
 02:29:59,530 --> 02:30:00,800
-and so forth.
+и что-то с ней сделать
 
 3439
 02:30:00,800 --> 02:30:04,090
-It's a val, it can't be
-changed, so it's a mutable.
+Она объявлена через "val"
+и ее никто не поменяет
 
 3440
 02:30:04,090 --> 02:30:06,540
-Now, if I'm back inside
-of the main function,
+Если вернемся в main
 
 3441
 02:30:06,540 --> 02:30:08,090
-I can still access this though.
+то мы можем так же ее вызвать
 
 3442
 02:30:08,090 --> 02:30:09,290
-So let's say view user.
+с помощью нашего
+созданного пользователя.
 
 3443
 02:30:10,365 --> 02:30:11,900
-If I still want it to be locked down,
+Если я захочу, чтобы ее
+можно было использовать
 
 3444
 02:30:11,900 --> 02:30:14,670
-I would have to actually
-provide some level of modifier
+внутри класса, но запретить
+доступ к нему
 
 3445
 02:30:14,670 --> 02:30:17,890
-on it to see 'cause we can
-access max age right here.
+со стороны
 
 3446
 02:30:17,890 --> 02:30:19,730
-If I didn't wanna access max age,
+я могу использовать модификатор
 
 3447
 02:30:19,730 --> 02:30:22,160
-what I would need to do is
-throw a visibility modifier
+видимости, или иначе модификатор
+доступа "private".
 
 3448
 02:30:22,160 --> 02:30:23,940
-on there saying, hey, this is private,
+Это сужает видимость этой константы
 
 3449
 02:30:23,940 --> 02:30:27,530
-which is private to just
-the scope of this class.
+и доступна она будет только в
+классе где объявлена.
 
 3450
 02:30:27,530 --> 02:30:29,770
-Now main, you'll see here,
-we don't have access to.
+В main функции вы увидите ошибку
+потому что main теперь не видит константу
 
 3451
 02:30:29,770 --> 02:30:34,166
-So can I access max age,
-it's private inside of user.
+но она все еще доступна внутри
+класса пользователя.
 
 3452
 02:30:34,166 --> 02:30:35,720
-So that's the first
-way that you can do it.
+Это первый способ создания констант.
 
 3453
 02:30:35,720 --> 02:30:39,060
-Now you can also create
-this again is all is scoped
+Есть только одна проблема,
+чтобы пользоваться
 
 3454
 02:30:39,060 --> 02:30:41,040
-to the instance of the class.
+константой, нам обязательно нужно
 
 3455
 02:30:41,040 --> 02:30:44,390
-So if we were to see max age over here,
+создать экзепляр класса,
 
 3456
 02:30:44,390 --> 02:30:46,370
-let's say user.max age,
+и вызвать user.MAX_AGE
 
 3457
 02:30:46,370 --> 02:30:51,370
-this max age is scoped the
-instance of this user here.
+Но константы бывают априори,
+напрмер кол-во океанов,
 
 3458
 02:30:53,776 --> 02:30:54,609
-So it's instance of this user.
+И не хотелось бы что-то для этого создавать.
 
 3459
 02:30:54,609 --> 02:30:58,690
-So if you want it to be a
-more appropriate constant,
+Для того чтобы константа
+была независима от создания объектов
 
 3460
 02:30:58,690 --> 02:31:01,170
-as you see in our languages,
-you would think to do this,
+то мы можем применить уже
+известный нам метод -
 
 3461
 02:31:01,170 --> 02:31:03,550
-but what we'd actually need
-here is a companion object
+создать companion object
 
 3462
 02:31:03,550 --> 02:31:05,350
-inside the companion object.
+и объявить ее внутри.
 
 3463
 02:31:05,350 --> 02:31:10,350
-We say, we want to say
-const, val max age equals 18.
+Теперь мы можем использовать "const"
+и напишем что возраст так же равен 18
 
 3464
 02:31:10,980 --> 02:31:14,410
-Now inside of here again, we
-can access max age very easily
+Теперь мы можем получить доступ к
+константе гораздо проще
 
 3465
 02:31:14,410 --> 02:31:17,180
-inside of our actual class.
+и без создания экземпляра класса
 
 3466
 02:31:17,180 --> 02:31:19,927
-It's local to the class
-we have access to it.
+И она еще и локальная для нашего
+класса, поэтому нужно только название
 
 3467
 02:31:19,927 --> 02:31:23,370
-But however, if we say user max age,
+Но если теперь мы напишем user.MAX_AGE
 
 3468
 02:31:23,370 --> 02:31:25,600
-you'll notice that we don't
-have a max age on user.
+увидим, что больше она
+не привязана к конкретному пользователю.
 
 3469
 02:31:25,600 --> 02:31:29,630
-But we can access it because it's inside
+Но мы можем получить к ней доступ
+через название класса
 
 3470
 02:31:29,630 --> 02:31:33,540
-of a companion object,
-it's scoped to the actual
+и теперь это синглтон
 
 3471
 02:31:33,540 --> 02:31:37,100
-to be a Singleton as part
-of the user class here,
+для класса пользователя
 
 3472
 02:31:37,100 --> 02:31:39,960
-it's kind of a Singleton
-scoped for the value.
+можем вызвать ее через User.MAX_AGE
 
 3473
 02:31:39,960 --> 02:31:42,180
-So it user.max age.
+можем вызвать ее через User.MAX_AGE
 
 3474
 02:31:42,180 --> 02:31:45,040
-And there we go, now we can
-actually view the max age,
+Теперь мы можем использовать ее
 
 3475
 02:31:45,040 --> 02:31:47,700
-which means that we can use it outside
+где угодно, не создавая при этом
 
 3476
 02:31:47,700 --> 02:31:49,560
-in various different locations.
+объект пользователя
 
 3477
 02:31:49,560 --> 02:31:51,700
-So it's basically almost
-users almost treated
+И класс User это что-то вроде
+нэймспейса
 
 3478
 02:31:51,700 --> 02:31:54,100
-as some type of namespace.
+для нашей константы
 
 3479
 02:31:54,100 --> 02:31:56,920
-Almost, you could see it
-as that way for max age.
+можно рассуждать так.
 
 3480
 02:31:56,920 --> 02:31:58,900
-So again, we have the
-local type we have inside
+У нас есть есть константа
 
 3481
 02:31:58,900 --> 02:32:00,110
-of the companion object.
+которая объявлена в
+объекте компаньоне.
 
 3482
 02:32:01,456 --> 02:32:03,610
-Now also a lot of times
-you'll notice an applications,
+В ходе вашего обучения вы заметите
 
 3483
 02:32:03,610 --> 02:32:08,030
-many people prefer to put their constants
+что люди обычно создают
 
 3484
 02:32:08,030 --> 02:32:11,570
-and maybe to a new file,
-they'll call it constants.
+отдельный файл для констант
 
 3485
 02:32:11,570 --> 02:32:12,403
-constants.kt.
+допустим constants.kt
 
 3486
 02:32:14,399 --> 02:32:16,150
-And then we'll do is we'll
-actually create an object
+И в нем мы создадим object
 
 3487
 02:32:16,150 --> 02:32:17,650
-and they'll call it constants.
+который назовем "константы"
 
 3488
 02:32:18,798 --> 02:32:20,915
-And you remember when we
-use the object keyword,
+И вы помните, что object
 
 3489
 02:32:20,915 --> 02:32:21,748
-that's a Singleton.
+это для создания синглтон класса
 
 3490
 02:32:21,748 --> 02:32:25,030
-And so what we can say inside
-of here there is const val
+И внутри него мы уже можем
 
 3491
 02:32:25,030 --> 02:32:29,350
-max age equals 18.
+объявить нашу константу
+MAX_AGE = 18
 
 3492
 02:32:29,350 --> 02:32:33,110
-And then we might want to say, const, val,
+и еще одну, например
 
 3493
 02:32:33,110 --> 02:32:35,200
-whatever minimum age requirement is five,
+минимальный возраст - 5 лет
 
 3494
 02:32:35,200 --> 02:32:36,530
-for whatever reason.
+по какой-то причине.
 
 3495
 02:32:36,530 --> 02:32:38,970
-And then back inside of our main class,
+и внутри main функции
 
 3496
 02:32:38,970 --> 02:32:42,140
-we can then use that as we've
-seen in other languages.
+мы можем вызвать
 
 3497
 02:32:42,140 --> 02:32:47,120
-So constants.max age, we
-have constant.mean age
+наши максимальные и минимальный
+возраст, через объект Constants
 
 3498
 02:32:47,120 --> 02:32:49,240
-that we can also access as well.
+который нам доступен в любой момент.
 
 3499
 02:32:49,240 --> 02:32:52,240
-Now, these all don't have
-to be inside of objects
+В Котлине на самом деле не нужно
+указывать константы внутри object класса
 
 3500
 02:32:52,240 --> 02:32:55,230
-or classes or anything that
-can be also at a top level.
+можно просто объявлять вершнеуровневые
+константы в файле
 
 3501
 02:32:55,230 --> 02:32:57,340
-So it can just kind of
-be floating on their own
+они просто будут находиться в файле
+и не будут привязаны
 
 3502
 02:32:57,340 --> 02:32:58,900
-in their own files.
+к конкретным названиям
 
 3503
 02:32:58,900 --> 02:33:03,320
