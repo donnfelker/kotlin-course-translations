@@ -15443,1344 +15443,1291 @@ MAX_AGE = 18
 
 3503
 02:32:58,900 --> 02:33:03,320
-So maybe we wanna have
-implementation that looks like this.
+Напирмер нам нужна такая константа
 
 3504
 02:33:03,320 --> 02:33:08,140
-Say, const val max age equals 18.
+Например MAX_AGE = 18
 
 3505
 02:33:08,140 --> 02:33:10,899
-Now this could be referenced over here.
+Теперь мы можем использовать эту
+константу тут
 
 3506
 02:33:10,899 --> 02:33:11,880
-There's max ages in the root of the file.
+потому что константа находится в корне
+нашего файла
 
 3507
 02:33:11,880 --> 02:33:13,630
-I can be over here instead of user.
+И я так же могу использовать ее
+в классе пользователя
 
 3508
 02:33:14,944 --> 02:33:18,520
-I could say something like this, max age.
+и могу вызвать ее
 
 3509
 02:33:18,520 --> 02:33:20,260
-Now this is again, when
-we go to implementation,
+Если мы перейдем к определению
+константы
 
 3510
 02:33:20,260 --> 02:33:23,328
-it's going to this root
-level file over here.
+нас выкинет в файл main.kt
 
 3511
 02:33:23,328 --> 02:33:25,450
-Now, which one should you use?
+Какие константы лучше использовать?
 
 3512
 02:33:25,450 --> 02:33:29,650
-I prefer to keep any of the
-constants that are applicable
+Я предпочитаю хранить константы
+связанные с классом
 
 3513
 02:33:29,650 --> 02:33:32,250
-to the user inside of the user class.
+в объекте компаньоне класса
 
 3514
 02:33:32,250 --> 02:33:35,030
-So I would have a companion object for me,
+Это кажется логичным
 
 3515
 02:33:35,030 --> 02:33:37,630
-and I would put const val max age,
+И в случае с пользователем
+мы можем добавить MAX_AGE сюда
 
 3516
 02:33:37,630 --> 02:33:39,580
-if this was only pertinent to the user.
+если это константа только для пользователя.
 
 3517
 02:33:40,442 --> 02:33:42,090
-If I have a constant that
-is going to be shared
+Если мне нужна константа, которая будет
 
 3518
 02:33:42,090 --> 02:33:44,660
-across many different
-parts of the application,
+использоваться в разных частях
+нашего приложения
 
 3519
 02:33:44,660 --> 02:33:47,230
-at that time, I might put
-a create a constants file
+то я предпочитаю создавать
+класс синглтон и класть
 
 3520
 02:33:47,230 --> 02:33:49,720
-where it's an object
-and I call it constants.
+в него константы.
+сделаем вот такой объект
 
 3521
 02:33:49,720 --> 02:33:52,730
-And then I have const val, et cetera,
+и сюда пишем const val и так далее
 
 3522
 02:33:52,730 --> 02:33:54,600
-ABC, whatever the value is,
+"ABC", какое то значени
 
 3523
 02:33:54,600 --> 02:33:57,420
-and it could be food or whatever.
+и это например какая-то еда
 
 3524
 02:33:57,420 --> 02:33:59,050
-And then I can access that from anywhere
+И теперь у меня есть доступ к этой
 
 3525
 02:33:59,050 --> 02:34:02,660
-inside of my application
-using the constants
+константе из любого места в
+приложении, константы в данном случае
 
 3526
 02:34:03,940 --> 02:34:07,300
-as kind of a default standard there.
+это какие-то дефолтные данные нашего
+приложения.
 
 3527
 02:34:07,300 --> 02:34:09,330
-So that's the way that I would do it.
+И скорее всего вы тоже будете так делать
 
 3528
 02:34:09,330 --> 02:34:12,290
-If you're going to need
-constants, I prefer to scope them
+Если нужны константы то лучше сначала
+попытаться привязать их к какому-нибудь
 
 3529
 02:34:12,290 --> 02:34:13,690
-to the class that they have.
+классу в приложении
 
 3530
 02:34:14,891 --> 02:34:17,410
-Again, if I don't need this
-constant on the outside,
+Если вам например не нужно чтобы другие
+классы ее видели
 
 3531
 02:34:17,410 --> 02:34:20,210
-I don't need it visible
-on the outside of this,
+и не могли использовать
 
 3532
 02:34:20,210 --> 02:34:22,120
-then what you can also do is just go ahead
+вы можете закрыть их с помощью private
 
 3533
 02:34:22,120 --> 02:34:24,390
-and you don't even have to
-use the companion object
+или если вам вообще нужно значение
+для экземпляра вашего классо
 
 3534
 02:34:24,390 --> 02:34:27,510
-if you don't want to and
-you can just mark this
+то можете писать константу в поле
 
 3535
 02:34:27,510 --> 02:34:31,900
-as a private and that can
-be just stored as a max age.
+и тоже пометить ее как private
 
 3536
 02:34:32,890 --> 02:34:35,460
-Now, what you so think about
-it as if you were on too,
+Если вам константа не нужна
+в экземплярах и вы не хотите создавать
 
 3537
 02:34:35,460 --> 02:34:38,300
-this is going to be
-stored around as a class,
+объекты, чтобы ее использовать
 
 3538
 02:34:38,300 --> 02:34:39,420
-part of the class as well.
+объекты, чтобы ее использовать
 
 3539
 02:34:39,420 --> 02:34:41,530
-So if you don't want that
-as part of the class,
+Вы можете использовать
 
 3540
 02:34:41,530 --> 02:34:44,020
-you can just put it inside
-the companion object
+объект компаньон и повесить
 
 3541
 02:34:44,020 --> 02:34:45,620
-and you can mark this as private
+модификатор доступа private
 
 3542
 02:34:46,533 --> 02:34:47,366
-inside the companion object.
+внутри объекта компаньона на константу.
 
 3543
 02:34:47,366 --> 02:34:49,860
-It will still be visible
-inside of your class.
+Эта константа все еще будет видима
+внутри вашего класса.
 
 3544
 02:34:49,860 --> 02:34:51,830
-So max age here, but if we go back
+Напишем MAX_AGE тут, все хорошо
 
 3545
 02:34:51,830 --> 02:34:55,050
-to the main implementation
-and we say user,
+если вернемся в main.kt,
+и создадим пользователя
 
 3546
 02:34:56,252 --> 02:34:57,540
-and we create a new user again,
+и создадим пользователя
 
 3547
 02:34:59,857 --> 02:35:02,350
-and I try to access that
-user max age will notice
+и я попытаюсь вызвать MAX_AGE
 
 3548
 02:35:02,350 --> 02:35:05,520
-that it's not available because
-I've marked it as private.
+то увидим, что константа недоступна
+потому что она помечена как private.
 
 3549
 02:35:05,520 --> 02:35:08,850
-So now if I remove private
-and I go back back to here,
+Если я уберу модификатор "private"
 
 3550
 02:35:08,850 --> 02:35:13,170
-let's see we have access user.max age.
+то мы получим доступ к user.MAX_AGE
 
 3551
 02:35:14,494 --> 02:35:18,517
-If we go here, private
-user.max age is not,
+Вернем private
 
 3552
 02:35:19,500 --> 02:35:20,910
-we can't even access it inside of here,
+У нас нет доступа к константе
 
 3553
 02:35:20,910 --> 02:35:25,140
-even though it's scoped to the class V
+даже когда это константа класса
 
 3554
 02:35:25,140 --> 02:35:26,890
-in the companion object,
-I don't have access
+и находится она в объекте компаньоне
 
 3555
 02:35:26,890 --> 02:35:29,320
-because we've slapped the
-private modifier on there.
+вот на что способен модификатор private
 
 3556
 02:35:29,320 --> 02:35:34,270
-So again, just to recap, if
-you wanna have your constants,
+Небольшой рекап всего
+что мы сейчас делали
 
 3557
 02:35:34,270 --> 02:35:36,670
-I prefer to keep them
-scoped locally to the class
+Если вам нужны константы,
+постарайтесь отнести их к какому-то
 
 3558
 02:35:36,670 --> 02:35:37,503
-that they belong to.
+класу, который подходит по смыслу
 
 3559
 02:35:37,503 --> 02:35:39,800
-If they can be accessed and
-are usable by many classes
+Если константа нужна в нескольких местах
 
 3560
 02:35:39,800 --> 02:35:41,850
-and have kind of cutting concerns,
+и будет использоваться
+нескольким классам
 
 3561
 02:35:42,770 --> 02:35:45,080
-I will then usually put them
-in some type of constants file.
+то я обычно выделяю для этого
+какой-то объект
 
 3562
 02:35:45,080 --> 02:35:48,080
-I rarely will ever use
-them at a root level,
+Я редко выношу константы на верхний
+уровень класса
 
 3563
 02:35:48,080 --> 02:35:51,910
-such as this const val foo
-or whatever equals var.
+как вот эту константу foo
 
 3564
 02:35:51,910 --> 02:35:54,640
-These are something
-things that I don't do,
+Мое личное мнение, что
 
 3565
 02:35:54,640 --> 02:35:57,040
-some of them, because these
-are kind of just randomly
+константы в таком виде ни к чему не
+прявязаны и рандомно подвешены
 
 3566
 02:35:57,040 --> 02:36:00,560
-floating around in some unknown space
+в неисветных местах в коде
 
 3567
 02:36:00,560 --> 02:36:02,550
-and don't seem to be scoped too well.
+очень легко запутаться и забыть про них.
 
 3568
 02:36:02,550 --> 02:36:04,580
-I have to keep things
-organized in my application.
+В моих приложениях вещи строго организованы
 
 3569
 02:36:04,580 --> 02:36:06,200
-So it depends on what your use cases,
+Но все зависит от вашего приложения
+и кейсов использования констант,
 
 3570
 02:36:06,200 --> 02:36:08,960
-but that's how you can
-create a constant in Kotlin.
+но вот такими разными способами
+вы можете созжавать константы в Котлин.
 
 3571
 02:36:08,960 --> 02:36:12,360
-Let's say you're building a
-wizard to create a new user
+Давайте представим что нам нужен
 
 3572
 02:36:12,360 --> 02:36:13,330
-through some type of screen.
+новый пользователь
 
 3573
 02:36:13,330 --> 02:36:17,750
-And you know that you want
-a to store the favorite city
+и у него нужно указать
+любимый город
 
 3574
 02:36:17,750 --> 02:36:19,560
-of a particular user in a variable.
+в изменяемй переменной
 
 3575
 02:36:20,460 --> 02:36:22,290
-And so you could say it's a string.
+и мы можем допустить что это строка
 
 3576
 02:36:23,210 --> 02:36:26,530
-Now, by default, we can't
-just leave this uninitialized,
+По дефолту мы должны
+проинициализировать это поле
 
 3577
 02:36:26,530 --> 02:36:29,208
-we're gonna get an error
-here that says the property
+иначе у нас будет ошибка о том
 
 3578
 02:36:29,208 --> 02:36:30,041
-must be initialized.
+что переменная непроинициализированна.
 
 3579
 02:36:30,041 --> 02:36:32,840
-And so we could say empty
-string, now that would work.
+И мы можем указать пустую строку
+чтобы это работало.
 
 3580
 02:36:32,840 --> 02:36:36,830
-So what we could say here
-is when we print this
+И теперь в функции "toString"
 
 3581
 02:36:36,830 --> 02:36:38,310
-to the screen, we don't wanna say,
+мы можем вывести
 
 3582
 02:36:38,310 --> 02:36:41,783
-so say Donn Felker's favorite city is,
+что любимый город нашего
 
 3583
 02:36:43,330 --> 02:36:47,536
-and then we'd print the
-favorite city so forth.
+пользователя такой-то.
 
 3584
 02:36:47,536 --> 02:36:48,501
-We can print the favorite city.
+Давайте теперь выведем на экран.
 
 3585
 02:36:48,501 --> 02:36:51,900
-So let's go back to the main file here.
+вернемся в main функцию
 
 3586
 02:36:51,900 --> 02:36:55,580
-And inside of here,
-what we can say is user,
+И внутри можем создать пользователя
 
 3587
 02:36:55,580 --> 02:36:58,161
-we'll create the new user
-and it will print the user
+и вывести его через println
 
 3588
 02:36:58,161 --> 02:36:59,266
-to the screen.
+в консоль.
 
 3589
 02:36:59,266 --> 02:37:01,080
-And when we print it, we'll
-see Donn Felker's favorite city
+И в консоли мы видим что
 
 3590
 02:37:01,080 --> 02:37:03,930
-is blank, but now, however,
-this isn't really useful.
+любимый город пустой,
+не очень полезная информация.
 
 3591
 02:37:03,930 --> 02:37:06,330
-Kotlin does provide us with
-the ability to say like,
+В Котлине есть способ сказать компилятору
 
 3592
 02:37:06,330 --> 02:37:10,210
-hey, I know I'm gonna need a variable
+что мы не будем инициализировать
+переменную сразу
 
 3593
 02:37:10,210 --> 02:37:12,160
-and I know that I need it populated,
+но к моменту вызова она точно будет
+проинициализированна
 
 3594
 02:37:12,160 --> 02:37:15,380
-but I kind of know that
-it's not gonna be populated
+и поэтому в момент объявления мы ничего
 
 3595
 02:37:15,380 --> 02:37:17,870
-just yet, so just go ahead and trust me,
+в нее не запшем, но дадим компилятору
 
 3596
 02:37:17,870 --> 02:37:20,120
-I'm going to initialize this thing,
+понять, что мы точно проинициализируем
 
 3597
 02:37:20,120 --> 02:37:22,890
-but I'm not gonna do it in right away.
+переменную как можно быстрее.
 
 3598
 02:37:22,890 --> 02:37:24,410
-So basically as soon as it's variable,
+И получается, что нашу переменную
+мы объявили,
 
 3599
 02:37:24,410 --> 02:37:29,087
-it's properties declared,
-it's not ready to use.
+но не можем ее использовать
+сразу
 
 3600
 02:37:30,470 --> 02:37:31,830
-And I'm telling Kotlin, hey, that's okay,
+но мы говорим компилятору, что это нормально
 
 3601
 02:37:31,830 --> 02:37:35,280
-because I'm going to initialize
-it later at some point.
+и мы ее обязательно проинициализируем
+перед использованием.
 
 3602
 02:37:35,280 --> 02:37:38,490
-But let's assume for some reason
-that I don't initialize it.
+Допустим, что по какой-то причине мы забыли
+проинициализировать переменную
 
 3603
 02:37:38,490 --> 02:37:39,790
-So what's gonna happen here
+и во время выполнения программы,
 
 3604
 02:37:39,790 --> 02:37:42,100
-when we call the two string method,
+когда мы вызовем метод toString,
 
 3605
 02:37:42,100 --> 02:37:43,330
-let's go back to the main file.
+давайте вернемся в main файл
 
 3606
 02:37:43,330 --> 02:37:47,130
-So we haven't told Kotlin
-about the favorite city at all.
+Мы не сказали какой будет любимый город
 
 3607
 02:37:47,130 --> 02:37:49,920
-Now, if we run this again,
-what we're going to notice
+ПОэтому, если запустим
 
 3608
 02:37:49,920 --> 02:37:52,100
-is we're going to get Kotlin blows up here
+то Котлин выдаст ошибку
 
 3609
 02:37:52,100 --> 02:37:55,330
-and throws an uninitialized
-property access exception.
+что lateinit поле должно
 
 3610
 02:37:55,330 --> 02:37:58,325
-And it says that the late in it property
+быть проинициализированно
+перед использованием
 
 3611
 02:37:58,325 --> 02:37:59,940
-from my favorite city
-has not been initialized.
+а сейчас в нем ничего нет
 
 3612
 02:37:59,940 --> 02:38:01,620
-So Kotlin's basically
-letting us know like,
+И Котлин как бы говорит:
+"Вы обежали, что что-то будет
 
 3613
 02:38:01,620 --> 02:38:04,890
-hey, you told me that you
-were going to initialize
+в этом поле к моменту использования,
+но вы так ничего и не
 
 3614
 02:38:04,890 --> 02:38:07,220
-favorite city at some
-point before you used it.
+положили, я так работать не могу"
 
 3615
 02:38:07,220 --> 02:38:12,220
-However, you tried to use it
-down here on user line eight,
+Потому что к моменту вызова на строке 8
 
 3616
 02:38:12,380 --> 02:38:13,790
-which were on here.
+вот тут
 
 3617
 02:38:13,790 --> 02:38:16,190
-You used it down here and
-it wasn't initialized.
+мы использовали функцию с вызовом
+lateinit поля,
 
 3618
 02:38:17,280 --> 02:38:19,860
-We're not allowing that to
-happen, we're gonna blow up,
+которое не было проинициализированно,
+в таких случаях программа навернется,
 
 3619
 02:38:19,860 --> 02:38:21,660
-and Kotlin throws the uninitialized
+и Котлин выбросит
 
 3620
 02:38:22,534 --> 02:38:23,367
-property access exceptions.
+исключение.
 
 3621
 02:38:23,367 --> 02:38:26,450
-So now the nice thing here is easy to fix.
+Это можно легко поправить
 
 3622
 02:38:26,450 --> 02:38:29,840
-So this allows me some
-kind of some safety to know
+А сама ошибка дает понять
 
 3623
 02:38:30,731 --> 02:38:32,030
-that my application is working correctly,
+что мое приложение работает неправильно
 
 3624
 02:38:32,030 --> 02:38:34,090
-that I've actually initialized
-this because I do need
+и мне нужно проинициализировать
+поле для нормальной работы
 
 3625
 02:38:34,090 --> 02:38:36,170
-a favorite city, I do need to populate it,
+и нужно это поле проинициализировать
 
 3626
 02:38:36,170 --> 02:38:39,093
-and I want it to blow up if it doesn't.
+иначе все взорвется
 
 3627
 02:38:39,093 --> 02:38:40,220
-So now it's that user, that favorite city.
+Давайте перед выводом
 
 3628
 02:38:40,220 --> 02:38:42,780
-And I could say, let's
-go ahead and go with it,
+присвоим пользователю любимый город
 
 3629
 02:38:42,780 --> 02:38:46,820
-Newark is a great place,
-so Newark and the wide run.
+например "Newark"
+и запустим
 
 3630
 02:38:49,489 --> 02:38:50,322
-And that's not really my favorite city,
+Это конечно не мой любимый город,
+но пусть будет для примера,
 
 3631
 02:38:50,322 --> 02:38:53,960
-but we have Donn Felker's
-favorite city is Newark.
+и теперь в выводе будет полное
+имя пользователя и любимый город
 
 3632
 02:38:53,960 --> 02:38:55,290
-Now we don't get a blowing up anymore.
+И никаких больше ошибок.
 
 3633
 02:38:55,290 --> 02:38:57,600
-So I could even set
-this to an empty string.
+В принципе можно указать и пустую строку
 
 3634
 02:38:57,600 --> 02:38:58,750
-That's fine as well.
+и все по прежнему будет работать
 
 3635
 02:38:58,750 --> 02:39:00,830
-But not at least that's been initialized,
+Главное проинициализировать хоть чем-то.
 
 3636
 02:39:00,830 --> 02:39:04,210
-I've told Kotlin like, hey,
-I could say Minneapolis,
+Я могу записать "Минеаполис"
 
 3637
 02:39:05,260 --> 02:39:07,870
-which is one of my favorite
-cities and we'll print off here.
+это один из моих любимых городов
 
 3638
 02:39:07,870 --> 02:39:11,320
-So we'll see Minneapolis and
-we'll see it's populated.
+и мы увидим, что выводится Минеаполис.
 
 3639
 02:39:11,320 --> 02:39:14,780
-So that's one way that you can
-do it with a late initialized
+Так мы используем ключевое слово
+lateinit и откладываем
 
 3640
 02:39:14,780 --> 02:39:16,580
-property inside of your application.
+инициализацию полей в приложении.
 
 3641
 02:39:17,575 --> 02:39:18,420
-This could be a string, it
-could be another object,
+Тип может быть разный, это может
+быть строка или какой-то объект
 
 3642
 02:39:18,420 --> 02:39:19,990
-it could be any of that nature.
+И вообще любой тип
 
 3643
 02:39:19,990 --> 02:39:23,880
-You're basically telling
-Kotlin, hey, I'm going to need
+Мы просто говоорим компилятору,
+что у нас есть
 
 3644
 02:39:23,880 --> 02:39:27,790
-some type of variable that
-I don't know what it is yet,
+какая-то переменная и
+к моменту использования
 
 3645
 02:39:27,790 --> 02:39:30,159
-but I do need it populated
-before I can use it.
+мы что-то туда положим,
+не буспокойся.
 
 3646
 02:39:30,159 --> 02:39:31,780
-So I'm not gonna initialize it here,
+И я пока ничего в него не кладу
+а просто пишу lateinit
 
 3647
 02:39:31,780 --> 02:39:35,552
-it's just gonna be initialized
-later, so late init,
+что означает - "поздняя инициализация"
 
 3648
 02:39:35,552 --> 02:39:37,040
-so it's late initialization.
+что означает - "поздняя инициализация"
 
 3649
 02:39:37,950 --> 02:39:40,110
-So just if I don't initialize it, blow up.
+Если вы забудете проинициализировать,
+то приложение сломается.
 
 3650
 02:39:40,110 --> 02:39:41,330
-Now, one important thing.
+Еще одна важная вещь.
 
 3651
 02:39:41,330 --> 02:39:43,430
-If we say, hey, well, this
-is a mutable property,
+Если мы захотим, чтобы lateinit
 
 3652
 02:39:43,430 --> 02:39:44,920
-I don't want it to be immutable.
+поле было неизменяемым
 
 3653
 02:39:44,920 --> 02:39:46,620
-Well, if we try that,
-what we'll notice here
+и попробуем написать val
 
 3654
 02:39:46,620 --> 02:39:49,996
-is we get this error that says
-the late and init modifier
+то у нас ничего не выйдет
 
 3655
 02:39:49,996 --> 02:39:50,829
-is only allowed on mutable properties.
+потому что при использовании lateinit
+переменная должна быть var.
 
 3656
 02:39:50,829 --> 02:39:52,620
-And well, if we think
-about that, the reason why
+А почему так?
+Если подумать, то нам
 
 3657
 02:39:52,620 --> 02:39:57,620
-is because we have to
-mutate it as soon as,
+придется изменить ее
+в момент, когда мы
 
 3658
 02:39:57,690 --> 02:39:59,538
-whenever we wanna change it.
+сделаем инициализацию
 
 3659
 02:39:59,538 --> 02:40:00,800
-So it has to be a mutable variable.
+Поэтому нужно использовать var
 
 3660
 02:40:00,800 --> 02:40:03,240
-Otherwise it would be defined immediately.
+иначе мы ничего не сможем в нее записать.
 
 3661
 02:40:03,240 --> 02:40:07,210
-So as soon as it's defined,
-if this were this way,
+val можем использовать, но тогда
+нам нужно сразу записать
 
 3662
 02:40:07,210 --> 02:40:08,480
-of course, we're gonna get an error.
+значение и удалить ключевое слово lateinit
 
 3663
 02:40:08,480 --> 02:40:11,750
-But if we were to define this as NYC,
+и теперь можем записать "NYC"
 
 3664
 02:40:11,750 --> 02:40:13,410
-it would work just fine.
+и это будет работать.
 
 3665
 02:40:13,410 --> 02:40:18,410
-But since we are using late
-init, it has to be a var.
+Но если хотим lateinit, то нужно ставить var
 
 3666
 02:40:18,780 --> 02:40:20,840
-And that's how you can define a late init
+И так вы можете откладывать инициализацию
 
 3667
 02:40:20,840 --> 02:40:21,890
-and use it in Kotlin.
+переменных в Котлин.
 
 3668
 02:40:23,150 --> 02:40:25,720
-Let's say that you wanted to have classes
+В Котлине, как и во многих других
+объектно ориентированных языках
 
 3669
 02:40:25,720 --> 02:40:28,980
-nested with init themselves,
-Kotlin supports that.
+Классы могут содержать другие классы.
 
 3670
 02:40:28,980 --> 02:40:32,020
-So let's say you have
-a class called vehicle
+Допустим у нас есть класс "Машина"
 
 3671
 02:40:32,020 --> 02:40:35,350
-and the class vehicle has a brand
+и у машины есть брэнд
 
 3672
 02:40:35,350 --> 02:40:36,790
-and the brand is gonna be string
+пусть брэнд будет строкой
 
 3673
 02:40:36,790 --> 02:40:39,870
-and we'll just default that
-to unknown at this time.
+и по дефолту всегда будет "unknown"
 
 3674
 02:40:39,870 --> 02:40:42,250
-Now, perhaps a vehicle also has a type
+И, допустим, что у машины будет
 
 3675
 02:40:42,250 --> 02:40:44,690
-of a steering wheel class
-for whatever reason.
+класс руля внутри.
 
 3676
 02:40:44,690 --> 02:40:46,740
-So we have a steering wheel.
+Теперь у нас есть класс руля, который
 
 3677
 02:40:46,740 --> 02:40:51,220
-So we actually put this class
-inside of the vehicle class.
+находится внутри класса машины
 
 3678
 02:40:51,220 --> 02:40:55,290
-And then I could say
-something like this file name,
+И допустим у руля ест название
 
 3679
 02:40:55,290 --> 02:40:58,370
-or we made some var or
-whatever we wanted to do.
+давайте сделаем его var
 
 3680
 02:40:58,370 --> 02:41:03,277
-And we could say the steering
-wheel and inside of here,
+и даже какая-то функция
 
 3681
 02:41:05,597 --> 02:41:07,980
-we could even provide a
-function of some sorts.
+которая что-то будет делать
 
 3682
 02:41:07,980 --> 02:41:11,080
-Let's say, fun info and
-then we could just say,
+Путь это будет функция info,
 
 3683
 02:41:11,080 --> 02:41:14,030
-could be a print line of some
-sorts of all inline function.
+которая просто выводит информацию
+о руле
 
 3684
 02:41:15,200 --> 02:41:17,870
-And we would say name, we print the name.
+напишем println(name)
 
 3685
 02:41:17,870 --> 02:41:19,750
-Now, if we wanted to use this class,
+Если мы хотим обращаться к этому классу
 
 3686
 02:41:19,750 --> 02:41:23,150
-we could actually very
-easily come up here and say,
+то нам нужно создать
+экземпляр класса руля
 
 3687
 02:41:23,150 --> 02:41:25,979
-val steering SW for steering wheel,
+сделаем переменную sw
 
 3688
 02:41:25,979 --> 02:41:29,610
-say vehicle.steering wheel,
-create a new instance of it.
+и через класс машины, обратимся
+к классу руля и вызовем конструктор
 
 3689
 02:41:29,610 --> 02:41:32,220
-And then I could say sw.info.
+и теперь у переменной sw сможем
+вызвать функцию info
 
 3690
 02:41:32,220 --> 02:41:34,820
-And if we were to run this,
-we will see that it prints
+Если запустим то увидим
 
 3691
 02:41:34,820 --> 02:41:37,280
-the steering wheel, which is we see here.
+что нам вывелась информация о руле
 
 3692
 02:41:37,280 --> 02:41:39,910
-Now we can also, we're not
-limited to just one class,
+И мы не ограниченны в создании
+классов внутри классов
 
 3693
 02:41:39,910 --> 02:41:42,990
-we can have multiple different
-classes inside of here.
+Можем создавать их сколько угодно
 
 3694
 02:41:42,990 --> 02:41:46,470
-So we could have a class
-and we could call this one
+Давайте сделаем еще один
+и назовем его
 
 3695
 02:41:46,470 --> 02:41:47,560
-a transmission.
+"коробка передач".
 
 3696
 02:41:48,830 --> 02:41:50,600
-And perhaps we just, for whatever reason,
+Представим что мы делаем
 
 3697
 02:41:50,600 --> 02:41:52,750
-we're building some automotive software
+какую-то программу для автомобилей
 
 3698
 02:41:52,750 --> 02:41:56,520
-and we're going to have a var type
+и внутри объявим var переменную
 
 3699
 02:41:56,520 --> 02:41:58,970
-and it could be run a
-default, this to automatic.
+с типом коробки передач
+и пусть она будет автоматическая
 
 3700
 02:42:00,360 --> 02:42:03,180
-And then of course, maybe
-we might have a function
+И тут же мы можем определить функцию
 
 3701
 02:42:03,180 --> 02:42:07,360
-called shift and we'll
-just have it print off
+которая будет переключать передачи
 
 3702
 02:42:07,360 --> 02:42:10,430
-something like that say, print, print ln.
+на деле просто будет выводить текст
 
 3703
 02:42:12,031 --> 02:42:13,480
-And it will say the vehicle has shifted.
+и текст будет "передача изменилась"
 
 3704
 02:42:17,250 --> 02:42:19,120
-And what now we can do is of course
+И теперь нам нужно
 
 3705
 02:42:20,170 --> 02:42:22,420
-we have the steering wheel
-where you don't have an instance
+у нас уже есть экземпляр руля,
+но нет экземпляра коробки передач
 
 3706
 02:42:22,420 --> 02:42:27,090
-of the transmission, we
-would say val transmission
+мы можем так же его объявить обратившись
 
 3707
 02:42:28,150 --> 02:42:30,510
-equals vehicle.transmission.
+через Vehicle
 
 3708
 02:42:32,170 --> 02:42:34,320
-Of course, in that we'd
-say transmission.shift.
+И теперь мы можем вызвать функцию shift()
 
 3709
 02:42:35,620 --> 02:42:37,220
-And of course, we're gonna
-see when we run this,
+И после запуска мы увидим
 
 3710
 02:42:37,220 --> 02:42:39,030
-we'll see the steering
-wheel and then we'll see
+информацию о руле
 
 3711
 02:42:39,030 --> 02:42:40,660
-the vehicle has shifted.
+а потом сообщение о переключении
+передачи;
 
 3712
 02:42:40,660 --> 02:42:44,701
-So now each time if we were
-to run this multiple times,
+Если мы продублируем вызов метода
 
 3713
 02:42:44,701 --> 02:42:47,080
-we'd see the vehicle
-shifted twice, very simple.
+мы увидим сообщение о переключении
+дважды
 
 3714
 02:42:47,080 --> 02:42:50,170
-So we can actually nest
-classes inside of here.
+И так мы можем объявлять классы
+внутри других классов
 
 3715
 02:42:50,170 --> 02:42:51,930
-Now notice we haven't done
-anything with the brand here.
+Заметьте, что мы ничего не
+делали с брэндом машины
 
 3716
 02:42:51,930 --> 02:42:54,100
-So we could also have some information
+можем добавить функцию, которая тоже
+выводит информацию о брэнде
 
 3717
 02:42:54,100 --> 02:42:59,100
-about the info function here
-and this one is just print off
+допустим, она просто
 
 3718
 02:42:59,810 --> 02:43:02,760
-the brand here of the vehicle.
+выводит ее в консоль.
 
 3719
 02:43:03,620 --> 02:43:07,152
-And the brand of the vehicle
-will kind of print off there.
+выводит ее в консоль.
 
 3720
 02:43:07,152 --> 02:43:09,282
-And let's actually set this
-to a var 'cause we know
+И брэнд сделаем var, потому что
+скорее всего он можжет измениться
 
 3721
 02:43:09,282 --> 02:43:10,115
-we're probably gonna change that as well.
+скорее всего он можжет измениться
 
 3722
 02:43:10,115 --> 02:43:15,070
-So maybe we wanna do something
-like this val vehicle
+И теперь создадим экземпляо
 
 3723
 02:43:16,250 --> 02:43:20,300
-equals vehicle and move
-on to change the vehicle
+И сразу заменим
 
 3724
 02:43:20,300 --> 02:43:25,037
-to brand equals Fiat vehicle.info.
+брэнд на "Fiat" и выведем
+название в консоль
 
 3725
 02:43:27,354 --> 02:43:29,280
-So we'll print it, we'll see Fiat
+И мы должны увидеть сначала брэнд
 
 3726
 02:43:29,280 --> 02:43:30,900
-and then we'll see the steering wheel
+потом информацию о руле
 
 3727
 02:43:30,900 --> 02:43:34,050
-and the vehicle shifted and
-the vehicle has shifted.
+и дважды переключение передачи
 
 3728
 02:43:34,050 --> 02:43:37,210
-So that's how we can nest
-classes inside of Kotlin.
+таким образом мы создаем вложенные
+классы в Котлине.
 
 3729
 02:43:37,210 --> 02:43:40,580
-And it's useful for when
-things are somewhat related
+Такой подход полезен, когда
+классы связаны друг с другом
 
 3730
 02:43:40,580 --> 02:43:43,400
-and you wanna kind of keep a
-class hierarchy accordingly.
+и легче держать иерархию
+классов в одном месте
 
 3731
 02:43:43,400 --> 02:43:44,540
-So he might have a vehicle.
+Например у нас есть машина
 
 3732
 02:43:44,540 --> 02:43:46,430
-And inside of that,
-there's a steering wheel.
+а которой есть руль
 
 3733
 02:43:46,430 --> 02:43:49,297
-So as we're creating
-it, we can kind of see
+И при создании руля мы уже видим
+что это руль машины
 
 3734
 02:43:49,297 --> 02:43:50,130
-that these things are related.
+по названиям
 
 3735
 02:43:50,130 --> 02:43:52,030
-So there's many different related domains
+И в программировани очень
 
 3736
 02:43:52,030 --> 02:43:54,010
-that you're gonna encounter in software.
+много подобной связи в объектах.
 
 3737
 02:43:55,094 --> 02:43:56,960
-This is one way to organize
-them with nested classes.
+И с помощью вложенных классов
+можно устроить эту организацию
 
 3738
 02:43:57,970 --> 02:44:00,310
-Kotlin is nested classes
-are easy to create.
+В котлине очень просто
+создавать вложенные классы
 
 3739
 02:44:00,310 --> 02:44:02,760
-Inside of another class,
-you can have another class
+В своем классе вы можете напрямую создать
+вложенный класс
 
 3740
 02:44:02,760 --> 02:44:04,850
-to create different types of hierarchies.
+и создавать иерархию зависимостей типов
 
 3741
 02:44:04,850 --> 02:44:07,550
-However, there are times
-when you would like to access
+Но иногда вам понадобится из
+вложенного класса получить
 
 3742
 02:44:08,470 --> 02:44:10,870
-instance variables and
-methods and so forth
+поступ к полям внешнего класса
 
 3743
 02:44:10,870 --> 02:44:12,890
-inside of an nesting class.
+поступ к полям внешнего класса
 
 3744
 02:44:12,890 --> 02:44:14,910
-So let's assume the steering wheel,
+давайте допустим, что класс
+руля в информации должен
 
 3745
 02:44:14,910 --> 02:44:16,430
-we wanted to print the brand name.
+писать название брэнда машины
 
 3746
 02:44:16,430 --> 02:44:21,430
-So we would say brand of
-car is the brand of the car,
+перепишем немного наш
 
 3747
 02:44:23,100 --> 02:44:27,990
-a vehicle with a boom name.
+вывод в консоль
 
 3748
 02:44:30,614 --> 02:44:32,687
-We'll call it the steering
-wheel and we'll call it with
+Сменим название руля на "кожаный"
 
 3749
 02:44:35,750 --> 02:44:39,400
-leather, say leather with
-a leather steering wheel.
+теперь это руль из кожи.
 
 3750
 02:44:41,200 --> 02:44:43,930
-Now, notice we have an error
-here, brand is not accessible.
+И заметим что у нас появилась ошибка,
+брэнд недоступен в классе руля
 
 3751
 02:44:43,930 --> 02:44:47,660
-The reason for that is by
-default nesting classes
+Причина этому - вложенные
 
 3752
 02:44:47,660 --> 02:44:50,890
-do not have access to the member variables
+классы не получают доступа к полям
 
 3753
 02:44:50,890 --> 02:44:52,820
-of the outer class.
+класса где они объявлены
 
 3754
 02:44:52,820 --> 02:44:54,830
-If we want to do that, we need to specify
+Если мы хотим иметь доступ к полям
+внешего класса
 
 3755
 02:44:54,830 --> 02:44:58,330
-that this is an inner class of vehicle.
+нам нужно использовать ключевое слово
+"inner"
 
 3756
 02:44:58,330 --> 02:45:00,880
-So vehicle has an inner
-class and the inner class
+И теперь у нашины есть "внутренний"
+класс руля
 
 3757
 02:45:00,880 --> 02:45:02,700
-can now access these variables.
+который имеет доступ к полям машины
 
 3758
 02:45:02,700 --> 02:45:05,310
-So, you can see brand is
-the brand new vehicle.
+мы видим, что ошибка в выводе
+пропала
 
 3759
 02:45:05,310 --> 02:45:07,640
-So let's go ahead and get rid of this.
+Давайте удалим этот код
 
 3760
 02:45:08,790 --> 02:45:11,750
-And then we can say, Fiat
-is the brand, vehicle info.
+Оставим изменение брэнда на "Fiat"
+и вывод информации
 
 3761
 02:45:11,750 --> 02:45:16,110
-Now we see here, the steering
-wheel is the constructor
+Теперь вы можете заметить, что
+поломался вызов конструктора
 
 3762
 02:45:16,110 --> 02:45:18,620
-of steering wheel can only
-be called with the receiver
+для руля. Теперь этот конструктор
+может вызывать
 
 3763
 02:45:18,620 --> 02:45:19,900
-of the containing class.
+только экземпляр машины.
 
 3764
 02:45:20,760 --> 02:45:23,240
-Now, what that means is
-because steering wheel
+Это значит, что из-за того что
+руль имеет доступ к полям машины
 
 3765
 02:45:23,240 --> 02:45:25,680
-has access to the member variables,
+это значит что нам нужен созданный
+объект машины, чтобы создать руль
 
 3766
 02:45:26,929 --> 02:45:29,900
-it's gonna have carries a
-reference to the outer class.
+и руль теперь всегда будет держать
+ссылку на объект машины к которой он привязан
 
 3767
 02:45:29,900 --> 02:45:33,660
-Meaning that we can't use the
-actual class name vehicle,
+И мы не можем использовать название
+класса для создания руля
 
 3768
 02:45:33,660 --> 02:45:35,240
-we actually have to use the instance
+нам нужно позвать
 
 3769
 02:45:35,240 --> 02:45:37,450
-because string was gonna
-carry a reference to it.
+экземпляр нашей машины
 
 3770
 02:45:37,450 --> 02:45:40,400
-So we have an instance of
-vehicle here is called vehicle.
+У нас уже есть готовый экземпляр
 
 3771
 02:45:40,400 --> 02:45:41,950
-So I'm just gonna go ahead and delete this
+И нам нужно заменить вызов
 
 3772
 02:45:41,950 --> 02:45:44,130
-'cause it's the capital
-V, which is the class name
+класса на вызов экземпляра
 
 3773
 02:45:44,130 --> 02:45:46,050
-when we go to the lower case V.
+просто поменять "V" с большой
+на маленькую
 
 3774
 02:45:46,050 --> 02:45:49,730
-Now, if we wanna just
-change this and call my car,
+давайте просто переименум
+и назовем машину "myCar"
 
 3775
 02:45:49,730 --> 02:45:52,190
-we can do that, so it's called my car.
+теперь лучше.
 
 3776
 02:45:52,190 --> 02:45:54,840
-And now I can say my car.steering wheel
+и теперь я могу вызвать конструктор
 
 3777
 02:45:54,840 --> 02:45:57,040
-and then we're gonna actually
-see, it's gonna create
+руля с помощью myCar
 
 3778
 02:45:57,040 --> 02:45:58,350
-an instance of the steering wheel class.
+и руль будет хранить ссылку на myCar
+и знать о ее брэнде.
 
 3779
 02:45:58,350 --> 02:46:01,370
-We're gonna see steering
-wheel.info, which is right here.
+давайте выведем информацию о руле
 
 3780
 02:46:01,370 --> 02:46:02,970
-Now, if we go to info,
-we'll see it's print off
+запустим и выведем
 
 3781
 02:46:02,970 --> 02:46:05,950
-the brand of the vehicle and
-let's go ahead and run this.
+все в консоль.
 
 3782
 02:46:05,950 --> 02:46:09,590
-And what we will see now is
-that when it runs, it says Fiat,
+И теперь мы видим информацию
+он нашей машины - это Фиат
 
 3783
 02:46:09,590 --> 02:46:12,440
-Fiat is the brand of vehicle
-with leather steering wheel.
+и вывод от нашего руля, который
+выводит ту же марку машины
 
 3784
 02:46:12,440 --> 02:46:16,230
-Now, since the transmission
-is still a nested class,
+Из-за того что коробка передач
+это все еще вложенный класс
 
 3785
 02:46:16,230 --> 02:46:19,800
-we cannot call my car.transmission.
+мы не можем вызвать myCar.Transmission()
 
 3786
 02:46:20,840 --> 02:46:23,170
-So the reason for that
-is it's a nested class.
+потому что это вложенный класс и
+экземпляр машины не межет его создать
 
 3787
 02:46:23,170 --> 02:46:25,870
-If we wanted to create a transmission,
+И нам все еще нужно вызывать
 
 3788
 02:46:25,870 --> 02:46:30,230
-we would have to say vehicle.transmission.
+создание через названия классов
 
 3789
 02:46:31,370 --> 02:46:34,590
-Now we wanted to make this a inner class,
+Если мы хотим сделать
+коробку внутренним классом
 
 3790
 02:46:34,590 --> 02:46:36,674
-of course, we'd slap on the word enter.
+нам нужно просто пришпандорить
+ключевое слово inner
 
 3791
 02:46:36,674 --> 02:46:37,520
-And now of course, this
-is not going to work.
+У нас, конечно сломается
+наше создание экземпляра
 
 3792
 02:46:37,520 --> 02:46:40,250
-we have to use an instance
-because the transmission
+и нам нужно использовать готовый
+экземпляр машины, чтобы создать
 
 3793
 02:46:40,250 --> 02:46:42,440
-is going to have a reference
-to its outer class.
+коробку передач. Теперь коробка
+будет держать ссылку на машину.
 
 3794
 02:46:42,440 --> 02:46:45,630
-So in that case, when we create
-an instance of transmission,
+И теперь, когда мы создаем экземпляр
+коробки передач
 
 3795
 02:46:46,922 --> 02:46:50,230
-it's gonna keep a reference to
-the instance of my car here.
+она будет держать ссылку на нашу машину
+и знать про все ее поля
 
 3796
 02:46:51,450 --> 02:46:53,150
-And that's how you create an inner class,
+И так вы можеме создавать внутренние классы
 
 3797
 02:46:53,150 --> 02:46:56,110
-which can reference an
-outer class in Kotlin.
+которы держат ссылку на
+свои внешние классы
 
 3798
 02:46:56,110 --> 02:46:58,150
