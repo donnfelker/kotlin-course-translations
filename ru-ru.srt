@@ -17185,484 +17185,454 @@ and define them in Kotlin.
 
 3900
 02:51:36,340 --> 02:51:38,280
-Sometimes it's useful to provide values
+Иногда бывает полезным вместе
+с enum передавать какое-то
 
 3901
 02:51:38,280 --> 02:51:39,670
-associated with an enum.
+дополнительное значение
 
 3902
 02:51:40,752 --> 02:51:42,927
-For example, if this was
-used for gym membership,
+На примере нашего абонемента
+в спортивный зал
 
 3903
 02:51:42,927 --> 02:51:46,590
-let's assume that if you're
-a bronze account type,
+давайте представим, что
+бронзовый абонемент
 
 3904
 02:51:46,590 --> 02:51:50,490
-you're going to then
-get, let's say 10% off.
+дает вам 10% скидку.
 
 3905
 02:51:50,490 --> 02:51:53,840
-If you're silver, you're
-gonna get 15% off.
+Серебряный - 15%
 
 3906
 02:51:53,840 --> 02:51:56,320
-If you're gold, you're gonna get 20% off.
+Золотой 20%
 
 3907
 02:51:56,320 --> 02:51:59,620
-And if you are a platinum
-customer, you're gonna 25% off,
+а платиновый целых 25%
 
 3908
 02:51:59,620 --> 02:52:03,360
-maybe bronze is a single
-member, this is two, this is 10.
+например бронзовый абонемент
+на месяц
 
 3909
 02:52:03,360 --> 02:52:04,830
-This is more than 10.
+и с увеличением кол-ва месяцев
 
 3910
 02:52:04,830 --> 02:52:07,500
-So start getting more
-discounts for more members
+у вас появляется все больше
 
 3911
 02:52:07,500 --> 02:52:09,090
-on your plan or whatever.
+и больше скидок.
 
 3912
 02:52:09,090 --> 02:52:10,250
-So how would you define this?
+Как нам загнать эти значения в enum?
 
 3913
 02:52:10,250 --> 02:52:12,330
-Now, what you need to do
-is provide a constructor
+Проще простого, у enum
 
 3914
 02:52:12,330 --> 02:52:13,770
-for your enum.
+нужно объявить конструктор
 
 3915
 02:52:13,770 --> 02:52:17,680
-And so what you would do is
-you'd say val discount percent,
+И заведем поле val с велечиной скидки
 
 3916
 02:52:17,680 --> 02:52:19,730
-and this can be any number of things,
+и сожно указать тип
 
 3917
 02:52:19,730 --> 02:52:22,510
-but we'll make this an int, it
-could be floats or whatever.
+для простоты сделаем Int,
+но можно Float, или ваш собственный тип
 
 3918
 02:52:22,510 --> 02:52:24,210
-Now you'll notice we have
-a bunch of errors here
+Теперь мы видим кучу ошибок
 
 3919
 02:52:24,210 --> 02:52:27,300
-because the enum has
-no default constructor.
+потому что у enum теперь нет
+дефолтного конструктора
 
 3920
 02:52:27,300 --> 02:52:29,170
-So we need to use the parameters.
+мы можем сделать
 
 3921
 02:52:30,217 --> 02:52:31,820
-But if we were to provide
-a default constructor,
+дефолтное значение
 
 3922
 02:52:31,820 --> 02:52:33,240
-maybe we said 10.
+например это будет 10%
 
 3923
 02:52:33,240 --> 02:52:35,160
-Now all of these would work
-and they would default to 10,
+Теперь все энамы под капотом
+будут содержать значение 10
 
 3924
 02:52:35,160 --> 02:52:37,029
-but let's not do that.
+но давайте не будем так
+все оставлять
 
 3925
 02:52:37,029 --> 02:52:40,160
-Let's make the compiler
-work for us by defining
+И укажем для каждого
 
 3926
 02:52:40,160 --> 02:52:43,040
-that we actually need to
-have a particular value
+абонемента конкретное
 
 3927
 02:52:43,040 --> 02:52:46,240
-parse d into each individual enum.
+значение скидки.
 
 3928
 02:52:46,240 --> 02:52:50,670
-So here, we're gonna say 10,
-this one's going to be 15.
+Укажем 10,
+для сребряного 15
 
 3929
 02:52:50,670 --> 02:52:54,720
-Then this one will be 20
-and this one will be 25.
+золотому - 20
+и платиновому 25
 
 3930
 02:52:55,600 --> 02:52:57,230
-So there we go, pretty simple there.
+И все, все так просто
 
 3931
 02:52:57,230 --> 02:52:59,710
-And we can go ahead and
-delete all this stuff out.
+Мы теперь можем почистить
+все комментарии
 
 3932
 02:53:00,840 --> 02:53:02,910
-And now, if we were
-actually to print line this
+И если мы теперь выведем
 
 3933
 02:53:02,910 --> 02:53:06,180
-to the screen, we would
-see that we can still do
+в консоль какой-нибудь энам
 
 3934
 02:53:06,180 --> 02:53:09,500
-account type.gold, and we'd
-still be able to print gold.
+то мы все еще увидим его название.
 
 3935
 02:53:09,500 --> 02:53:12,217
-And then we can actually
-say, discount percent.
+Но теперь мы можем вывести поле
+discountPercent у энама
 
 3936
 02:53:12,217 --> 02:53:13,530
-We can actually print
-the discount percent.
+и это выведет наше новое число.
 
 3937
 02:53:13,530 --> 02:53:15,030
-So for your to run this,
+И если запустим увидим
 
 3938
 02:53:15,030 --> 02:53:17,210
-we would see that we have gold and 20.
+энам GOLD и скидку 20%
 
 3939
 02:53:17,210 --> 02:53:22,046
-Now you're not just limited
-to a particular number
+Но и это не предел,
 
 3940
 02:53:22,046 --> 02:53:23,840
-of parameters, you can
-do another one here.
+мы можем добавить какой-нибудь
+другой параметр
 
 3941
 02:53:23,840 --> 02:53:28,840
-So we can say val, say
-number of subscriptions
+напишем val и например
+кол-во месяцев
 
 3942
 02:53:29,270 --> 02:53:30,690
-and this could be an integer value.
+пусть это тоже будет Int
 
 3943
 02:53:30,690 --> 02:53:32,650
-Now you see here again, we're
-having the same problem.
+и опять видим проблему с энамами
 
 3944
 02:53:32,650 --> 02:53:36,370
-So maybe this is the minimum
-number here to reach this one,
+И для бронзы это будет
+один месяц
 
 3945
 02:53:36,370 --> 02:53:39,360
-this one you have to have a five,
+для серебряного пять
 
 3946
 02:53:39,360 --> 02:53:41,610
-this one you have to have 10 people.
+для золота - 10
 
 3947
 02:53:41,610 --> 02:53:44,330
-And this one you have to
-have at least 15 people.
+и для платинового 15 месяцев.
 
 3948
 02:53:44,330 --> 02:53:45,830
-And these are perhaps the minimums.
+И это минимальное число для
+каждого абонемента.
 
 3949
 02:53:45,830 --> 02:53:48,100
-And now again, I could then say,
+И так я могу легко заводить
 
 3950
 02:53:48,100 --> 02:53:49,300
-all right, well, what does this one
+новые типы абонементов работая
 
 3951
 02:53:49,300 --> 02:53:51,690
-five for number of subscriptions?
+с енамом как с небольшой иерархией объектов
 
 3952
 02:53:51,690 --> 02:53:53,970
-And I can start providing
-a kind of a known
+у которых есть процент скидки
 
 3953
 02:53:53,970 --> 02:53:55,910
-simple little data type structure,
+и кол-во месяцев.
 
 3954
 02:53:55,910 --> 02:53:57,580
-a custom data structure here that says,
+И конечно название
 
 3955
 02:53:57,580 --> 02:54:01,810
-hey, this is enum class,
-it's an account type.
+нового типа абонемента
 
 3956
 02:54:01,810 --> 02:54:05,230
-And it's gonna be bronze,
-silver, or gold, et cetera.
+И у нас будут разные абонементы: бронзовый
+серебряный, золотой и так далее
 
 3957
 02:54:06,069 --> 02:54:08,120
-And it's gonna have these
-discount percentages
+И у них у всех будут определены
 
 3958
 02:54:09,450 --> 02:54:10,730
-and subscription percentages
-or a number of subscriptions
+скидки и кол-во месяцев
 
 3959
 02:54:10,730 --> 02:54:12,860
-that are required accordingly.
+как обязательные параметры.
 
 3960
 02:54:12,860 --> 02:54:15,732
-And I can start to
-define that here in code,
+И это все будут строго
 
 3961
 02:54:15,732 --> 02:54:16,565
-so it's strongly type.
+типизированные переменные в коде.
 
 3962
 02:54:16,565 --> 02:54:19,090
-And of course, as usual I could actually,
+И например, я знаю
 
 3963
 02:54:19,090 --> 02:54:21,530
-perhaps maybe even say I only know this
+что у меня бэкенд присылает
 
 3964
 02:54:21,530 --> 02:54:24,240
-because it comes down
-from an API and I can say
+тип абонемента и я могу
 
 3965
 02:54:24,240 --> 02:54:27,950
-account type.value of, and
-again, I'm gonna use gold
+использовать функцию valueOf
+в нее передать строку
 
 3966
 02:54:27,950 --> 02:54:30,500
-to uppercase and I can even
-do something like this.
+и сделать у нее все буквы заглавными
 
 3967
 02:54:30,500 --> 02:54:33,080
-Maybe it's regular case like that.
+и сделать у нее все буквы заглавными
 
 3968
 02:54:33,080 --> 02:54:36,850
-And would we be able to see
-this, let's take a look here
+И давайте, чтобы не повторяться
 
 3969
 02:54:36,850 --> 02:54:38,600
-and we can actually just say value.
+с выводами цифр
 
 3970
 02:54:40,370 --> 02:54:43,170
-Actually, this is do instead
-of gold, let's do platinum.
+создадим платиновый абонемент
 
 3971
 02:54:44,590 --> 02:54:46,950
-And we'll run this again and we can see
+И если запустим, увидим, что создался
 
 3972
 02:54:46,950 --> 02:54:49,150
-that we have platinum.
+платиновый enum.
 
 3973
 02:54:49,150 --> 02:54:52,875
-And now if we actually do
-something like this, print line,
+И теперь мы можем вывести..
 
 3974
 02:54:52,875 --> 02:54:56,700
-I should just copy this twice,
-it will say discount percent
+Давайте просто скопируем дважды
+и выведем скидку
 
 3975
 02:54:56,700 --> 02:54:58,290
-and number of subscriptions.
+и кол-во месяцев
 
 3976
 02:54:59,490 --> 02:55:00,330
-So basically what we've
-done at this point in time,
+И что мы сделали тут -
 
 3977
 02:55:00,330 --> 02:55:01,750
-as we've gotten a string here,
+опираясь на строку мы создали из нее
 
 3978
 02:55:01,750 --> 02:55:04,840
-we have acquired the account type enum
+enum, который подходил по названию
 
 3979
 02:55:05,863 --> 02:55:06,920
-and then we're able to
-print the values off that.
+и смогли вывести все значения этого энама.
 
 3980
 02:55:06,920 --> 02:55:09,870
-So let's say that the value
-platinum came as a value
+И это реальный кейс, когда вам
+будет приходить значение из базы данных
 
 3981
 02:55:09,870 --> 02:55:11,980
-from an API or a database call,
+и вы будете трансформировать его
 
 3982
 02:55:11,980 --> 02:55:14,690
-we could then create this type at runtime.
+в кокой-то энам во время
+выполнения программы.
 
 3983
 02:55:14,690 --> 02:55:16,980
-It's all right, well, they
-are platinum account type
+И в консоль вывелся платиновый
 
 3984
 02:55:16,980 --> 02:55:19,250
-and it's a 25% discount
+абонемент с 25% скидки
 
 3985
 02:55:19,250 --> 02:55:21,830
-and a minimum number
-of subscriptions is 15.
+и минимальным кол-вом месяцев 15
 
 3986
 02:55:21,830 --> 02:55:24,210
-So that's how you can use
-constructor parameters
+И таким образом вы можете
+передавать в энамы
 
 3987
 02:55:24,210 --> 02:55:25,780
-with an enum in Kotlin.
+дополнительные параметры.
 
 3988
 02:55:27,170 --> 02:55:29,320
-Let's use the discount example again,
+Давайте разберем еще одну вещь
+на нашем примере абонементов
 
 3989
 02:55:29,320 --> 02:55:32,240
-and let's assume that you
-need to provide a discount
+давайте допустим, что скидка
+неизвестна сразу
 
 3990
 02:55:32,240 --> 02:55:34,970
-for bronze or silver, gold or platinum,
+и должна быть рассчитана индивидуально
 
 3991
 02:55:34,970 --> 02:55:36,840
-but you had to be calculated.
+во время выполнения программы.
 
 3992
 02:55:36,840 --> 02:55:38,210
-So what you could do is you could define
+В таком случае вы можете написать
 
 3993
 02:55:38,210 --> 02:55:43,210
-an abstract function and you
-could say, discount percent,
+абстрактную функцию
 
 3994
 02:55:44,510 --> 02:55:47,580
-let me say calculate discount percent.
+которая будет высчитывать процент
 
 3995
 02:55:47,580 --> 02:55:49,690
-And it's gonna return a,
-it's gonna be a function
+И будет она возвращать скидку
 
 3996
 02:55:49,690 --> 02:55:52,720
-and it's gonna return and integer.
+с типом Int
 
 3997
 02:55:52,720 --> 02:55:56,220
-Now what you're gonna see here
-is I spelled abstract wrong.
+Я немного опечатался
 
 3998
 02:56:00,430 --> 02:56:01,800
-And now, as soon as we get that fixed,
+Теперь когда мы все починили
 
 3999
 02:56:01,800 --> 02:56:03,990
-we have a bunch of errors
-here saying class bronze
+мы видим кучу ошибок
+здесь говорится, что класс BRONZE
 
 4000
 02:56:03,990 --> 02:56:07,360
-is not abstract and does not
-implement the abstract member,
+абстрактный и не реализует
+абстрактный метод
 
 4001
 02:56:07,360 --> 02:56:09,800
-calculate discount percent as
-defined inside of this type.
+который опрдеделен в нашем enum
 
 4002
 02:56:09,800 --> 02:56:11,690
-And the same thing happens here for silver
+тоже самое для
 
 4003
 02:56:11,690 --> 02:56:13,430
-and gold and platinum.
+остальных типов enum
 
 4004
 02:56:13,430 --> 02:56:16,780
-So what we can do is we can
-add some curly braces here,
+Мы можем поставить
+фигурные скобки
 
 4005
 02:56:16,780 --> 02:56:19,850
-and then we can implement that interface.
+И реализовать абстрактный метод
 
 4006
 02:56:19,850 --> 02:56:22,478
