@@ -17636,458 +17636,431 @@ enum, который подходил по названию
 
 4006
 02:56:19,850 --> 02:56:22,478
-And actually we'll see, assuming implement
+появится метод с ключевым словом
+override и мы можем
 
 4007
 02:56:22,478 --> 02:56:24,470
-that abstract class,
-the abstract function.
+написать реализацию абстрактной
+функции.
 
 4008
 02:56:24,470 --> 02:56:26,110
-And we can either just do it inline here,
+Можно сделать метод однострочным
 
 4009
 02:56:26,110 --> 02:56:27,400
-or since this is gonna be...
+или, если вы собираетесь
 
 4010
 02:56:27,400 --> 02:56:31,190
-If you're gonna perform some
-type of complex calculation,
+писать много логики, можно реализовать
 
 4011
 02:56:31,190 --> 02:56:34,110
-you could do that in here
-and you don't perform
+как обычную функцию
 
 4012
 02:56:34,110 --> 02:56:38,380
-your logic and so forth
-and then finally return
+и в конце возвратить какое-нибудь
 
 4013
 02:56:38,380 --> 02:56:40,560
-whatever five or whatever,
-whatever you've calculated,
+значение, например пять
 
 4014
 02:56:40,560 --> 02:56:43,250
-or if you just know what's
-going to be very simple,
+или, если подсчеты простые
 
 4015
 02:56:43,250 --> 02:56:44,200
-you can also inline it.
+можно сделать в одну строку.
 
 4016
 02:56:44,200 --> 02:56:46,480
-So we might be able to just say five here.
+Вот например написать пять тут.
 
 4017
 02:56:46,480 --> 02:56:48,110
-And the same thing would happen here.
+Тоже самое будет происходить тут
 
 4018
 02:56:48,110 --> 02:56:51,150
-Again, I would need to
-implement that member here,
+нужно опять реализовать
+абстрактную функцию
 
 4019
 02:56:51,150 --> 02:56:54,740
-and then I could say 10.
+и вернуть наприер 10
 
 4020
 02:56:54,740 --> 02:56:56,650
-And what I'm gonna do
-is just copy this over
+Я просто скопирую все отсюда,
 
 4021
 02:56:56,650 --> 02:56:57,650
-'cause this is easy.
+так будет проще.
 
 4022
 02:56:58,943 --> 02:57:02,150
-That way, I have to
-space that over what 15.
+Тут я верну 15
 
 4023
 02:57:03,074 --> 02:57:03,940
-And again, these are different percentages
+И, напомню, это просто те же
 
 4024
 02:57:03,940 --> 02:57:04,840
-than I had last time.
+проценты скидки что были раньше.
 
 4025
 02:57:04,840 --> 02:57:09,130
-But for the example here
-that are all the same here.
+Все цифры что и в предыдущем результате
 
 4026
 02:57:09,130 --> 02:57:11,040
-So calculate that accordingly.
+Только через абстрактнцю функцию
 
 4027
 02:57:11,930 --> 02:57:15,370
-And it looks like it's
-expecting a semi-colon
+И тут нужно добавить точку с запятой
 
 4028
 02:57:15,370 --> 02:57:17,530
-at the end of this after we've
-kind of built all that up.
+потому что после значений энама
+у нас есть функция.
 
 4029
 02:57:17,530 --> 02:57:21,060
-Now, what I can say is if we
-use that same type of example,
+Теперь попытаемся это все повызывать
 
 4030
 02:57:21,060 --> 02:57:23,450
-again, maybe we have
-something coming from the API
+И например наши данные приходят с
 
 4031
 02:57:23,450 --> 02:57:25,770
-and it's just all spelled
-kind of really weird
+какого-то API в каком-то
 
 4032
 02:57:25,770 --> 02:57:27,450
-with weird casing.
+плохом формате.
 
 4033
 02:57:27,450 --> 02:57:29,540
-We wouldn't wanna say
-we have the account type
+Мы сделаем переменную для типа аккаунта
 
 4034
 02:57:29,540 --> 02:57:33,140
-and we got that from the
-account type dot value of,
+и вызовем valueOf
 
 4035
 02:57:33,140 --> 02:57:35,270
-and then we would take this from API,
+и возьмем наше значение из API
 
 4036
 02:57:35,270 --> 02:57:37,860
-go to uppercase, now we have that type.
+переведем его в верхний регистр
+и получим наш тип абонемента.
 
 4037
 02:57:37,860 --> 02:57:39,880
-And then we could say print line
+и теперь используем функцию
 
 4038
 02:57:39,880 --> 02:57:43,310
-account type.calculate discount percent.
+вычисления скидки для абонемента.
 
 4039
 02:57:43,310 --> 02:57:45,360
-And if it's gonna be gold,
-which we could run it,
+И это будет золотой абонемент
+и если запустим
 
 4040
 02:57:45,360 --> 02:57:48,510
-we should see that we're
-gonna get 15, which we do.
+Увидим скидку 15 процентов.
 
 4041
 02:57:48,510 --> 02:57:52,990
-If we change this to numb,
-which we're just doing
+Если изменим на платиновый
 
 4042
 02:57:52,990 --> 02:57:56,290
-weird casing here to mess
-with it and platinum is 20.
+то получим 20
 
 4043
 02:57:56,290 --> 02:57:59,700
-So that's how you can
-implement an abstract method
+И так вы можете писать абстрактные
 
 4044
 02:57:59,700 --> 02:58:01,600
-inside of an enum.
+функции у энамов.
 
 4045
 02:58:01,600 --> 02:58:06,600
-This will be very useful,
-again, if you are not sure
+Это будет полезно, когда вы
+не будете сразу понимать
 
 4046
 02:58:07,060 --> 02:58:08,590
-what you are going to return.
+что будет результатом вычислений
 
 4047
 02:58:09,759 --> 02:58:10,592
-Of course, it's gonna end and you need
+и у вас будет гораздо больше вычислений
 
 4048
 02:58:10,592 --> 02:58:13,220
-a lot larger calculation, you
-can use a larger block here.
+И блок функции будет больше
 
 4049
 02:58:13,220 --> 02:58:16,740
-So you could do a bunch of work here,
+Вы будете делать много работы
 
 4050
 02:58:16,740 --> 02:58:19,430
-and then you're gonna return
-whatever that value is.
+в функции и выводить результат.
 
 4051
 02:58:19,430 --> 02:58:23,590
-If it's, for example, maybe
-it's gonna be a var percent
+Например у вас будет переменная
+которая хранит процент
 
 4052
 02:58:24,970 --> 02:58:27,970
-and you wanna start off at
-zero, no discount percent,
+и вы начнете с нуля процентов
 
 4053
 02:58:27,970 --> 02:58:30,180
-and you get to return to percent here.
+и вернете процент в конце.
 
 4054
 02:58:30,180 --> 02:58:33,740
-And perhaps you're gonna
-kind of do calculations
+И например ваши вычисления процента
 
 4055
 02:58:33,740 --> 02:58:36,456
-inside of here based upon maybe some other
+будут зависеть от параметров
 
 4056
 02:58:36,456 --> 02:58:37,289
-constructor parameters that you have
+конструктора, которые вы будете
 
 4057
 02:58:37,289 --> 02:58:39,390
-inside of the account type,
-which we don't have any here.
+передавать в тип энам.
+Сейчас этих параметров нет
 
 4058
 02:58:39,390 --> 02:58:44,390
-But if you did, you can perform
-all those calculations here.
+но если бы были, вы бы могли
+их использовать
 
 4059
 02:58:44,460 --> 02:58:47,700
-And that's how you can
-use abstract function
+Так и используются
 
 4060
 02:58:47,700 --> 02:58:49,200
-inside of a Kotlin enum.
+абстрактные функции
+в enam'ах Котлина.
 
 4061
 02:58:50,750 --> 02:58:53,150
-You can also iterate over all of the types
+По типам энама
 
 4062
 02:58:53,150 --> 02:58:56,150
-inside of an enum very easily
+можно итерироваться
 
 4063
 02:58:56,150 --> 02:58:59,860
-by using the account type.values.
+вызвав AccountType.values()
 
 4064
 02:58:59,860 --> 02:59:01,320
-So you can use the values method,
+Вы можете использовать это поле
 
 4065
 02:59:01,320 --> 02:59:02,620
-which has built in for you.
+оно встроено во все энамы.
 
 4066
 02:59:02,620 --> 02:59:04,460
-You don't have to define
-that, it's just part
+и идет как
 
 4067
 02:59:04,460 --> 02:59:06,300
-of the enum built in for you.
+часть языка Котлин
 
 4068
 02:59:06,300 --> 02:59:09,570
-And so let's say it's for, say type,
+С помощью ключевого слова for
 
 4069
 02:59:09,570 --> 02:59:13,400
-let's actually say account
-type and these types here,
+мы можем написать цикл
+слева напишем accountType
 
 4070
 02:59:13,400 --> 02:59:15,450
-then I could say print line,
+и внутри сделаем вывод
 
 4071
 02:59:15,450 --> 02:59:16,840
-and then I could say account type.
+нашего типа аккаунта
 
 4072
 02:59:16,840 --> 02:59:19,700
-And if I were to run this,
-then what I would see
+И если запустим
 
 4073
 02:59:19,700 --> 02:59:22,080
-is that when I run it, we're
-gonna see all the types here
+мы увидим все типы аккаунтов
 
 4074
 02:59:22,080 --> 02:59:26,380
-print on new line, bronze,
-silver, gold, and platinum,
+кажный на новой строке:
+бронза, серебро, золото, платина
 
 4075
 02:59:26,380 --> 02:59:30,140
-and the values method returns in array
+метод values возвращает массив
 
 4076
 02:59:30,140 --> 02:59:31,270
-of those account types.
+содержащий тип AccountType
 
 4077
 02:59:31,270 --> 02:59:33,930
-Now, because it's an array
-it's so it's a collection
+И, из-за того что массив в
+Котлине это коллекция
 
 4078
 02:59:33,930 --> 02:59:37,880
-that's built into Kotlin,
-we also get to have access
+мы можем использовать удобные
+функции расширения
 
 4079
 02:59:37,880 --> 02:59:41,160
-to all those nice little helper
-functions such as Foreach.
+для итерации по массиву,
+например forEach
 
 4080
 02:59:41,160 --> 02:59:45,350
-So I could do the same thing
-here and I could use print line
+и я могу сделать все то же самое,
+и в фигурных скобках сделаю
 
 4081
 02:59:45,350 --> 02:59:47,360
-I could use the kind of built IT.
+вывод в консоль.
 
 4082
 02:59:47,360 --> 02:59:49,770
-It's kind of one line
-all of this together,
+И теперь мы делаем все наши операции
 
 4083
 02:59:49,770 --> 02:59:51,330
-instead of having three lines of code
+в одну троку, вместо трех
 
 4084
 02:59:51,330 --> 02:59:52,720
-that does the same exact thing.
+и в выводе ровно тот же результат
 
 4085
 02:59:52,720 --> 02:59:55,470
-So you can iterate over each one of those.
+и в выводе ровно тот же результат
 
 4086
 02:59:55,470 --> 02:59:57,550
-And that's how you can
-integrate over all the values
+И таким образом можно итерироваться
 
 4087
 02:59:57,550 --> 03:00:02,510
-inside of an array, really of
-enum as an array, very easily.
+по значениям энамов
 
 4088
 03:00:04,950 --> 03:00:06,690
-To add a static method to an enum,
+Чтобы добавить статический
+метод в энам
 
 4089
 03:00:06,690 --> 03:00:08,570
-what you wanna use as a companion object.
+мы можем использовать
+объект компаньон
 
 4090
 03:00:08,570 --> 03:00:11,530
-But first you wanna
-terminate the different enums
+Но сначала нам нужно
+поставить точку с запятой
 
 4091
 03:00:11,530 --> 03:00:14,320
-by providing a semi-colon at the end,
+чтобы сказать Котлину, что мы закончили
+объявлять энамы
 
 4092
 03:00:14,320 --> 03:00:16,860
-then you'll wanna say a companion object.
+и теперь мы можем написать companion object.
 
 4093
 03:00:16,860 --> 03:00:19,790
-And for example, here, we
-could actually have a function
+и тут мы можем создать
+функцию, котоая
 
 4094
 03:00:19,790 --> 03:00:23,850
-that says get account type by name.
+будет возвращать тип энама по имени
 
 4095
 03:00:23,850 --> 03:00:26,840
-We can just parse in the
-name and it's a string,
+Мы будем принимать имя в виде строки
 
 4096
 03:00:26,840 --> 03:00:28,190
-and this could just be valid.
+и внутри мы можем
 
 4097
 03:00:28,190 --> 03:00:31,610
-We could just use the value
-of named.to uppercase.
+использовать уже известный нам
+метод valueOf и вызвать toUpperCase
 
 4098
 03:00:31,610 --> 03:00:33,070
-And you may be wondering what this is for.
+Вы можете спросить, а зачем?
 
 4099
 03:00:33,070 --> 03:00:36,127
-It's a kind of a nice
-little syntactic sugar
+На самом деле это будет просто небольшой
+синтаксический сахар
 
 4100
 03:00:36,127 --> 03:00:40,160
-to say account type by
-get account type by name.
+и вызывать создание
 
 4101
 03:00:40,160 --> 03:00:41,720
-And I could just parse it and gold.
+типа аккаунта будет легче
 
 4102
 03:00:41,720 --> 03:00:44,800
-And so I can say account type,
+чем мы делали это раньше
 
 4103
 03:00:44,800 --> 03:00:47,980
-and now I could actually
-print this to the screen
+И давайте выведем в консоль
 
 4104
 03:00:47,980 --> 03:00:49,240
-and say account type.
+и напишем нашу переменную.
 
 4105
 03:00:50,647 --> 03:00:51,480
-And then if we hit run, we should see
+Запустим и увидим
 
 4106
 03:00:51,480 --> 03:00:53,210
-that we're going to
-get gold on the screen,
+что в консоли будет золотой аккаунт
 
 4107
 03:00:53,210 --> 03:00:56,190
