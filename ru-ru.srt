@@ -18064,888 +18064,837 @@ override и мы можем
 
 4107
 03:00:53,210 --> 03:00:56,190
-which we do down here on the
-bottom in the output window,
+тут снизу экрана
 
 4108
 03:00:56,190 --> 03:01:01,190
-I could change just to platinum,
-which is different casing
+Я могу поменять на платиновый абонемент
 
 4109
 03:01:01,570 --> 03:01:02,850
-or whatever.
+или любой другой.
 
 4110
 03:01:02,850 --> 03:01:05,521
-And then of course, for whatever reason,
+А если я напишу
 
 4111
 03:01:05,521 --> 03:01:06,354
-if I just spelled wrong,
+сюда какую-нибудь билиберду
 
 4112
 03:01:06,354 --> 03:01:10,980
-it's going to blow up
-because we don't have a value
+то ничего не сработает и
 
 4113
 03:01:11,920 --> 03:01:13,120
-with a constant of this type,
+приложение выдаст ошибку
 
 4114
 03:01:13,120 --> 03:01:15,630
-which is what we would
-probably want to have happen
+потому что такого типа
 
 4115
 03:01:15,630 --> 03:01:18,030
-if you're trying to use that
-in your production code.
+энама у нас нет.
 
 4116
 03:01:18,030 --> 03:01:19,390
-Now, just an important note here
+Одна важная концептуальная
 
 4117
 03:01:19,390 --> 03:01:22,170
-is that Kotlin, doesn't have
-a concept of a static method.
+особенность Котлина от Java это то
+что в нем нет ключевого слова static
 
 4118
 03:01:22,170 --> 03:01:24,825
-This is just Kotlin's
-way of kind of providing
+но по поведению companion object
 
 4119
 03:01:24,825 --> 03:01:26,725
-the same functionality out of the box.
+делает именно это.
 
 4120
 03:01:27,660 --> 03:01:31,160
-And that's how you can create
-a companion object method.
+Так в энам можно сделать функции
+в объекте компаньоне
 
 4121
 03:01:31,160 --> 03:01:33,520
-It kind of acts like a static method
+который по сути и работает
 
 4122
 03:01:33,520 --> 03:01:37,040
-inside of a Kotlin enum by
-using a companion object.
+как статический метод в Котлине
 
 4123
 03:01:38,320 --> 03:01:41,110
-Kotlin doesn't have a concept
-of a switch statement.
+В котлине нет ключевого слова switch
 
 4124
 03:01:41,110 --> 03:01:43,840
-Kotlin's switch statement
-is known as a when.
+В контлине у него есть аналог -
+ключевое слово "when"
 
 4125
 03:01:43,840 --> 03:01:47,300
-So let's go ahead and create
-a user to work with real fast.
+Давайте быстренько
+создадим пользователя
 
 4126
 03:01:47,300 --> 03:01:49,880
-And this user will have
-a first name of Don
+С именем Donn
 
 4127
 03:01:49,880 --> 03:01:51,310
-and the last name of Felker.
+и фамилией Felker.
 
 4128
 03:01:52,150 --> 03:01:54,310
-Now the when statement
-looks something like this.
+when - условие
+выглядит так
 
 4129
 03:01:54,310 --> 03:01:56,280
-You say when and then
-you provide the value
+вы пишите when ив скобчках
+пишете объект, состояние
 
 4130
 03:01:56,280 --> 03:01:59,740
-that you're going to evaluate
-here as the condition.
+которого вы хотите проверить.
 
 4131
 03:01:59,740 --> 03:02:02,860
-Say, user.first name say, hey,
-when the user's first name
+Мы будем проверять имя пользователя
+имя это строковый объект
 
 4132
 03:02:02,860 --> 03:02:05,690
-is equal to something and each line here
+и в фигурных скобках будут
 
 4133
 03:02:05,690 --> 03:02:07,750
-will be a condition that we're checking.
+проверки, которые нас интересуют
 
 4134
 03:02:07,750 --> 03:02:11,340
-So when the user's first name is Don,
+И мы как бы говорим, проверим ия пользователя
 
 4135
 03:02:11,340 --> 03:02:14,600
-then we want to go ahead and
-perform some type of action
+и если оно соответствует условию,
+будем делать какое-то действие
 
 4136
 03:02:14,600 --> 03:02:17,460
-and we'll put that inside
-of some curly braces here,
+и условие и действие будут
+внутри фигурных скобок
 
 4137
 03:02:17,460 --> 03:02:22,220
-and we'll say, print ln, this is Don.
+условие - если имя "Donn"
+действие - вывести имя на экран.
 
 4138
 03:02:22,220 --> 03:02:24,100
-And then we can run this.
+и запустим
 
 4139
 03:02:24,100 --> 03:02:26,720
-Now, if we run this here, we'll run
+Теперь мы увидим
 
 4140
 03:02:26,720 --> 03:02:29,890
-and we'll see in the output
-window that we say, this is Don.
+и в консоли увидим имя
 
 4141
 03:02:29,890 --> 03:02:33,890
-Now, if for some reason we
-changed this username to Dan,
+представим, что имя пользователя
+поменялось
 
 4142
 03:02:33,890 --> 03:02:36,860
-of course this evaluation's
-not going to run,
+теперь наша проверка не выполнится
 
 4143
 03:02:36,860 --> 03:02:38,580
-and we're not gonna see
-anything printed out
+и в консоли
 
 4144
 03:02:38,580 --> 03:02:40,058
-to the screen.
+ничего не будет.
 
 4145
 03:02:40,058 --> 03:02:41,640
-So what we can do is also
-provide a default brand,
+так же мы можем сделать
+действие по дефолту
 
 4146
 03:02:41,640 --> 03:02:44,870
-which is known as an
-else inside of the when
+для этого нам нужно написать "else"
 
 4147
 03:02:44,870 --> 03:02:47,360
-and we can provide the
-brackets in here too.
+и фигурные скобки
 
 4148
 03:02:47,360 --> 03:02:50,000
-Print ln, this is not to Don.
+и напишем "Имя не DOnn"
 
 4149
 03:02:50,000 --> 03:02:53,420
-Now, if we run this again
-because user's name is Dan,
+Если запустим теперь
 
 4150
 03:02:53,420 --> 03:02:55,810
-which I'm sure there's
-a Dan Felker somewhere,
+то мы увидим
 
 4151
 03:02:55,810 --> 03:02:57,210
-we'll see this is not Don,
+наш второй вывод
 
 4152
 03:02:57,210 --> 03:03:00,600
-so the else branch has now executed here.
+а значит выполнился блок из
+условия "else"
 
 4153
 03:03:00,600 --> 03:03:03,820
-Now, one of the things,
-and you can put multiple
+В блоках "действиях"
 
 4154
 03:03:03,820 --> 03:03:05,370
-different things inside of here.
+можно делать несколько вещей
 
 4155
 03:03:05,370 --> 03:03:07,930
-So we could do a print line, foo var,
+например сделаем еще один вывод
 
 4156
 03:03:07,930 --> 03:03:10,110
-or do some type of logic or whatever.
+или еще какую-нибудь логику, не важно
 
 4157
 03:03:10,110 --> 03:03:11,860
-These are just basically blocks of code
+это тоже самое что и функции,
+но их можно вызывать только тут
 
 4158
 03:03:11,860 --> 03:03:13,210
-that you can do stuff with.
+и делать в них любые действия.
 
 4159
 03:03:14,596 --> 03:03:15,940
-Now, one of the challenges
-that you're going to run into
+Когда вы только начнете
 
 4160
 03:03:15,940 --> 03:03:18,719
-when you first start
-developing with Kotlin
+разрабатывать на Kotlin
+вам придется
 
 4161
 03:03:18,719 --> 03:03:19,552
-is you're not gonna understand
+адаптироватся к тому как
 
 4162
 03:03:19,552 --> 03:03:20,510
-how to write a when statement.
+правильно писать when условия.
 
 4163
 03:03:20,510 --> 03:03:22,250
-At least that was my experience.
+Так во всяком случае было у меня.
 
 4164
 03:03:22,250 --> 03:03:25,270
-So thankfully the IDE
-helps you out a lot here.
+Но длагодаря IDE это
+делать довольно легче
 
 4165
 03:03:25,270 --> 03:03:27,580
-So you may be familiar with
-writing something like this,
+Вам уже знакомы "if" проверки
 
 4166
 03:03:27,580 --> 03:03:30,960
-user.first name, equal equals Don.
+можно написать такую проверку
 
 4167
 03:03:30,960 --> 03:03:35,210
-And then you may have this
-print line statement here,
+и вывести что-то на экран
 
 4168
 03:03:35,210 --> 03:03:36,600
-and then you're gonna have an else.
+и потом у вас будет else
 
 4169
 03:03:36,600 --> 03:03:39,570
-And this is very common
-in all C style languages,
+и это нормальный подход для
+"Си" подобных языков
 
 4170
 03:03:39,570 --> 03:03:42,660
-which you're probably used
-to seeing many times now.
+и вы видели такой подход
+ммного раз
 
 4171
 03:03:42,660 --> 03:03:47,660
-So if we comment this out,
-we'll see here that Dan Felker.
+если мы закоментируем эту часть
 
 4172
 03:03:48,830 --> 03:03:51,530
-So we should see, this is
-not Don, let's run this now.
+И запустим, то увидим что логика работает
 
 4173
 03:03:52,622 --> 03:03:54,130
-And we'll see, this is not Don.
+и мы уходим в else блок
 
 4174
 03:03:54,130 --> 03:03:56,340
-If I change this back
-to Donn Felker up top,
+Если поменяем имя назад
 
 4175
 03:03:56,340 --> 03:04:00,070
-we'll see that this Don, so
-that condition will be run.
+и запустим, то попадем
+в первое условие
 
 4176
 03:04:00,070 --> 03:04:02,620
-Now again, I know that
-I probably wanna use
+И я например хочу
 
 4177
 03:04:02,620 --> 03:04:06,330
-a when statements very
-Kotlin idiomatic to do so.
+работать с такими условиями в
+Котлин стиле
 
 4178
 03:04:06,330 --> 03:04:08,688
-Now you see as I put my cursor here,
+можно анвести курсор на "if"
 
 4179
 03:04:08,688 --> 03:04:10,220
-we get this little yellow
-light bulb alt enter
+и нажать на желтую лампочку
 
 4180
 03:04:10,220 --> 03:04:13,720
-or hit this and say replace if with when
+и нажать на опцию
+"заменить if на when"
 
 4181
 03:04:13,720 --> 03:04:16,410
-and automatically it
-rewrote the code for us
+и IDE автоматически все заменит
 
 4182
 03:04:16,410 --> 03:04:18,340
-to a little bit different here.
+на немного другой код
 
 4183
 03:04:18,340 --> 03:04:21,220
-Now this doesn't look like
-the one that's down here,
+И этот when не очень похож на тот,
+который мы написали ниже
 
 4184
 03:04:21,220 --> 03:04:23,240
-yet it does the exact same thing.
+но делает ровно ту же вещь
 
 4185
 03:04:24,770 --> 03:04:26,140
-And what this is basically saying is,
+И что тут происходит?
 
 4186
 03:04:26,140 --> 03:04:29,060
-hey, is this username
-first name equals Don.
+мы просто заходим и спрашиваем
+имя равно Donn?
 
 4187
 03:04:29,060 --> 03:04:32,830
-Now it's going to just say print line.
+и выводим строку в консоль
 
 4188
 03:04:32,830 --> 03:04:35,650
-Now notice how there's no
-brackets here like I have here.
+И тут у нас нет фигурных скобок
+как снизу
 
 4189
 03:04:35,650 --> 03:04:38,190
-So let's undo what we just did before.
+Давайте вернем все к if
 
 4190
 03:04:38,190 --> 03:04:41,860
-If I have multiple statements
-in here and I said,
+И допишем еще какое-то действие
 
 4191
 03:04:41,860 --> 03:04:43,280
-this is cool.
+в if-е
 
 4192
 03:04:43,280 --> 03:04:44,900
-And then I come back up here and say
+И снова заменим
 
 4193
 03:04:44,900 --> 03:04:46,450
-replace the if with the when,
+if условие на when
 
 4194
 03:04:47,520 --> 03:04:50,170
-the IDE will automatically
-provide the brackets for it.
+IDE при форматировании подставит скобки
 
 4195
 03:04:50,170 --> 03:04:51,920
-So if it's a single line statement,
+Если в if у нас одно действие
 
 4196
 03:04:53,146 --> 03:04:53,979
-what will end up happening
-is when we replace
+то при замене на
 
 4197
 03:04:53,979 --> 03:04:55,770
-the if with the when,
+when условие
 
 4198
 03:04:55,770 --> 03:04:58,280
-it will then turn it into a
-single line in line statement.
+действие превратится в одностроковое
+как это было с функциями
 
 4199
 03:04:58,280 --> 03:04:59,950
-So it's easier to read,
+и читать его будет проще
 
 4200
 03:04:59,950 --> 03:05:02,690
-but it's also optimized
-it here because it says,
+и when еще немного оптимизирован
+и мы не проверяем конкретный объект
 
 4201
 03:05:02,690 --> 03:05:05,980
-hey, we don't have to evaluate
-the wind for the else here.
+а работаем с большими проверками
 
 4202
 03:05:05,980 --> 03:05:08,080
-So we're just gonna throw
-it in this item here,
+и тут мы можем делать дополнительные
 
 4203
 03:05:08,080 --> 03:05:12,140
-which also means we could
-just say, this could be Dan.
+проверки, например
+мы можем проверить
 
 4204
 03:05:12,140 --> 03:05:14,700
-Now at this point, it's
-getting kind of redundant.
+равно ли имя пользователя
 
 4205
 03:05:14,700 --> 03:05:16,680
-So we say, this is Dan.
+например, "Dan"
 
 4206
 03:05:16,680 --> 03:05:18,910
-And if we were to run this,
-now let's run real fast.
+И если запустим, то увидим,
 
 4207
 03:05:18,910 --> 03:05:21,750
-You're gonna see that it's
-gonna say this is Don.
+что сейчас имя Donn
 
 4208
 03:05:21,750 --> 03:05:25,200
-Now, if I put in Dan, say, this is Dan.
+заменим имя пользователя на Dan
+в выводе увидим Dan
 
 4209
 03:05:27,260 --> 03:05:29,740
-And then if I put in, this is Dana,
+И теперь вставим "Dana"
 
 4210
 03:05:29,740 --> 03:05:31,260
-it's not gonna work 'cause this is Dana.
+и попадем в else блок.
 
 4211
 03:05:31,260 --> 03:05:33,450
-So then I can rewrite this in my opinion,
+На мой взгляд, если все проверки
+касаются одного и того же объекта
 
 4212
 03:05:33,450 --> 03:05:34,940
-it's a little bit cleaner.
+то лучше написать это немного чище
 
 4213
 03:05:34,940 --> 03:05:38,150
-I can actually just say,
-get rid of this stuff here.
+и удалить вызов объекта
+в каждом условии и добавить
 
 4214
 03:05:38,150 --> 03:05:40,530
-And what this will do is it'll valuate
+в крглые скобки блока (when)
 
 4215
 03:05:40,530 --> 03:05:44,390
-when I can put this inside
-the, the user.first name.
+запишем сюда user.firstName
 
 4216
 03:05:45,520 --> 03:05:47,140
-So what this is gonna do is only evaluate
+и теперь when будет лимитирован проверкой
 
 4217
 03:05:47,140 --> 03:05:50,151
-whatever's inside of
-the first name variable.
+нашего имени пользователя
 
 4218
 03:05:50,151 --> 03:05:53,520
-So what the saying is user's
-first name when it equals Don,
+Когда у нас имя равно
 
 4219
 03:05:54,588 --> 03:05:55,421
-go ahead and print this out here.
+"Donn" мы выполняем это действие
 
 4220
 03:05:55,421 --> 03:05:57,130
-When that equals Dan, print this out here.
+Когда "Dan", то вот это
 
 4221
 03:05:57,130 --> 03:05:59,910
-Now, when would you wanna not use that?
+Когда не получится работать с
+when на конкретном объекте?
 
 4222
 03:05:59,910 --> 03:06:00,860
-That's a very good example.
+Есть хороший пример
 
 4223
 03:06:00,860 --> 03:06:03,660
-So you could actually say,
-well, when the user's first name
+Вернем код и напишем
 
 4224
 03:06:03,660 --> 03:06:05,430
-is Don, then we wanna print this as Don.
+все как было
 
 4225
 03:06:05,430 --> 03:06:08,820
-But what if we only wanna
-print it when it's Donn Felker.
+но если мы захотим проверить
+кроме имени
 
 4226
 03:06:08,820 --> 03:06:13,820
-So user.last name equals, excuse
-me, we wanna go over here.
+должны еще проверить
 
 4227
 03:06:15,325 --> 03:06:19,470
-Username equals Donn and
-user.last name equals Felker.
+фамилию, имя равно Donn и фамилия
+равна Felker
 
 4228
 03:06:20,900 --> 03:06:22,910
-Then at that point, we
-wanna say print this as Don,
+И с таким условием
+мы выведем "Donn"
 
 4229
 03:06:22,910 --> 03:06:24,452
-otherwise we don't.
+иначе - что-то другое
 
 4230
 03:06:24,452 --> 03:06:26,530
-So let's go back here
-and let's change this.
+Давайте вернемся сюда
+и поменяем пользователя
 
 4231
 03:06:26,530 --> 03:06:30,860
-Again, this go to Dan, let's
-go to Donn Felker and run this.
+на Donn Felker и запустим
 
 4232
 03:06:30,860 --> 03:06:33,760
-What you'll see here is
-it's gonna say this is Don,
+И в выводе увидим
+строку из первого условия
 
 4233
 03:06:33,760 --> 03:06:38,470
-but what happened if we added just Felker,
+а что будет, если фамилия не совпадет
 
 4234
 03:06:39,399 --> 03:06:41,930
-I misspelled whatever, and run it again.
+например у нас опечатка, и запустим
 
 4235
 03:06:41,930 --> 03:06:44,120
-This is not going to run, it's
-gonna say this is not Don,
+код из первого условия не выполнится
 
 4236
 03:06:44,120 --> 03:06:46,480
-because what this one statement is doing
+потому что условие проверяется полностью
 
 4237
 03:06:46,480 --> 03:06:49,140
-is using this entire
-line as an evaluation.
+все это слева проверяется
 
 4238
 03:06:49,140 --> 03:06:52,130
-And again, once it starts
-getting kind of long
+И опять, если эта строка очень большая
 
 4239
 03:06:52,130 --> 03:06:54,070
-and goes after the initial line break,
+и становится плохо читаемым
 
 4240
 03:06:54,070 --> 03:06:56,830
-I prefer to put it inside
-of a print line here.
+то можно все действия
+переносить на новую строку
 
 4241
 03:06:56,830 --> 03:06:58,580
-So you kind of start evaluating multiple
+И теперь вы проверяете много
 
 4242
 03:06:58,580 --> 03:07:00,260
-different conditionals inside of here
+разных значений в
 
 4243
 03:07:00,260 --> 03:07:02,680
-using this when statement, and
-then of course you can have
+when условии и если не попадаете
 
 4244
 03:07:02,680 --> 03:07:05,670
-a fall through as the else at the end.
+ни в одно из них, то выполняется
+else блок в конце.
 
 4245
 03:07:05,670 --> 03:07:08,570
-You can mix having blocks
-of code inside of here,
+Вы можете миксовать блоки кода
 
 4246
 03:07:08,570 --> 03:07:12,190
-or you can kind of have
-one line evaluations
+и выражения написанные в одну строку
 
 4247
 03:07:12,190 --> 03:07:14,520
-and statements here,
-which will then evaluate
+и действия справа
 
 4248
 03:07:14,520 --> 03:07:16,820
-these expressions and
-print onto the screen.
+будут выполняться как и блоки кода
 
 4249
 03:07:16,820 --> 03:07:18,790
-You can not put multiple
-ones here on the same line,
+В одностроковых действиях
+вы не можете делать несколько строк кода
 
 4250
 03:07:18,790 --> 03:07:20,330
-as soon as you need to do multiple things,
+если вы это сделаете
 
 4251
 03:07:20,330 --> 03:07:23,030
-you will need to provide a block for that.
+то вам придется добавлять фигурные скобки
 
 4252
 03:07:23,030 --> 03:07:24,340
-So that's pretty easy to do.
+Делается это просто, берем строку
 
 4253
 03:07:24,340 --> 03:07:28,240
-You can just go ahead and
-provide that print all those,
+пишем фигурные скобки
 
 4254
 03:07:28,240 --> 03:07:32,630
-print ln and accordingly,
+и на новой строке вставляем код обратно
 
 4255
 03:07:34,640 --> 03:07:38,550
-and you can put some other
-stuff inside of here, print ln.
+И теперь можете писать
+сколько угодно логики
 
 4256
 03:07:38,550 --> 03:07:41,620
-This is ABC, whatever.
+что-то вроде этого, неважно.
 
 4257
 03:07:41,620 --> 03:07:43,150
-And then that's how you can go ahead
+И так мы познакомились
 
 4258
 03:07:43,150 --> 03:07:46,740
-and use a basic when
-statement inside of Kotlin.
+с when условиями и ключевым
+словом "when" в котлин
 
 4259
 03:07:46,740 --> 03:07:47,990
-And of course, this can be used
+И его можно использовать
 
 4260
 03:07:47,990 --> 03:07:51,660
-with different types of
-things, such as primitives
+с проверкой самых разных типов
 
 4261
 03:07:51,660 --> 03:07:54,740
-can be used to check
-different instance types.
+от примитивов до ваших
+собственных классов
 
 4262
 03:07:54,740 --> 03:07:57,370
-This is just a conditional
-very much like an if.
+"when" очень похож на if
 
 4263
 03:07:57,370 --> 03:08:00,037
-And again, if you don't know how to write
+И если у вас какие-то сложности с написанием
 
 4264
 03:08:00,037 --> 03:08:01,190
-the when statement, you can always go back
+when условия, вы всегда можете написать
 
 4265
 03:08:01,190 --> 03:08:03,780
-to the if statement,
-write your if statement,
+if - условия и с помощью
 
 4266
 03:08:03,780 --> 03:08:07,030
-and then go ahead and use the
-helper inside of IntelliJ,
+IDE конвертировать его в when
 
 4267
 03:08:07,030 --> 03:08:11,410
-Android Studio or any
-other Java IDE that's built
+Это форматирование встроено
+в Intellij IDEA и Android Studio
 
 4268
 03:08:11,410 --> 03:08:14,320
-by JetBrains to have actually have it.
+обе сделаны компанией JetBrains
 
 4269
 03:08:14,320 --> 03:08:16,430
-Go ahead and replace your if statement
+Спокойно переводите if условия
 
 4270
 03:08:16,430 --> 03:08:17,690
-with a when statement.
+в when условия.
 
 4271
 03:08:19,610 --> 03:08:21,340
-There are times in a when statement
+Иногда бывают ситуайции, когда
 
 4272
 03:08:21,340 --> 03:08:23,150
-when it's used as an expression
+when используется как функция выражения
 
 4273
 03:08:23,150 --> 03:08:24,700
-that it needs to be exhaustive.
+и должна проверять все условия.
 
 4274
 03:08:30,120 --> 03:08:32,500
-What that means is ln
-statement must be provided.
+Это значит, что в  нем обязательно
+должно быть else условие
 
 4275
 03:08:32,500 --> 03:08:34,800
-So let's assume that we
-have at when statement
+Давайте предположим что у нас есть when
 
 4276
 03:08:36,386 --> 03:08:37,219
-based upon an account type.
+который проверяет тип аккаунта
 
 4277
 03:08:37,219 --> 03:08:39,410
-So if we have an account
-type and we'll just say
+давайте заведем тип аккаунта
 
 4278
 03:08:39,410 --> 03:08:44,410
-account type.gold, and we can
-say a when statement here.
+пусть будет GOLD и сделаем на нем
+when проверку
 
 4279
 03:08:45,250 --> 03:08:48,960
-So when an account type,
-and then we say gold,
+И когда тип аккаунта золотой
 
 4280
 03:08:50,850 --> 03:08:54,890
-what we can actually do
-here is we can actually
+мы можем выполнить
 
 4281
 03:08:54,890 --> 03:08:56,620
-have some type of code
-here and we can say,
+какой-то код, мы, например,
+вернем строку
 
 4282
 03:08:56,620 --> 03:09:01,030
-return gold member.
+"Gold member"
 
 4283
 03:09:01,030 --> 03:09:02,960
-Maybe we wanna return certain strings
+Допустим что мы хотим возвращать
 
 4284
 03:09:02,960 --> 03:09:05,400
-based upon whatever their status is.
+строку в зависимости от
+типа абонемента
 
 4285
 03:09:05,400 --> 03:09:07,380
-So you can see here, we
-have an error and it says,
+И тут мы можем заметить ошибку
 
 4286
 03:09:07,380 --> 03:09:11,290
-hey, this is by default,
-a unit and returns a unit,
+и она говорит, что мы возвращаем String
 
 4287
 03:09:11,290 --> 03:09:12,550
-but we're telling you to return a string.
+а должны возвращать Unit
 
 4288
 03:09:12,550 --> 03:09:15,790
-So what we can actually do
-is have when return of value.
+На самом деле when может
+возвращать значение
 
 4289
 03:09:15,790 --> 03:09:19,000
-So we actually, val equals message.
+напишем переменную в которую
+запишется результат
 
 4290
 03:09:19,000 --> 03:09:21,470
-So I wanna say a message
-off of this when statement.
+и теперь результат when формирует
+нашу новую переменную
 
 4291
 03:09:21,470 --> 03:09:24,022
-And what you'll see
-here is it's telling us,
+И теперь новая ошибка говорит,
+что когда when используется
 
 4292
 03:09:24,022 --> 03:09:28,260
-hey, well now when the when
-expression is used like this,
+таким образом, when должен
+покрывать все кейсы
 
 4293
 03:09:28,260 --> 03:09:29,290
-it must be exhaustive.
+и обязательно что-то возвращать.
 
 4294
 03:09:29,290 --> 03:09:33,180
-So we have to actually handle
-all of the different scenarios
+И нам придется поддержать
+все возможные сценарии
 
 4295
 03:09:33,180 --> 03:09:37,790
-because this val must be
-populated with something.
+потому что переменная должна
+в итоге получить значение
 
 4296
 03:09:37,790 --> 03:09:38,900
-It has to be something.
+Что-то должно быть в результате
 
 4297
 03:09:38,900 --> 03:09:41,580
-And the compiler knows by default.
+И компилятору извесно, что
 
 4298
 03:09:41,580 --> 03:09:44,383
-Well, account type has different values,
+у типа аккаунта есть несколько значений
 
 4299
 03:09:44,383 --> 03:09:45,590
-it has bronze and silver
-and gold and platinum.
+Бронза, серебра, золото и платина
 
 4300
 03:09:45,590 --> 03:09:49,120
-If you parse in, if this is platinum,
+И если ваш тип аккаунта Платиновый
 
 4301
 03:09:49,120 --> 03:09:50,720
-it doesn't know what to return.
+то when не знает как его обаботать.
 
 4302
 03:09:50,720 --> 03:09:53,480
