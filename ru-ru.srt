@@ -18898,900 +18898,849 @@ when проверку
 
 4302
 03:09:50,720 --> 03:09:53,480
-So it's telling you,
-hey, you have to return
+И говорит нам, что
 
 4303
 03:09:53,480 --> 03:09:54,840
-all of these things inside of here.
+нужно обработать все варианты
 
 4304
 03:09:54,840 --> 03:09:56,160
-And what it's saying is here,
+И тут он пишет, что
 
 4305
 03:09:56,160 --> 03:09:58,130
-you can do this in one of two ways,
+мы можем либо предоставить
 
 4306
 03:09:58,130 --> 03:10:00,730
-you can add a necessary
-bronze, silver, or platinums,
+обработку всех недостающих абонементов
 
 4307
 03:10:00,730 --> 03:10:03,070
-or add an else branch, so
-there's two ways to do this.
+либо добавить else блок
 
 4308
 03:10:03,070 --> 03:10:07,390
-We could say, hey, a gold
-member, or we can say,
+Мы можем сделать как сейчас
 
 4309
 03:10:08,890 --> 03:10:13,420
-what would we say, else
-and we could return
+и дописть блок else
+и, например вернуть
 
 4310
 03:10:13,420 --> 03:10:18,420
-a regular member, something like that.
+какой-нибудь обычный текст
 
 4311
 03:10:20,930 --> 03:10:23,630
-We'll see here we have, it
-looks like it's returning,
+И тут какая-то ошибка
 
 4312
 03:10:23,630 --> 03:10:25,200
-we don't need to add the
-return statement there
+кажется нам не нужно слово return
 
 4313
 03:10:25,200 --> 03:10:26,730
-'cause it's actually
-used as an expression,
+потому что when используется как
+функция выражение
 
 4314
 03:10:26,730 --> 03:10:27,940
-so we don't need to return anymore.
+и ничего явно возвращать не нужно
 
 4315
 03:10:27,940 --> 03:10:32,450
-And then what we can do here
-is say, print line message.
+И теперь наконец-то мы можем
+вывести наше сообщение в консоль
 
 4316
 03:10:33,770 --> 03:10:36,270
-And when we print this,
-well, you're gonna see
+И в консоли увидим что
 
 4317
 03:10:36,270 --> 03:10:37,910
-that they are a gold member.
+это сообщение для золотого абонемента.
 
 4318
 03:10:37,910 --> 03:10:40,260
-Now, if I were to type this as platinum,
+Если заменим на платиновый
 
 4319
 03:10:43,820 --> 03:10:47,340
-we know that this is incorrect
-and it says regular member.
+мы значем, что это не золотой
+и попадем в else блок
 
 4320
 03:10:47,340 --> 03:10:49,230
-Now that's not correct here.
+потому что обрабатывается
+только золотой
 
 4321
 03:10:49,230 --> 03:10:54,090
-So maybe what we wanna do is
-if we say, if they are gold,
+Давайте допустим, что мы хотим
+что-то сделать, если
 
 4322
 03:10:55,380 --> 03:10:57,140
-then anything else like that,
+абонемент золотой.
 
 4323
 03:10:57,140 --> 03:10:58,790
-where maybe platinum is a highest level,
+Хотя нет, платиновый самый лучший
 
 4324
 03:10:58,790 --> 03:11:00,090
-we'll say platinum member.
+поэтому заменим на платиновый
 
 4325
 03:11:05,710 --> 03:11:06,740
-Platinum.
+Платиновый
 
 4326
 03:11:06,740 --> 03:11:09,392
-And then inside of the classroom,
+И внутри else блока
 
 4327
 03:11:09,392 --> 03:11:14,392
-we can say not eligible
-for special access,
+мы напишем, что у остальных
+нет доступа к
 
 4328
 03:11:15,730 --> 03:11:16,690
-whatever that might mean.
+например к спортивному залу
 
 4329
 03:11:16,690 --> 03:11:18,900
-And if that's basically
-saying this is maybe a string,
+И теперь в случае, когда абонемент
 
 4330
 03:11:18,900 --> 03:11:21,330
-that's going to be
-displayed to the screen.
+платиновый мы будем выводить
 
 4331
 03:11:21,330 --> 03:11:22,830
-When they're platinum, then use this,
+что он платиновый
 
 4332
 03:11:22,830 --> 03:11:26,670
-otherwise for all other instances,
-if they're gold, silver,
+а для всех других типов
 
 4333
 03:11:27,654 --> 03:11:29,640
-or bronze, then we want them to only see
+будет текст, что у них нет доступа
 
 4334
 03:11:29,640 --> 03:11:32,201
-not eligible for special access.
+в зал
 
 4335
 03:11:32,201 --> 03:11:33,540
-Well, here they're a platinum member.
+Сейчас у нас результат для платинового
 
 4336
 03:11:33,540 --> 03:11:37,390
-So we can actually say
-platinum member access allowed.
+и давайте заменим текст, что у них
+доступ к залу есть
 
 4337
 03:11:39,110 --> 03:11:40,664
-And then when we rerun it,
+и перезапустим
 
 4338
 03:11:40,664 --> 03:11:41,500
-we'll see platinum member access allowed.
+увидим новый текст
 
 4339
 03:11:41,500 --> 03:11:44,400
-And then we'll come up
-here and changes to silver
+теперь заменим на серебряный
 
 4340
 03:11:44,400 --> 03:11:45,270
-and we're rerun it.
+и снова перезапустим
 
 4341
 03:11:45,270 --> 03:11:48,530
-And it says, hey, you're not
-eligible for special access.
+И теперь доступа для такого аккаунта
+у нас нет
 
 4342
 03:11:48,530 --> 03:11:50,070
-Now that's when we could do it.
+И так мы можем обрабатывать
+одним способом
 
 4343
 03:11:50,070 --> 03:11:52,800
-One way we could do it now,
-we could also change this
+Другой способ подразумевает,
 
 4344
 03:11:52,800 --> 03:11:56,770
-and provide an implementation
-for each individual one.
+что нам нужно обработать все типы
+абонементов
 
 4345
 03:11:56,770 --> 03:11:59,650
-Now it doesn't matter, we
-could type bronze here,
+Главное правило тут что
 
 4346
 03:11:59,650 --> 03:12:01,760
-we could type the different ones here.
+порядок не важен
 
 4347
 03:12:01,760 --> 03:12:05,830
-This would, of course, maybe
-there's a bronze access,
+Текст для бронзы заменим на правильный
 
 4348
 03:12:05,830 --> 03:12:07,360
-there's bronze member access.
+что есть "бронзовый" доступ
 
 4349
 03:12:09,580 --> 03:12:12,090
-And so we have this, we'll
-change this to silver.
+А это поменяем на серебро
 
 4350
 03:12:13,280 --> 03:12:15,160
-And notice we still have
-the squiggly align up here,
+И заметьте что у нас до сих
+пор есть это подчеркивание
 
 4351
 03:12:15,160 --> 03:12:17,520
-it's still complaining that
-we don't have everything
+компилятор жалуется, что мы не
+обработали все варианты
 
 4352
 03:12:17,520 --> 03:12:20,730
-that we need and then we
-can change this to gold.
+И добавим последний - золотой
 
 4353
 03:12:22,289 --> 03:12:23,122
-As soon as I provide the gold,
+Как только я его написал
 
 4354
 03:12:23,122 --> 03:12:25,690
-I've provided all of these values,
+и мы обработали все варианты
+ошибка пропала
 
 4355
 03:12:25,690 --> 03:12:27,070
-gold member access allowed.
+заменим текст в золотом
 
 4356
 03:12:28,190 --> 03:12:31,000
-Now the beautiful part
-about this is regardless
+Самая классная вещь во всем этом
 
 4357
 03:12:31,000 --> 03:12:33,040
-of whatever I've typed inside of here.
+это то что в будущем...
 
 4358
 03:12:33,040 --> 03:12:34,840
-And I look this telling us
-we can inline this here,
+Так, компилятор говорит, что
+мы можем упростить код
 
 4359
 03:12:34,840 --> 03:12:38,100
-we can inline the message,
-which we don't really wanna do,
+но мы этого делать не будем,
 
 4360
 03:12:38,100 --> 03:12:41,320
-'cause we're assuming this
-comes from an API or database.
+потому что мы подразумеваем что
+это значение динамически меняется.
 
 4361
 03:12:41,320 --> 03:12:42,550
-The beautiful part about all this.
+Так вот, самая класная штука -
 
 4362
 03:12:42,550 --> 03:12:45,480
-Once we run it, we'll see that
-we get the correct bronze,
+когда мы запустим мы увидим правильный
 
 4363
 03:12:46,346 --> 03:12:49,650
-silver, gold is that, and just,
+вывод в консоли
 
 4364
 03:12:49,650 --> 03:12:51,660
-excuse me, I'm gonna reorganize here
+простите, я все таки поменяю их
 
 4365
 03:12:51,660 --> 03:12:54,421
-because it just makes more
-sense and matches the code,
+местами, чтобы было логичнее.
 
 4366
 03:12:54,421 --> 03:12:56,840
-is it when we have account types,
+из-за того что мы работаем
+с типом аккаунта
 
 4367
 03:12:56,840 --> 03:12:57,840
-they're gonna have a value,
+у нас будет фиксированый список
 
 4368
 03:12:57,840 --> 03:13:00,080
-which means later on in our application,
+и если он в будущем поменяется
 
 4369
 03:13:01,410 --> 03:13:03,430
-if we decide to, for whatever reason,
+и мы решим, что у нас будет
 
 4370
 03:13:03,430 --> 03:13:06,800
-our business needs change
-and we add a new level Onyx.
+добавлен новый тип Onyx
 
 4371
 03:13:07,750 --> 03:13:11,420
-Now our application will not compile.
+наше приложение не скомпилируется
 
 4372
 03:13:11,420 --> 03:13:12,710
-The compiler is gonna check this and say,
+Компилятор придет в when и увидит
 
 4373
 03:13:12,710 --> 03:13:14,940
-hey, this when statement
-is not exhaustive.
+что when не обработал все возможные
+варианты
 
 4374
 03:13:14,940 --> 03:13:18,070
-So if this account type
-is in another class file
+И если у нас тип аккаунта
+используется где-то в другом
 
 4375
 03:13:18,070 --> 03:13:19,940
-or another file or application,
+файле или приложении,
 
 4376
 03:13:19,940 --> 03:13:21,840
-which it's most likely is going to be,
+что тоже вероятно,
 
 4377
 03:13:22,761 --> 03:13:25,000
-and we've added Onyx because
-it's coming down from the API.
+и мы добавим onyx потому что api
+теперь может присылать такой вариант
 
 4378
 03:13:25,000 --> 03:13:28,360
-Cool, we have Onyx now,
-we're gonna to add that
+То мы добавим этот тип и когда
 
 4379
 03:13:28,360 --> 03:13:30,120
-and we're to try to
-compile our application
+попробуем скомпилировать приложение
 
 4380
 03:13:30,120 --> 03:13:32,550
-and the Kotlin compiler's
-gonna say no, no, no, no, no,
+компилятор Котлина остановит нас
 
 4381
 03:13:32,550 --> 03:13:34,950
-you can't do this because
-you have to make sure
+и скажет, что он ничего не будет
 
 4382
 03:13:34,950 --> 03:13:37,400
-that when expression is exhaustive.
+компилировать, пока мы не
+обработаем это значение везде
 
 4383
 03:13:37,400 --> 03:13:40,120
-Now of course, that's, of
-course can be gotten around
+И конечно такой кейс можно
+обойти, если
 
 4384
 03:13:40,120 --> 03:13:45,120
-by if the else is here, then
-say unknown member type,
+мы добавим else блок в конце
 
 4385
 03:13:45,710 --> 03:13:48,253
-or whatever and you can
-have that and will be,
+и вставим какой-нибудь
 
 4386
 03:13:48,253 --> 03:13:49,396
-you can add it in there.
+текст для неопределенных
+абонементов
 
 4387
 03:13:49,396 --> 03:13:51,160
-So if you add another
-one, you can say pink
+И если мы сейчас добавит еще
 
 4388
 03:13:51,160 --> 03:13:53,510
-and whatever that would
-be, maybe it's special,
+один тип, например "розовый"
 
 4389
 03:13:55,599 --> 03:13:56,600
-cancer awareness or something.
+абонемент
 
 4390
 03:13:56,600 --> 03:14:00,200
-It pops in there, then you
-can have that inside there.
+то его обработает блок else
+или вы можете напистаь обработку сами
 
 4391
 03:14:00,200 --> 03:14:04,010
-The different types that you have in here,
+Опять же, порядок тут не важен
 
 4392
 03:14:04,010 --> 03:14:04,843
-again, this doesn't matter if the bronze
+Если ваш тип будет бронзовый,
 
 4393
 03:14:04,843 --> 03:14:07,101
-is the bomb or whatever, the
-expression will be evaluated
+то мы выполним только блок у бронзового
 
 4394
 03:14:07,101 --> 03:14:09,960
-and the message will be
-returned at that point.
+и вернем сообщение
 
 4395
 03:14:09,960 --> 03:14:12,696
-And that's how you can
-work with an exhaustive
+И так мы работаем с when выражениями,
+которые используются
 
 4396
 03:14:12,696 --> 03:14:14,900
-versus non-exhaustive when statement.
+как функции выражений
 
 4397
 03:14:14,900 --> 03:14:17,020
-And again, the non-exhaustive
-one is going to be
+Еще раз напомню что обычный when
 
 4398
 03:14:17,020 --> 03:14:20,860
-perhaps if you just want to
-perform some type of evaluation.
+просто делает проверку
+и ничего не возвращает
 
 4399
 03:14:20,860 --> 03:14:24,434
-So this would be non-exhaustive
-one account type.
+Вот так будет выглядеть обычный when
 
 4400
 03:14:24,434 --> 03:14:26,580
-And I could say gold.
+И я могу обработать золотой абонемент
 
 4401
 03:14:28,150 --> 03:14:31,050
-And I would say, maybe just
-print something to the screen.
+и вывести что-то на экран
 
 4402
 03:14:32,130 --> 03:14:34,290
-This is gold.
+"Это золотой абонемент"
 
 4403
 03:14:35,280 --> 03:14:36,880
-Now this is non-exhaustive here.
+это обычный when
 
 4404
 03:14:37,908 --> 03:14:39,890
-We're not required to
-provide an else statement.
+и в нем даже не нужен else блок
 
 4405
 03:14:39,890 --> 03:14:41,390
-Because this is using the expression,
+А этот блок должен проинициализировть
 
 4406
 03:14:41,390 --> 03:14:42,700
-it's gonna be returning a value.
+переменную и вернуть значение
 
 4407
 03:14:42,700 --> 03:14:46,170
-We have to provide an exhaustive approach.
+и нам нужно
 
 4408
 03:14:46,170 --> 03:14:47,650
-We have to exhaust all the options.
+обработать все варианты
 
 4409
 03:14:47,650 --> 03:14:50,000
-So we need to provide all of the options
+то есть пройтись по всем типам
 
 4410
 03:14:50,000 --> 03:14:51,900
-or also provide an else at the bottom
+и использовать else для типов,
+которые мы не обрабатываем
 
 4411
 03:14:51,900 --> 03:14:53,010
-so we know what to do there.
+чтобы компилятор знал что сделать
 
 4412
 03:14:53,010 --> 03:14:55,695
-And again, there's no Onyx here.
+Теперь снова жалуется, потому
+что мы не написали
 
 4413
 03:14:55,695 --> 03:14:56,712
-So it starts complaining and so forth.
+как обработать Onyx тип
 
 4414
 03:14:56,712 --> 03:15:01,692
-And if we delete the Onyx and we had to go
+И если удалим сам тип
 
 4415
 03:15:01,692 --> 03:15:04,480
-to platinum there, we fix
-our compiler problems.
+то все будет хорошо
 
 4416
 03:15:04,480 --> 03:15:05,940
-And that's how we work with the exhaustive
+И на этом можно завершить
 
 4417
 03:15:05,940 --> 03:15:08,730
-versus non-exhaustive
-when statements Kotlin.
+наш разговор про ключевое слово when
 
 4418
 03:15:10,800 --> 03:15:13,920
-In programming, it's very often
-that you'll have in a class,
+Часто в разработке у вас будут случаи
 
 4419
 03:15:13,920 --> 03:15:16,470
-this you simply to hold data.
+когда ваши классы будут
+только хранить данные
 
 4420
 03:15:16,470 --> 03:15:20,890
-And so what we might have
-is a class called person
+Допустим у нас есть класс человека
 
 4421
 03:15:20,890 --> 03:15:24,170
-and as string and a last name of string,
+с именем и фамилией
 
 4422
 03:15:25,479 --> 03:15:26,590
-and it doesn't maybe even have a body
+и допустим у него нет никаких функций
 
 4423
 03:15:26,590 --> 03:15:29,790
-that's just has no properties
-or any of them be no functions
+а поэтому тело класса писать не нужно
 
 4424
 03:15:29,790 --> 03:15:31,020
-or anything like that.
+и никаких других конструкторов
 
 4425
 03:15:32,524 --> 03:15:35,850
-So this is a person and we may
-define person one as P one.
+Сделаем переменную
 
 4426
 03:15:35,850 --> 03:15:37,080
-And we would say person,
+и проинициализируем ее человеком
 
 4427
 03:15:38,625 --> 03:15:39,660
-and we'll save their first name is Don
+пусть имя будет Donn
 
 4428
 03:15:39,660 --> 03:15:41,900
-and their last name is Felker.
+а фамилия Felker
 
 4429
 03:15:41,900 --> 03:15:45,740
-And I'm gonna create two of
-these, so P one and P two.
+и я сделаю еще одного пользователя
+с такими же параметрами
 
 4430
 03:15:45,740 --> 03:15:47,370
-Now, if I were to actually say,
+И теперь, если я проверю хи на равенство
 
 4431
 03:15:47,370 --> 03:15:50,620
-are these equal to each
-other, you might think
+вам сначала может показаться
 
 4432
 03:15:50,620 --> 03:15:52,010
-of course, that these
-are equal to each other.
+что они одинаковые
 
 4433
 03:15:52,010 --> 03:15:53,600
-They have the same contents,
+у них одинаковые имя и фамилия,
 
 4434
 03:15:53,600 --> 03:15:56,690
-they must be equal to each
-other, so let's run that here.
+поэтому они должны быть одинаковыми
 
 4435
 03:15:56,690 --> 03:15:59,040
-And what we're going to
-see is that it's false,
+если запустим, то увидим,
+что результат false
 
 4436
 03:15:59,950 --> 03:16:01,780
-these do not equal to each other.
+они не равны друг другу
 
 4437
 03:16:01,780 --> 03:16:06,780
-And if we are to print these
-out, we're going to see P one
+А если вывести их на экран
 
 4438
 03:16:07,200 --> 03:16:12,200
-and P two actually have
-different little codes here
+то мы увдим странные кодироваки
+и они будут разные для этих объектов
 
 4439
 03:16:12,260 --> 03:16:15,010
-at the end, which we can get
-to that in at a later time,
+я позже объясню что они значат
 
 4440
 03:16:15,010 --> 03:16:17,777
-basically showing that,
-look, both of these objects
+и не смотря на то что
+эти объекты очень похожи,
 
 4441
 03:16:17,777 --> 03:16:18,610
-are actually different.
+для программы они разные
 
 4442
 03:16:18,610 --> 03:16:20,910
-They're different is
-not actually comparing
+программа на самом деле не проверяет
 
 4443
 03:16:20,910 --> 03:16:23,140
-value equality inside of them.
+контент этих объектов
 
 4444
 03:16:23,140 --> 03:16:26,150
-Now, thankfully, the
-language designers at Kotlin
+Благодаря прекрасным
+разработчикам языка Котлин,
 
 4445
 03:16:26,150 --> 03:16:27,290
-have thought about this and said,
+которые позаботились об этом
+и подумали, что будут классы
 
 4446
 03:16:27,290 --> 03:16:30,580
-well, there are times when we
-just wanna carry data around.
+которые будут просто хранить данные
 
 4447
 03:16:30,580 --> 03:16:33,730
-And so if we have a class
-like that, you can then use
+и если нам нужен класс для
+таких нужд
 
 4448
 03:16:33,730 --> 03:16:35,460
-what's known as a data class.
+мы можем использовать дата классы,
+ключевое слово "data class"
 
 4449
 03:16:35,460 --> 03:16:37,590
-And to use a data class,
-you'll just slap the word data
+И если ваш класс именно такой
 
 4450
 03:16:37,590 --> 03:16:39,710
-at the beginning and then
-you also have to have
+просто пришлепните слово data в начале
+и ваши параметры в конструкторе
 
 4451
 03:16:39,710 --> 03:16:42,080
-at least one parameter and all parameters
+должны начинаться с
 
 4452
 03:16:42,080 --> 03:16:44,470
-must either be val or var.
+val и var
 
 4453
 03:16:44,470 --> 03:16:47,680
-And so we've added that here
-and now we can actually say
+И как толко мы добавили
+это ключевое слово
 
 4454
 03:16:47,680 --> 03:16:51,940
-print line P one equals equals P two.
+мы можем проверить на
+равенство наши объекты
 
 4455
 03:16:53,451 --> 03:16:54,940
-And if we run this, we'll
-see that both of these values
+и если запустим увидим, что теперь
 
 4456
 03:16:54,940 --> 03:16:55,773
-are the same.
+объекты равны.
 
 4457
 03:16:55,773 --> 03:16:57,480
-And what will happen behind the scenes
+Под капотом data говорит компилятору
+что классы нужно проверять на равенство
 
 4458
 03:16:57,480 --> 03:17:00,960
-is it's actually comparing the values.
+по их контенту
 
 4459
 03:17:00,960 --> 03:17:03,000
-Now there's a couple of things
-that are making this happen.
+И происходит это таким образом
 
 4460
 03:17:03,000 --> 03:17:06,060
-The Kotlin compiler is actually overriding
+Компилятор самостоятельно переопределяет
 
 4461
 03:17:06,060 --> 03:17:10,630
-and creating the equals operator
-and the hash code operator,
+оператор сравнения для этого класса
+и использует переменные из конструктора
 
 4462
 03:17:10,630 --> 03:17:13,900
-as well as the two string and
-a couple of other functions,
+для сравнения, а так же переопределяет
+метод toString и добавляет еще несколько
 
 4463
 03:17:13,900 --> 03:17:15,460
-which we'll talk about soon.
+функций, о них поговорим позже.
 
 4464
 03:17:15,460 --> 03:17:18,730
-So if we're gonna take a look
-at the equals and hashcode
+Давайте посмотрим основные методы
+которые переопределяет компилятор
 
 4465
 03:17:18,730 --> 03:17:22,090
-is what's kind of helping
-us with the equality here.
+toString - метод для вывода объекта
+в строковом виде
 
 4466
 03:17:22,090 --> 03:17:26,240
-However, with the print
-line, we can actually,
+И когда мы вызываем println
+на объекте, функция println
 
 4467
 03:17:26,240 --> 03:17:29,180
-as we remember print line will
-call the two string method
+вызывает toString метод объекта
 
 4468
 03:17:29,180 --> 03:17:30,531
-by default.
+по дефолту
 
 4469
 03:17:30,531 --> 03:17:33,700
-So we can say P one and
-then what will happen
+И мы можем вывести p1
 
 4470
 03:17:33,700 --> 03:17:35,500
-if let's actually go
-back a little bit here
+Давайте для начала
+уберем префикс data
 
 4471
 03:17:35,500 --> 03:17:37,460
-and take this off.
+и посмотрим что обудет
 
 4472
 03:17:38,422 --> 03:17:41,040
-If we run this just as
-this is as a regular class,
+Если мы выведем это
 
 4473
 03:17:41,040 --> 03:17:43,410
-we'll see that we have,
-if we do a print line,
+как обычный класс
 
 4474
 03:17:43,410 --> 03:17:48,000
-we'll see person at 49476842,
-so it's not too helpful.
+мы увидим тип класса и цифры,
+пользы млаовато
 
 4475
 03:17:48,000 --> 03:17:52,400
-However, if this is a data
-class, what you'll notice here
+но если вернем data, то
+компилятор перепишет
 
 4476
 03:17:52,400 --> 03:17:55,540
-is that the data class
-has a two string method,
+метод toString
 
 4477
 03:17:55,540 --> 03:17:56,590
-which has implemented for us,
+метод toString
 
 4478
 03:17:56,590 --> 03:17:58,760
-which is a very nice format here,
+и вывод будет в хорошем формате
 
 4479
 03:17:58,760 --> 03:18:01,381
-which has person first name, last name.
+вывелся тип и значения полей
 
 4480
 03:18:01,381 --> 03:18:03,528
-And let's say we add
-the age inside of here.
+И давайте еще добавим возраст
 
 4481
 03:18:03,528 --> 03:18:07,050
-So val age int, and we'll
-put some numbers here,
+и добавим какой-то возраст
 
 4482
 03:18:07,050 --> 03:18:10,560
-30, and let's just do the same thing 30,
+например 30. И для второго объекта тоже
 
 4483
 03:18:10,560 --> 03:18:12,020
-and we run it again.
+перезапустим
 
 4484
 03:18:12,020 --> 03:18:14,570
-You'll see that the print line method
+Теперь в консоли
 
 4485
 03:18:14,570 --> 03:18:16,270
-also outputs that parameter.
+появится еще и возраст
 
 4486
 03:18:16,270 --> 03:18:18,670
-So it'll actually output
-each of the parameters
+И теперь выведутся все параметры
 
 4487
 03:18:18,670 --> 03:18:22,040
-as a value in the two string method.
+И теперь выведутся все параметры
 
 4488
 03:18:22,040 --> 03:18:23,420
-So this is all generated for us.
+И это все генерируется компилятором
 
 4489
 03:18:23,420 --> 03:18:25,900
-The equals the hash
-code and the two string.
+методы equals, hashcode и toString
 
 4490
 03:18:25,900 --> 03:18:27,970
-And this is how you
-can create a data class
+И так мы создаем
 
 4491
 03:18:27,970 --> 03:18:29,220
-inside of Kotlin.
+data классы в Котлине
 
 4492
 03:18:29,220 --> 03:18:31,600
-Now you can also have
-functions inside of here.
+На самом деле вы можете писать
+функции в data классах
 
 4493
 03:18:31,600 --> 03:18:34,180
-So you might be able to say full name.
+Например выводить полное имя
 
 4494
 03:18:34,180 --> 03:18:36,550
-And this is very similar
-to our other user object,
+и это все будет как в наших
 
 4495
 03:18:36,550 --> 03:18:37,470
-which we've seen before.
+предыдущих примерах
 
 4496
 03:18:37,470 --> 03:18:38,870
-This will return the string,
+метод будет возвращать строку
 
 4497
 03:18:40,180 --> 03:18:42,870
-and this will be returned like this.
+и в теле метода
 
 4498
 03:18:42,870 --> 03:18:47,870
-We'll say return, first
-name and then last name.
+вернем комбинацию имени и фамилии
 
 4499
 03:18:49,460 --> 03:18:52,640
-And we can actually come up
-here and print the full name.
+И теперь мы можем вывести полное имя
 
 4500
 03:18:52,640 --> 03:18:56,600
-And if we run it, we will see Donn Felker
+запустим и увиди Donn Felcer
 
 4501
 03:18:56,600 --> 03:18:59,350
