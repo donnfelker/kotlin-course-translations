@@ -19740,259 +19740,251 @@ data классы в Котлине
 
 4500
 03:18:52,640 --> 03:18:56,600
-запустим и увиди Donn Felcer
+запустим и увиди Donn Felker
 
 4501
 03:18:56,600 --> 03:18:59,350
-and of course we can have
-do other things such as this
+И, конечно мы можем писать тут
 
 4502
 03:18:59,350 --> 03:19:00,650
-such as name, length.
+любые методы, например метод
 
 4503
 03:19:02,128 --> 03:19:04,720
-If we wanna have a method
-that perhaps returns an int,
+который выводит длинну полного
 
 4504
 03:19:04,720 --> 03:19:06,770
-and all that does is full name.length.
+имени и возвращает число
 
 4505
 03:19:07,740 --> 03:19:09,340
-And we can do the same thing up here,
+И мы можем эту функцию теперь
 
 4506
 03:19:09,340 --> 03:19:12,570
-full name or name length,
+заменим ввод с вывода полного имени
 
 4507
 03:19:12,570 --> 03:19:14,460
-and that will provide a
-full length of the name
+на вывод длины полного имени
 
 4508
 03:19:14,460 --> 03:19:17,570
-and characters at the
-character council at 11.
+И результат, с учетом пробела
+будет одинадцать.
 
 4509
 03:19:17,570 --> 03:19:19,890
-And that's how you can
-create a very simple class
+И так мы закончим тему про создание
+дата классов -
 
 4510
 03:19:19,890 --> 03:19:23,410
-in Kotlin, very simple
-data class in Kotlin
+простых классов, в которых уже
 
 4511
 03:19:23,410 --> 03:19:26,550
-and how it can perform
-data equality and so forth.
+реализованые опирации сравнения
+и вывода в строковом виде.
 
 4512
 03:19:28,060 --> 03:19:31,480
-If you would like your data
-class to be constructor list
+Если при сождании дата класса вам
+понадобится ражные вариации
 
 4513
 03:19:31,480 --> 03:19:32,900
-or seem like it's constructor list,
+конструктора
 
 4514
 03:19:32,900 --> 03:19:35,900
-you will need to provide default
-values for each of those.
+то можно использовать дефолтные
+значения в конструкторе
 
 4515
 03:19:35,900 --> 03:19:39,910
-So you could say first unknown here,
+Например на имени дефолтное
 
 4516
 03:19:39,910 --> 03:19:42,750
-and that was gonna go to
-first unknown known here,
+значение будет, что имя неизвестно,
+на фамилии -
 
 4517
 03:19:42,750 --> 03:19:44,160
-last unknown.
+фамилия неизвестна.
 
 4518
 03:19:44,160 --> 03:19:45,620
-These are just values I'm typing in there.
+Эти значения взяты из головы
 
 4519
 03:19:45,620 --> 03:19:47,500
-They could be anything, an age
+они могут быть любыми
 
 4520
 03:19:48,544 --> 03:19:50,140
-we could just default to zero.
+возраст просто поставим ноль
 
 4521
 03:19:50,140 --> 03:19:52,038
-Then of course, it's getting kind of long,
+И теперь конструктор
 
 4522
 03:19:52,038 --> 03:19:54,340
-so it's gonna put these
-on a separate lines.
+у нас довольно большой,
+давайте перенесем строки.
 
 4523
 03:19:54,340 --> 03:19:56,913
-So now we have our class
-kind of broken apart
+И теперь у нас объявление класса
 
 4524
 03:19:56,913 --> 03:19:57,746
-into separate lines.
+разбито на несколько строк.
 
 4525
 03:19:57,746 --> 03:19:59,720
-And then if I like to
-create a P three up here,
+И теперь можно создать пользователя
+p3 в функции мэйн
 
 4526
 03:19:59,720 --> 03:20:02,960
-I could very easily do. So
-Val P three equals person,
+Мы просто объявляем переменную
+и вызываем конструктор
 
 4527
 03:20:02,960 --> 03:20:04,230
-and I have to provide any values
+нам не нужно передавать никаких
 
 4528
 03:20:04,230 --> 03:20:05,810
-because they're all default.
+значений - все они будут дефолтными
 
 4529
 03:20:05,810 --> 03:20:08,420
-Now, again, I can't have
-another value in here.
+Теперь я могу конечно в
+конструкторе добавить еще одно поле
 
 4530
 03:20:08,420 --> 03:20:11,080
-Val is just Fu, which is a
-string it's not provided.
+пусть будет поле foo с типом
+String
 
 4531
 03:20:11,080 --> 03:20:13,500
-We'll see, we get a bunch of
-errors here, even up here,
+У нас сразу появится куча ошибок
+потому что дефолтного значения
 
 4532
 03:20:13,500 --> 03:20:17,220
-because there's no value unless
-I defaulted to something.
+нет и это значение нужно указать явно
+для каждого человека
 
 4533
 03:20:17,220 --> 03:20:19,170
-But at that point, these are all vals.
+давайте удалим
 
 4534
 03:20:19,170 --> 03:20:24,170
-And then of course, if
-we print ln, the P three,
+и выведем нашего нового человека
 
 4535
 03:20:25,500 --> 03:20:30,360
-delete these, you're
-going to see that we have
+удалим все старые выводы
 
 4536
 03:20:30,360 --> 03:20:32,160
-the default values that are output.
+и увидим в консоли пользователя
+с нашими дефолтными значениями
 
 4537
 03:20:32,160 --> 03:20:35,700
-So first unknown, last
-known, known, and age zero.
+имя неизвестно, фамилия неизвестна
+и возраст ноль лет
 
 4538
 03:20:35,700 --> 03:20:38,300
-And that's how you can
-simulate having a parameter
+И так можно делать конструкторы
 
 4539
 03:20:38,300 --> 03:20:40,560
-list constructor in a data class.
+динамичнее, и не вводить все данные.
 
 4540
 03:20:40,560 --> 03:20:43,410
-Kotlin data classes by
-default will generate
+Дата классы в котлине
+генерируют так называемые
 
 4541
 03:20:43,410 --> 03:20:45,490
-what are known as component methods.
+методы компонент.
 
 4542
 03:20:45,490 --> 03:20:48,480
-So if P1, we'll see component,
-we have component one,
+при вызове функции человека p1
+мы видим функцию component1
 
 4543
 03:20:48,480 --> 03:20:49,880
-which is a string,
+которая возвращает строку
 
 4544
 03:20:49,880 --> 03:20:53,200
-and this is going to
-be the first name P one
+и на самом деле этот метод
+просто вернет имя пользователя
 
 4545
 03:20:53,200 --> 03:20:58,200
-dot component two, is going
-to be for the second item
+второй компонент это второе
+поле пользователя, а именно фамилия
 
 4546
 03:20:58,600 --> 03:21:00,490
-in the parameter list, which is a string.
+и тоже строкового типа
 
 4547
 03:21:00,490 --> 03:21:03,210
-So in the order in which they
-occur is what the components
+компоненты хранят поля дата класса
+в порядке их объявления
 
 4548
 03:21:03,210 --> 03:21:04,043
-will occur.
+в конструкторе.
 
 4549
 03:21:04,043 --> 03:21:08,640
-And so this would be val
-first name, val last name.
+И этот компонент вернет имя,
+а этот фамилию
 
 4550
 03:21:11,120 --> 03:21:12,602
-What do you call that?
+И на этом все
 
 4551
 03:21:12,602 --> 03:21:13,435
-And then as you can see here,
+вы можете заметить, что больше
 
 4552
 03:21:13,435 --> 03:21:15,950
-we do not have any more
-components because that's all.
+компонентов нет, потому что в
+конструкторе только два поля
 
 4553
 03:21:15,950 --> 03:21:18,970
-So P1.component, component
-one, component two.
+для которых дополнительно сгенерируются
+методы component1, component2.
 
 4554
 03:21:18,970 --> 03:21:21,800
-However, if we come down here
-and add another item here,
+Но если мы заведем еще одно поле
 
 4555
 03:21:21,800 --> 03:21:26,730
-so Val age, enter int, and
-let's provide a value up here.
+Напрмер возраст с типом Int
+и в месте вызова напишем, например,
 
 4556
 03:21:28,453 --> 03:21:30,680
@@ -20000,651 +19992,626 @@ let's provide a value up here.
 
 4557
 03:21:30,680 --> 03:21:33,360
-Now, if we insert P one dot component.
+Теперь, если мы введем p1.
 
 4558
 03:21:33,360 --> 03:21:35,438
-We see we have another one.
+то увидим новую компонент функцию
 
 4559
 03:21:35,438 --> 03:21:37,350
-And this one is an integer
-type because this is the third
+и она будет возвращать тип Int
+потому что этот компонент
 
 4560
 03:21:37,350 --> 03:21:38,400
-parameter up here.
+связан с полем возраста
 
 4561
 03:21:38,400 --> 03:21:39,820
-This is the Int.
+связан с полем возраст
 
 4562
 03:21:40,775 --> 03:21:43,010
-So it's the third component
-in the parameter list.
+И это третий компонент
+в списке параметров
 
 4563
 03:21:43,010 --> 03:21:46,990
-And so we say Val age
-equals component three.
+и напишем val age равно
+component3.
 
 4564
 03:21:46,990 --> 03:21:49,630
-And these are generated
-for you behind the scenes
+все эти методы генерируются под капотом
 
 4565
 03:21:49,630 --> 03:21:51,800
-by the Kotlin compiler.
+Котлин компилятором.
 
 4566
 03:21:51,800 --> 03:21:54,380
-So if we were to print line
-all of these things out there,
+И если мы выведем все наши переменные
 
 4567
 03:21:54,380 --> 03:21:57,490
-we could say first name,
-and we say print line,
+выведем имя
 
 4568
 03:21:59,540 --> 03:22:01,620
-last name and print lane.
+выведем фамилию
 
 4569
 03:22:02,540 --> 03:22:03,500
-We can not do age.
+и возраст в конце
 
 4570
 03:22:04,935 --> 03:22:06,850
-And if were to run this,
-we will see Donn Felker, 30
+и если запустим, увидим
+все данные нашего пользователя
 
 4571
 03:22:06,850 --> 03:22:08,340
-being printed out to the screen.
+выведенные каждая на
+своей строке.
 
 4572
 03:22:08,340 --> 03:22:09,550
-Now, of course, we could just replace this
+И вообще мы можем отказаться
+отпромежуточных значений и заменить это
 
 4573
 03:22:09,550 --> 03:22:12,470
-with P one dot component one
+на p1.component1
 
 4574
 03:22:15,550 --> 03:22:19,520
-and P one dot component two.
+это на p1.component2
 
 4575
 03:22:19,520 --> 03:22:22,190
-And we just copy this here, save time.
+Просто скопирую для экономии времени
 
 4576
 03:22:22,190 --> 03:22:23,810
-It would do component
-three and we can delete
+и это будет третий компонент,
+а лишние переменные
 
 4577
 03:22:23,810 --> 03:22:26,650
-these other ones here
-and delete all these.
+мы просто удалим.
 
 4578
 03:22:28,280 --> 03:22:29,660
-And if we run this,
-we'll see the same thing
+Если перезапустим, то получим
+точно такой же результат
 
 4579
 03:22:29,660 --> 03:22:32,280
-we just saw before: Donn Felker, 30.
+Донн Фелкер, 30 лет
 
 4580
 03:22:32,280 --> 03:22:34,460
-So component one, component
-two, component three.
+И это компонент 1,2 и 3
 
 4581
 03:22:34,460 --> 03:22:36,300
-Now, if I switch this around,
+Если я теперь поменяю поля местами
 
 4582
 03:22:36,300 --> 03:22:40,690
-so I'm gonna put 30 here
-and see if I'm gonna get
+я переставлю 30 на вторую
+позицию, но сначала будет много
 
 4583
 03:22:40,690 --> 03:22:43,200
-a competitor error at
-first, so I'll say 30.
+ошибок, быстро поправим
 
 4584
 03:22:43,200 --> 03:22:45,550
-I need to switch the
-parameter order down here.
+я поменяю поля в конструкторе
+местами, чтобы не было ошибок
 
 4585
 03:22:47,590 --> 03:22:48,740
-I can actually do this.
+И все будет хорошо
 
 4586
 03:22:54,630 --> 03:22:56,620
-Then component one, two, and
-three are gonna be different.
+Но теперь компоненты поменяли
+свои значения
 
 4587
 03:22:56,620 --> 03:22:58,670
-Component one will be Don,
-component two will be 30,
+компонент один будет Donn
+компонент два - будет 30
 
 4588
 03:22:58,670 --> 03:23:00,800
-components three will be Felker.
+и компонент три будет Felker.
 
 4589
 03:23:00,800 --> 03:23:02,480
-Let's put it back to how it was before
+Давайте вернем все на свои места
 
 4590
 03:23:02,480 --> 03:23:03,840
-with the age at the end.
+и возраст поставим в конце.
 
 4591
 03:23:03,840 --> 03:23:06,730
-And one more thing that we can
-ask you actually do here too,
+Еще одна вещь
 
 4592
 03:23:06,730 --> 03:23:09,570
-is we can actually specify
-these in correct order.
+мы можем использовать
+именованные аргументы
 
 4593
 03:23:09,570 --> 03:23:11,210
-So let's do this.
+Давайте так и поступим.
 
 4594
 03:23:11,210 --> 03:23:16,210
-Let's just say age equals
-30, last name equals Felker.
+напишем что возраст 30
+фамилия Felker
 
 4595
 03:23:18,480 --> 03:23:22,810
-First name equals Don.
+и имя Donn
 
 4596
 03:23:23,800 --> 03:23:26,093
-And actually let's even flip these two.
+и еще поменяем местами эти два
 
 4597
 03:23:26,093 --> 03:23:27,490
-Let's flip these two right here.
+Давайте поменяем.
 
 4598
 03:23:27,490 --> 03:23:29,750
-So we're completely out
-of order at this point,
+Теперь порядок в месте вызова
+у нас все вперемешку
 
 4599
 03:23:29,750 --> 03:23:32,410
-but however we're using
-named parameters and Kotlin
+но именнованые аргументы
+связывают значения с порядком
 
 4600
 03:23:32,410 --> 03:23:35,420
-is gonna figure that out
-for us in a way anyway,
+в конструкторе и компилятор
+сам поймет, как правильно реализовать
 
 4601
 03:23:35,420 --> 03:23:37,260
-because this is the way
-that they're defined.
+функции компоненты.
+Порядок компонент определяется конструктором.
 
 4602
 03:23:37,260 --> 03:23:38,750
-So these are the way that the components
+Именно в этом порядке будут
 
 4603
 03:23:38,750 --> 03:23:39,990
-are going to be adjusted.
+сгенерированы компоненты
 
 4604
 03:23:39,990 --> 03:23:42,070
-Not in the order in
-which they're parse d in,
+Не в том порядке
+где вызывается конструктор
 
 4605
 03:23:42,070 --> 03:23:44,710
-but in a way that they're
-defined in the data class.
+а тос где он объявлен в дата классе
 
 4606
 03:23:44,710 --> 03:23:46,480
-So first name is component one.
+имя будет component1
 
 4607
 03:23:46,480 --> 03:23:49,510
-Last name is component two
-and age is component three.
+фамилия - component2,
+а возраст - component3.
 
 4608
 03:23:49,510 --> 03:23:52,490
-So even if I use name
-parameters in a different order,
+И даже, если я вызываю конструктор
+в другом порядке
 
 4609
 03:23:52,490 --> 03:23:55,150
-Kotlin will figure that out
-behind the scenes and correctly
+Котлин сам разрулит эти моменты
 
 4610
 03:23:55,150 --> 03:23:57,660
-render them in the correct order
-with the correct component.
+и определит нужный порядок.
 
 4611
 03:23:57,660 --> 03:24:01,030
-As we can see here,
-component one is Donn Felker.
+В нашем примере первый компонент
+это Donn, Felker - второй
 
 4612
 03:24:01,030 --> 03:24:04,730
-Here is component two and
-component three is 30.
+и третий компонент - 30
 
 4613
 03:24:04,730 --> 03:24:06,480
-And that's how you can
-work with the components
+Вот так функции компоненты
 
 4614
 03:24:06,480 --> 03:24:09,380
-that are generated inside of data class.
+генерируются для нас
 
 4615
 03:24:09,380 --> 03:24:11,190
-And I do have one more
-use and that's going to be
+И еще одна вешь, важное понятие -
+"деструктуризация"
 
 4616
 03:24:11,190 --> 03:24:13,730
-de-structuring, which is coming soon.
+именно для него
+используются функции компоненты
 
 4617
 03:24:15,980 --> 03:24:19,230
-One of the main reasons for the
-component values that we see
+функции компоненты используются
+языком чтобы
 
 4618
 03:24:19,230 --> 03:24:21,680
-inside of data classes,
-such as component one,
+деструктурировать
 
 4619
 03:24:21,680 --> 03:24:24,180
-component two, component
-three is for de-structuring.
+дата классы
 
 4620
 03:24:24,180 --> 03:24:26,710
-So component one,
-references the first name,
+Тут у нас компонент1 ссылается на имя -
 
 4621
 03:24:26,710 --> 03:24:28,840
-which is the first parameter as defined
+потому что он первый в
+параметрах конструктора
 
 4622
 03:24:28,840 --> 03:24:30,270
-inside of the data class.
+в дата классе
 
 4623
 03:24:30,270 --> 03:24:32,610
-Component two will be the
-second parameter here.
+компонент2 это второй параметр
 
 4624
 03:24:32,610 --> 03:24:34,760
-And component three will
-be the third one here.
+а компонент3 - третий
 
 4625
 03:24:34,760 --> 03:24:36,420
-This is used for de-structuring.
+вот пример деструктуризации
 
 4626
 03:24:36,420 --> 03:24:39,060
-So we can say val, and
-we can say first name.
+мы создадим переменную и в круглых
+скобках напишем через запятую
 
 4627
 03:24:41,260 --> 03:24:44,070
-And then we say last
-name and we can say age.
+имя, фамилия и возраст
 
 4628
 03:24:44,070 --> 03:24:45,550
-And I'm gonna say equals person.
+и все это будет равно нашему человеку
 
 4629
 03:24:45,550 --> 03:24:48,190
-So as we've defined the
-person here on line two,
+мы человека объявили
+во второй строке
 
 4630
 03:24:49,330 --> 03:24:50,590
-what we're doing here is
-we're actually defining
+и вот тут мы объявляем
 
 4631
 03:24:50,590 --> 03:24:53,170
-these three variables
-and we're de-structuring
+три переменных и разбиваем (деструктурируем)
 
 4632
 03:24:53,170 --> 03:24:54,970
-the person object.
+наш класс на три переменные.
 
 4633
 03:24:54,970 --> 03:24:57,550
-And what's happening behind
-the scenes is Kotlin is using
+И под капотом Котлин использует
 
 4634
 03:24:57,550 --> 03:24:59,860
-component one, component
-two and component three
+функции компоненты
 
 4635
 03:24:59,860 --> 03:25:02,210
-to shove it into these variables here.
+и с помощью них инициализирует
+новые переменные
 
 4636
 03:25:02,210 --> 03:25:04,450
-So now let's print line each one of these
+давайте все эти переменные выведем
 
 4637
 03:25:04,450 --> 03:25:06,602
-to see what they look like.
+и посмотрим, как они выглядят
 
 4638
 03:25:06,602 --> 03:25:10,020
-I'll say first name print line,
+напишем функции вывода и выведем
 
 4639
 03:25:10,020 --> 03:25:14,260
-last name, it will say print line, age.
+наши переменные
 
 4640
 03:25:14,260 --> 03:25:15,450
-And if we run this,
+Теперь запустим
 
 4641
 03:25:16,620 --> 03:25:20,270
-what we're going to see here
-is that we see Donn Felker 30.
+и в консоли будут значения нашего
+человека
 
 4642
 03:25:20,270 --> 03:25:21,580
-So this is great.
+Отлично.
 
 4643
 03:25:21,580 --> 03:25:25,400
-Now this isn't based upon
-the name of these variables.
+И имена переменных никак на это не влияют
 
 4644
 03:25:25,400 --> 03:25:26,780
-So I could actually switch these around.
+можно поменять тут все местами
 
 4645
 03:25:26,780 --> 03:25:30,440
-I could say last name, age, first name.
+например имя, возраст, фамилия
 
 4646
 03:25:31,510 --> 03:25:32,343
-Now watch.
+Теперь смотрите.
 
 4647
 03:25:32,343 --> 03:25:34,720
-If I run this, it's not gonna
-be Donn Delker, 30 anymore.
+И теперь в выводе будет другой порядок
 
 4648
 03:25:34,720 --> 03:25:36,750
-It's not gonna print these in that way.
+и мы увидим
 
 4649
 03:25:36,750 --> 03:25:38,800
-So it's gonna print 30 Donn Felker.
+возраст, имя, а томто фамилию
 
 4650
 03:25:38,800 --> 03:25:41,500
-Now, the reason is it's based
-upon the de-structuring.
+это все потому что деструктуризация
+основана на порядке переменных в скобках
 
 4651
 03:25:41,500 --> 03:25:42,810
-So this is component one.
+то есть сюда запишется component1
 
 4652
 03:25:42,810 --> 03:25:44,900
-This is actually gonna be the first name.
+и это будет имя
 
 4653
 03:25:44,900 --> 03:25:47,210
-So last name right here,
-which we print right here.
+тут будет фамилия,
+которую мы выводим тут
 
 4654
 03:25:47,210 --> 03:25:50,012
-This is the second one,
-that's Don, that's correct.
+Это второе, Donn, все верно
 
 4655
 03:25:50,012 --> 03:25:51,280
-Then we have first name,
+потом будет имя
 
 4656
 03:25:51,280 --> 03:25:53,550
-which was actually using
-component three's location.
+которая на самом деле будет содержать
+component3 нашего пользователя
 
 4657
 03:25:53,550 --> 03:25:56,310
-Component three, so we're
-just gonna see first name,
+и у нас будет имя
 
 4658
 03:25:56,310 --> 03:25:58,060
-component three's location, which is age,
+в котором будет записан возраст
 
 4659
 03:25:58,060 --> 03:26:00,250
-which is why we see 30 printed first here.
+и он выведется тут и будет равен 30
 
 4660
 03:26:00,250 --> 03:26:01,440
-And the last thing that was printed,
+И последний вывод это
 
 4661
 03:26:01,440 --> 03:26:04,210
-I have listed as the
-name of the age variable,
+переменная возраст в которрую
 
 4662
 03:26:04,210 --> 03:26:06,310
-is showing Felker because that's actually
+запишется значение из component2
+функции и это на самом
 
 4663
 03:26:06,310 --> 03:26:07,380
-the second component here.
+деле будет фамилия
 
 4664
 03:26:07,380 --> 03:26:10,390
-So this doesn't matter what
-these variable names are.
+В общем, не важно какие названия
+тут будут указаны
 
 4665
 03:26:10,390 --> 03:26:14,240
-So in essence, I could
-actually just rename these two
+Можем даже переименовать
 
 4666
 03:26:14,240 --> 03:26:19,240
-component one, component two,
+эти переменные и назвать их
+компонентами
 
 4667
 03:26:21,790 --> 03:26:25,190
-which I would have, these names
-don't really mean anything.
+эти имена ни на что не влияют.
 
 4668
 03:26:25,190 --> 03:26:27,190
-And I would never do this in production,
+я бы никогда так не написао в
+реальном приложении
 
 4669
 03:26:28,210 --> 03:26:30,940
-but this is just an example
-that it doesn't matter
+это просто пример и доказательство
+того, что тут все зависит от положения
 
 4670
 03:26:30,940 --> 03:26:33,390
-the name of the actual values
+а не названия
 
 4671
 03:26:33,390 --> 03:26:34,500
-that you're destructuring into.
+переменных.
 
 4672
 03:26:34,500 --> 03:26:36,500
-It'll still print those values.
+Все равно результат будет тот же
 
 4673
 03:26:36,500 --> 03:26:39,060
-So let's go ahead and
-move this component one,
+Давайте все вернем на прежние позиции
 
 4674
 03:26:39,060 --> 03:26:40,150
-component two, component three.
+компонент один, два и три
 
 4675
 03:26:40,150 --> 03:26:42,130
-Let's print them in a proper order again.
+чтобы порядок снова был логичным
 
 4676
 03:26:42,130 --> 03:26:44,170
-So there was Donn Felker 30.
+и у нас будет Donn Felker 30.
 
 4677
 03:26:44,170 --> 03:26:47,060
-So again, I could just call
-this F name for first name.
+И снова, я бы просто мог назвать
+эту переменную fName
 
 4678
 03:26:47,060 --> 03:26:50,940
-I could call this L name for last name.
+эту переменную lName
+I could call this name for last name.
 
 4679
 03:26:50,940 --> 03:26:52,890
-It could be, you know, whatever casing.
+случайно включил капслок
 
 4680
 03:26:53,940 --> 03:26:56,580
-L name, and then we could call it
+lName, и последнюю я могу
 
 4681
 03:26:58,550 --> 03:27:02,070
-go, and this could be person age.
+назвать personAge
 
 4682
 03:27:04,200 --> 03:27:07,480
-It doesn't matter what, as
-long as whatever is in this
+Это все не имеет значения,
+в них запишутся
 
 4683
 03:27:07,480 --> 03:27:09,540
-third component is this
-is the third component
+значения функций компонент
 
 4684
 03:27:09,540 --> 03:27:11,190
-is gonna be shoved into
-this variable here.
+значения функций компонент
 
 4685
 03:27:11,190 --> 03:27:14,680
-And that's how you can
-de structure a data class
+и так вы можете разбирать
+дата классы
 
 4686
 03:27:14,680 --> 03:27:17,780
-into values here, just in one quick line,
+на переменные в одну строку,
 
 4687
 03:27:17,780 --> 03:27:19,570
-because if you were to
-do it the other way,
+другой способ гораздо длиннее
 
 4688
 03:27:19,570 --> 03:27:21,350
-you might have to do something like this.
+вам нужно будет сделать такую цепочку
 
 4689
 03:27:21,350 --> 03:27:25,440
-First name equals person
-dot first name Val,
+Создать переменную имени
+и присвоить ей значение из дата класса
 
 4690
 03:27:26,370 --> 03:27:29,090
-last name equals person dot last name,
+фамилию и ей тоже самое
 
 4691
 03:27:30,040 --> 03:27:31,630
-and there's nothing wrong with doing this.
+и тут на самом деле нет ничего плохого
 
 4692
 03:27:31,630 --> 03:27:34,180
-It's just, you can also use destructuring
+просто деструктуризация позволяет
 
 4693
 03:27:34,180 --> 03:27:39,180
-to your advantage very easily
-by turning this three lines
+это делать в одну строку
 
 4694
 03:27:39,180 --> 03:27:43,390
-of code into one line of code.
+это делать в одну строку
 
 4695
 03:27:43,390 --> 03:27:48,005
-And that's de-structuring
-data classes in Kotlin.
+На этом все про деструктуризацию
+в языке Котлин
 
 4696
 03:27:48,005 --> 03:27:53,005
-It's very often in development
-that you'll need to create
+Очень часто в разработке вам нужно
+будет создавать
 
 4697
 03:27:55,470 --> 03:27:56,950
-a copy of some data.
+копию какой-то информации
 
 4698
 03:27:56,950 --> 03:28:00,140
-So perhaps you need to
-create a copy of this person
+Например вам нужно сделать копию
+нашего человека
 
 4699
 03:28:00,140 --> 03:28:02,560
-and you'll want to create a sibling.
+И для этого создадим переменную
 
 4700
 03:28:02,560 --> 03:28:04,760
-And the sibling will, then
-you can easily do that
+и теперь еще один приятный метод
+дата класса
 
 4701
 03:28:04,760 --> 03:28:07,810
