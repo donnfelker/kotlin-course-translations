@@ -20615,1341 +20615,1283 @@ lName, и последнюю я могу
 
 4701
 03:28:04,760 --> 03:28:07,810
-with the data class with
-the built-in copy method.
+а именно - метод copy()
 
 4702
 03:28:07,810 --> 03:28:11,050
-And the copy method will
-automatically create a copy
+Метод copy создает копию
 
 4703
 03:28:11,050 --> 03:28:12,520
-of everything inside of the class
+вашего объекта и всего его
 
 4704
 03:28:12,520 --> 03:28:13,590
-and give you a new instance.
+содержимого.
 
 4705
 03:28:13,590 --> 03:28:17,650
-So if we were to create, to
-print this to the screen here,
+И если мы выведем
 
 4706
 03:28:17,650 --> 03:28:20,430
-we would see person and then
-if we were to come down here,
+сначала нашего человека
 
 4707
 03:28:20,430 --> 03:28:23,090
-we could see sibling and we would run it.
+а потом его "родственника"
 
 4708
 03:28:23,090 --> 03:28:27,170
-We would see that the two
-classes had the exact same data.
+в консоли мы увидим два класса
+с одними и теми же данными
 
 4709
 03:28:27,170 --> 03:28:28,890
-Now it's very often, you
-may only wanna change
+Иногда может возникнуть ситуация
+что при копировании
 
 4710
 03:28:28,890 --> 03:28:30,640
-a couple of the attributes
-and you can do that
+вам нужно заменить парочку параметров
 
 4711
 03:28:30,640 --> 03:28:32,500
-with the named parameters.
+вашего класса
 
 4712
 03:28:32,500 --> 03:28:35,240
-And so I could say something like Sam.
+И я могу, например
 
 4713
 03:28:35,240 --> 03:28:36,500
-Change the first name to Sam.
+заменить имя на Sam
 
 4714
 03:28:36,500 --> 03:28:37,470
-And if I were to run that here,
+И если запустим теперь
 
 4715
 03:28:37,470 --> 03:28:39,780
-we'd see the rest of
-the data stays the same,
+то увидим что все данные совпадают,
 
 4716
 03:28:39,780 --> 03:28:41,720
-except for the first name changes to Sam.
+но у второго человека имя Sam
 
 4717
 03:28:41,720 --> 03:28:44,470
-And maybe Sam is perhaps an older sibling
+И давайте например Sam
+это родственник постарше
 
 4718
 03:28:44,470 --> 03:28:46,650
-and Sam's age is 44.
+и ему 44 года
 
 4719
 03:28:47,490 --> 03:28:48,420
-And we were to run that.
+Перезапустим..
 
 4720
 03:28:48,420 --> 03:28:51,320
-And now we could see Sam Felker age 44.
+И увидим нашего Сэма, которому 44 года.
 
 4721
 03:28:51,320 --> 03:28:52,980
-Now this is an easy way to do this.
+И это самый простой создавать и
+измениять объекты при копировании
 
 4722
 03:28:52,980 --> 03:28:56,280
-This is very useful if you
-have a very large object graph.
+Это особенно полезно, когда
+у вашего объекта очень много параметров
 
 4723
 03:28:56,280 --> 03:29:00,870
-So perhaps you have a
-person, or maybe you have a,
+Например у вас есть человек, или лучше
 
 4724
 03:29:00,870 --> 03:29:03,470
-perhaps a data class with a order.
+у вас есть заказ
 
 4725
 03:29:03,470 --> 03:29:07,140
-And that order has an
-amount which is an int.
+У заказа есть сумма
 
 4726
 03:29:07,140 --> 03:29:09,990
-And then the order belongs
-to an action needs to be,
+по идее сумма может меняться, но пусть
 
 4727
 03:29:09,990 --> 03:29:12,400
-have a Val or a VAR amount,
+она будет val в этом примере
 
 4728
 03:29:12,400 --> 03:29:15,020
-and then actually belongs to a person
+и заказ принадлежит какому-то человеку
 
 4729
 03:29:15,020 --> 03:29:16,150
-which could be the customer.
+пусть это будет customer (клиент)
 
 4730
 03:29:16,150 --> 03:29:18,620
-And that will be a person instance.
+и тип будет Person
 
 4731
 03:29:18,620 --> 03:29:22,570
-So if you were to do this, you
-could actually come up here,
+В таком виде мы можем
 
 4732
 03:29:22,570 --> 03:29:24,560
-let's go ahead and create this order.
+создать наш заказ
 
 4733
 03:29:24,560 --> 03:29:25,700
-So we say Val order.
+напишем переменную order
 
 4734
 03:29:26,870 --> 03:29:30,420
-And this order would be, let
-me say the amount is equal
+И пусть сумма будет 100
 
 4735
 03:29:30,420 --> 03:29:35,420
-to 100 and the person equals let's say
+и наш человек будет
 
 4736
 03:29:35,420 --> 03:29:36,520
-it equals the sibling.
+родственником
 
 4737
 03:29:37,938 --> 03:29:41,860
-Excuse me, the customer is the sibling.
+простите, клиент будет родственником
 
 4738
 03:29:41,860 --> 03:29:44,140
-And of course, if we print line this,
+и теперь мы выведем заказ
 
 4739
 03:29:44,140 --> 03:29:48,210
-we're going to see that the
-order has the amount of 100.
+увидим что сумма заказа 100
 
 4740
 03:29:49,350 --> 03:29:50,310
-And then inside of there,
+и тут внутри мы увидим заказчика
 
 4741
 03:29:50,310 --> 03:29:53,330
-the customer is that person
-instance with the age of 44.
+это наш родственник
 
 4742
 03:29:53,330 --> 03:29:55,710
-So let's say I wanted to copy that order.
+До пустим я хочу скопировать этот заказ
 
 4743
 03:29:55,710 --> 03:29:56,860
-And so I say new order,
+Я могу сделать новый заказ
 
 4744
 03:29:59,060 --> 03:30:00,970
-and I know let's say the
-customer is the same,
+и пусть заказчик будет тем же
 
 4745
 03:30:00,970 --> 03:30:02,720
-but I just wanna change the amount.
+я просто хочу сменить сумму.
 
 4746
 03:30:03,687 --> 03:30:06,750
-I can say order, and I'd say
-the amount is 200 this time,
+Я введу сумму 200,
 
 4747
 03:30:06,750 --> 03:30:08,420
-perhaps they purchased
-a different product,
+допустим они что-то еще набрали
+в заказе
 
 4748
 03:30:08,420 --> 03:30:10,430
-but it's gonna be the same customer.
+и заказчик остается тем же)
 
 4749
 03:30:10,430 --> 03:30:12,270
-I could easily do that.
+Я могу это без проблем сделать
 
 4750
 03:30:12,270 --> 03:30:13,103
-Oops, excuse me.
+Ой простите
 
 4751
 03:30:13,103 --> 03:30:15,060
-We'll say order dot copy.
+Мы напишем order.copy()
 
 4752
 03:30:16,150 --> 03:30:18,400
-And the amount will be 200.
+и введем сумму 200
 
 4753
 03:30:20,110 --> 03:30:21,560
-And once we get the 200 here,
+И после того как ввели,
 
 4754
 03:30:22,452 --> 03:30:24,690
-we can print line that for the new order.
+можем вывести этот новый заказ в консоль.
 
 4755
 03:30:26,280 --> 03:30:27,950
-And then once this runs,
+и когда все запустится
 
 4756
 03:30:27,950 --> 03:30:29,660
-we'll see that we have another order here
+мы увидим новый заказ
 
 4757
 03:30:29,660 --> 03:30:32,460
-for the amount of 200, with
-the same exact customer.
+на сумму 200 с тем же
+самым заказчиком
 
 4758
 03:30:32,460 --> 03:30:34,480
-Now, this could also be, you know,
+Мы так же можем
 
 4759
 03:30:34,480 --> 03:30:36,970
-let's take this something
-a new route here.
+пойти по другому пути
 
 4760
 03:30:36,970 --> 03:30:41,800
-So let's say Val new order two,
-I could say order dot copy.
+давайте создадим еще один заказ
 
 4761
 03:30:41,800 --> 03:30:44,120
-And perhaps I want it
-to create another order
+и теперь мы хотим
 
 4762
 03:30:44,120 --> 03:30:45,320
-of the same exact thing
+в заказе оставить прежнюю сумму
 
 4763
 03:30:45,320 --> 03:30:47,380
-but this time I have a different customer.
+но поменять заказчика
 
 4764
 03:30:47,380 --> 03:30:50,790
-And this time the customer
-would be the person.
+и заказчиком должен стать person
 
 4765
 03:30:50,790 --> 03:30:52,510
-Now I can say print line and we can see
+Выведем это в консоль
 
 4766
 03:30:52,510 --> 03:30:54,130
-what this would look like.
+посмотрим на результат.
 
 4767
 03:30:54,130 --> 03:30:56,890
-And it would say new order
-two, and we'd run it here.
+вводим второй заказ
+и запускаем
 
 4768
 03:30:56,890 --> 03:31:00,210
-We can actually see that the
-order amount is still 100
+Видим в консоли что
+сумма по прежнему 100
 
 4769
 03:31:00,210 --> 03:31:03,300
-but this time the person
-has actually changed.
+но сменился заказчик.
 
 4770
 03:31:03,300 --> 03:31:06,940
-And that's how you copy a
-data class in Kotlin, period.
+И так можно копировать дата классы
+в Котлине
 
 4771
 03:31:06,940 --> 03:31:10,630
-It's important to note that
-this is not a full deep copy
+Важно понимать, что если
+в вашем классе есть
 
 4772
 03:31:10,630 --> 03:31:12,110
-if you're using lists and so forth,
+списки, то при копировании
+будет происходить поверхностное копирование
 
 4773
 03:31:12,110 --> 03:31:13,940
-a lot of these items
-will be shallow copies.
+то есть будет копироваться ссылка на
+список, а не контент списка.
 
 4774
 03:31:13,940 --> 03:31:15,970
-So be careful copying lists this way.
+Будьте осторожны при копировании
+объектов со списками.
 
 4775
 03:31:17,940 --> 03:31:19,410
-You can build your own data classes,
+Вы можете делать свои собственные
+data классы, но я хочу
 
 4776
 03:31:19,410 --> 03:31:21,890
-but there are a couple of
-useful data classes built
+показать вам парочку полезных
 
 4777
 03:31:21,890 --> 03:31:23,580
-into the standard library.
+готовых data классов из библиотеки.
 
 4778
 03:31:23,580 --> 03:31:27,430
-One is known as a pair and
-it's just a pair of values.
+Один из них - класс Pair и
+он просто хранит пару значений
 
 4779
 03:31:27,430 --> 03:31:32,430
-So you could have foo and
-then you could have bar,
+В него например можно положить
+строки "foo" и "bar",
 
 4780
 03:31:33,310 --> 03:31:35,310
-and these are just a pair of
-values and they're accessed
+и теперь это просто переменная
+с парой значений, которые
 
 4781
 03:31:35,310 --> 03:31:38,610
-via the first and second parameter values.
+можно получить через поля first
+и second
 
 4782
 03:31:41,151 --> 03:31:41,984
-So you can have a pair of value.
+И так можно передавать значения парами.
 
 4783
 03:31:41,984 --> 03:31:43,960
-So you don't have to create a,
+И вам не нужно создавать
 
 4784
 03:31:43,960 --> 03:31:46,240
-if you have two values
-you need to parse around,
+собственный класс, если вам нужно
+передавать пару значений
 
 4785
 03:31:46,240 --> 03:31:47,880
-you don't feel like creating
-a custom class for it,
+в программе, можно просто
 
 4786
 03:31:47,880 --> 03:31:49,480
-you can use a pair.
+сложить их в Pair.
 
 4787
 03:31:49,480 --> 03:31:53,010
-And of course, when you
-print line these to screen,
+и если вы выведете Pair
 
 4788
 03:31:53,010 --> 03:31:57,887
-you're going to see that
-we have the following.
+в консоль first и second значения
 
 4789
 03:31:59,500 --> 03:32:02,740
-So we have the first just
-foo and the second is bar.
+то сначала мы увидим foo,
+а потом bar
 
 4790
 03:32:02,740 --> 03:32:05,850
-Now there's also another
-way another syntax
+Еще в Котлине для Pair
+существует специальный
 
 4791
 03:32:05,850 --> 03:32:06,750
-you can use for this.
+синтаксис для создания.
 
 4792
 03:32:06,750 --> 03:32:09,090
-And you'll see convert to two here.
+В подсказках можно увидеть опцию
+"Конвертировать с 'to'"
 
 4793
 03:32:09,090 --> 03:32:11,550
-And this is a syntax using the two syntax.
+И теперь у нас будет такой синтаксис
 
 4794
 03:32:11,550 --> 03:32:15,330
-So basically we have foo
-is going to match to bar.
+который читается "foo к bar"
 
 4795
 03:32:15,330 --> 03:32:16,163
-It's a pair.
+и его результат дает нам Pair
 
 4796
 03:32:16,163 --> 03:32:19,060
-So this is another way to
-create a pair is foo to bar.
+Это просто еще один легче читаемый
 
 4797
 03:32:19,060 --> 03:32:22,410
-It's a syntactic sugar
-over the application.
+способ создать пару в программе
 
 4798
 03:32:22,410 --> 03:32:26,350
-And this is inside of the
-Kotlin standard library.
+И это уже встроено
+в стандартные средства Котлина
 
 4799
 03:32:26,350 --> 03:32:28,588
-And you can look at the
-implementation here,
+Мы можем посмотреть реализацию
 
 4800
 03:32:28,588 --> 03:32:31,120
-creates a (indistinct)
-pair from this and that.
+"Создает пару из переданных значений"
 
 4801
 03:32:31,120 --> 03:32:33,980
-So this and that is
-basically the two values.
+this и that это два наших
+значения
 
 4802
 03:32:33,980 --> 03:32:35,580
-So you don't have to worry
-about the implementation,
+но не сильно парьтесь по поводу реализации
 
 4803
 03:32:35,580 --> 03:32:38,370
-but you can either use a pair like this
+самое главное что пару можно создавать так
 
 4804
 03:32:38,370 --> 03:32:40,640
-or if you want, you can go ahead and use
+или стандартным способом
 
 4805
 03:32:40,640 --> 03:32:43,880
-the regular pair method like this.
+через конструктор класса
 
 4806
 03:32:43,880 --> 03:32:46,910
-We have a small error
-and there's our pair.
+И у нас тут небольшая ошибка
 
 4807
 03:32:46,910 --> 03:32:47,743
-Now there's another one here.
+Еще один дата класс на случай
 
 4808
 03:32:47,743 --> 03:32:50,120
-If you have three values,
-you can call it a triple.
+если у вас три значения,
+называется Triple
 
 4809
 03:32:51,390 --> 03:32:53,150
-And a triple is the same type of thing.
+и он очень похож на пару
 
 4810
 03:32:53,150 --> 03:32:58,150
-So we can say foo bar is or whatever,
+И значения впишем foo, bar и что-то еще
 
 4811
 03:32:58,470 --> 03:32:59,860
-and we have three values.
+и у нас будут три значения
 
 4812
 03:32:59,860 --> 03:33:00,850
-And the same thing happens here.
+И тут все работает так же
 
 4813
 03:33:00,850 --> 03:33:05,640
-You can say triple.first.second.third.
+мы можем позвать triple.first,
+triple.second, triple.third
 
 4814
 03:33:07,353 --> 03:33:08,210
-And these are all very similar.
+и получить значения
 
 4815
 03:33:08,210 --> 03:33:09,540
-Now they don't have to be strength.
+Важно отметить, что тип не обязательно
 
 4816
 03:33:09,540 --> 03:33:10,640
-They can be whatever you want.
+должен совпадать
 
 4817
 03:33:10,640 --> 03:33:13,370
-If you want them to be an
-integer and you want this one
+напрмер если мы хотим, чтобы третий
+элемент был Int мы можем его заменить
 
 4818
 03:33:13,370 --> 03:33:16,190
-to be Boolean, you could do that.
+можно заменить на Boolean
 
 4819
 03:33:16,190 --> 03:33:18,260
-And this is up to you, how
-you would like to have them.
+зависит от того что вам нужно
 
 4820
 03:33:18,260 --> 03:33:20,070
-And then of course, as we see here,
+И теперь мы увидим
 
 4821
 03:33:20,070 --> 03:33:23,950
-the triple dot second is gonna be Boolean
+что triple.second возвращает Boolean
 
 4822
 03:33:23,950 --> 03:33:25,420
-as we see right here.
+вот тут
 
 4823
 03:33:25,420 --> 03:33:27,760
-We see the third is gonna be integer,
+А triple.third возвращает Int
 
 4824
 03:33:29,252 --> 03:33:30,260
-and then we can see we can also copy that
+И, конечно, это data класс
+и мы можем копировтаь наш контейнер
 
 4825
 03:33:30,260 --> 03:33:31,510
-'cause it's a built-in data class,
+потому что это заранее встроено
 
 4826
 03:33:31,510 --> 03:33:34,260
-so we can copy these and
-work with them as they would
+в функциональность
 
 4827
 03:33:34,260 --> 03:33:35,770
-with regular data classes.
+data классов
 
 4828
 03:33:35,770 --> 03:33:40,640
-So these are the two built
-in data classes right now
+Это два готовых к использованию
+встроенных data классов
 
 4829
 03:33:40,640 --> 03:33:42,830
-that are inside of the
-Kotlin standard library.
+в стандартной библиотеке Котлина
 
 4830
 03:33:42,830 --> 03:33:44,010
-Of course, more to come,
+Конечно со временем появится что-то новое,
 
 4831
 03:33:44,010 --> 03:33:45,770
-if you're watching this in the future.
+если вывдруг смотрите курс спустя
+несколько лет,
 
 4832
 03:33:45,770 --> 03:33:48,720
-It's pair and triple, they're
-both in the standard library.
+но на данный момент эти два класса
+есть в стандартной библиотеке.
 
 4833
 03:33:50,110 --> 03:33:54,670
-Adding a protected modifier to
-a variable in Kotlin is easy.
+К переменным класса можно
+добавлять модификатор protected
 
 4834
 03:33:54,670 --> 03:33:57,910
-All you have to do is
-inside of your class,
+Для этого в классе при объявлении
 
 4835
 03:33:57,910 --> 03:34:02,100
-add the protected modifier
-to your variable name
+переменной вам нужно дописать
+модификатор protected
 
 4836
 03:34:02,100 --> 03:34:03,630
-prior to the declaration.
+в самом начале.
 
 4837
 03:34:03,630 --> 03:34:06,820
-So here I've added
-protected two favorite food.
+Тут я добавил protected
+к переменной любимого блюда
 
 4838
 03:34:06,820 --> 03:34:08,260
-Now let's go ahead and
-remove that real quick
+Давайте теперь его уберем и
 
 4839
 03:34:08,260 --> 03:34:10,770
-and see what the cause of that happens is.
+посмотрим на что он влияет
 
 4840
 03:34:10,770 --> 03:34:13,040
-Back in the main file,
-I've created a new instance
+В main файле я создам
 
 4841
 03:34:13,040 --> 03:34:15,930
-of the person class, and this person class
+переменную с типом Person
 
 4842
 03:34:15,930 --> 03:34:17,860
-has a favorite food property on it.
+у человека есть любимое блюдо
 
 4843
 03:34:17,860 --> 03:34:21,040
-So I could set perhaps watermelon.
+Допустим это арбуз
 
 4844
 03:34:21,040 --> 03:34:22,620
-Now this works just fine,
+и все работает хорошо
 
 4845
 03:34:22,620 --> 03:34:24,930
-works as a regular setter and getter.
+у нас есть доступ на изменение и получение
 
 4846
 03:34:24,930 --> 03:34:27,140
-I have a property that
-we're used to working with.
+и так мы уже работали с полями
 
 4847
 03:34:27,140 --> 03:34:30,810
-However, if I were to add
-the protected keyword here,
+но если я добавлю модификатор
+protected
 
 4848
 03:34:30,810 --> 03:34:32,890
-this now modifies this variable.
+то он ограничит доступ к переменной
 
 4849
 03:34:32,890 --> 03:34:35,020
-So it's only visible from
-within the current class,
+И область видимости этой переменной
+сузится до этого класса
 
 4850
 03:34:35,020 --> 03:34:40,020
-in any of the classes that
-it get inherit from it.
+и классов, которые наследуются
+от него
 
 4851
 03:34:40,040 --> 03:34:42,640
-So if we come back here, we
-now see in the main class,
+если вернемся в main  и увидим
 
 4852
 03:34:42,640 --> 03:34:45,160
-I no longer have access to set this value.
+что у нас больше нет доступа
+и мы не можем менять или получать это поле
 
 4853
 03:34:45,160 --> 03:34:49,350
-And if I try via intellisense
-or code completion
+И если я попробую посмотреть
+какие поля доступны
 
 4854
 03:34:49,350 --> 03:34:52,600
-to see favorite food, we're
-gonna see that it's not there.
+то IDEA перестанет показывать
+наше поле
 
 4855
 03:34:52,600 --> 03:34:54,780
-And the reason for that is
-because it's now protected.
+и причина тому модификатор
+protected
 
 4856
 03:34:54,780 --> 03:34:58,380
-So only this class and any
-of the classes that inherit
+и теперь доступ к полю есть только
 
 4857
 03:34:58,380 --> 03:34:59,880
-from it are going to see it.
+у самого класса и его наследников
 
 4858
 03:34:59,880 --> 03:35:01,060
-So let's see that in action here.
+Давайте посмотрим на примере
 
 4859
 03:35:01,060 --> 03:35:03,930
-And I've actually already created
-another class called chef.
+Я уже сделал еще один класс Chef
 
 4860
 03:35:03,930 --> 03:35:06,260
-And remember, I have had
-to add the open keyword
+И мне пришлось дописать модификатор
+open, чтобы я мог
 
 4861
 03:35:06,260 --> 03:35:09,480
-so I can extend the person class.
+наследоваться от класса Person
 
 4862
 03:35:09,480 --> 03:35:11,682
-I've created person and chef.
+и я отнаследовал Chef от Person
 
 4863
 03:35:11,682 --> 03:35:12,630
-So basically a chef just extends person.
+теперь Chef расширяет функциональность
+класса Peron
 
 4864
 03:35:12,630 --> 03:35:16,410
-Now, maybe if I have a chef
-class, for whatever reason,
+И теперь, у меня есть класс Chef
 
 4865
 03:35:16,410 --> 03:35:18,590
-the chef can have a favorite food.
+и он тоже может иметь
+любимое блюдо из-за наследования полей
 
 4866
 03:35:18,590 --> 03:35:22,350
-So I'll say fav food, and
-we're just gonna say string.
+и я могу передать это блюдо в конструктор
+тип у него будет String
 
 4867
 03:35:22,350 --> 03:35:24,520
-And so when I create a chef now,
+И теперь, когда я создаю Шефа
 
 4868
 03:35:24,520 --> 03:35:26,470
-I have to provide a favorite food.
+нужно передавать любимое блюдо
 
 4869
 03:35:26,470 --> 03:35:28,950
-And then what I can do is
-I can actually set that.
+И нужно это как-то сохранить
 
 4870
 03:35:28,950 --> 03:35:30,930
-I'm gonna create an initializer block,
+Я создам блок инициализации
 
 4871
 03:35:30,930 --> 03:35:33,840
-which will be called as
-soon as we create the class.
+он будет вызываться при создании класса
 
 4872
 03:35:33,840 --> 03:35:35,340
-And then I can say
-actually, favorite food.
+и тут я могу написать
+что любимое блюдо равно
 
 4873
 03:35:35,340 --> 03:35:36,690
-See there's favorite food.
+тому блюду, что мы передали
 
 4874
 03:35:36,690 --> 03:35:38,580
-And if I go to the
-declaration of it's actually
+И если я пойду посмотреть где объявлено
+это поле, то IDE
 
 4875
 03:35:38,580 --> 03:35:41,400
-gonna take me right up here to line five.
+перекинет меня на пятую строчку в Person
 
 4876
 03:35:41,400 --> 03:35:44,070
-Now back here on line
-15, I say favorite food
+вернемся в блок и напишем, что
+любимое блюдо
 
 4877
 03:35:44,070 --> 03:35:47,500
-equals my favorite food
-that I just parse d in.
+это блюдо, которое пришло в конструкторе
 
 4878
 03:35:47,500 --> 03:35:48,940
-So that's interesting.
+И это интересно
 
 4879
 03:35:48,940 --> 03:35:52,460
-I can access it from within side of chef.
+Не смотря на модификатор
+я могу работать с эти полем в классе Chef.
 
 4880
 03:35:52,460 --> 03:35:54,860
-Now, if say for whatever reason,
+Если по какой-то причине я хочу запретить
 
 4881
 03:35:54,860 --> 03:35:59,453
-I don't want to allow
-regular persons to modify
+изменять поле
 
 4882
 03:36:01,050 --> 03:36:03,730
-the favorite food variable.
+класса снаружи
 
 4883
 03:36:03,730 --> 03:36:05,970
-I only want it to allow the chef to do it.
+И оставить эту возможность только
+наследникам, то можно исопльзовать protected
 
 4884
 03:36:05,970 --> 03:36:08,620
-So I've not really
-restricted anything up here.
+и класс Person все еще может
+использовать и менять его
 
 4885
 03:36:08,620 --> 03:36:10,920
-I could still come here
-and say favorite food
+вот тут я могу вызвать favoriteFood
 
 4886
 03:36:12,347 --> 03:36:13,180
-and I can still change here,
+и изменить его при желании
 
 4887
 03:36:13,180 --> 03:36:16,580
-but maybe I don't want to
-have a public API per se,
+Но давать менять его снаружи
 
 4888
 03:36:16,580 --> 03:36:19,640
-that allows me or any callers to modify.
+и получать его снаружи уже не получится.
 
 4889
 03:36:19,640 --> 03:36:21,470
-So I don't ever want the person variable.
+Я не хочу чтобы у кого-то была возможность
 
 4890
 03:36:21,470 --> 03:36:25,840
-So I never want the person not
-favorite food to be called.
+вызвать favoriteFood через
+экзепляр класса
 
 4891
 03:36:25,840 --> 03:36:28,950
-Now, if I were to call a
-chef, so, or create a chef,
+И если я теперь создам
+экзепляр класса Chef
 
 4892
 03:36:28,950 --> 03:36:32,660
-I would say, perhaps something
-like this, and we can say,
+Напрмер как-то так,
 
 4893
 03:36:33,610 --> 03:36:37,930
-Bob and Bob is 33 and Bob's
-favorite food is ribs.
+пусть будет Боб, 33 года
+и он любит ребрышки.
 
 4894
 03:36:39,110 --> 03:36:41,860
-Then we can see here that
-now I can actually set
+И тут мы можем выбрать
 
 4895
 03:36:41,860 --> 03:36:42,810
-the favorite food here,
+любимое блюдо
 
 4896
 03:36:42,810 --> 03:36:44,860
-because this is being set right here,
+потому что так объявлен конструктор
 
 4897
 03:36:44,860 --> 03:36:48,210
-which in turn is being set
-inside the initializer block.
+и это значение попадет в блок
+инициализации
 
 4898
 03:36:48,210 --> 03:36:50,230
-But let's go ahead and assume
-that I want them to only allow
+И давайте допустим, что
+мы хотим позволить
 
 4899
 03:36:50,230 --> 03:36:51,090
-chef to change it.
+менять блюдо у шефа
 
 4900
 03:36:51,090 --> 03:36:54,850
-So I create a function, as
-I say set favorite food,
+Для этого сооздадим функцию
+setFavoriteFood
 
 4901
 03:36:54,850 --> 03:36:57,260
-and they may a parse in the food.
+и передадим туда новое блюдо
 
 4902
 03:36:57,260 --> 03:37:01,090
-And then what I would do
-is this a favorite food
+и внутри функции мы выставим
+любимое блюдо равно
 
 4903
 03:37:01,090 --> 03:37:01,970
-equals food.
+новому блюду.
 
 4904
 03:37:03,810 --> 03:37:05,830
-Now we have an interesting error here.
+Тут есть интересная ошибка
 
 4905
 03:37:05,830 --> 03:37:06,740
-We're getting a squiggly line.
+метод подчеркнулся красным
 
 4906
 03:37:06,740 --> 03:37:08,650
-And if we put our cursor over it,
+и если наведем курсор
 
 4907
 03:37:08,650 --> 03:37:12,146
-we'll see that we get an error
-of an accidental override.
+мы увидим сообщение о случайном
+переопределении функции
 
 4908
 03:37:12,146 --> 03:37:14,170
-And what this is basically
-telling us is that,
+Это потому что котлин под капотом
 
 4909
 03:37:14,170 --> 03:37:16,700
-hey, Kotlin actually does us a favor here.
+выполняет работу за нас и когда
 
 4910
 03:37:16,700 --> 03:37:19,500
-When we declare a property
-up here automatically
+мы объявляем поля, Котлин
 
 4911
 03:37:19,500 --> 03:37:21,020
-what's being created behind the scenes
+создает для нас
 
 4912
 03:37:21,020 --> 03:37:25,170
-for other JVM based languages
-such as Java and so forth,
+функции на получение
+и изменения этого поля
 
 4913
 03:37:25,170 --> 03:37:27,670
-are variables like this.
+с названием getFavoriteFood и
+setFavoriteFood
 
 4914
 03:37:27,670 --> 03:37:29,390
-Excuse me, methods like this.
+которые позволяют нам получить
 
 4915
 03:37:29,390 --> 03:37:30,610
-We have a set favorite food,
+или изсенить это поле
 
 4916
 03:37:30,610 --> 03:37:33,700
-which is going to allow
-us to parse in a value,
+это наследие из Java
 
 4917
 03:37:33,700 --> 03:37:35,830
-which is a setter, which can be string.
+но в котлине эти методы вызываются неявно
 
 4918
 03:37:36,750 --> 03:37:39,100
-And then there's also a
-getter, so an accessor.
+при обращении к самому полю
 
 4919
 03:37:40,330 --> 03:37:44,690
-And these two methods
-are created simply for,
+В случае get** нам вернется строка
 
 4920
 03:37:44,690 --> 03:37:46,720
-it's gonna return a string,
+а вслучае set** нам вернется Unit,
+но мы должны передать строку.
 
 4921
 03:37:46,720 --> 03:37:49,590
-interoperability with other JVM languages.
+это нужно для поддержки работы
+Котлина с Java
 
 4922
 03:37:49,590 --> 03:37:53,540
-Anytime you've worked in
-traditional Java environments,
+В Джаве, когда вы создаете поле
 
 4923
 03:37:53,540 --> 03:37:54,770
-anytime you declare a variable,
+вам нужно создать геттер и сеттер
 
 4924
 03:37:54,770 --> 03:37:56,860
-you need to provide a
-mutator and an accessor.
+функции чтобы получать или изменять это поле
 
 4925
 03:37:56,860 --> 03:37:58,560
-So a setter and a getter.
+И обычно они называеются как само
 
 4926
 03:37:58,560 --> 03:38:02,400
-And this is typically the
-method in which you do it.
+поле, но прибавляется
 
 4927
 03:38:02,400 --> 03:38:06,660
-You prefix the set,
-whatever variable name is
+префикс set и после него
+идет название поля
 
 4928
 03:38:06,660 --> 03:38:09,910
-and proper, of course, camel case.
+конечно оно будет с большой буквы теперь
 
 4929
 03:38:09,910 --> 03:38:13,950
-And then of course, if there is a getter,
+и для получения - функция с префиксом
 
 4930
 03:38:13,950 --> 03:38:16,410
-which are usually is in this
-case, you wanna get the value,
+get и названием поля
 
 4931
 03:38:16,410 --> 03:38:18,020
-you have the getter in the same format.
+в таком же формате как и сеттер
 
 4932
 03:38:18,020 --> 03:38:20,310
-So prefix it with the word get.
+в таком же формате как и сеттер
 
 4933
 03:38:20,310 --> 03:38:23,080
-So set and get, these are
-generated automatically
+в котлине эти функции генерируются
 
 4934
 03:38:23,080 --> 03:38:24,080
-for you behind the scenes.
+под капотом
 
 4935
 03:38:24,080 --> 03:38:27,670
-So Kotlin's saying, "Hey,
-we can't really do that.
+И котлин говорит, что не может
+создать функцию
 
 4936
 03:38:28,630 --> 03:38:29,463
-"You shouldn't do this.
+потому что он ее уже
 
 4937
 03:38:29,463 --> 03:38:32,530
-"We're already gonna generate
-this for you, so no dice."
+сгенерировал, хоть ее нигде
+не видно
 
 4938
 03:38:32,530 --> 03:38:34,690
-So I'm just gonna go and
-rename and set my favorite food
+Чтобы это исправить я просто
+переименую в setMyfavoriteFood
 
 4939
 03:38:34,690 --> 03:38:36,270
-just for an example.
+просто для примера.
 
 4940
 03:38:36,270 --> 03:38:38,460
-So now if I go back to my main class,
+если вернемся в main файл
 
 4941
 03:38:38,460 --> 03:38:41,560
-what I can actually do is
-that the chef can actually set
+то теперь у класса Chef мы
 
 4942
 03:38:41,560 --> 03:38:43,032
-my favorite food.
+можем поменять любимое блюдо
 
 4943
 03:38:43,032 --> 03:38:45,032
-And maybe I wanna change that to celery.
+И я поменяю на "Сельдерей"
 
 4944
 03:38:46,240 --> 03:38:47,600
-I don't know who likes celery that much,
+Я не очень люблю сельдерей
 
 4945
 03:38:47,600 --> 03:38:49,830
-but that's beyond the scope of this.
+но это просто ради примера
 
 4946
 03:38:49,830 --> 03:38:52,560
-So we have a favorite
-food that set the celery.
+И теперь любимое блюда этого шефа
+сменится на сельдерей
 
 4947
 03:38:52,560 --> 03:38:56,410
-But now if we try to change the
-food to set my favorite food
+Но если мы попытаемся поменять
+любимое блюдо
 
 4948
 03:38:56,410 --> 03:38:59,690
-on the person, well, that
-method of course does not exist
+у нашего человека, то Котлин эту функцию
 
 4949
 03:38:59,690 --> 03:39:01,230
-in the person class.
+не найдет.
 
 4950
 03:39:01,230 --> 03:39:02,580
-So that's interesting thing.
+И это очень интересно
 
 4951
 03:39:02,580 --> 03:39:05,310
-But what we can do is
-we can actually print
+Но мы можем сделать функцию
 
 4952
 03:39:06,240 --> 03:39:10,913
-with my favorite food from the superclass.
+выводит в консоль любимое блюдо
 
 4953
 03:39:12,500 --> 03:39:13,350
-And that's very easy to do.
+А в теле функции
 
 4954
 03:39:13,350 --> 03:39:14,220
-Say print line.
+просто напишем println
 
 4955
 03:39:16,080 --> 03:39:17,430
-And inside that print line,
+и внутри него
 
 4956
 03:39:19,519 --> 03:39:20,520
-we'll go ahead and say the favorite food.
+выведем favoriteFood
 
 4957
 03:39:21,395 --> 03:39:22,228
-So that's pretty simple.
+проще простого
 
 4958
 03:39:22,228 --> 03:39:23,420
-Now, if we were actually gonna call this
+И теперь вызовем эту функцию у человека
 
 4959
 03:39:23,420 --> 03:39:26,620
-from the person class, P
-dot print my favorite food,
+напишем p.printMyFavoriteFood
 
 4960
 03:39:26,620 --> 03:39:28,080
-that'll work.
+все работает
 
 4961
 03:39:28,080 --> 03:39:28,920
-And if we're gonna do it down here.
+И теперь, чуть ниже напишем
 
 4962
 03:39:28,920 --> 03:39:31,180
-C dot, let's actually do it two times,
+давайте напишем дважны, до и после изменения
 
 4963
 03:39:31,180 --> 03:39:34,540
-C dot print my favorite food
-and then same thing down here,
+тут и строчкой ниже
 
 4964
 03:39:34,540 --> 03:39:35,480
-print my favorite food.
+выводим
 
 4965
 03:39:35,480 --> 03:39:39,880
-Because again, I am extending
-the person class over here.
+И класс Chef наследуется от Person,
+поэтому все методы и поля класса
 
 4966
 03:39:41,860 --> 03:39:44,260
-So the chef class is
-extending the person class.
+Person автоматом переносятся в Chef
 
 4967
 03:39:45,400 --> 03:39:48,900
-I then can call any of the
-methods that are available to it.
+и я в классе Chef могу звать любые
+функции пользователя
 
 4968
 03:39:48,900 --> 03:39:51,250
-So that are not private based.
+если на них не стоит модификатор private
 
 4969
 03:39:51,250 --> 03:39:52,860
-And I'm calling print my favorite food.
+и я вызываю printMyFavoriteFood
 
 4970
 03:39:52,860 --> 03:39:54,070
-Now for the person class,
+Для класса Person
 
 4971
 03:39:54,070 --> 03:39:56,880
-this is gonna show up as
-unknown because we are not able
+долен вывестись unknown, потому что
+это дефолтное значение
 
 4972
 03:39:56,880 --> 03:39:59,180
-to set the favorite food of that person
+и мы никак не можем выставить
+любимое блюдо у человека
 
 4973
 03:40:00,220 --> 03:40:02,120
-unless we're using a chef instance.
+но можем его выставить,
+если человек это Chef
 
 4974
 03:40:02,120 --> 03:40:04,230
-So the favorite food is just
-going to show up as unknown
+Итак, сначала выведется unknown
 
 4975
 03:40:04,230 --> 03:40:08,100
-for the chef we're actually
-gonna see it twice.
+а для шефа будет два вывода
 
 4976
 03:40:09,682 --> 03:40:10,515
-So we'll say print my
-favorite food, it'll say ribs.
+в первый раз выведутся рюбра
 
 4977
 03:40:10,515 --> 03:40:12,456
-We're gonna change it to celery.
+а потом будет замена на сельдерей
 
 4978
 03:40:12,456 --> 03:40:15,150
-And then once we print it
-again, it'll show as celery.
+и выведется сельдерей.
 
 4979
 03:40:15,150 --> 03:40:20,150
-So this is us enabling to work
-with a protected variable.
+И так мы можем работать с
+protected полями
 
 4980
 03:40:20,410 --> 03:40:22,310
-So if there's anything that
-you would like to protect
+Если вам нужно что-то скрыть
+для внешнего вмешательство
 
 4981
 03:40:22,310 --> 03:40:25,970
-from any outside callers,
-you wanna hold some state
+но оставить открытым для класса
 
 4982
 03:40:25,970 --> 03:40:28,190
-inside of your class, but
-maybe you still wanted
+и его наследников
 
 4983
 03:40:28,190 --> 03:40:32,710
-to be available to other
-children classes via inheritance.
+без проблем можно обозначить
 
 4984
 03:40:32,710 --> 03:40:35,730
-Then you can go ahead and
-provide a protected variable
+поля и методы с помощью
 
 4985
 03:40:35,730 --> 03:40:36,563
-and you can do that.
+ключевого слова protected.
 
 4986
 03:40:36,563 --> 03:40:39,460
-And of course this works
-with objects and value types,
+и все это работает с любыми
 
 4987
 03:40:39,460 --> 03:40:40,360
-et cetera.
+типами.
 
 4988
 03:40:40,360 --> 03:40:42,250
-Now, of course, if we were to run this,
+Давайте запустим
 
 4989
 03:40:42,250 --> 03:40:43,450
-here's what we would see.
+и увидим выводы
 
 4990
 03:40:44,513 --> 03:40:46,460
-We would see unknown, which is the person
+первый "unknown" это блюдо человека
 
 4991
 03:40:46,460 --> 03:40:48,640
-knowing see ribs and we'd see celery.
+дальше ribs и celery
 
 4992
 03:40:48,640 --> 03:40:51,050
-And that's how you can work
-with protected variables
+И так вы можете использовать
+ключевое слово protected
 
 4993
 03:40:51,050 --> 03:40:51,883
-in Kotlin.
+в Котлине
 
 4994
 03:40:53,470 --> 03:40:57,260
-You can also make a
-method protected as well.
+protected можно выставлять у методов
 
 4995
 03:40:57,260 --> 03:40:59,870
-So we're going to use the same
-example here that was used
+давайте на этом же примере
 
 4996
 03:40:59,870 --> 03:41:02,830
-in the variable protected modifier lesson.
+рассмотрим новый способ.
 
 4997
 03:41:04,000 --> 03:41:07,100
-And so here we have the print,
-my favorite food method,
+например у нас есть метод,
+который выводит любимое блюдо
 
 4998
 03:41:07,100 --> 03:41:09,500
-which can be used back
-inside of this main class.
+который мы уже используем в
+main функции
 
 4999
 03:41:09,500 --> 03:41:14,500
-So again, like I say
-p.print my favorite food.
+Вот тут используем у person
 
 5000
 03:41:16,338 --> 03:41:18,340
-And when you say c.print my favorite food,
+а тут у шефа
 
 5001
 03:41:20,260 --> 03:41:22,400
