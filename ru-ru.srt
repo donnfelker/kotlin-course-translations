@@ -21895,458 +21895,448 @@ main функции
 
 5001
 03:41:20,260 --> 03:41:22,400
-and that's going to print
-the actual favorite food,
+и нам веведется любимое блюдо
 
 5002
 03:41:22,400 --> 03:41:24,990
-which is called from the person class.
+которое определено
+в классе Person
 
 5003
 03:41:24,990 --> 03:41:27,470
-Now, for whatever reason
-inside of your application,
+Давайте рассмотрим пример
+когда мы не хотим, чтобы
 
 5004
 03:41:27,470 --> 03:41:29,780
-you may determine that
-you do not want this
+внутри нашего приложения
+эта функция не была частью
 
 5005
 03:41:29,780 --> 03:41:32,297
-to be part of your public API.
+публичного API
 
 5006
 03:41:32,297 --> 03:41:35,880
-And what I mean by public
-API is a part of your class
+Под публичным API я подразумеваю
+что эта функуия
 
 5007
 03:41:35,880 --> 03:41:39,340
-that can be called anywhere
-that's perhaps public,
+может вызываться откуда угодно
 
 5008
 03:41:39,340 --> 03:41:40,870
-and this would be a public method.
+потому что это публичный метод
 
 5009
 03:41:40,870 --> 03:41:43,170
-So we can actually access it publicly.
+и доступ к нему публичный
 
 5010
 03:41:43,170 --> 03:41:44,530
-Let's say for whatever reason you want it
+Например по какой-то причине вы
 
 5011
 03:41:44,530 --> 03:41:47,770
-to only access this within
-the current instance
+хотите чтобы доступ к этой
+функции был только у экземпляров
 
 5012
 03:41:47,770 --> 03:41:50,170
-of person or any of the children classes
+класса Person или его наследников
 
 5013
 03:41:50,170 --> 03:41:51,480
-such as chef or whatever.
+например таких как Chef
 
 5014
 03:41:52,690 --> 03:41:54,040
-To do that all you're gonna wanna do
+Для этого вам всего лишь нужно
 
 5015
 03:41:54,040 --> 03:41:57,100
-is slap on the protected keyword.
+поставить ключевое слово protected.
 
 5016
 03:41:57,100 --> 03:42:00,060
-And now this modifier was now applied
+И теперь этот модификатор работает
 
 5017
 03:42:00,060 --> 03:42:02,880
-the per print my favorite
-food to only be available
+и мы не можем вызывать функции
+в main файле
 
 5018
 03:42:02,880 --> 03:42:05,890
-from within this class and
-from within this class.
+но можем звать внутри класса
+тут и тут
 
 5019
 03:42:05,890 --> 03:42:07,950
-So let's go back to the
-main file and take a look
+Давайте вернемеся в main
+файл и посмотрим
 
 5020
 03:42:07,950 --> 03:42:09,150
-what happened.
+что поменялось.
 
 5021
 03:42:09,150 --> 03:42:13,040
-Now we can see that the print
-my favorite food is protected.
+Теперь мы видим что функция
+myFavoriteFood protected.
 
 5022
 03:42:13,040 --> 03:42:13,930
-So what does that mean?
+Что это собственно значит?
 
 5023
 03:42:13,930 --> 03:42:16,570
-Let's take a look here
-and the auto-complete,
+Давайте посмотрим на авто заполнение
 
 5024
 03:42:17,470 --> 03:42:19,640
-we don't see print my
-favorite food anymore.
+мы больше не видим нашу функцию
 
 5025
 03:42:19,640 --> 03:42:23,370
-However, if we were to go
-perhaps into the info class here,
+Но если мы перейдем
+в метод info
 
 5026
 03:42:23,370 --> 03:42:25,150
-we can say, print my favorite food.
+мы можем вызвать эту функцию тут
 
 5027
 03:42:25,150 --> 03:42:27,940
-We could still call it from
-within the person class.
+И у нас есть доступ к ней из
+класса Person.
 
 5028
 03:42:27,940 --> 03:42:29,630
-So give us a little flexibility here.
+И это дает нам много возможностей
+не раскрывая метод всемо коду
 
 5029
 03:42:29,630 --> 03:42:33,660
-And also any of perhaps other classes,
+И можно использовать в других
+наследниках Person
 
 5030
 03:42:33,660 --> 03:42:35,340
-perhaps that we wanted
-to set my favorite food
+например мы хотим выводить
 
 5031
 03:42:35,340 --> 03:42:38,370
-and then print it for
-the console or whatever,
+любимое блюдо, когда оно изменилось
 
 5032
 03:42:38,370 --> 03:42:39,650
-we can call it from within any
+и можем вызывать эту функцию
 
 5033
 03:42:39,650 --> 03:42:41,180
-of the other children classes as well.
+из любого наследника Person.
 
 5034
 03:42:41,180 --> 03:42:43,710
-So now let's say that's what we wanna do,
+Например мы хотим
 
 5035
 03:42:43,710 --> 03:42:46,680
-we only wanna print it when
-we set the favorite food
+выводить, когда у нас новое значение
 
 5036
 03:42:46,680 --> 03:42:47,513
-for whatever reason.
+любимого блюда
 
 5037
 03:42:47,513 --> 03:42:49,400
-So we can say, print my favorite food.
+Можем написать println функцию
 
 5038
 03:42:49,400 --> 03:42:51,710
-Now we can come back here.
+И когда вернемся в main...
 
 5039
 03:42:51,710 --> 03:42:55,190
-And of course, if we cannot
-print or have anything
+И тут конечно мы уже не можем
+вызывать эти функции
 
 5040
 03:42:55,190 --> 03:42:57,740
-to do with the favorite food
-from a person perspective,
+потому что они закрыты для
 
 5041
 03:42:57,740 --> 03:43:00,330
-because maybe that's
-just part of the given,
+внешнего использования,
+так может быть устроено ваше
 
 5042
 03:43:00,330 --> 03:43:02,620
-the way you're designing application,
+приложение
 
 5043
 03:43:02,620 --> 03:43:04,490
-but we can actually say
-set my favorite food.
+но мы можем
+установить новое значение
 
 5044
 03:43:04,490 --> 03:43:07,020
-So we know that the person's
-food was ribs before,
+мы знаем, что раньше любимым
+блюдом были ребрышки
 
 5045
 03:43:08,164 --> 03:43:10,030
-but for whatever reason,
-we wanna change it now
+но по какой-то причине
+мы хотим поменять
 
 5046
 03:43:10,030 --> 03:43:12,890
-and change it to be a potato.
+и сделать картошку любимым блюдом
 
 5047
 03:43:15,810 --> 03:43:18,610
-And so if we were to run this
-now, what we should see happen
+И если теперь запустим приложение
 
 5048
 03:43:18,610 --> 03:43:22,550
-is it's gonna be set from ribs to potato,
+то увидим, что значение изменилось
+на картошку
 
 5049
 03:43:22,550 --> 03:43:24,794
-and then it's gonna print
-potato to the screen.
+и в консоли тоже выведется картошка
 
 5050
 03:43:24,794 --> 03:43:26,510
-Let me see print potato to the screen.
+Вот она наша картошка
 
 5051
 03:43:26,510 --> 03:43:28,660
-And the reason why is
-because inside of the set
+А выводится это потому что
+внутри set функции
 
 5052
 03:43:28,660 --> 03:43:30,320
-my favorite food method,
+мы зовем нашу protected функцию
 
 5053
 03:43:30,320 --> 03:43:32,911
-we're setting the favorite
-food to a different food
+любимое блюдо заменяется,
+а потом выводится
 
 5054
 03:43:32,911 --> 03:43:34,000
-and then we're calling
-print my favorite food,
+на экран с помощью другой функции,
 
 5055
 03:43:34,000 --> 03:43:36,330
-which is protected inside of here.
+доступной только в этом классе
 
 5056
 03:43:36,330 --> 03:43:38,990
-Now, of course we could,
-maybe there's no need for this
+И вообще все можно сделать
+немного по другому
 
 5057
 03:43:38,990 --> 03:43:39,900
-to be inside of here.
+Нам не обязательно хранить вывод
+любимого блюда внутри Person
 
 5058
 03:43:39,900 --> 03:43:43,280
-And maybe the food does not
-even need to be inside of here,
+И наверное наш Person не должен ничего
+знать о любимой еде
 
 5059
 03:43:43,280 --> 03:43:46,170
-which when you start
-thinking about it perhaps,
+Таким образом Person станет шаблоном
+который хранит имя и возраст
 
 5060
 03:43:46,170 --> 03:43:49,040
-the person, we don't need to
-know anything about the person
+и понятия не имеет,
 
 5061
 03:43:49,040 --> 03:43:50,920
-having a favorite food.
+какую еду любит человек
 
 5062
 03:43:50,920 --> 03:43:53,540
-So maybe we just need
-to move both of these
+Для этого нам нужно перенести
+поле и метод
 
 5063
 03:43:53,540 --> 03:43:56,130
-into this class down here.
+вниз в класс Chef
 
 5064
 03:43:57,980 --> 03:43:58,990
-And this would both work here.
+И внутри Chef будут
+лежать поле и метод
 
 5065
 03:43:58,990 --> 03:44:00,430
-So we're gonna see favorite food now,
+Итак, у нас есть любимое блюдо, но
 
 5066
 03:44:00,430 --> 03:44:03,120
-is not going to have a problem here.
+есть небольшая проблемка
 
 5067
 03:44:03,120 --> 03:44:05,230
-So what is it saying can vary by...
+Что говорит подсказка...
 
 5068
 03:44:05,230 --> 03:44:07,730
-Variable cannot be initialized
-before declaration.
+Переменная не можеть быть присвоена
+до определения
 
 5069
 03:44:08,580 --> 03:44:10,000
-So what we can then do here.
+Тут мы можем делаем следующее
 
 5070
 03:44:10,000 --> 03:44:12,510
-So we've trying to initialize it before,
+в init методе пытаемся
+выставить значение
 
 5071
 03:44:12,510 --> 03:44:13,810
-it's really been declared,
+но сама переменная объявлена ниже
 
 5072
 03:44:14,793 --> 03:44:15,626
-there's a couple of
-things we could do here.
+Это можно поправить парой способов
 
 5073
 03:44:15,626 --> 03:44:16,500
-So we just kind of go
-ahead and remove this
+для начала просто уберем это
 
 5074
 03:44:16,500 --> 03:44:17,920
-and we could actually remove this as well,
+и теперь можем убрать поле
 
 5075
 03:44:17,920 --> 03:44:20,950
-because let's assume that every
-chef needs a favorite food.
+и нам каждому Шефу нужно
+любимое блюдо, поэтому
 
 5076
 03:44:20,950 --> 03:44:22,900
-So to get access to this
-and since we're mutating it,
+просто пойдем в конструктор
 
 5077
 03:44:22,900 --> 03:44:24,410
-we're gonna change this to a variable.
+и добавим к переменной ключевое
+слово var
 
 5078
 03:44:24,410 --> 03:44:26,380
-So throw the var word on
-there and now we can print it
+Просто пришлепнем
+ключевое слово var
 
 5079
 03:44:26,380 --> 03:44:28,740
-and now we can also mutate it as well.
+и тепере мы можем вызывать
+и менять это поле
 
 5080
 03:44:28,740 --> 03:44:31,390
-And if we go back to our main class now,
+И если вернемся в main файл
 
 5081
 03:44:32,630 --> 03:44:34,670
-we've kind of cleaned
-up our API a little bit.
+после того как мы почистили наши классы
 
 5082
 03:44:34,670 --> 03:44:36,530
-So we definitely do have our person class
+у нас все еще может быть
+экземпляр Person
 
 5083
 03:44:36,530 --> 03:44:38,730
-and we do have the chef class,
+и экзепляр Chef
 
 5084
 03:44:38,730 --> 03:44:40,460
-and this will still run accordingly
+и программа все еще будет запускаться
 
 5085
 03:44:40,460 --> 03:44:44,100
-because the person is very
-kind of a just a shell
+теперь наш Person это просто
 
 5086
 03:44:46,048 --> 03:44:46,881
-of a class.
+какой-то базовый класс
 
 5087
 03:44:46,881 --> 03:44:48,808
-And of course we print and we see potato.
+и после запуска мы все еще увидим картошку
 
 5088
 03:44:48,808 --> 03:44:50,766
-And what I mean by that
-is the person class
+И Person теперь
 
 5089
 03:44:50,766 --> 03:44:51,777
-just contains the name of the age.
+это просто хранилище для
+возраста и имени
 
 5090
 03:44:51,777 --> 03:44:53,800
-And it's just a very basic
-information about a person
+а это самая базовая информация
+которая подходит по смыслу
 
 5091
 03:44:53,800 --> 03:44:55,920
-and we've extended it using inheritance.
+а все наследники только добавляют
+новые свойства
 
 5092
 03:44:55,920 --> 03:44:57,720
-And we've created a chef
-and added a favorite food
+Как, например, наш шеф,
+который добавляет любимое блюдо
 
 5093
 03:44:57,720 --> 03:44:58,830
-for that chef.
+своим экземплярам.
 
 5094
 03:44:58,830 --> 03:45:00,620
-And this chef males will
-have additional methods
+И у шефа есть дополнительные
 
 5095
 03:45:00,620 --> 03:45:03,330
-like cook their favorite
-meal or anything like that,
+методы связанные с его полями,
+например приготовить или
 
 5096
 03:45:03,330 --> 03:45:05,440
-or prepare foods.
+вывести блюдо в консоль.
 
 5097
 03:45:05,440 --> 03:45:07,730
-And as we start building
-an application out,
+И чем больше растет наше приложение
 
 5098
 03:45:07,730 --> 03:45:10,060
-we can start separating
-it into different classes,
+тем больше мы начнем разделять
+обязанности классов
 
 5099
 03:45:10,060 --> 03:45:13,540
-yet also having values
-in here that are perhaps
+и беспокоиться за архитектуру
 
 5100
 03:45:14,800 --> 03:45:19,800
-more protected and the
-modifiers are in way
+и области видимости, как мы
 
 5101
 03:45:20,740 --> 03:45:22,620
-such that they can only
-be seen by children.
+делали с классами Chef
+и классом Person
 
 5102
 03:45:22,620 --> 03:45:24,920
